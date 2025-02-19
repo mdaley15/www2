@@ -128,7 +128,6 @@
             </div>
           </div>
         </header>
-      {@|apply login.block}
        
         <div class="Content-outer">
           {.if collection}{.if item}{.or}{.equal? collection.typeName "index"}{.or}
