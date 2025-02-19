@@ -1,0 +1,99 @@
+.Mobile-overlay {
+    * {
+        outline: none!important;
+    }
+    button, a {
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+    .Mobile-overlay-close {
+        &:hover,
+        &:focus {
+            background: white;
+            stroke: @primary;
+        }
+    }
+}
+.notVisible {
+    display: none!important;
+}
+.Mobile-bar--top {
+    padding-top: 0!important;
+    padding-bottom: 0!important;
+
+    .Mobile-bar-search,
+    .Mobile-bar-menu {
+        &:hover,
+        &:focus {
+            stroke: @secondary!important;
+        }
+    }
+}
+.Header--top {
+    box-shadow: 0 3px 5px @primary;
+    position: relative;
+    z-index: 11;
+
+    div[data-nc-container="top-left"] {
+        display: flex!important;
+    }
+}
+.Header--bottom {
+    background: @tweak-header-bottom-color!important;
+    box-shadow: 0 3px 5px @primary;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    .Header-branding {
+        order: 1!important;
+        margin-right: 30px;
+    }
+    .Header-nav--primary {
+
+        .Header-nav-item {
+            padding: 20px 0!important;
+
+            .Header-nav-folder {
+                box-shadow: 0 3px 5px @shadow, 0 11px 7px -9px rgba(0,0,0,.2) inset;
+                border-radius: 0 0 5px 5px;
+                transform: none!important;
+            }
+            &:hover,
+            &:focus,
+            &:focus-within {
+                .Header-nav-folder {
+                    left: 0;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+.Header-nav--primary .Header-nav-folder-title:hover,
+.Header-nav--primary .Header-nav-folder-title:focus,
+.Header-nav--primary .Header-nav-folder-title--active,
+.Header-nav--primary .Header-nav-item:hover,
+.Header-nav--primary .Header-nav-item:focus,
+.Header-nav--primary .Header-nav-item--active,
+.Header-nav--primary .Header-nav-folder-item:hover,
+.Header-nav--primary .Header-nav-folder-item:focus,
+.Header-nav--primary .Header-nav-folder-item--active {
+    text-decoration: underline;
+    -webkit-text-decoration-color: @secondary; /* Safari */  
+    text-decoration-color: @secondary;
+}
+.Header-nav-item:first-child .Header-nav-folder {
+    margin-left: -20px;
+}
+.Header-nav-item:nth-child(2) .Header-nav-folder {
+    margin-left: -20px;
+}
+.Header-nav-item:nth-child(3) .Header-nav-folder {
+    margin-left: -20px;
+}
+.Header-nav-item:last-child .Header-nav-folder {
+    margin-left: -183px;
+}

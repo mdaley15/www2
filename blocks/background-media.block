@@ -3,5 +3,5 @@
     {@|apply sqs-video-background.block}
   </div>
 {.or}
-  <img {mainImage|image-meta} data-load="false" alt="" />
+  <img {mainImage|image-meta} data-load="false" class="adaimages" />
 {.end}

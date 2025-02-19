@@ -1,0 +1,22 @@
+<div align="center" class="socialMedia">
+  <div class="socialIcon">
+    <a target="_blank" href="https://www.facebook.com/pages/Castparts-Employees-Federal-Credit-Union/126033067451411"aria-label="Link to Castparts Federal Credit Union's Facebook Page">
+      <img class="lift" src="/assets/facebook1.svg" alt="Facebook Icon" />
+    </a>
+  </div>
+  {#  <div class="socialIcon">
+    <a target="_blank" href="https://www.alliancecufl.org/going-to-twitter/"aria-label="Link to Castparts Federal Credit Union's Twitter Page">
+      <img class="lift" src="/assets/twitter.svg" alt="Twitter Icon" />
+    </a>
+  </div>
+  <div class="socialIcon">
+    <a target="_blank" href="https://www.alliancecufl.org/going-to-instagram/"aria-label="Link to Castparts Federal Credit Union's Instagram Page">
+      <img class="lift" src="/assets/instagram.svg" alt="Instagram Icon" />
+    </a>
+  </div>
+  <div class="socialIcon">
+    <a target="_blank" href="https://www.alliancecufl.org/going-to-linkedin/"aria-label="Link to Castparts Federal Credit Union's Linkedin Page">
+      <img class="lift" src="/assets/linkedin.svg" alt="Linkedin Icon" />
+    </a>
+  </div>  }
+</div>

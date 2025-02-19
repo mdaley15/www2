@@ -197,27 +197,27 @@
   .ancillary-header-branding-position-top-left,
   .ancillary-header-tagline-position-top-left.has-tagline,
   .ancillary-header-primary-nav-position-top-left.has-primary-nav,
+  .ancillary-header-third-nav-position-top-left.has-third-nav,
   .ancillary-header-secondary-nav-position-top-left.has-secondary-nav,
   .ancillary-header-social-position-top-left.has-social,
   .ancillary-header-search-position-top-left,
   .ancillary-header-cart-position-top-left.has-cart,
-  .ancillary-header-account-position-top-left.has-user-accounts,
   .ancillary-header-branding-position-top-center,
   .ancillary-header-tagline-position-top-center.has-tagline,
   .ancillary-header-primary-nav-position-top-center.has-primary-nav,
+  .ancillary-header-third-nav-position-top-center.has-third-nav,
   .ancillary-header-secondary-nav-position-top-center.has-secondary-nav,
   .ancillary-header-social-position-top-center.has-social,
   .ancillary-header-search-position-top-center,
   .ancillary-header-cart-position-top-center.has-cart,
-  .ancillary-header-account-position-top-center.has-user-accounts,
   .ancillary-header-branding-position-top-right,
   .ancillary-header-tagline-position-top-right.has-tagline,
   .ancillary-header-primary-nav-position-top-right.has-primary-nav,
+  .ancillary-header-third-nav-position-top-right.has-third-nav,
   .ancillary-header-secondary-nav-position-top-right.has-secondary-nav,
   .ancillary-header-social-position-top-right.has-social,
   .ancillary-header-search-position-top-right,
-  .ancillary-header-cart-position-top-right.has-cart,
-  .ancillary-header-account-position-top-right.has-user-accounts {
+  .ancillary-header-cart-position-top-right.has-cart {
     [data-nc-base="header"] [data-nc-group="top"] {
       .nc-parent;
     }
@@ -225,27 +225,27 @@
   .ancillary-header-branding-position-bottom-left,
   .ancillary-header-tagline-position-bottom-left.has-tagline,
   .ancillary-header-primary-nav-position-bottom-left.has-primary-nav,
+  .ancillary-header-third-nav-position-bottom-left.has-third-nav,
   .ancillary-header-secondary-nav-position-bottom-left.has-secondary-nav,
   .ancillary-header-social-position-bottom-left.has-social,
   .ancillary-header-search-position-bottom-left,
   .ancillary-header-cart-position-bottom-left.has-cart,
-  .ancillary-header-account-position-bottom-left.has-user-accounts,
   .ancillary-header-branding-position-bottom-center,
   .ancillary-header-tagline-position-bottom-center.has-tagline,
   .ancillary-header-primary-nav-position-bottom-center.has-primary-nav,
+  .ancillary-header-third-nav-position-bottom-center.has-third-nav,
   .ancillary-header-secondary-nav-position-bottom-center.has-secondary-nav,
   .ancillary-header-social-position-bottom-center.has-social,
   .ancillary-header-search-position-bottom-center,
   .ancillary-header-cart-position-bottom-center.has-cart,
-  .ancillary-header-account-position-bottom-center.has-user-accounts,
   .ancillary-header-branding-position-bottom-right,
   .ancillary-header-tagline-position-bottom-right.has-tagline,
   .ancillary-header-primary-nav-position-bottom-right.has-primary-nav,
+  .ancillary-header-third-nav-position-bottom-right.has-third-nav,
   .ancillary-header-secondary-nav-position-bottom-right.has-secondary-nav,
   .ancillary-header-social-position-bottom-right.has-social,
   .ancillary-header-search-position-bottom-right,
-  .ancillary-header-cart-position-bottom-right.has-cart,
-  .ancillary-header-account-position-bottom-right.has-user-accounts {
+  .ancillary-header-cart-position-bottom-right.has-cart {
     [data-nc-base="header"] [data-nc-group="bottom"] {
       .nc-parent;
     }
@@ -257,11 +257,11 @@
   [data-nc-element="branding"] { .nc-order(1); }
   [data-nc-element="search"] { .nc-order(2); }
   [data-nc-element="primary-nav"] { .nc-order(3); }
+  [data-nc-element="third-nav"] { .nc-order(3); }
   [data-nc-element="secondary-nav"] { .nc-order(4); }
   [data-nc-element="tagline"] { .nc-order(5); }
   [data-nc-element="social"] { .nc-order(6); }
-  [data-nc-element="account"] { .nc-order(7); }
-  [data-nc-element="cart"] { .nc-order(8); }
+  [data-nc-element="cart"] { .nc-order(7); }
   .nc-display(hide);
 }
 .ancillary-header-top-left-layout-stacked [data-nc-base="header"] [data-nc-container="top-left"] {
@@ -274,11 +274,11 @@
 .ancillary-header-branding-position-top-left,
 .ancillary-header-tagline-position-top-left.has-tagline,
 .ancillary-header-primary-nav-position-top-left.has-primary-nav,
+.ancillary-header-third-nav-position-top-left.has-third-nav,
 .ancillary-header-secondary-nav-position-top-left.has-secondary-nav,
 .ancillary-header-social-position-top-left.has-social,
 .ancillary-header-search-position-top-left,
-.ancillary-header-cart-position-top-left.has-cart,
-.ancillary-header-account-position-top-left.has-user-accounts {
+.ancillary-header-cart-position-top-left.has-cart {
   [data-nc-base="header"] [data-nc-container="top-left"] {
     .nc-display(show);
   }
@@ -287,12 +287,12 @@
   .nc-justify(center);
   [data-nc-element="tagline"] { .nc-order(1); }
   [data-nc-element="primary-nav"] { .nc-order(2); }
+  [data-nc-element="third-nav"] { .nc-order(2); }
   [data-nc-element="branding"] { .nc-order(3); }
   [data-nc-element="secondary-nav"] { .nc-order(4); }
   [data-nc-element="social"] { .nc-order(5); }
   [data-nc-element="search"] { .nc-order(6); }
-  [data-nc-element="account"] { .nc-order(7); }
-  [data-nc-element="cart"] { .nc-order(8); }
+  [data-nc-element="cart"] { .nc-order(7); }
   .nc-display(hide);
 }
 .ancillary-header-top-center-layout-stacked [data-nc-base="header"] [data-nc-container="top-center"] {
@@ -305,18 +305,18 @@
 .ancillary-header-branding-position-top-center,
 .ancillary-header-tagline-position-top-center.has-tagline,
 .ancillary-header-primary-nav-position-top-center.has-primary-nav,
+.ancillary-header-third-nav-position-top-center.has-third-nav,
 .ancillary-header-secondary-nav-position-top-center.has-secondary-nav,
 .ancillary-header-social-position-top-center.has-social,
 .ancillary-header-search-position-top-center,
-.ancillary-header-cart-position-top-center.has-cart,
-.ancillary-header-account-position-top-center.has-user-accounts {
+.ancillary-header-cart-position-top-center.has-cart {
   [data-nc-base="header"] [data-nc-container="top-center"] {
     .nc-display(show);
   }
   [data-nc-base="header"] [data-nc-group="top"] { .nc-parent-center; }
   [data-nc-base="header"] [data-nc-container="top-left"] { .nc-display(show); }
   [data-nc-base="header"] [data-nc-container="top-right"] { .nc-display(show); }
-  &:not(.ancillary-header-branding-position-top-left):not(.ancillary-header-branding-position-top-right):not(.ancillary-header-tagline-position-top-left.has-tagline):not(.ancillary-header-tagline-position-top-right.has-tagline):not(.ancillary-header-primary-nav-position-top-left.has-primary-nav):not(.ancillary-header-primary-nav-position-top-right.has-primary-nav):not(.ancillary-header-secondary-nav-position-top-left.has-secondary-nav):not(.ancillary-header-secondary-nav-position-top-right.has-secondary-nav):not(.ancillary-header-social-position-top-left.has-social):not(.ancillary-header-social-position-top-right.has-social):not(.ancillary-header-search-position-top-left):not(.ancillary-header-search-position-top-right):not(.ancillary-header-cart-position-top-left.has-cart):not(.ancillary-header-cart-position-top-right.has-cart) {
+  &:not(.ancillary-header-branding-position-top-left):not(.ancillary-header-branding-position-top-right):not(.ancillary-header-tagline-position-top-left.has-tagline):not(.ancillary-header-tagline-position-top-right.has-tagline):not(.ancillary-header-primary-nav-position-top-left.has-primary-nav):not(.ancillary-header-primary-nav-position-top-right.has-primary-nav):not(.ancillary-header-third-nav-position-top-left.has-third-nav):not(.ancillary-header-third-nav-position-top-right.has-third-nav):not(.ancillary-header-secondary-nav-position-top-left.has-secondary-nav):not(.ancillary-header-secondary-nav-position-top-right.has-secondary-nav):not(.ancillary-header-social-position-top-left.has-social):not(.ancillary-header-social-position-top-right.has-social):not(.ancillary-header-search-position-top-left):not(.ancillary-header-search-position-top-right):not(.ancillary-header-cart-position-top-left.has-cart):not(.ancillary-header-cart-position-top-right.has-cart) {
     [data-nc-base="header"] [data-nc-container="top-left"] { .nc-display(hide); }
     [data-nc-base="header"] [data-nc-container="top-right"] { .nc-display(hide); }
   }
@@ -334,39 +334,26 @@
   &.ancillary-header-secondary-nav-position-top-center.ancillary-header-cart-position-top-center {
     [data-nc-base="header"] [data-nc-element="secondary-nav"] { .nc-order(2); }
   }
-  &.ancillary-header-secondary-nav-position-top-center.ancillary-header-account-position-top-center {
-    [data-nc-base="header"] [data-nc-element="secondary-nav"] { .nc-order(2); }
-  }
   &.ancillary-header-social-position-top-center.ancillary-header-search-position-top-center {
     [data-nc-base="header"] [data-nc-element="social"] { .nc-order(2); }
   }
   &.ancillary-header-social-position-top-center.ancillary-header-cart-position-top-center {
     [data-nc-base="header"] [data-nc-element="social"] { .nc-order(2); }
   }
-  &.ancillary-header-social-position-top-center.ancillary-header-account-position-top-center {
-    [data-nc-base="header"] [data-nc-element="social"] { .nc-order(2); }
-  }
   &.ancillary-header-search-position-top-center.ancillary-header-cart-position-top-center {
     [data-nc-base="header"] [data-nc-element="search"] { .nc-order(2); }
-  }
-  &.ancillary-header-search-position-top-center.ancillary-header-account-position-top-center {
-    [data-nc-base="header"] [data-nc-element="search"] { .nc-order(2); }
-  }
-  &.ancillary-header-cart-position-top-center.ancillary-header-account-position-top-center {
-    [data-nc-base="header"] [data-nc-element="cart"] { .nc-order(2); }
-    [data-nc-base="header"] [data-nc-element="account"] { .nc-order(2); }
   }
 }
 [data-nc-base="header"] [data-nc-container="top-right"] {
   .nc-justify(right);
   [data-nc-element="tagline"] { .nc-order(1); }
   [data-nc-element="primary-nav"] { .nc-order(2); }
+  [data-nc-element="third-nav"] { .nc-order(2); }
   [data-nc-element="secondary-nav"] { .nc-order(3); }
   [data-nc-element="social"] { .nc-order(4); }
   [data-nc-element="search"] { .nc-order(5); }
   [data-nc-element="branding"] { .nc-order(6); }
-  [data-nc-element="account"] { .nc-order(7); }
-  [data-nc-element="cart"] { .nc-order(8); }
+  [data-nc-element="cart"] { .nc-order(7); }
   .nc-display(hide);
 }
 .ancillary-header-top-right-layout-stacked [data-nc-base="header"] [data-nc-container="top-right"] {
@@ -379,11 +366,11 @@
 .ancillary-header-branding-position-top-right,
 .ancillary-header-tagline-position-top-right.has-tagline,
 .ancillary-header-primary-nav-position-top-right.has-primary-nav,
+.ancillary-header-third-nav-position-top-right.has-third-nav,
 .ancillary-header-secondary-nav-position-top-right.has-secondary-nav,
 .ancillary-header-social-position-top-right.has-social,
 .ancillary-header-search-position-top-right,
-.ancillary-header-cart-position-top-right.has-cart,
-.ancillary-header-account-position-top-right.has-user-accounts {
+.ancillary-header-cart-position-top-right.has-cart {
   [data-nc-base="header"] [data-nc-container="top-right"] {
     .nc-display(show);
   }
@@ -393,11 +380,11 @@
   [data-nc-element="branding"] { .nc-order(1); }
   [data-nc-element="search"] { .nc-order(2); }
   [data-nc-element="primary-nav"] { .nc-order(3); }
+  [data-nc-element="third-nav"] { .nc-order(3); }
   [data-nc-element="secondary-nav"] { .nc-order(4); }
   [data-nc-element="tagline"] { .nc-order(5); }
   [data-nc-element="social"] { .nc-order(6); }
-  [data-nc-element="account"] { .nc-order(7); }
-  [data-nc-element="cart"] { .nc-order(8); }
+  [data-nc-element="cart"] { .nc-order(7); }
   .nc-display(hide);
 }
 .ancillary-header-bottom-left-layout-stacked [data-nc-base="header"] [data-nc-container="bottom-left"] {
@@ -410,11 +397,11 @@
 .ancillary-header-branding-position-bottom-left,
 .ancillary-header-tagline-position-bottom-left.has-tagline,
 .ancillary-header-primary-nav-position-bottom-left.has-primary-nav,
+.ancillary-header-third-nav-position-bottom-left.has-third-nav,
 .ancillary-header-secondary-nav-position-bottom-left.has-secondary-nav,
 .ancillary-header-social-position-bottom-left.has-social,
 .ancillary-header-search-position-bottom-left,
-.ancillary-header-cart-position-bottom-left.has-cart,
-.ancillary-header-account-position-bottom-left.has-user-accounts {
+.ancillary-header-cart-position-bottom-left.has-cart {
   [data-nc-base="header"] [data-nc-container="bottom-left"] {
     .nc-display(show);
   }
@@ -423,12 +410,12 @@
   .nc-justify(center);
   [data-nc-element="tagline"] { .nc-order(1); }
   [data-nc-element="primary-nav"] { .nc-order(2); }
+  [data-nc-element="third-nav"] { .nc-order(2); }
   [data-nc-element="branding"] { .nc-order(3); }
   [data-nc-element="secondary-nav"] { .nc-order(4); }
   [data-nc-element="social"] { .nc-order(5); }
   [data-nc-element="search"] { .nc-order(6); }
-  [data-nc-element="account"] { .nc-order(7); }
-  [data-nc-element="cart"] { .nc-order(8); }
+  [data-nc-element="cart"] { .nc-order(7); }
   .nc-display(hide);
 }
 .ancillary-header-bottom-center-layout-stacked [data-nc-base="header"] [data-nc-container="bottom-center"] {
@@ -441,18 +428,18 @@
 .ancillary-header-branding-position-bottom-center,
 .ancillary-header-tagline-position-bottom-center.has-tagline,
 .ancillary-header-primary-nav-position-bottom-center.has-primary-nav,
+.ancillary-header-third-nav-position-bottom-center.has-third-nav,
 .ancillary-header-secondary-nav-position-bottom-center.has-secondary-nav,
 .ancillary-header-social-position-bottom-center.has-social,
 .ancillary-header-search-position-bottom-center,
-.ancillary-header-cart-position-bottom-center.has-cart,
-.ancillary-header-account-position-bottom-center.has-user-accounts {
+.ancillary-header-cart-position-bottom-center.has-cart {
   [data-nc-base="header"] [data-nc-container="bottom-center"] {
     .nc-display(show);
   }
   [data-nc-base="header"] [data-nc-group="bottom"] { .nc-parent-center; }
   [data-nc-base="header"] [data-nc-container="bottom-left"] { .nc-display(show); }
   [data-nc-base="header"] [data-nc-container="bottom-right"] { .nc-display(show); }
-  &:not(.ancillary-header-branding-position-bottom-left):not(.ancillary-header-branding-position-bottom-right):not(.ancillary-header-tagline-position-bottom-left.has-tagline):not(.ancillary-header-tagline-position-bottom-right.has-tagline):not(.ancillary-header-primary-nav-position-bottom-left.has-primary-nav):not(.ancillary-header-primary-nav-position-bottom-right.has-primary-nav):not(.ancillary-header-secondary-nav-position-bottom-left.has-secondary-nav):not(.ancillary-header-secondary-nav-position-bottom-right.has-secondary-nav):not(.ancillary-header-social-position-bottom-left.has-social):not(.ancillary-header-social-position-bottom-right.has-social):not(.ancillary-header-search-position-bottom-left):not(.ancillary-header-search-position-bottom-right):not(.ancillary-header-cart-position-bottom-left.has-cart):not(.ancillary-header-cart-position-bottom-right.has-cart) {
+  &:not(.ancillary-header-branding-position-bottom-left):not(.ancillary-header-branding-position-bottom-right):not(.ancillary-header-tagline-position-bottom-left.has-tagline):not(.ancillary-header-tagline-position-bottom-right.has-tagline):not(.ancillary-header-primary-nav-position-bottom-left.has-primary-nav):not(.ancillary-header-primary-nav-position-bottom-right.has-primary-nav):not(.ancillary-header-third-nav-position-bottom-left.has-third-nav):not(.ancillary-header-third-nav-position-bottom-right.has-third-nav):not(.ancillary-header-secondary-nav-position-bottom-left.has-secondary-nav):not(.ancillary-header-secondary-nav-position-bottom-right.has-secondary-nav):not(.ancillary-header-social-position-bottom-left.has-social):not(.ancillary-header-social-position-bottom-right.has-social):not(.ancillary-header-search-position-bottom-left):not(.ancillary-header-search-position-bottom-right):not(.ancillary-header-cart-position-bottom-left.has-cart):not(.ancillary-header-cart-position-bottom-right.has-cart) {
     [data-nc-base="header"] [data-nc-container="bottom-left"] { .nc-display(hide); }
     [data-nc-base="header"] [data-nc-container="bottom-right"] { .nc-display(hide); }
    }
@@ -470,38 +457,26 @@
   &.ancillary-header-secondary-nav-position-bottom-center.ancillary-header-cart-position-bottom-center {
     [data-nc-base="header"] [data-nc-element="secondary-nav"] { .nc-order(2); }
   }
-  &.ancillary-header-secondary-nav-position-bottom-center.ancillary-header-account-position-bottom-center {
-    [data-nc-base="header"] [data-nc-element="secondary-nav"] { .nc-order(2); }
-  }
   &.ancillary-header-social-position-bottom-center.ancillary-header-search-position-bottom-center {
     [data-nc-base="header"] [data-nc-element="social"] { .nc-order(2); }
   }
   &.ancillary-header-social-position-bottom-center.ancillary-header-cart-position-bottom-center {
     [data-nc-base="header"] [data-nc-element="social"] { .nc-order(2); }
   }
-  &.ancillary-header-social-position-bottom-center.ancillary-header-account-position-bottom-center {
-    [data-nc-base="header"] [data-nc-element="social"] { .nc-order(2); }
-  }
   &.ancillary-header-search-position-bottom-center.ancillary-header-cart-position-bottom-center {
     [data-nc-base="header"] [data-nc-element="search"] { .nc-order(2); }
-  }
-  &.ancillary-header-search-position-bottom-center.ancillary-header-account-position-bottom-center {
-    [data-nc-base="header"] [data-nc-element="search"] { .nc-order(2); }
-  }
-  &.ancillary-header-cart-position-bottom-center.ancillary-header-account-position-bottom-center {
-    [data-nc-base="header"] [data-nc-element="cart"] { .nc-order(2); }
   }
 }
 [data-nc-base="header"] [data-nc-container="bottom-right"] {
   .nc-justify(right);
   [data-nc-element="tagline"] { .nc-order(1); }
   [data-nc-element="primary-nav"] { .nc-order(2); }
+  [data-nc-element="third-nav"] { .nc-order(2); }
   [data-nc-element="secondary-nav"] { .nc-order(3); }
   [data-nc-element="social"] { .nc-order(4); }
   [data-nc-element="search"] { .nc-order(5); }
   [data-nc-element="branding"] { .nc-order(6); }
-  [data-nc-element="account"] { .nc-order(7); }
-  [data-nc-element="cart"] { .nc-order(8); }
+  [data-nc-element="cart"] { .nc-order(7); }
   .nc-display(hide);
 }
 .ancillary-header-bottom-right-layout-stacked [data-nc-base="header"] [data-nc-container="bottom-right"] {
@@ -514,11 +489,11 @@
 .ancillary-header-branding-position-bottom-right,
 .ancillary-header-tagline-position-bottom-right.has-tagline,
 .ancillary-header-primary-nav-position-bottom-right.has-primary-nav,
+.ancillary-header-third-nav-position-bottom-right.has-third-nav,
 .ancillary-header-secondary-nav-position-bottom-right.has-secondary-nav,
 .ancillary-header-social-position-bottom-right.has-social,
 .ancillary-header-search-position-bottom-right,
-.ancillary-header-cart-position-bottom-right.has-cart,
-.ancillary-header-account-position-bottom-right.has-user-accounts {
+.ancillary-header-cart-position-bottom-right.has-cart {
   [data-nc-base="header"] [data-nc-container="bottom-right"] {
     .nc-display(show);
   }
@@ -538,15 +513,13 @@
   [data-nc-element="menu-icon"] { .nc-order(1); }
   [data-nc-element="branding"] { .nc-order(2); }
   [data-nc-element="search-icon"] { .nc-order(3); }
-  [data-nc-element="account"] { .nc-order(4); }
-  [data-nc-element="cart"] { .nc-order(5); }
+  [data-nc-element="cart"] { .nc-order(4); }
   .nc-display(hide);
 }
 .ancillary-mobile-bar-branding-position-top-left,
 .ancillary-mobile-bar-search-icon-position-top-left,
 .ancillary-mobile-bar-menu-icon-position-top-left,
-.ancillary-mobile-bar-cart-position-top-left.has-cart,
-.ancillary-mobile-bar-account-position-top-left.has-user-accounts {
+.ancillary-mobile-bar-cart-position-top-left.has-cart {
   [data-nc-base="mobile-bar"] [data-nc-container="top-left"] {
     .nc-display(show);
   }
@@ -556,22 +529,20 @@
   [data-nc-element="menu-icon"] { .nc-order(1); }
   [data-nc-element="branding"] { .nc-order(2); }
   [data-nc-element="search-icon"] { .nc-order(3); }
-  [data-nc-element="account"] { .nc-order(4); }
-  [data-nc-element="cart"] { .nc-order(5); }
+  [data-nc-element="cart"] { .nc-order(4); }
   .nc-display(hide);
 }
 .ancillary-mobile-bar-branding-position-top-center,
 .ancillary-mobile-bar-search-icon-position-top-center,
 .ancillary-mobile-bar-menu-icon-position-top-center,
-.ancillary-mobile-bar-cart-position-top-center.has-cart,
-.ancillary-mobile-bar-account-position-top-center.has-user-accounts {
+.ancillary-mobile-bar-cart-position-top-center.has-cart {
   [data-nc-base="mobile-bar"] [data-nc-container="top-center"] {
     .nc-display(show);
   }
   [data-nc-base="mobile-bar"] [data-nc-group="top"] { .nc-parent-center; }
   [data-nc-base="mobile-bar"] [data-nc-container="top-left"] { .nc-display(show); }
   [data-nc-base="mobile-bar"] [data-nc-container="top-right"] { .nc-display(show); }
-  &:not(.ancillary-mobile-bar-branding-position-top-left):not(.ancillary-mobile-bar-branding-position-top-right):not(.ancillary-mobile-bar-search-icon-position-top-left):not(.ancillary-mobile-bar-search-icon-position-top-right):not(.ancillary-mobile-bar-menu-icon-position-top-left):not(.ancillary-mobile-bar-menu-icon-position-top-right):not(.ancillary-mobile-bar-cart-position-top-left.has-cart):not(.ancillary-mobile-bar-cart-position-top-right.has-cart):not(.ancillary-mobile-bar-account-position-top-left.has-user-accounts):not(.ancillary-mobile-bar-account-position-top-right.has-user-accounts) {
+  &:not(.ancillary-mobile-bar-branding-position-top-left):not(.ancillary-mobile-bar-branding-position-top-right):not(.ancillary-mobile-bar-search-icon-position-top-left):not(.ancillary-mobile-bar-search-icon-position-top-right):not(.ancillary-mobile-bar-menu-icon-position-top-left):not(.ancillary-mobile-bar-menu-icon-position-top-right):not(.ancillary-mobile-bar-cart-position-top-left.has-cart):not(.ancillary-mobile-bar-cart-position-top-right.has-cart) {
     [data-nc-base="mobile-bar"] [data-nc-container="top-left"] { .nc-display(hide); }
     [data-nc-base="mobile-bar"] [data-nc-container="top-right"] { .nc-display(hide); }
    }
@@ -584,17 +555,15 @@
 [data-nc-base="mobile-bar"] [data-nc-container="top-right"] {
   .nc-justify(right);
   [data-nc-element="search-icon"] { .nc-order(1); }
-  [data-nc-element="account"] { .nc-order(2); }
-  [data-nc-element="cart"] { .nc-order(3); }
-  [data-nc-element="branding"] { .nc-order(4); }
-  [data-nc-element="menu-icon"] { .nc-order(5); }
+  [data-nc-element="cart"] { .nc-order(2); }
+  [data-nc-element="branding"] { .nc-order(3); }
+  [data-nc-element="menu-icon"] { .nc-order(4); }
   .nc-display(hide);
 }
 .ancillary-mobile-bar-branding-position-top-right,
 .ancillary-mobile-bar-search-icon-position-top-right,
 .ancillary-mobile-bar-menu-icon-position-top-right,
-.ancillary-mobile-bar-cart-position-top-right.has-cart,
-.ancillary-mobile-bar-account-position-top-right.has-user-accounts {
+.ancillary-mobile-bar-cart-position-top-right.has-cart {
   [data-nc-base="mobile-bar"] [data-nc-container="top-right"] {
     .nc-display(show);
   }
@@ -604,15 +573,13 @@
   [data-nc-element="menu-icon"] { .nc-order(1); }
   [data-nc-element="branding"] { .nc-order(2); }
   [data-nc-element="search-icon"] { .nc-order(3); }
-  [data-nc-element="account"] { .nc-order(4); }
-  [data-nc-element="cart"] { .nc-order(5); }
+  [data-nc-element="cart"] { .nc-order(4); }
   .nc-display(hide);
 }
 .ancillary-mobile-bar-branding-position-bottom-left,
 .ancillary-mobile-bar-search-icon-position-bottom-left,
 .ancillary-mobile-bar-menu-icon-position-bottom-left,
-.ancillary-mobile-bar-cart-position-bottom-left.has-cart,
-.ancillary-mobile-bar-account-position-bottom-left.has-user-accounts {
+.ancillary-mobile-bar-cart-position-bottom-left.has-cart {
   [data-nc-base="mobile-bar"] [data-nc-container="bottom-left"] {
     .nc-display(show);
   }
@@ -622,22 +589,20 @@
   [data-nc-element="menu-icon"] { .nc-order(1); }
   [data-nc-element="branding"] { .nc-order(2); }
   [data-nc-element="search-icon"] { .nc-order(3); }
-  [data-nc-element="account"] { .nc-order(4); }
-  [data-nc-element="cart"] { .nc-order(5); }
+  [data-nc-element="cart"] { .nc-order(4); }
   .nc-display(hide);
 }
 .ancillary-mobile-bar-branding-position-bottom-center,
 .ancillary-mobile-bar-search-icon-position-bottom-center,
 .ancillary-mobile-bar-menu-icon-position-bottom-center,
-.ancillary-mobile-bar-cart-position-bottom-center.has-cart,
-.ancillary-mobile-bar-account-position-bottom-center.has-user-accounts {
+.ancillary-mobile-bar-cart-position-bottom-center.has-cart {
   [data-nc-base="mobile-bar"] [data-nc-container="bottom-center"] {
     .nc-display(show);
   }
   [data-nc-base="mobile-bar"] [data-nc-group="bottom"] { .nc-parent-center; }
   [data-nc-base="mobile-bar"] [data-nc-container="bottom-left"] { .nc-display(show); }
   [data-nc-base="mobile-bar"] [data-nc-container="bottom-right"] { .nc-display(show); }
-  &:not(.ancillary-mobile-bar-branding-position-bottom-left):not(.ancillary-mobile-bar-branding-position-bottom-right):not(.ancillary-mobile-bar-search-icon-position-bottom-left):not(.ancillary-mobile-bar-search-icon-position-bottom-right):not(.ancillary-mobile-bar-menu-icon-position-bottom-left):not(.ancillary-mobile-bar-menu-icon-position-bottom-right):not(.ancillary-mobile-bar-cart-position-bottom-left.has-cart):not(.ancillary-mobile-bar-cart-position-bottom-right.has-cart):not(.ancillary-mobile-bar-account-position-bottom-left.has-user-accounts):not(.ancillary-mobile-bar-account-position-bottom-right.has-user-accounts) {
+  &:not(.ancillary-mobile-bar-branding-position-bottom-left):not(.ancillary-mobile-bar-branding-position-bottom-right):not(.ancillary-mobile-bar-search-icon-position-bottom-left):not(.ancillary-mobile-bar-search-icon-position-bottom-right):not(.ancillary-mobile-bar-menu-icon-position-bottom-left):not(.ancillary-mobile-bar-menu-icon-position-bottom-right):not(.ancillary-mobile-bar-cart-position-bottom-left.has-cart):not(.ancillary-mobile-bar-cart-position-bottom-right.has-cart) {
     [data-nc-base="mobile-bar"] [data-nc-container="bottom-left"] { .nc-display(hide); }
     [data-nc-base="mobile-bar"] [data-nc-container="bottom-right"] { .nc-display(hide); }
    }
@@ -650,17 +615,15 @@
 [data-nc-base="mobile-bar"] [data-nc-container="bottom-right"] {
   .nc-justify(right);
   [data-nc-element="search-icon"] { .nc-order(1); }
-  [data-nc-element="account"] { .nc-order(2); }
-  [data-nc-element="cart"] { .nc-order(3); }
-  [data-nc-element="branding"] { .nc-order(4); }
-  [data-nc-element="menu-icon"] { .nc-order(5); }
+  [data-nc-element="cart"] { .nc-order(2); }
+  [data-nc-element="branding"] { .nc-order(3); }
+  [data-nc-element="menu-icon"] { .nc-order(4); }
   .nc-display(hide);
 }
 .ancillary-mobile-bar-branding-position-bottom-right,
 .ancillary-mobile-bar-search-icon-position-bottom-right,
 .ancillary-mobile-bar-menu-icon-position-bottom-right,
-.ancillary-mobile-bar-cart-position-bottom-right.has-cart,
-.ancillary-mobile-bar-account-position-bottom-right.has-user-accounts {
+.ancillary-mobile-bar-cart-position-bottom-right.has-cart {
   [data-nc-base="mobile-bar"] [data-nc-container="bottom-right"] {
     .nc-display(show);
   }

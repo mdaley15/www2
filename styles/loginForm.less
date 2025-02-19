@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box!important;
+}
+.loginBox {
+    position: absolute !important;
+    width: 100%;
+    background-color: rgba(255, 255, 255, .7);
+    left: 0;
+    box-shadow: 0 3px 5px @primary!important;
+    z-index: 9;
+    
+    .loginHeader {
+        padding: 10px;
+        
+        h2 {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: @primary;
+            padding: 0;
+            text-align: center;
+            line-height: 1.1;
+            text-transform: uppercase;
+            
+            i {
+                color: @secondary;
+                text-shadow: 3px 3px 3px @primary;
+                transition: all .4s ease-in-out!important;
+                -webkit-transition: all .4s ease-in-out!important;
+            }
+        }
+    }
+    .loginContent {
+        padding: 0 10px;
+        
+        .loginInputs {
+            display: flex;
+            
+            .inputWrap {
+                flex-grow: 1;
+                
+                .inputButton {
+                    font-size: 16px !important;
+                    font-weight: 600;
+                    color: @primary;
+                    background-color: transparent;
+                    border: 1px solid @primary;
+                    padding: 5px;
+                    margin: 0 0 8px 0!important;
+                    border-radius: 3px;
+                    width: 100%;
+                    line-height: 1.2em !important;
+                    text-align: left;
+                    
+                    &::placeholder,
+                    &::-webkit-input-placeholder {
+                        color: rgba(0, 0, 0, .6)!important;
+                    }
+                }
+                &.inputOne {
+                    padding-right: 4px;
+                    
+                    input {
+                        border-radius: 10px 3px 3px 10px;
+                    }
+                }
+                &.inputTwo {
+                    padding-left: 4px;
+                    
+                    input {
+                        border-radius: 3px 10px 10px 3px;
+                    }
+                }
+            }
+        }
+        .button {
+            width: 100%;
+            display: block;
+        }
+        .textLinkWrap {
+            line-height: 0;
+            padding: 10px 0;
+            
+            .textLink {
+                color: @primary;
+                line-height: 1;
+                font-size: 12px;
+                position: relative;
+                left: 0;
+                transition: left .6s;
+                
+                .textLink i {
+                    color: @secondary!important;
+                }
+                &:hover {
+                    left: 10px;
+                }
+            }
+        }
+        .socialIcons {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            max-width: 280px;
+            margin: 0 auto;
+            
+            svg {
+                width: 40px;
+                height: 40px;
+                display: block;
+                fill: @primary!important;
+                stroke: @primary!important;
+            }
+            &:hover svg {
+                fill: @secondary!important;
+                stroke: @secondary!important;
+            }
+        }
+        .Header-search-form-input {
+            display: none;
+            padding-bottom: 0!important;
+        }
+        .mobileApps {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            max-width: 280px;
+            margin: 0 auto;
+            
+            img {
+                max-width: 132px;
+                border-radius: 5px;
+                display: block;
+            }
+            &:hover,
+            &:focus {
+                img {
+                    box-shadow: 0 3px 3px @primary;
+                }
+            }
+        }
+        hr {
+            margin: 10px 0!important;
+        }
+    }
+}
+@media screen and (max-width: 1099px) {
+    .loginHeader {
+        cursor: pointer;
+    }
+    .loginContent {
+        display: none;
+    }
+}
+@media screen and (min-width: 1100px) {
+    .loginBox {
+        width: 300px;
+        left: 50px!important;
+        border-radius: 20px;
+        top: 179px!important;
+    }
+}

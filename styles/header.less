@@ -68,7 +68,6 @@
   .ancillary-header-social-position-top-left.has-social,
   .ancillary-header-search-position-top-left,
   .ancillary-header-cart-position-top-left.has-cart,
-  .ancillary-header-account-position-top-left.has-user-accounts,
   .ancillary-header-branding-position-top-center,
   .ancillary-header-tagline-position-top-center.has-tagline,
   .ancillary-header-primary-nav-position-top-center.has-primary-nav,
@@ -76,15 +75,13 @@
   .ancillary-header-social-position-top-center.has-social,
   .ancillary-header-search-position-top-center,
   .ancillary-header-cart-position-top-center.has-cart,
-  .ancillary-header-account-position-top-center.has-user-accounts,
   .ancillary-header-branding-position-top-right,
   .ancillary-header-tagline-position-top-right.has-tagline,
   .ancillary-header-primary-nav-position-top-right.has-primary-nav,
   .ancillary-header-secondary-nav-position-top-right.has-secondary-nav,
   .ancillary-header-social-position-top-right.has-social,
   .ancillary-header-search-position-top-right,
-  .ancillary-header-cart-position-top-right.has-cart,
-  .ancillary-header-account-position-top-right.has-user-accounts {
+  .ancillary-header-cart-position-top-right.has-cart {
 
     .Header--top { display: block; }
 
@@ -113,10 +110,10 @@
     // Overriding style set in site.less
     background: transparent;
 
-    // I would like the z-index here to be lower,
-    // but anything below 1000 makes causes dropdown menus 
-    // to be hidden behind image galleries.
-    z-index: 1000;
+    // I would like the z-index here to be 3,
+    // but anything below 10 makes the tweak
+    // overlay unclickable.
+    z-index: 10;
     width: 100%;
     .font-smoothing(@tweak-overlay-color);
   }
@@ -130,8 +127,9 @@
   }
 }
 
+// Show
 @media screen and (min-width: @tweak-mobile-breakpoint) {
-  
+
   .ancillary-header-branding-position-bottom-left,
   .ancillary-header-tagline-position-bottom-left.has-tagline,
   .ancillary-header-primary-nav-position-bottom-left.has-primary-nav,
@@ -139,7 +137,6 @@
   .ancillary-header-social-position-bottom-left.has-social,
   .ancillary-header-search-position-bottom-left,
   .ancillary-header-cart-position-bottom-left.has-cart,
-  .ancillary-header-account-position-bottom-left.has-user-accounts,
   .ancillary-header-branding-position-bottom-center,
   .ancillary-header-tagline-position-bottom-center.has-tagline,
   .ancillary-header-primary-nav-position-bottom-center.has-primary-nav,
@@ -147,15 +144,13 @@
   .ancillary-header-social-position-bottom-center.has-social,
   .ancillary-header-search-position-bottom-center,
   .ancillary-header-cart-position-bottom-center.has-cart,
-  .ancillary-header-account-position-bottom-center.has-user-accounts,
   .ancillary-header-branding-position-bottom-right,
   .ancillary-header-tagline-position-bottom-right.has-tagline,
   .ancillary-header-primary-nav-position-bottom-right.has-primary-nav,
   .ancillary-header-secondary-nav-position-bottom-right.has-secondary-nav,
   .ancillary-header-social-position-bottom-right.has-social,
   .ancillary-header-search-position-bottom-right,
-  .ancillary-header-cart-position-bottom-right.has-cart,
-  .ancillary-header-account-position-bottom-right.has-user-accounts {
+  .ancillary-header-cart-position-bottom-right.has-cart {
 
     .Header--bottom { display: block; }
 
@@ -271,17 +266,17 @@
 }
 .mixin-header-nav-style(@option) when (@option = fade) {
   .Header-nav-item:hover { .alpha-color(@link-color, 0.4); }
-  .Header-nav-folder-item:hover, .Header-nav-folder-item:focus-within { .alpha-color(@folder-link-color, 0.4); }
+  .Header-nav-folder-item:hover { .alpha-color(@folder-link-color, 0.4); }
 }
 .mixin-header-nav-style(@option) when (@option = spotlight) {
   &:hover .Header-nav-item { .alpha-color(@link-color, 0.4); }
   &:hover .Header-nav-item:hover { color: @link-color; }
   .Header-nav-folder-item { .alpha-color(@folder-link-color, 0.4); }
-  .Header-nav-folder-item:hover, .Header-nav-folder-item:focus-within { color: @folder-link-color; }
+  .Header-nav-folder-item:hover { color: @folder-link-color; }
 }
 .mixin-header-nav-style(@option) when (@option = active) {
   .Header-nav-item:hover { color: @active-link-color; }
-  .Header-nav-folder-item:hover, .Header-nav-folder-item:focus-within { color: @active-link-color; }
+  .Header-nav-folder-item:hover { color: @active-link-color; }
   .Header-nav-item--active,
   .Header-nav-folder-title--active,
   .Header-nav-folder-item--active {
@@ -410,6 +405,7 @@
 
   &-folder {
     .border-box();
+
     position: absolute;
     top: 100%;
     left: -99999px;
@@ -433,8 +429,7 @@
 
   }
 
-  &-item--folder:hover &-folder,
-  &-item--folder:focus-within &-folder:focus-within {
+  &-item--folder:hover &-folder {
     left: 0;
     opacity: 1;
     .transform(translate3d(0, 0, 0));
@@ -577,6 +572,92 @@
   }
 }
 
+body:not(.tweak-header-third-nav-inherit-styles) .Header-nav--third { .tweak-header-third-nav-font; }
+.tweak-header-third-nav-hover-style-plain:not(.tweak-header-third-nav-inherit-styles) {
+  .Header-nav--third {
+    .mixin-header-nav(right, regular, plain);
+  }
+  .Header--overlay .Header-nav--third,
+  &.tweak-header-bottom-overlay-on-index-gallery .Header--index-gallery .Header-nav--third {
+    .mixin-header-nav(right, overlay, plain);
+  }
+}
+.tweak-header-third-nav-hover-style-fade:not(.tweak-header-third-nav-inherit-styles) {
+  .Header-nav--third {
+    .mixin-header-nav(right, regular, fade);
+  }
+  .Header--overlay .Header-nav--third,
+  &.tweak-header-bottom-overlay-on-index-gallery .Header--index-gallery .Header-nav--third {
+    .mixin-header-nav(right, overlay, fade);
+  }
+}
+.tweak-header-third-nav-hover-style-spotlight:not(.tweak-header-third-nav-inherit-styles) {
+  .Header-nav--third {
+    .mixin-header-nav(right, regular, spotlight);
+  }
+  .Header--overlay .Header-nav--third,
+  &.tweak-header-bottom-overlay-on-index-gallery .Header--index-gallery .Header-nav--third {
+    .mixin-header-nav(right, overlay, spotlight);
+  }
+}
+.tweak-header-third-nav-hover-style-active:not(.tweak-header-third-nav-inherit-styles) {
+  .Header-nav--third {
+    .mixin-header-nav(right, regular, active);
+  }
+  .Header--overlay .Header-nav--third,
+  &.tweak-header-bottom-overlay-on-index-gallery .Header--index-gallery .Header-nav--third {
+    .mixin-header-nav(right, overlay, active);
+  }
+}
+.tweak-header-third-nav-hover-style-button:not(.tweak-header-third-nav-inherit-styles) {
+  .Header-nav--third {
+    .mixin-header-nav-style-button();
+  }
+
+  // Shape
+  &.tweak-header-third-nav-button-shape-square .Header-nav--third {
+    .mixin-header-nav-button-shape(square);
+  }
+  &.tweak-header-third-nav-button-shape-rounded .Header-nav--third {
+    .mixin-header-nav-button-shape(rounded);
+  }
+  &.tweak-header-third-nav-button-shape-pill .Header-nav--third {
+    .mixin-header-nav-button-shape(pill);
+  }
+
+  // Style
+  &.tweak-header-third-nav-button-style-solid {
+    .Header-nav--third {
+      .mixin-header-nav(right, regular, button, solid);
+      .mixin-header-nav-button-style(solid);
+    }
+    .Header--overlay .Header-nav--third,
+    &.tweak-header-bottom-overlay-on-index-gallery .Header--index-gallery .Header-nav--third {
+      .mixin-header-nav(right, overlay, button, solid);
+    }
+  }
+  &.tweak-header-third-nav-button-style-outline {
+    .Header-nav--third {
+      .mixin-header-nav(right, regular, button, outline);
+      .mixin-header-nav-button-style(outline);
+    }
+    .Header--overlay .Header-nav--third,
+    &.tweak-header-bottom-overlay-on-index-gallery .Header--index-gallery .Header-nav--third {
+      .mixin-header-nav(right, overlay, button, outline);
+    }
+  }
+  &.tweak-header-third-nav-button-style-raised {
+    .Header-nav--third {
+      .mixin-header-nav(right, regular, button, raised);
+      .mixin-header-nav-button-style(raised);
+    }
+    .Header--overlay .Header-nav--third,
+    &.tweak-header-bottom-overlay-on-index-gallery .Header--index-gallery .Header-nav--third {
+      .mixin-header-nav(right, overlay, button, raised);
+    }
+  }
+}
+
 body:not(.tweak-header-secondary-nav-inherit-styles) .Header-nav--secondary { .tweak-header-secondary-nav-font; }
 .tweak-header-secondary-nav-hover-style-plain:not(.tweak-header-secondary-nav-inherit-styles) {
   .Header-nav--secondary {
@@ -669,15 +750,29 @@ body:not(.tweak-header-secondary-nav-inherit-styles) .Header-nav--secondary { .t
 
 .tweak-header-primary-nav-hover-style-button {
   .Header-nav--primary .Header-nav-item,
-  &.tweak-header-secondary-nav-inherit-styles .Header-nav--secondary .Header-nav-item {
+  &.tweak-header-secondary-nav-inherit-styles .Header-nav--secondary .Header-nav-item,
+  &.tweak-header-third-nav-inherit-styles .Header-nav--third .Header-nav-item {
     padding: 12px 18px;
     margin: 0.618em @tweak-header-primary-nav-link-spacing;
   }
 }
 body:not(.tweak-header-primary-nav-hover-style-button) {
   .Header-nav--primary .Header-nav-item,
+  &.tweak-header-third-nav-inherit-styles .Header-nav--third .Header-nav-item,
   &.tweak-header-secondary-nav-inherit-styles .Header-nav--secondary .Header-nav-item {
     margin: 0 @tweak-header-primary-nav-link-spacing;
+    padding: 0.618em 0;
+  }
+}
+.tweak-header-third-nav-hover-style-button:not(.tweak-header-third-nav-inherit-styles) {
+  .Header-nav--third .Header-nav-item {
+    padding: 12px 18px;
+    margin: 0.618em @tweak-header-third-nav-link-spacing;
+  }
+}
+body:not(.tweak-header-third-nav-hover-style-button):not(.tweak-header-third-nav-inherit-styles) {
+  .Header-nav--third .Header-nav-item {
+    margin: 0 @tweak-header-third-nav-link-spacing;
     padding: 0.618em 0;
   }
 }
@@ -857,67 +952,5 @@ body:not(.tweak-header-secondary-nav-hover-style-button):not(.tweak-header-secon
 }
 
 
-
-
-
-
-// =======================================================
-
-//    User Accounts
-
-// =======================================================
-
-.Header-account {
-  .tweak-header-account-font;
-  line-height: 1em;
-
-  .user-accounts-text-link {
-    display: none;
-    .tweak-header-account-font;
-    line-height: 1em;
-    // Override
-    outline: 0;
-    background: transparent;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    color: @tweak-header-account-color;
-  }
-
-  .user-accounts-icon {
-    display: none;
-    stroke: @tweak-header-account-icon-color;
-		fill: none;
-		overflow: visible;
-
-    .Icon--user-accounts {
-      display: block;
-      width: 28px;
-      height: 28px;
-    }
-  }
-
-  .Header--overlay & {
-    .user-accounts-text-link {
-      color: @tweak-header-overlay-account-color;
-    }
-
-    .user-accounts-icon {
-      stroke: @tweak-header-overlay-account-icon-color;
-    }
-  }
-
-  .tweak-header-account-style-text & {
-    &.loaded .user-accounts-text-link {
-      display: inline-block;
-    }
-  }
-
-  .tweak-header-account-style-icon & {
-    .user-accounts-icon {
-      display: block;
-    }
-  }
-}
 
 

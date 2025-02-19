@@ -1,0 +1,28 @@
+.SocialLinks-link {
+    position: static!important;
+}
+.SocialLinks {
+    
+    .SocialLinks-inner {
+
+        a.SocialLinks-link {    
+            margin-right: 15px!important;
+        }
+        a.SocialLinks-link:last-child { 
+            margin-right: 0!important;
+        }
+        .SocialLinks-link-icon {
+            transition: all .2s ease-in-out!important;
+            -webkit-transition: all .2s ease-in-out!important;
+        }
+    }
+}
+.SocialLinks-link:hover .SocialLinks-link-icon,
+.SocialLinks-link:focus .SocialLinks-link-icon {
+    fill: @secondary!important;
+}
+@media only screen and (max-width: 1099px) {
+    .SocialLinks {
+        margin-top: 20px;
+    }
+}

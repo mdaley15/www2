@@ -1,0 +1,45 @@
+#ctas {
+    position: relative;
+    z-index: 1;
+
+    .Index-page-content {
+        padding: 0!important;
+
+        .row,
+        .col,
+        .sqs-block {
+            padding: 0!important;
+            margin: 0!important;
+
+            .contentWrap {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                text-align: center;
+
+                .contentOuter {
+                    width: 100%;
+                    padding: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    a.contentInner {
+
+                    }
+                }
+                @media only screen and (min-width: 641px) {
+                    .contentOuter {
+                        width: 50%;
+                    }
+                }
+                @media only screen and (min-width: 1000px) {
+                    .contentOuter {
+                        width: 25%;
+                    }
+                }
+            }
+        }
+    }
+}

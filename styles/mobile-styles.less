@@ -42,10 +42,7 @@
       .ancillary-mobile-bar-search-icon-position-top-right &,
       .ancillary-mobile-bar-cart-position-top-left &,
       .ancillary-mobile-bar-cart-position-top-center &,
-      .ancillary-mobile-bar-cart-position-top-right &,
-      .ancillary-mobile-bar-account-position-top-left &,
-      .ancillary-mobile-bar-account-position-top-center &,
-      .ancillary-mobile-bar-account-position-top-right &  {
+      .ancillary-mobile-bar-cart-position-top-right & {
         padding-top: @mobile-padding;
         padding-bottom: @mobile-padding;
       }
@@ -75,10 +72,7 @@
       .ancillary-mobile-bar-search-icon-position-bottom-right &,
       .ancillary-mobile-bar-cart-position-bottom-left &,
       .ancillary-mobile-bar-cart-position-bottom-center &,
-      .ancillary-mobile-bar-cart-position-bottom-right &,
-      .ancillary-mobile-bar-account-position-bottom-left &,
-      .ancillary-mobile-bar-account-position-bottom-center &,
-      .ancillary-mobile-bar-account-position-bottom-right & {
+      .ancillary-mobile-bar-cart-position-bottom-right & {
         padding-top: @mobile-padding;
         padding-bottom: @mobile-padding;
       }
@@ -184,55 +178,6 @@
 
     // -----------------------------------------
 
-    //  Account
-
-    &-account {
-      .tweak-mobile-bar-account-font;
-      line-height: 1em;
-
-      .user-accounts-text-link {
-        display: none;
-        .tweak-mobile-bar-account-font;
-        line-height: 1em;
-        // Override
-        outline: 0;
-        background: transparent;
-        border: 0;
-        padding: 0;
-        .no-select;
-        white-space: nowrap;
-        color: @tweak-mobile-bar-account-color;
-      }
-
-      .user-accounts-icon {
-        display: none;
-        stroke: @tweak-mobile-bar-account-icon-color;
-        fill: none;
-        overflow: visible;
-
-        .Icon--user-accounts {
-          display: block;
-          width: 28px;
-          height: 28px;
-        }
-      }
-
-      .tweak-mobile-bar-account-style-text & {
-        &.loaded .user-accounts-text-link {
-          display: inline-block;
-        }
-      }
-
-      .tweak-mobile-bar-account-style-icon & {
-        .user-accounts-icon {
-          display: block;
-        }
-      }
-    }
-
-
-    // -----------------------------------------
-
     //  Search
 
     &-search {
@@ -310,7 +255,7 @@
 
   .enable-load-effects & {
 
-    .animation(~"anim-opacity-99" (@mobile-overlay-duration + @mobile-overlay-delay) ~"linear");
+    .animation (~"anim-opacity-99" (@mobile-overlay-duration + @mobile-overlay-delay) ~"linear");
 
   }
 

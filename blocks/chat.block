@@ -1,0 +1,3 @@
+<div class="chat-button-holder">
+  <squarespace:block-field id="chatButton" columns="12" label="Chat Block" />
+</div>

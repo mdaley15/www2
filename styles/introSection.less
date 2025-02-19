@@ -1,0 +1,47 @@
+#intro {
+    max-height: 92vh;
+    position: relative;
+    
+    video {
+        width: 100%;
+        display: block;
+    }
+    .Index-page-content {
+
+        .row,
+        .col,
+        .sqs-block {
+            padding: 0!important;
+            margin: 0 auto!important;
+        }
+    }
+}
+.search-page-intro {
+    background: url('/assets/search.png');
+    background-size: cover;
+    background-position: center center;
+}
+.sqs-search-page-more-wrapper {
+    display: none;
+}
+@media only screen and (max-width: 640px) {
+    #intro video {
+        display: none;
+    }
+}
+@media screen and (max-width: 960px) {
+    #intro, .Intro {
+        height: 300px;
+    }
+}
+@media screen and (min-width: 961px) {
+    .Intro {
+        height: 400px;
+    }
+    .search-page-intro {
+        background-attachment: fixed;
+    }
+}
+.search-page-input {
+    margin: 0 auto!important;
+}

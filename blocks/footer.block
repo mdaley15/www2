@@ -1,53 +1,69 @@
 <footer class="Footer" role="contentinfo" data-controller="FooterBreakpoints">
+    <div class="insideFooter">
 
-  <div class="Footer-inner clear">
-
-    <squarespace:block-field id="footerBlocksTop" class="Footer-blocks Footer-blocks--top sqs-alternate-block-style-container" columns="12" label="{localizedStrings.footerTopBlocks}" />
-
-    <div class="Footer-middle">
-      <div class="Footer-business">
-
-        {.if website.location.addressTitle || website.location.addressLine1 || website.location.addressLine2 || websiteSettings.contactPhoneNumber || websiteSettings.contactEmail}
-          <div class="Footer-business-info">
-            {.section website}
-              {.section location}
-                {.section addressTitle}<div class="Footer-business-info-item Footer-business-info-item--name">{@}</div>{.end}
-                {.if addressLine1}<div class="Footer-business-info-item">{addressLine1}{.if addressLine2 || addressCountry},{.end}</div>{.end}
-                {.if addressLine2}<div class="Footer-business-info-item">{addressLine2}{.if addressCountry},{.end}</div>{.end}
-                {.section addressCountry}<div class="Footer-business-info-item Footer-business-info-item--country">{@}</div>{.end}
-              {.end}
-            {.end}
-            {.section websiteSettings}
-              {.section contactPhoneNumber}<a href="tel:{@}" rel="tel" class="Footer-business-info-item Footer-business-info-item--phone">{@}</a>{.end}
-              {.section contactEmail}<a href="mailto:{@}" title="{@}" target="_blank" class="Footer-business-info-item Footer-business-info-item--email">{@}</a>{.end}
-            {.end}
-          </div>
-        {.end}
-
-        {.section websiteSettings}
-          {.section businessHours}
-            <div class="Footer-business-hours">
-              <div class="Footer-business-hours-heading">{localizedStrings.hours}</div>
-              {.section monday}{.section text}<div class="Footer-business-hours-item">{localizedStrings.mon} {text}</div>{.end}{.end}
-              {.section tuesday}{.section text}<div class="Footer-business-hours-item">{localizedStrings.tue} {text}</div>{.end}{.end}
-              {.section wednesday}{.section text}<div class="Footer-business-hours-item">{localizedStrings.wed} {text}</div>{.end}{.end}
-              {.section thursday}{.section text}<div class="Footer-business-hours-item">{localizedStrings.thu} {text}</div>{.end}{.end}
-              {.section friday}{.section text}<div class="Footer-business-hours-item">{localizedStrings.fri} {text}</div>{.end}{.end}
-              {.section saturday}{.section text}<div class="Footer-business-hours-item">{localizedStrings.sat} {text}</div>{.end}{.end}
-              {.section sunday}{.section text}<div class="Footer-business-hours-item">{localizedStrings.sun} {@}</div>{.end}{.end}
+        <div class="footerRow rowOne">
+            <div class="footerCol smallCol colOne">
+                <ul class="quicklinks linksLeft">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div><a class="address external" href="asdfasdfasdf" target="_blank">Street<br>City, State ZIP</a></div>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-square"></i>
+                        <div><a class="phone local" href="tel:1-123-456-7890" target="_blank">Call: (123) 456-7890</a></div>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <div><a class="email local" href="mailto:email@email.com" target="_blank">Email: email@email.com</a></div>
+                    </li>
+                </ul>
             </div>
-          {.end}
-        {.end}
+            <div class="footerCol smallCol colTwo">
+                <center>
+                    {.section website}
+                        {.section logoImageUrl}
+                            <img src="{logoImageUrl}?format=1500w" alt="{siteTitle}" class="Header-branding-logo" />
+                        {.or}
+                            {siteTitle}
+                        {.end}
+                    {.end}
+                </center>
+            </div>
+            <div class="footerCol smallCol colThree">
+                <ul class="quicklinks linksRight">
+                    <li><i class="fas fa-calculator"></i><div><a href="/calculators">Calculators</a></div></li>	
+                    <li><i class="fas fa-exchange-alt"></i><div><a href="/privacy-policy">Privacy Policy</a></div></li>
+                    <li><i class="fas fa-map-marked-alt"></i><div><a href="/branches">Locations/Hours</a></div></li>
+                    <li><i class="fas fa-random"></i> <div>Routing# 253075251</div></li> 
+                </ul>
+            </div>
+        </div>
+        <div class="footerRow rowTwo">
+            <div class="footerCol medCol colOne">
+                {.section website}
+                    <p class="footerP" style="white-space:pre-wrap;">*APR = Annual Percentage Rate. Rate based on creditworthiness and term of loan.<br>**APY = Annual Percentage Yield. Rates are subject to change at any time and are not guaranteed.<br>We provide links to third party partners, independent from {siteTitle}. These links are provided only as a convenience. We do not manage the content of those sites. The privacy and security policies of external websites will differ from those of {siteTitle}.</p>
+                {.end}
+            </div>
+            <div class="footerCol smallCol colTwo">
+                <center class="footerIcons">
+                    <div class="footerIcon footerIcon1">
+                        <a class="lift" href="https://www.ncua.gov" target="_blank">
+                            <img src="/assets/ncua.svg" alt="Federally insured by NCUA">
+                        </a>
+                    </div>
+                    <div class="footerIcon footerIcon2">
+                        <a class="lift" href="http://hud.gov/" target="_blank">
+                            <img src="/assets/ehl.svg" alt="Equal Housing Lender">
+                        </a>
+                    </div>
+                </center>
+            </div>
+        </div>
+        <div class="footerRow rowThree">
+            <div class="footerCol bigCol">
+                {@|apply oc-sig.block}
+            </div>
+        </div>
 
-      </div>
-
-      <squarespace:block-field id="footerBlocksMiddle" class="Footer-blocks Footer-blocks--middle sqs-alternate-block-style-container" columns="12" label="{localizedStrings.footerMiddleBlocks}" />
-
-      <squarespace:navigation navigationId="footerMainNavigation" template="footer-nav" />
     </div>
-
-    <squarespace:block-field id="footerBlocksBottom" class="Footer-blocks Footer-blocks--bottom sqs-alternate-block-style-container" columns="12" label="{localizedStrings.footerBottomBlocks}" />
-
-  </div>
-
 </footer>

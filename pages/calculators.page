@@ -1,0 +1,368 @@
+<style>
+.Main--calculators-lest .Main-content {
+    padding: 50px 20px!important; 
+}
+</style>
+<div>
+<h1 class="text-align-center">Calculators</h1>
+<hr class="width"/>
+
+<div class="container calculators">
+    <ul class="collapsible">
+        <li>
+            <button class="collapsible-header"> 
+                <h2>Simple Loan Calculator</h2>
+                <div class="sign">&nbsp;<i class="far fa-plus"></i></div>
+            </button>
+            <div class="collapsible-body">
+                <div class="calc-container first"> 
+                        <h3>Calculate Your Loan Payment</h3>
+                            <p>
+                                Enter the term, rate, and loan amount; the loan payment will be calculated for you.
+                            </p>
+                            <noscript>
+                                <p>
+                                    JavaScript must be enabled for this calculator to function.
+                                </p>
+                            </noscript>
+                        
+                            <div class="form-row dollar">
+                                <label for="amount">Loan Amount:</label>
+                                <span><input id="loanPaymentAmount" type="number" autocomplete="off" min="1" step="0.01" placeholder="$0.00" style=: 100px;" aria-label="Loan Amount"/></span>
+                            </div>
+                            
+                            <div class="form-row percent">
+                                <label for="rate">Annual Percentage Rate:</label>
+                                <span><input id="loanPaymentRate" type="number" autocomplete="off" min="1" step="0.01" placeholder="0%"style=: 50px;" aria-label="Annual Percentage Rate"/></span>
+                            </div>
+
+                            <div class="form-row dollar">
+                                <label for="months">Length of Loan:</label>
+                                <span><input id="loanPaymentMonths" type="number" autocomplete="off" min="1" step="1" placeholder="0" style=: 50px;" aria-label="Length of Loan"/></span>
+                                <select id="loanPaymentFrequency" aria-label="Payment Frequency">
+                                    <option value="12" selected="selected">Months </option>
+                                    <option value="1">Years </option>
+                                </select>
+                            </div>
+
+                            <div class="form-row formButton">
+                                <input type="button"  class="allBtns" value="Compute" onclick="validateFormLoanPayment()"/>
+                                <input type="button" id="reset" value="Reset" class="allBtns" />
+                            </div>
+                                <hr />
+                            <div class="form-row dollar">
+                                <label for="payment">Payment:</label>
+                                <span><input id="loanPaymentPayment" type="number" autocomplete="off" min="1" step="0.01" placeholder="$0.00"style=: 100px;" aria-label="Payment Amount"/></span>
+                            </div>
+                            <p class="small center">
+                                *The accuracy of this calculator and its applicability to your circumstances is not guaranteed. Results should be discussed with a qualified professional before any product purchases or loan commitments are made.
+                            </p>
+                </div>                        
+                        
+                        
+          </div>
+        </li>
+        <li>
+          <button class="collapsible-header">
+             <h2>How Much Can I Afford?</h2>
+                <div class="sign">&nbsp;<i class="far fa-plus"></i></div>
+            </button>
+          <div class="collapsible-body">
+                <div class="calc-container"> 
+                        <h3>Loan Afford Calculator</h3>
+                            <p>
+                                Enter the term, rate, and desired payment; the loan total will be calculated for you.
+                            </p>
+                            <noscript>
+                                <p>
+                                    JavaScript must be enabled for this calculator to function.
+                                </p>
+                            </noscript>
+                            <div class="form-row dollar">
+                                    <label for="payment">Desired Payment:</label>
+                                    <span><input id="loanAffordPayment" type="number" autocomplete="off" min="1" step="0.01" placeholder="$0.00" style=: 100px;" aria-label="Desired Payment Amount"/></span>
+                                </div>
+                            
+                            <div class="form-row percent">
+                                <label for="rate">Annual Percentage Rate:</label>
+                                <span><input id="loanAffordRate" type="number" autocomplete="off" min="1" step="0.01" placeholder="0%" style=: 50px;" aria-label="Annual Percentage Rate"/></span>
+                            </div>
+                            <div class="form-row">
+                                <label for="months">Length of Loan:</label>
+                                <span><input id="loanAffordMonths" type="number" autocomplete="off" min="1" step="1" placeholder="0" style=: 50px;" aria-label="Length of Loan"/></span>
+                                <select id="loanAffordFrequency" aria-label="Frequency">
+                                    <option value="12" selected="selected">Months </option>
+                                    <option value="1">Years </option>
+                                </select>
+                            </div>
+                            <div class="form-row formButton">
+                                <input type="button"  class="allBtns" value="Compute" onclick="validateFormLoanAfford()"/>
+                                <input type="button" id="reset" value="Reset" class="allBtns" />
+                            </div>
+                                <hr />
+                            <div class="form-row dollar">
+                                <label for="amount">Loan Amount:</label>
+                                <span><input id="loanAffordAmount" type="number" autocomplete="off" min="1" step="0.01" placeholder="$0.00" style=: 100px;" aria-label="Loan Amount"/></span>
+                            </div>
+                            <p class="small center">
+                                *The accuracy of this calculator and its applicability to your circumstances is not guaranteed. Results should be discussed with a qualified professional before any product purchases or loan commitments are made.
+                            </p>
+                </div>
+                        
+                        
+            </div>
+        </li>
+        <li>
+            <button class="collapsible-header">
+                <h2>Bi-Weekly Mortgage Calculator</h2>
+                <div class="sign">&nbsp;<i class="far fa-plus"></i></div>
+            </button>
+          <div class="collapsible-body">
+                <div class="calc-container"> 
+                        <h3>Calculate your Interest and Savings</h3>
+                            <p>
+                                This calculator will show you how much you can save if you make half of your mortgage payment every two weeks instead of making a full mortgage payment once a month. In effect, you are making one extra mortgage payment per year!
+                            </p>
+                            <noscript>
+                                <p>
+                                    JavaScript must be enabled for this calculator to function.
+                                </p>
+                            </noscript>
+                        
+                            <div class="form-row dollar">
+                                <label for="principal">Mortgage Principal:</label>
+                                <span><input type="number" id="mortgagePaymentPrincipal" step="0.01" min="1" style=:100px;" placeholder="$0.00" aria-label="mortgagePaymentPrincipal"/></span>
+                            </div>
+                            <div class="form-row dollar">
+                                <label for="payment">Monthly Payment:</label>
+                                <span><input type="number" id="mortgagePaymentPayment" step="0.01" min="1" style=:75px;" placeholder="$0.00" aria-label="Monthly Payment"/></span>
+                            </div>
+                            <div class="form-row percent">
+                                <label for="intRate">Interest Rate:</label>
+                                <span><input type="number" id="mortgagePaymentIntRate" step="0.001" min="0.01" style=:75px;" placeholder="0%" aria-label="Interest Rate"/></span>
+                            </div>
+                            <div class="form-row formButton">
+                                <input type="button" id="mortgagePaymentCompute" value="Compute" class="allBtns" />
+                                <input type="button" id="reset" value="Reset" class="allBtns" />
+                            </div>
+                            <hr />
+                            <div class="form-row result1">
+                                <label for="origInt">Current Total Interest Due:</label>
+                                <span id="mortgagePaymentOrigInt" style="font-weight: bold;">$0.00</span>
+                            </div>
+                            <div class="form-row result2">
+                                <label for="biwkInt">Bi-Weekly Total Interest Due:</label>
+                                <span id="mortgagePaymentBiwkInt" style="font-weight: bold;">$0.00</span>
+                            </div>
+                            <div class="form-row result1">
+                                <label for="intSave">Total Interest Savings:</label>
+                                <span id="mortgagePaymentIntSave" style="font-weight: bold;">$0.00</span>
+                            </div>
+                            <p id="mortgagePaymentTime">
+                                
+                            </p>
+                        
+                            <p class="small center">
+                                The accuracy of this calculator and its applicability to your circumstances is not guaranteed. Results should be discussed with a qualified professional before any product purchases or loan commitments are made.
+                            </p>
+                            </div>
+                        
+          </div>
+        </li>
+        <li>
+                <button class="collapsible-header">
+                    <h2>Mortgage Refinance Calculator</h2>
+                    <div class="sign">&nbsp;<i class="far fa-plus"></i></div>
+                </button>
+                <div class="collapsible-body">
+                        <div class="calc-container">      
+                                <h3>Refinance</h3>
+                                   <p>
+                                       This calculator will help you to decide whether or not you should refinance your current mortgage at a lower interest rate. 
+                                       Not only will this calculator calculate the monthly payment and net interest savings, but it will also calculate how many 
+                                       months it will take to break even on the closing costs.
+                                   </p>
+                                   <noscript>
+                                       <p>
+                                           JavaScript must be enabled for this calculator to function.
+                                       </p>
+                                   </noscript>
+                               
+                                   <h3>Your Current Mortgage Information</h3>
+                                   <div class="form-row dollar">
+                                       <label for="principal">Principal:</label>
+                                       <span><input type="number" id="mortgageRefinancePrincipal" step="0.01" min="1" style=:100px;" placeholder="$0.00" aria-label="Principal Amount"/></span>
+                                   </div>
+                                   <div class="form-row dollar">
+                                       <label for="payment">Monthly Payment:</label>
+                                       <span><input type="number" id="mortgageRefinancePayment" step="0.01" min="1" style=:75px;" placeholder="$0.00" aria-label="Monthly Payment"/></span>
+                                   </div>
+                                   <div class="form-row percent">
+                                       <label for="intRate">Interest Rate:</label>
+                                       <span><input type="number" id="mortgageRefinanceIntRate" step="0.001" min="0.01" style=:75px;" placeholder="0%" aria-label="Interest Rate"/></span>
+                                   </div>
+                               
+                                   <h3>Refinancing Information</h3>
+                                   <div class="form-row percent">
+                                       <label for="intRate2">Interest Rate to Refinance:</label>
+                                       <span><input type="number" id="mortgageRefinanceIntRate2" step="0.001" min="0.01" style=:75px;" placeholder="0%" aria-label="Interest Rate to Refinance"/></span>
+                                   </div>
+                                   <div class="form-row">
+                                       <label for="nper2">Years to Refinance:</label>
+                                       <span><input type="number" id="mortgageRefinanceNper2" step="1" min="1" style=:75px;" placeholder="0" aria-label="Years to Refinance"/></span>
+                                   </div>
+                                   <div class="form-row dollar">
+                                       <label for="closingCost">Closing Costs to Refinance:</label>
+                                       <span><input type="number" id="mortgageRefinanceClosingCost" step="0.01" min="1" style=:75px;" placeholder="$0.00" aria-label="Closing Costs to Refinance"/></span>
+                                   </div>
+                                    <span class="small">If you are unsure, multiply your current balance owed by 0.3.</span>
+                                   <div class="form-row formButton">
+                                        <input type="button" id="mortgageRefinanceCompute" value="Compute" class="allBtns" />
+                                        <input type="button" id="reset" value="Reset" class="allBtns" /> 
+                                    </div>
+                                   <hr />
+                                   <div class="form-row result1">
+                                       <label for="payment2">Refinanced Monthly Payment:</label>
+                                       <span id="mortgageRefinancePayment2" style="font-weight: bold;">$0.00</span>
+                                   </div>
+                                   <div class="form-row result2">
+                                       <label for="moSave">Monthly Savings:</label>
+                                       <span id="mortgageRefinanceMoSave" style="font-weight: bold;">$0.00</span>
+                                   </div>
+                                   <div class="form-row result1">
+                                       <label for="closeMo">Months to Pay Off Closing Costs:</label>
+                                       <span id="mortgageRefinanceCloseMo" style="font-weight: bold;">0</span>
+                                   </div>
+                                   <div class="form-row result2">
+                                       <label for="origInt">Current Plan's Total Interest:</label>
+                                       <span id="mortgageRefinanceOrigInt" style="font-weight: bold;">$0.00</span>
+                                   </div>
+                                   <div class="form-row result1">
+                                       <label for="totInt2">Refinanced Plan's Total Interest:</label>
+                                       <span id="mortgageRefinanceTotInt2" style="font-weight: bold;">$0.00</span>
+                                   </div>
+                                   <div class="form-row result2">
+                                       <label for="intSave">Interest Saved by Refinancing:</label>
+                                       <span id="mortgageRefinanceIntSave" style="font-weight: bold;">$0.00</span>
+                                   </div>
+                                   <div class="form-row result1">
+                                       <label for="netSave">Net Savings (Minus Closing Costs):</label>
+                                       <span id="mortgageRefinanceNetSave" style="font-weight: bold;">$0.00</span>
+                                   </div>
+                                   <p id="mortgageRefinanceSummary">
+                                       
+                                   </p>
+                               
+                                   <p class="small center">
+                                       *The accuracy of this calculator and its applicability to your circumstances is not guaranteed. Results should be discussed with a qualified professional before any product purchases or loan commitments are made.
+                                   </p>
+                                   </div>
+                </div>
+        </li>
+        <li>
+                <button class="collapsible-header">
+                    <h2>Simple Savings Calculator</h2>
+                    <div class="sign">&nbsp;<i class="far fa-plus"></i></div>
+                </button>
+                <div class="collapsible-body">
+                        <div class="calc-container"> 
+                                <h3>See How Much You Can Save</h3>
+                                    <p>
+                                        To calculate the future value of a one-time, lump-sum investment, enter the dollar amount invested, the interest rate you expect to earn, and the number of years you expect to let the investment grow, then click the "Compute" button.
+                                    </p>
+                                    <noscript>
+                                        <p>
+                                            JavaScript must be enabled for this calculator to function.
+                                        </p>
+                                    </noscript>
+                                    <form action = "" method="post" onsubmit="singleDepositComputeForm()"> 
+                                    <div class="form-row dollar">
+                                        <label for="principal">Deposit Amount:</label>
+                                        <span><input type="number" id="singleDepositPrincipal" step="0.01" min="1" style=: 75px;" placeholder="$0.00" aria-label="Deposit Amount"/></span>
+                                    </div>
+                                    <div class="form-row percent">
+                                        <label for="interest">Annual Interest Rate:</label>
+                                        <span><input type="number" id="singleDepositInterest" step="0.001" min="0" style=: 75px;" placeholder="0%" aria-label="Annual Interest Rate"/></span>
+                                    </div>
+                                    <div class="form-row percent">
+                                        <label for="payments">Years to Accrue:</label>
+                                        <span><input type="number" id="singleDepositPayments" step="1" min="1" style=: 75px;" placeholder="0" aria-label="Years to Accrue"/></span>
+                                    </div>
+                                    <div class="form-row formButton">
+                                        <input type="button" value="Compute" id="singleDepositCompute" class="allBtns" />
+                                        <input type="button" value="Reset" id="reset" class="allBtns" />
+                                    </div>
+                                    <hr />
+                                    <div class="form-row result1" >
+                                        <label for="fv">Future Value:</label>
+                                        <span id="singleDepositFv" style="font-weight: bold;">$0.00</span>
+                                    </div>
+                                    <div class="form-row result2">
+                                        <label for="totalint">Interest Earned:</label>
+                                        <span id="singleDepositTotalint" style="font-weight: bold;">$0.00</span>
+                                    </div>
+                                
+                                    <p class="small center">
+                                        The accuracy of this calculator and its applicability to your circumstances is not guaranteed. Results should be discussed with a qualified professional before any product purchases or loan commitments are made.
+                                    </p>
+                                </form>
+                                </div>
+                </div>
+        </li>
+        <li>
+                <button class="collapsible-header">
+                    <h2>Multiple Deposit Calculator</h2>
+                    <div class="sign">&nbsp;<i class="far fa-plus"></i></div>
+                </button>
+                <div class="collapsible-body">
+                        <div class="calc-container">       
+                                <h3>Build Your Savings Calculator</h3>
+                                <p>
+                                    To calculate the future value of a monthly investment, enter the beginning balance, the monthly dollar amount you 
+                                    plan to deposit, the interest rate you expect to earn, and the number of years you expect to continue making monthly 
+                                    deposits, then click the "Compute" button.
+                                </p>
+                            
+                            <form action = "" method="post" onsubmit="multipleDepositComputeForm()">
+                                <div class="form-row dollar">
+                                    <label for="principal">Initial Investment:</label>
+                                    <span><input type="number" step="0.01" id="multipleDepositPrincipal" style=:75px;" placeholder="0" aria-label="Initial Investment"/></span>
+                                </div>
+                                <div class="form-row dollar">
+                                    <label for="moAdd">Amount to Add Monthly:</label>
+                                    <span><input type="number" step="0.01" id="multipleDepositMoAdd" style=: 75px;" placeholder="$0.00" aria-label="Amount to Add Monthly"/></span>
+                                </div>
+                                <div class="form-row percent">
+                                    <label for="interest">Annual Interest Rate:</label>
+                                    <span><input type="number" step="0.001" id="multipleDepositInterest" style=: 75px;" placeholder="0%" aria-label="Annual Interest Rate"></span>
+                                </div>
+                                <div class="form-row">
+                                    <label for="payments">Years to Accrue:</label>
+                                    <span><input type="number" step="1" id="multipleDepositPayments" style=: 75px;" placeholder="0" aria-label="Years to Accrue"/></span>
+                                </div>
+                                <div class="form-row formButton">
+                                    <input type="button" id="multipleDepositCompute" value="Compute" class="allBtns"/>
+                                    <input type="button" id="reset" value="Reset" class="allBtns">
+                                </div>
+                            </form>
+                                <hr>
+                                <div class="form-row result1" >
+                                    <label for="fv">Future Value:</label>
+                                    <span id="multipleDepositFv" style="font-weight: bold;">$0.00</span>
+                                </div>
+                                <div class="form-row result2">
+                                    <label for="totalint">Interest Earned:</label>
+                                    <span id="multipleDepositTotalint" style="font-weight: bold;">$0.00</span>
+                                </div>
+                            
+                                <p class="small center">
+                                    *The accuracy of this calculator and its applicability to your circumstances is not guaranteed. Results should be discussed with a qualified professional before any product purchases or loan commitments are made.
+                                </p>	
+                            </div>	
+                </div>
+        </li>
+      </ul>
+</div>
+</div>
+
+<script type="text/javascript" src = "../scripts/calculators.js"></script>

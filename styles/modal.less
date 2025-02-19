@@ -1,0 +1,149 @@
+.modalShow {
+  position: absolute !important;
+  visibility: visible !important;
+  opacity:1 !important;
+  display:block !important;
+  z-index:10001 !important;
+  top: 20%;
+  left: 20%;
+  overflow: auto;
+}
+.modalHide {
+  visibility: collapse !important;
+  opacity:0 !important;
+  display:none !important;
+}
+.Absolute-Center {
+width: 50%;
+height: 50%;
+margin: auto;
+position: fixed !important;
+top: 0; left: 0; bottom: 0; right: 0;
+}
+.modalLogo {
+margin-bottom: 20px
+}
+.modalLogo img {
+display: block;
+width: 200px;
+margin: 0 auto;
+}
+.popoverlay {
+position: relative;
+z-index: 1000;
+transition: opacity 500ms;
+visibility: hidden; 
+opacity: 0;
+}
+.popoverlay:target {
+visibility: visible;
+opacity: 1;
+}
+.centerModal {
+position:absolute !important;
+left:30%;
+top:50%;
+}
+.resetModal {
+position:absolute !important;
+width:80%;
+left:0;
+top:0;
+}
+#omnipop1 {
+overflow: visible;
+}
+.omnipop { 
+padding: 25px 50px 20px;
+background-color: @transparent;
+border-radius: 5px;
+position: relative;
+transition: all .5s ease-in-out;
+box-shadow: 0 3px 5px @secondary;
+}
+#omnipop1:focus {
+outline: 0!important;
+}
+/* .popbutton {
+border-color: @white!important;
+background-color: @secondary!important;
+}
+.popbutton:hover {
+border-color: @white!important;
+background-color: @primary!important;
+box-shadow: 0 3px 5px @secondary;
+} */
+.omnipop .closepop {
+position: absolute;
+top: 20px;
+right: 30px;
+transition: all 200ms;
+font-size: 30px;
+font-weight: bold;
+text-decoration: none;
+color: @secondary;
+text-shadow: 2px 2px 3px @black;
+transition: all .4s ease-in-out!important;
+-webkit-transition: all .4s ease-in-out!important;
+cursor: pointer;
+}
+.omnipop .closepop:hover {
+color: @primary;
+}
+.popcontent {
+text-align: left;
+line-height: 1.2;
+}
+.popcontent p {
+margin: 0 auto;
+color: @primary;
+}
+.modalBtns {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+
+  a, button {
+    margin: 5px!important;
+    border: none!important;
+    outline: none!important;
+  }
+}
+@media screen and (max-width: 500px) {
+.omnipop {
+  padding: 20px;
+
+  .modalLogo img {
+    width: 150px;
+  }
+  .popcontent p {
+    font-size: 15px;
+  }
+}
+}
+@media screen and (max-width: 1235px) and (min-width: 641px){
+.Absolute-Center {
+  width: 98%;
+  height: 98%;
+  margin: auto;
+  position: fixed !important;
+  top: 0; left: 0; bottom: 0; right: 0;
+  overflow: auto;
+}
+  .popbutton {
+    padding: 9px;
+  }
+}
+@media screen and (max-width: 640px){
+  .sqsbutton {
+    display:block;
+    margin-top: 20px !important;
+  }
+  .Absolute-Center {
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  position: fixed !important;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+}

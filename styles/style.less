@@ -1,0 +1,200 @@
+// Icon fix for squarespace interface
+.sqs-blockicon-content {
+    min-height:60px;
+}
+.sqs-layout-insert-block-menu .sqs-blockicon .label {
+    max-height:30px !important;
+    padding-top:35px !important;
+    overflow:visible !important;
+}
+
+@primary: #000000;
+@secondary: #ff0000;
+@transparent: rgba(255,255,255, .9);
+@shadow: rgba(0,0,0, .5);
+@black: #000;
+@white: #fff;
+@omniPurp: #662b90;
+* {
+    box-sizing: border-box!important;
+    -webkit-hyphens: none!important;
+    -ms-hyphens: none!important;
+    hyphens: none!important;
+}
+body {
+    overflow-x: hidden;
+}
+.Parallax-host-outer {
+    display: block;
+    z-index: -10!important;
+
+    * {
+        z-index: -10!important;
+        will-change: auto!important;
+    }
+}
+.cf {
+    clear: both;
+}
+.grow {
+    transition: all .2s ease-in-out!important;
+    -webkit-transition: all .2s ease-in-out!important;
+}
+.grow:hover,
+.grow:focus {
+    transform: scale(1.1)!important;
+    -webkit-transform: scale(1.1)!important;
+}
+.lift {
+    position: relative;
+    top: 0;
+    transition: all .4s ease-in-out!important;
+    -webkit-transition: all .4s ease-in-out!important;
+
+    &:hover,
+    &:focus {
+        top: -5px;
+    }
+}
+hr {
+    width: 100%!important;
+    border: none!important;
+    color: @secondary!important;
+    background-color: @secondary!important;
+    height: 1px!important;
+}
+.internalLink,
+.Main-content .sqs-block-html a {
+    position: relative;
+    top: 0;
+    color: @primary;
+    padding-bottom: .05em;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: @secondary;
+    -webkit-transition: all .15s ease-out;
+    -moz-transition: all .15s ease-out;
+    -ms-transition: all .15s ease-out;
+    -o-transition: all .15s ease-out;
+    transition: all .15s ease-out;
+
+    &:hover,
+    &:focus {
+        top: -5px;
+        color: @secondary;
+        border-color: @primary;
+    }
+}
+.allBtns,
+.button,
+.sqs-editable-button,
+.sqs-block-button-element {
+    font-size: 16px !important;
+    font-weight: 600!important;
+    font-style: normal!important;
+    text-transform: uppercase!important;
+    background-color: @primary!important;
+    color: @white!important;
+    padding: 6px 8px 5px!important;
+    margin: 0!important;
+    border-radius: 10px!important;
+    border: 0!important;
+    outline: none!important;
+    text-decoration: none!important;
+    line-height: 1em !important;
+    letter-spacing: .1em!important;
+    text-align: center;
+    transition: all .4s ease-in-out!important;
+    cursor: pointer;
+    opacity: 1!important;
+    display: inline-block;
+
+    &:hover,
+    &:focus {
+        background-color: @secondary!important;
+        color: @primary!important;
+    }
+}
+.contentWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    max-width: 1700px;
+    margin: 0 auto;
+
+    .contentOuter {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .contentInner {
+
+        }
+    }
+}
+.Main-content {
+    box-shadow: 0 -3px 5px @primary;
+}
+.Main-content > div {
+    max-width: 1700px!important;
+    margin: 0 auto!important;
+}
+/************************************************** tables *********************************************************/
+.twoColumn th,
+.twoColumn td {
+    width: 50%;
+}
+.threeColumn th,
+.threeColumn td {
+    width: 33.3333%;
+}
+.fourColumn th,
+.fourColumn td {
+    width: 25%;
+}
+.fiveColumn th,
+.fiveColumn td {
+    width: 20%;
+}
+th {
+    background-color: @primary;
+    color: #fff;
+}
+th, td {
+    line-height: 1.2;
+}
+@media only screen and (max-width: 640px) {
+    table {
+        font-size: .5em!important;
+    }
+}
+@media only screen and (min-width: 641px) and (max-width: 900px) {
+    table {
+        font-size: .7em!important;
+    }
+}
+/************************************************** removing WORD BREAKS *********************************************************/
+/************************************************** removing WORD BREAKS *********************************************************/
+/************************************************** removing WORD BREAKS *********************************************************/
+.noWrap {
+    white-space: nowrap;
+}
+/************************************************** List Style *********************************************************/
+ul.collapsible {
+    padding: 0!important;
+}
+ul {
+    padding-left: 40px!important;
+}
+ul.collapsible ul{
+    list-style-type: disc;
+}
+/************************************************** FONTS *********************************************************/
+@font-face {
+    font-family: "miedinger";
+    src: url("../assets/miedinger.ttf");
+}

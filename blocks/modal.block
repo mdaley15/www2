@@ -1,0 +1,22 @@
+<div id="omnipop1" class="popoverlay modalHide"  tabindex="0">
+    <div class="omnipop">
+        <!-- <img src="../assets/logo.png" alt="Teamsters Local 697 Credit Union" /> -->
+        {.section website}
+            {.section logoImageUrl}
+                <div class="modalLogo">
+                    <img src="{logoImageUrl}?format=1500w" alt="{siteTitle}" class="Header-branding-logo-modal" />
+                </div>
+            {.or}
+                {siteTitle}
+            {.end}
+            <div class="popcontent">
+                    <p>We provide links to third party websites, independent from {siteTitle}. These links are provided only as a convenience. We do not manage the content of those sites. The privacy and security policies of external websites will differ from those of {siteTitle}. Click "CONTINUE" to proceed or click the "RETURN TO SITE" to stay on this site.</p>
+                    <div class="modalBtns">
+                        <a class="popbutton allBtns lift" href="" target="_blank" id="externalButton" aria-label="Visit External Website">CONTINUE</a>
+                        <button class="returnToSite allBtns lift" onclick="focusReturn()" onkeypress="focusReturn()">RETURN TO SITE</button>
+                    </div>
+            </div>
+            <div class="closepop" tabindex="0" role="button" onclick="focusReturn()" onkeypress="focusReturn()">&times;</div>
+        {.end}
+    </div>
+</div>

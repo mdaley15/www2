@@ -9,7 +9,7 @@
 //                     __/ |
 //                    |___/
 // =======================================================
-
+@social-brand-color-url: #fff;
 
 @media screen and (max-width: 640px) {
   @import 'sqs-grid-breaker';
@@ -104,19 +104,6 @@ body {
 
 // =======================================================
 
-//    Images
-
-// =======================================================
-
-// Hide ImageLoader images prior to being loaded, so you
-// don't see the broken image graphic in some browsers
-img[data-src]:not([src]) {
-  opacity: 0;
-}
-
-
-// =======================================================
-
 //    Content Colors
 
 // =======================================================
@@ -166,11 +153,6 @@ img[data-src]:not([src]) {
         .link-style(@color);
       }
     }
-  }
-
-  .sqs-block-accordion .accordion-item__description a {
-    .link-color(@color);
-    .link-style(@color);
   }
 
   .sqs-block-twitter .tweet-text a { .link-color(@color); }
@@ -741,7 +723,7 @@ a {
 
     margin-left: 0;
     margin-right: 0;
-    border-left: 1px solid @tweak-line-color;
+    border-left: 1px solid #eeeeee;
     padding-left: 1.618em;
 
   }
@@ -864,17 +846,4 @@ a {
 
 .sqs-alternate-block-style-container .sqs-block-form input {
   color: #272727;
-}
-
-
-// -----------------------------------------
-
-//  Fix for Newsletter Block input text
-@defaultDarkNewsletterTextColor: #272727;
-
-.newsletter-form-field-element {
-  // The input fields have a hardcoded white background.
-  // This line forces the text color to the default dark color defined above,
-  // or the tweak-defined @newsletterTextColor if that color is darker than the default.
-  color: contrast(#ffffff, @defaultDarkNewsletterTextColor, @newsletterTextColor);
 }
