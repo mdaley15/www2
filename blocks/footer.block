@@ -61,7 +61,7 @@
         </div>
         <div class="footerRow rowThree">
             <div class="footerCol bigCol">
-                {@|apply oc-sig.block}
+                <!-- {@|apply oc-sig.block} -->
             </div>
         </div>
 
