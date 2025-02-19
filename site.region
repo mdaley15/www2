@@ -61,7 +61,7 @@
         <div class="Header-inner Header-inner--top" data-nc-group="top">
           <div data-nc-container="top-left">
 
-            <div class="Header-search" data-nc-element="search">
+            <div class="Header-search search" data-nc-element="search">
               <form class="Header-search-form" action="/search" method="get">
                 <input class="Header-search-form-input" name="q" type="text" spellcheck="false" value="" autocomplete="off" placeholder="{localizedStrings.search}" />
                 <button class="Header-search-form-submit" type="submit" data-test="template-search">
