@@ -22,7 +22,7 @@ $(document).ready(function() {
 
     $('a.external').click(function() {
         $('a#focusable').removeAttr('id');
-        $(this).attr('id', 'focusable');
+        $(this).attr('id', 'focusable'); 
     });
 
     "use strict";
