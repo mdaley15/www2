@@ -66,10 +66,14 @@ $( document ).ready(function() {
     $('.sqs-block-button-element, .sqs-system-button, .meta a').addClass('lift allBtns');
     
 
-    let accordionDesc = document.querySelectorAll('div.accordion-item__description');
-    console.log(accordionDesc);
-    for (let i = 0; i < accordionDesc.length; i++) {
+    let accordionDescs = document.querySelectorAll('div.accordion-item__description');
+    let newBlock = document.createElement("div");
+    newBlock.classList.add("sqs-block", "image-block", "sqs-block-image");
+    newBlock.attr("data-block-type", "5");
+
+    for (let i = 0; i < accordionDescs.length; i++) {
+        let accordionDesc = accordionDescs[i]
         console.log(i);
-        accordionDesc[i].append('<squarespace:block-field id="accordionImg'+[i]+'" class="accordionImage" columns="12"/>')
+        accordionDesc.append(newBlock);
     }
 });
