@@ -68,4 +68,7 @@ $( document ).ready(function() {
 
     let accordionDesc = document.querySelectorAll('div.accordion-item__description');
     console.log(accordionDesc);
+    for (let i = 0; i < accordionDesc.length; i++) {
+        console.log(i);
+    }
 });
