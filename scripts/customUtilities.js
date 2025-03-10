@@ -64,7 +64,8 @@ $( document ).ready(function() {
     $('a.next').append('<i class="fas fa-chevron-right"></i>');
 
     $('.sqs-block-button-element, .sqs-system-button, .meta a').addClass('lift allBtns');
-});
+    
 
-let accordionDesc = document.querySelectorAll('div.accordion-item__description');
-console.log(accordionDesc);
+    let accordionDesc = document.querySelectorAll('div.accordion-item__description');
+    console.log(accordionDesc);
+});
