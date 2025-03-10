@@ -6,7 +6,7 @@
 
       <span class="Header-nav-folder">
         {.repeated section items}
-            <squarespace:block-field id="{collection.fullUrl}" columns="12"/>
+            <squarespace:block-field id="{collection}" columns="12"/>
           {.collection?}
             <a href="{collection.fullUrl}" class="Header-nav-folder-item{.if active} Header-nav-folder-item--active{.end}" data-test="template-nav">{collection.navigationTitle}</a>
           {.or}
