@@ -16,7 +16,6 @@ $( document ).ready(function() {
     /* Create an alert to show if the browser is IE or not */
     if (isIE()) {
         console.log('Is IE');
-        $('.power h3, .ocLink').addClass('ieFont');
     } else {
         console.log('Is NOT IE');
     }
