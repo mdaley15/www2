@@ -5,6 +5,8 @@
     
     li {
         list-style-type: none!important;
+        border-radius: 5px;
+        overflow: hidden;
         
         .collapsible-header {
             cursor: pointer;
@@ -12,7 +14,7 @@
             align-items: center;
             line-height: 1.5;
             padding: 1rem;
-            background-color: #fff;
+            background-color: @primary;
             border: 0;
             transition: all .3s ease-in-out;
             -webkit-transition: all .3s ease-in-out;
@@ -23,6 +25,7 @@
             h3 {
                 margin: 0!important;
                 text-align: left;
+                width: 100%;
     
                 .col,
                 .sqs-layout .sqs-row .sqs-block {
@@ -32,6 +35,7 @@
                     width: 100%;
                     text-align: left;
                     transition: all .3s ease-in-out;
+                    color: white;
                 }
             }
             .sign {
@@ -43,6 +47,8 @@
                 i {
                     // font-size: 1.5em;
                     margin: 0!important;
+                    transition: all .3s ease-in-out;
+                    color: white;
                 }
             }
             &:hover,
