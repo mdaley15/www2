@@ -7,8 +7,6 @@ $(document).ready(function() {
     $('.external').attr('onclick', 'focusMethod()');
     $('.external').attr('onkeypress', 'focusMethod()');
     $('.collapsible-header').attr('aria-expanded', 'false');
-    $('.collapsible-header').attr('tabindex', '0');
-    $('.collapsible-header').attr('role', 'button');
     $('.Mobile-overlay-nav').attr('role', 'list');
     $('.Mobile-overlay').addClass('notVisible');
     $('.Mobile-overlay').attr('tabindex', '0');
