@@ -6,8 +6,8 @@ $( document ).ready(function() {
         if( location.hostname === this.hostname || !this.hostname.length) {
             $(this).addClass('local');
         } else {
-            console.log(this.hostname);
-            console.log('----------------------');
+            // console.log(this.hostname);
+            // console.log('----------------------');
             $(this).addClass('external');
         }
 
