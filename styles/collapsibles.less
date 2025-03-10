@@ -2,6 +2,7 @@
     padding: 0!important;
     margin: 0!important;
     list-style: none!important;
+    box-shadow: none!important;
     
     li {
         list-style-type: none!important;
@@ -14,8 +15,8 @@
             display: flex;
             align-items: center;
             line-height: 1.5;
-            padding: 1rem;
-            background-color: @primary;
+            padding: 10px;
+            background-color: @blue;
             border: 0;
             transition: all .3s ease-in-out;
             -webkit-transition: all .3s ease-in-out;
@@ -57,12 +58,12 @@
             &:hover,
             &:focus,
             &.active {
-                background-color: black;
+                background-color: @darkBlue;
                 text-decoration: none!important;
                 outline: none;
 
                 h3,i {
-                    color: white!important;
+                    // color: white!important;
                 }
             }
         }
