@@ -66,5 +66,5 @@ $( document ).ready(function() {
     $('.sqs-block-button-element, .sqs-system-button, .meta a').addClass('lift allBtns');
 });
 
-let accordionDesc = document.querySelectorAll('.accordion-item__description');
+let accordionDesc = document.querySelectorAll('div.accordion-item__description');
 console.log(accordionDesc);
