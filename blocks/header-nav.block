@@ -4,18 +4,18 @@
 
       <a href="{collection.fullUrl}" class="Header-nav-folder-title{.if folderActive} Header-nav-folder-title--active{.end}" data-controller="HeaderNavFolderTouch">{collection.navigationTitle}</a>
 
-      <span class="Header-nav-folder">
-        {.repeated section items}
-            <squarespace:block-field id="{collection.urlId}+1" class="navFolderBlock" columns="12" style="min-height: 20px;"/>
-          {.collection?}
-            <a href="{collection.fullUrl}" class="Header-nav-folder-item{.if active} Header-nav-folder-item--active{.end}" data-test="template-nav">{collection.navigationTitle}</a>
-          {.or}
-            {.section externalLink}
-              <a href="{url}"{.section newWindow} target="_blank"{.end} class="Header-nav-folder-item">{title}</a>
+        <span class="Header-nav-folder">
+            {.repeated section items}
+            {.collection?}
+                <a href="{collection.fullUrl}" class="Header-nav-folder-item{.if active} Header-nav-folder-item--active{.end}" data-test="template-nav">{collection.navigationTitle}</a>
+            {.or}
+                {.section externalLink}
+                <a href="{url}"{.section newWindow} target="_blank"{.end} class="Header-nav-folder-item">{title}</a>
+                {.end}
             {.end}
-          {.end}
-        {.end}
-      </span>
+            <squarespace:block-field id="{collection.urlId}+1" class="navFolderBlock" columns="12"/>
+            {.end}
+        </span>
     </span>{.end}{.or}{.section collection}<a href="{fullUrl}" class="Header-nav-item{.if active} Header-nav-item--active{.end}" data-test="template-nav">{navigationTitle}</a>{.end}{.end}{.end}{.section externalLink}<a href="{url}"{.section newWindow} target="_blank"{.end} class="Header-nav-item">{title}</a>{.end}{.end}
   </div>
 {.end}
