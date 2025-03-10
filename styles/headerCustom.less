@@ -60,6 +60,15 @@
                 box-shadow: 0 3px 5px @shadow, 0 11px 7px -9px rgba(0,0,0,.2) inset;
                 border-radius: 0 0 5px 5px;
                 transform: none!important;
+
+                .navFolderBlock {
+                    &.empty {
+                        display: none;
+                    }
+                    &.sqs-frontend-overlay-editor-widget-host {
+                        display: block!important;
+                    }
+                }
             }
             &:hover,
             &:focus,
