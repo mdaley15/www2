@@ -70,5 +70,6 @@ $( document ).ready(function() {
     console.log(accordionDesc);
     for (let i = 0; i < accordionDesc.length; i++) {
         console.log(i);
+        accordionDesc[i].append('<squarespace:block-field id="accordionImg'+[i]+'" class="accordionImage" columns="12"/>')
     }
 });
