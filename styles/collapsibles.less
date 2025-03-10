@@ -1,0 +1,91 @@
+.collapsible {
+    padding: 0!important;
+    margin: 0!important;
+    list-style: none!important;
+    
+    li {
+        list-style-type: none!important;
+        
+        .collapsible-header {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            line-height: 1.5;
+            padding: 1rem;
+            background-color: #fff;
+            border: 0;
+            transition: all .3s ease-in-out;
+            -webkit-transition: all .3s ease-in-out;
+            -webkit-tap-highlight-color: transparent;
+            cursor: pointer;
+            width: 100%;
+
+            h3 {
+                margin: 0!important;
+                text-align: left;
+    
+                .col,
+                .sqs-layout .sqs-row .sqs-block {
+                    padding: 0!important;
+                }
+                .collapsibleTitle {
+                    width: 100%;
+                    text-align: left;
+                    transition: all .3s ease-in-out;
+                }
+            }
+            .sign {
+                display: flex; 
+                justify-content: flex-end;
+                align-items: center;
+                pointer-events: none;
+                
+                i {
+                    // font-size: 1.5em;
+                    margin: 0!important;
+                }
+            }
+            &:hover,
+            &:focus,
+            &.active {
+                background-color: @primary;
+                text-decoration: none!important;
+                outline: none;
+
+                h2,i {
+                    color: white!important;
+                }
+            }
+        }
+        .collapsible-body {
+            display: none;
+            border-bottom: 1px solid #000;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 2rem;
+
+            li {
+                list-style-type: disc;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 500px) {
+    .calculators .collapsible {
+        padding-left: 0!important;
+        border: none!important;
+        box-shadow: none;
+    }
+    .collapsible-header {
+        padding: .5rem;
+    }
+    .collapsible-header h3 {
+        font-size: 20px;
+    }
+    .collapsible-body {
+        padding: 10px!important;
+    }
+    .calc-container {
+        padding: 5px;
+    }
+}
