@@ -69,7 +69,7 @@ $( document ).ready(function() {
     let accordionDescs = document.querySelectorAll('div.accordion-item__description');
     let newBlock = document.createElement("div");
     newBlock.classList.add("sqs-block", "image-block", "sqs-block-image");
-    newBlock.attr("data-block-type", "5");
+    newBlock.setAttribute("data-block-type", "5");
 
     for (let i = 0; i < accordionDescs.length; i++) {
         let accordionDesc = accordionDescs[i]
