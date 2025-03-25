@@ -56,48 +56,7 @@
         order: 1!important;
         margin-right: 30px;
     }
-    .Header-nav--primary {
-
-        .Header-nav-item {
-            padding: 20px 0!important;
-
-            .Header-nav-folder {
-                box-shadow: 0 3px 5px @shadow, 0 11px 7px -9px rgba(0,0,0,.2) inset;
-                border-radius: 0 0 5px 5px;
-                transform: none!important;
-
-                .navFolderBlock {
-                    &.empty {
-                        display: none;
-                    }
-                    &.sqs-frontend-overlay-editor-widget-host {
-                        display: block!important;
-                        min-height: 50px;
-                        background-color: beige;
-                    }
-                }
-                .folderItemWrap {
-                    &:hover,
-                    &:focus,
-                    &:focus-within {
-                        .Header-nav-folder-item {
-                            text-decoration: underline;
-                            -webkit-text-decoration-color: @orange; /* Safari */  
-                            text-decoration-color: @orange;
-                        }
-                    }
-                }
-            }
-            &:hover,
-            &:focus,
-            &:focus-within {
-                .Header-nav-folder {
-                    left: 0;
-                    opacity: 1;
-                }
-            }
-        }
-    }    
+      
 }
 .Header-nav--primary .Header-nav-folder-title:hover,
 .Header-nav--primary .Header-nav-folder-title:focus,
