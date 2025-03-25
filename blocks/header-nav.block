@@ -6,7 +6,6 @@
 
             <span class="Header-nav-folder">
                 {.repeated section items}
-                <div class="folderItemWrap">
                 {.collection?}
                     <a href="{collection.fullUrl}" class="Header-nav-folder-item{.if active} Header-nav-folder-item--active{.end}" data-test="template-nav">{collection.navigationTitle}</a>
                 {.or}
@@ -14,8 +13,6 @@
                     <a href="{url}"{.section newWindow} target="_blank"{.end} class="Header-nav-folder-item">{title}</a>
                     {.end}
                 {.end}
-                <!-- <squarespace:block-field id="{collection.urlId}FolderBlock" class="navFolderBlock" columns="12"/> -->
-                </div>
                 {.end}
             </span>
     </span>{.end}{.or}{.section collection}<a href="{fullUrl}" class="Header-nav-item{.if active} Header-nav-item--active{.end}" data-test="template-nav">{navigationTitle}</a>{.end}{.end}{.end}{.section externalLink}<a href="{url}"{.section newWindow} target="_blank"{.end} class="Header-nav-item">{title}</a>{.end}{.end}
