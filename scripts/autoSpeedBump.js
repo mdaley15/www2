@@ -17,10 +17,6 @@ $( document ).ready(function() {
                 $(this).addClass('local');
                 $(this).removeClass('external');
             break;
-            case 'www.ea.financial-net.com' :
-                $(this).addClass('local'); 
-                $(this).removeClass('external');
-            break;
             default:
                 $(this).addClass('local');
         }

@@ -1,5 +1,5 @@
-<div id="omnipop1" class="popoverlay modalHide"  tabindex="0">
-    <div class="omnipop">
+<div id="ISpop1" class="popoverlay modalHide"  tabindex="0">
+    <div class="ISpop">
         <!-- <img src="../assets/logo.png" alt="Teamsters Local 697 Credit Union" /> -->
         {.section website}
             {.section logoImageUrl}
