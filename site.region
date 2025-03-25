@@ -86,7 +86,7 @@
             <nav class="Header-nav Header-nav--secondary" data-nc-element="secondary-nav" data-content-field="navigation">
                 <squarespace:navigation navigationId="secondaryNavigation" template="header-nav" />
             </nav>
-            
+
             {.if website.socialAccounts.0}
               <div class="Header-social" data-nc-element="social">
                 {@|apply social-links.block}
@@ -120,6 +120,7 @@
             </div>
             <div data-nc-container="bottom-right">
                 <nav class="Header-nav Header-nav--primary" data-nc-element="primary-nav" data-content-field="navigation">
+                    <span class="navTitle">Who We Are</span>
                     <squarespace:navigation navigationId="mainNavigation" template="header-nav" />
                 </nav>
 
