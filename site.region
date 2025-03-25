@@ -125,7 +125,7 @@
                 </nav>
                 <nav class="Header-nav Header-nav--primary" data-nc-element="primary-nav" data-content-field="navigation">
                     <span class="navTitle">What We Do</span>
-                    <squarespace:navigation navigationId="mainNavigation2" template="header-nav2" />
+                    <squarespace:navigation navigationId="mainNavigation2" template="header-nav" />
                 </nav>
 
                 <squarespace:block-field id="myBlock" columns="12"/>
