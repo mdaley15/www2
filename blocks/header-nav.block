@@ -14,7 +14,7 @@
                     <a href="{url}"{.section newWindow} target="_blank"{.end} class="Header-nav-folder-item">{title}</a>
                     {.end}
                 {.end}
-                <squarespace:block-field id="{collection.urlId}FolderBlock" class="navFolderBlock" columns="12"/>
+                <!-- <squarespace:block-field id="{collection.urlId}FolderBlock" class="navFolderBlock" columns="12"/> -->
                 </div>
                 {.end}
             </span>
