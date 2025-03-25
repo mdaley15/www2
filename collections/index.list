@@ -3,7 +3,7 @@
 
     {.equal? typeName "gallery"}
 
-      <section id="{urlId}" class="Index-gallery" data-controller="IndexGallery" data-collection-id="{id}">
+      <section id="{urlId}" class="Index-gallery {urlId}" data-controller="IndexGallery" data-collection-id="{id}">
         <div class="Index-gallery-wrapper">
           <button class="Index-gallery-control Index-gallery-control--left">
             <svg class="Icon Icon--caretLarge--left" viewBox="0 0 23 48">
