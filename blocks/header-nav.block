@@ -2,7 +2,7 @@
   <div class="Header-nav-inner">
     {.repeated section @}{.collection?}{.folder?}{.index?}{.section collection}<a href="{fullUrl}" class="Header-nav-item{.if active} Header-nav-item--active{.end}" data-test="template-nav">{navigationTitle}</a>{.end}{.or}<span class="Header-nav-item Header-nav-item--folder">
 
-      <a href="{collection.fullUrl}" class="Header-nav-folder-title{.if folderActive} Header-nav-folder-title--active{.end}" data-controller="HeaderNavFolderTouch">{collection.navigationTitle}</a>
+      <span href="{collection.fullUrl}" class="Header-nav-folder-title{.if folderActive} Header-nav-folder-title--active{.end}" data-controller="HeaderNavFolderTouch">{collection.navigationTitle}</span>
 
         <span class="Header-nav-folder">
             {.repeated section items}
