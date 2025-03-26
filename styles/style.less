@@ -179,14 +179,21 @@ hr {
         }
     }
     &.stats {
-        @media only screen and (min-width: 641px) {
-            .contentOuter {
+        .contentOuter {
+            .contentInner {
+                i {
+                    font-size: 150px;
+                    color: fade(@blue, 95%);
+                }
+            }
+            @media only screen and (min-width: 641px) {
                 width: 50%;
             }
-        }
-        @media only screen and (min-width: 641px) {
-            .contentOuter {
-                width: 50%;
+            @media only screen and (min-width: 900px) {
+                width: 33.3333%;
+            }
+            @media only screen and (min-width: 1100px) {
+                width: 20%;
             }
         }
     }
