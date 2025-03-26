@@ -60,9 +60,9 @@
             </div>
         </div>
         <div class="footerRow rowThree">
-            <!-- <div class="footerCol bigCol">
-                {@|apply signature.block}
-            </div> -->
+            <div class="footerCol bigCol">
+                <small>© 2025 Inter-State Studio & Publishing Co.</small>
+            </div>
         </div>
 
     </div>
