@@ -17,6 +17,8 @@
                 {.end}
                 {.end}
             </span>
-    </span>{.end}{.or}{.section collection}<a href="{fullUrl}" class="Header-nav-item{.if active} Header-nav-item--active{.end}" data-test="template-nav">{navigationTitle}</a>{.end}{.end}{.end}{.section externalLink}<a href="{url}"{.section newWindow} target="_blank"{.end} class="Header-nav-item">{title}</a>{.end}{.end}
+    </span>{.end}{.or}{.section collection}
+        <a href="{fullUrl}" class="Header-nav-item{.if active} Header-nav-item--active{.end}" data-test="template-nav">{navigationTitle}</a>{.end}{.end}{.end}{.section externalLink}<a href="{url}"{.section newWindow} target="_blank"{.end} class="Header-nav-item">{@|apply starIcon.block} <span>{title}</span></a>
+    {.end}{.end}
   </div>
 {.end}
