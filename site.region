@@ -122,11 +122,11 @@
             </div>
             <div data-nc-container="bottom-right">
                 <nav class="Header-nav Header-nav--primary" data-nc-element="primary-nav" data-content-field="navigation" tabindex="0">
-                    <span class="navTitle">Who We Are</span>
+                    <span class="navTitle">Who We Are <i class="fa-solid fa-chevron-down"></i></span>
                     <squarespace:navigation navigationId="mainNavigation" template="header-nav" />
                 </nav>
                 <nav class="Header-nav Header-nav--primary" data-nc-element="primary-nav" data-content-field="navigation" tabindex="0">
-                    <span class="navTitle">What We Do</span>
+                    <span class="navTitle">What We Do <i class="fa-solid fa-chevron-down"></i></span>
                     <squarespace:navigation navigationId="mainNavigation2" template="header-nav" />
                 </nav>
 

@@ -48,15 +48,92 @@
     width: 100%;
     // padding: 0 5vw;
 
-    .Header-inner {
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
     .Header-branding {
         order: 1!important;
         margin-right: 30px;
     }
-      
+    .Header-inner {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .Header-nav--primary {
+        margin-left: 2vw;
+        position: relative;
+        padding: 30px 0!important;
+        
+        .navTitle {
+            font-size: 30px;
+            color: @blue;
+        }
+        .Header-nav-inner {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: rgba(255,255,255,.8);
+            border-radius: 5px;
+            display: none;
+            flex-direction: column;
+            padding: 10px;
+                
+            > .Header-nav-item {
+                margin-bottom: 10px!important;
+                
+                &:last-child {
+                    margin-bottom: 0!important;
+                }
+            }
+            a.Header-nav-item,
+            .Header-nav-folder-title {
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                margin: 0;
+                    
+                .starIcon {
+                    height: 20px;
+                    margin-right: 5px;
+                }
+            }
+            .Header-nav-item--folder {
+                padding: 0!important;
+                margin-top: 0!important;
+                margin-left: 0!important;
+                margin-right: 0!important;
+                
+                .Header-nav-folder {
+                    padding: 0;
+                    display: block;
+                    background: transparent;
+                    transform: none;
+                    margin: 0;
+                    
+                    a {
+                        padding-left: 35px;
+                        font-weight: 100;
+                        text-transform: capitalize;
+                        padding-top: 5px;
+                    }
+                }
+            }
+            * {
+                position: static!important;
+                opacity: 1;
+                text-align: left;
+            }
+        }
+        
+        &:hover,
+        &:focus,
+        &:focus-within {
+            .navTitle {
+                text-decoration: underline; 
+                text-decoration-color: @drkOrange;
+            }
+            .Header-nav-inner {
+                display: flex;
+            }
+        }
+    }      
 }
 .Header-nav--primary .Header-nav-folder-title:hover,
 .Header-nav--primary .Header-nav-folder-title:focus,
