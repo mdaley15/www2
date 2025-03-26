@@ -12,10 +12,13 @@
 @darkBlue: #273d71;
 @orange: #ec862d;
 @drkOrange: #dd6a14;
+@ltBlue: #58a6dc;
+@green: #b4d85b;
 @transparent: rgba(255,255,255, .9);
 @shadow: rgba(0,0,0, .5);
 @black: #000;
 @white: #fff;
+
 * {
     box-sizing: border-box!important;
     -webkit-hyphens: none!important;
@@ -76,6 +79,15 @@ hr {
 }
 .starIcon {
 
+}
+.orange {
+    color: @orange;
+}
+.ltBlue {
+    color: @ltBlue;
+}
+.green {
+    color: @green;
 }
 .drkOrange {
     color: @drkOrange;
@@ -204,8 +216,13 @@ hr {
                         margin: 0;
                         line-height: 1;
 
-                        &:first-child {
+                        &.stat {
                             font-size: 50px;
+                            font-family: oswald;
+                            text-shadow: 2px 2px 0 black;
+                        }
+                        &:nth-child(2) {
+                            color: @blue;
                         }
                     }
                 }
