@@ -22,6 +22,9 @@
     -ms-hyphens: none!important;
     hyphens: none!important;
 }
+html {
+    scroll-behavior: smooth!important;
+}
 body {
     overflow-x: hidden;
     font-family: "gotham";
@@ -173,6 +176,18 @@ hr {
 
         .contentInner {
 
+        }
+    }
+    &.stats {
+        @media only screen and (min-width: 641px) {
+            .contentOuter {
+                width: 50%;
+            }
+        }
+        @media only screen and (min-width: 641px) {
+            .contentOuter {
+                width: 50%;
+            }
         }
     }
 }
