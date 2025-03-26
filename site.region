@@ -166,7 +166,7 @@
         </div>
       </div>
 
-      {@|apply footer.block}
+      <!-- {@|apply footer.block} -->
       {@|apply chat.block}
 
     </div>
