@@ -1,7 +1,7 @@
 {.section items}
   <div class="Header-nav-inner">
     {.repeated section @}{.collection?}{.folder?}{.index?}{.section collection}
-        <a href="{fullUrl}" class="Header-nav-item{.if active} Header-nav-item--active{.end}" data-test="template-nav">{@|apply starIcon.block} <span>{navigationTitle}</span></a>
+        <p>{@|apply starIcon.block} <a href="{fullUrl}" class="Header-nav-item{.if active} Header-nav-item--active{.end}" data-test="template-nav">{navigationTitle}</a></p>
     {.end}{.or}
     <span class="Header-nav-item Header-nav-item--folder">
         <p href="{collection.fullUrl}" class="Header-nav-folder-title{.if folderActive} Header-nav-folder-title--active{.end}" data-controller="HeaderNavFolderTouch">{@|apply starIcon.block} <span>{collection.navigationTitle}</span></p>
@@ -18,7 +18,7 @@
                 {.end}
             </span>
     </span>{.end}{.or}{.section collection}
-        <a href="{fullUrl}" class="Header-nav-item{.if active} Header-nav-item--active{.end}" data-test="template-nav">{navigationTitle}</a>{.end}{.end}{.end}{.section externalLink}<a href="{url}"{.section newWindow} target="_blank"{.end} class="Header-nav-item">{@|apply starIcon.block} <span>{title}</span></a>
+        <p>{@|apply starIcon.block} <a href="{fullUrl}" class="Header-nav-item{.if active} Header-nav-item--active{.end}" data-test="template-nav">{navigationTitle}</a>{.end}{.end}{.end}{.section externalLink}<a href="{url}"{.section newWindow} target="_blank"{.end} class="Header-nav-item">{title}</a></p>
     {.end}{.end}
   </div>
 {.end}
