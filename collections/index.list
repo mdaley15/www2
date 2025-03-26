@@ -85,7 +85,7 @@
             <!-- <svg class="Index-page-scroll-indicator-arrow Icon Icon--caretLarge--down" viewBox="0 0 48 23">
               <use xlink:href="/assets/ui-icons.svg#caret-down-large-icon"></use>
             </svg> -->
-            <i class="fa-solid fa-chevron-down"></i>
+            <i class="fa-solid fa-chevron-down Index-page-scroll-indicator-arrow Icon Icon--caretLarge--down"></i>
             <div class="Index-page-scroll-indicator-line"></div>
           </div>
         {.end}
