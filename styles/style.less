@@ -112,7 +112,7 @@ hr {
     text-transform: uppercase!important;
     background-color: @blue!important;
     color: @white!important;
-    padding: 10px 20px!important;
+    padding: 10px 20px 12px!important;
     margin: 0!important;
     border-radius: 100px!important;
     border: 1px solid @drkOrange!important;
@@ -120,7 +120,7 @@ hr {
     outline: none!important;
     text-decoration: none!important;
     line-height: 1em !important;
-    letter-spacing: .1em!important;
+    letter-spacing: .05em!important;
     text-align: center;
     transition: all .4s ease-in-out!important;
     cursor: pointer;
@@ -129,8 +129,18 @@ hr {
 
     &:hover,
     &:focus {
-        background-color: @orange!important;
-        color: @blue!important;
+        background-color: @drkOrange!important;
+    }
+    &.sqs-block-button-element--large {
+        font-size: 20px !important;
+        padding: 12px 25px 14px!important;
+        background-color: @drkOrange!important;
+
+        &:hover,
+        &:focus {
+            background-color: white!important;
+            color: @blue!important;
+        }
     }
 }
 .contentWrap {
