@@ -82,9 +82,10 @@
         </video> -->
           <div class="Index-page-scroll-indicator hidden" data-controller="ScrollIndicator">
             <div class="Index-page-scroll-indicator-text"></div>
-            <svg class="Index-page-scroll-indicator-arrow Icon Icon--caretLarge--down" viewBox="0 0 48 23">
+            <!-- <svg class="Index-page-scroll-indicator-arrow Icon Icon--caretLarge--down" viewBox="0 0 48 23">
               <use xlink:href="/assets/ui-icons.svg#caret-down-large-icon"></use>
-            </svg>
+            </svg> -->
+            <i class="fa-solid fa-chevron-down"></i>
             <div class="Index-page-scroll-indicator-line"></div>
           </div>
         {.end}
