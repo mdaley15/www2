@@ -125,12 +125,24 @@
                         }
                         &:nth-child(3n + 1) {
                             box-shadow: 10px 10px 0 @drkOrange;
+
+                            &::before {
+                                background-color: @drkOrange;
+                            }
                         }
                         &:nth-child(3n + 2) {
                             box-shadow: 10px 10px 0 @ltBlue;
+                            
+                            &::before {
+                                background-color: @ltBlue;
+                            }
                         }
                         &:nth-child(3n + 3) {
                             box-shadow: 10px 10px 0 @green;
+                            
+                            &::before {
+                                background-color: @green;
+                            }
                         }
                         &::before {
                             content: "";
@@ -140,7 +152,6 @@
                             transform: translate(0,-50%);
                             height: 280px;
                             width: 300px;
-                            background-color: @drkOrange;
                             border-radius: 5px;
                             z-index: 0;
                         }
