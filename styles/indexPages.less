@@ -54,7 +54,8 @@
                         transform: translate(0,-50%);
                         padding: 50px;
                         width: 100%;
-                        background-color: #f5f6f9;
+                        max-width: 1400px;
+                        background-color: @bgOverlay;
                         border-radius: 5px;
                         
                         > img, .meta {
@@ -87,7 +88,7 @@
                                 text-align: left;
                                 
                                 .meta-title {
-                                    color: blue;
+                                    color: @blue;
                                     font-size: 40px;
                                     font-family: oswald;
                                     text-transform: uppercase;
@@ -114,11 +115,14 @@
                             right: 50px;
                             top: 50%;
                             transform: translate(0,-50%);
-                            height: 300px;
+                            height: 280px;
                             width: 300px;
-                            background-color: orange;
+                            background-color: @drkOrange;
                             border-radius: 5px;
                             z-index: 0;
+                        }
+                        &:first-child {
+                            box-shadow: 10px 10px 0 @green;
                         }
                     }
                 }
