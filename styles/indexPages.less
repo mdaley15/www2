@@ -122,14 +122,14 @@
                             border-radius: 5px;
                             z-index: 0;
                         }
-                        &:first-child {
+                        &:nth-child(3n) {
                             box-shadow: 10px 10px 0 @drkOrange;
                         }
-                        &:nth-child(2n + 3) {
+                        &:nth-child(3n + 2) {
                             box-shadow: 10px 10px 0 @ltBlue;
                         }
-                        &:last-child {
-                            // box-shadow: 10px 10px 0 @drkOrange;
+                        &:nth-child(3n + 3) {
+                            box-shadow: 10px 10px 0 @green;
                         }
                     }
                 }
