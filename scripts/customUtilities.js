@@ -58,16 +58,13 @@ $( document ).ready(function() {
 
     $('a[href^="tel:"]').css('white-space', 'nowrap');
 
-    $('.sqs-block-button-element, .sqs-system-button').addClass('lift allBtns');
-
     $('a.previous').append('<i class="fas fa-chevron-left"></i>');
     $('a.next').append('<i class="fas fa-chevron-right"></i>');
 
     $('.sqs-block-button-element, .sqs-system-button, .meta a').addClass('lift allBtns');
-    
+
 
     let accordionDescs = document.querySelectorAll('div.accordion-item__description');
-
 
     for (let i = 0; i < accordionDescs.length; i++) {
         let accordionDesc = accordionDescs[i]
