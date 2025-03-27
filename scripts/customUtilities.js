@@ -61,8 +61,7 @@ $( document ).ready(function() {
     $('a.previous').append('<i class="fas fa-chevron-left"></i>');
     $('a.next').append('<i class="fas fa-chevron-right"></i>');
 
-    $('.sqs-block-button-element, .sqs-system-button, .meta a').addClass('lift allBtns');
-
+    $('.sqs-block-button-element, .sqs-system-button, .meta a:last-child').addClass('lift allBtns');
 
     let accordionDescs = document.querySelectorAll('div.accordion-item__description');
 
