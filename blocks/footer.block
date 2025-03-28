@@ -41,7 +41,7 @@
                 </ul>
             </div>
             <div class="footerCol smallCol colFour">
-                <div class="Header-social" data-nc-element="social">
+                <div>
                     {@|apply social-links.block}
                 </div>
             </div>
