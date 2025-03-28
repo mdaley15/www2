@@ -65,7 +65,6 @@
                         .slideImgWrap,
                         .meta {
                             display: block;
-                            position: static!important;
                             right: unset;
                             left: unset!important;
                             top: unset!important;
@@ -76,18 +75,30 @@
                             width: 100%!important;
                             max-width: 430px;
                             padding-right: 30px;
+                            position: relative;
 
                             img {
                                 position: static!important;
                                 display: block;
-                                width: 100%;
+                                width: 100%!important;
                                 height: auto!important;
                                 border-radius: 5px;
                                 box-shadow: 2px 2px 3px rgba(0,0,0,.5);
                                 background: white;
                             }
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                right: 0;
+                                top: 20px;
+                                bottom: 20px;
+                                width: 60px;
+                                border-radius: 5px;
+                                z-index: 0;
+                            }
                         }
                         .meta {
+                            position: static!important;
                             flex-grow: 1;
                             margin: 0!important;
                             width: 100%;
@@ -181,17 +192,6 @@
                             &::before {
                                 background-color: @green;
                             }
-                        }
-                        &::before {
-                            content: "";
-                            position: absolute;
-                            right: 50px;
-                            top: 50%;
-                            transform: translate(0,-50%);
-                            height: 280px;
-                            width: 60px;
-                            border-radius: 5px;
-                            z-index: 0;
                         }
                         &.sqs-active-slide {
                             display: flex;
