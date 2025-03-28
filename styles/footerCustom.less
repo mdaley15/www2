@@ -26,20 +26,12 @@ footer {
         opacity: .2;
     }
     .insideFooter {
-        padding-left: 5vw;
-        padding-right: 5vw;
         margin: 0 auto;
     
         .footerRow {
 
             .footerCol {
-                padding-bottom: 20px!important;
                 
-                img.footerFavicon {
-                    display: block;
-                    width: 80px;
-                    margin-bottom: 10px;
-                }
                 .quicklinks {
                     text-align: left!important;
                     padding: 0!important;
@@ -51,58 +43,36 @@ footer {
                         align-items: baseline;
                     }
                     a {
-                    transition: all .4s ease-in-out!important;
-                    -webkit-transition: all .4s ease-in-out!important;
-                    }
-                    i {
-                        color: @orange;
-                        width: 25px;
-                        text-align: left;
-                    }
-                    a:hover,
-                    a:focus {
-                        text-decoration: underline;
-                    }
-                }
-                .footerP {
-                    font-size: .8em;
-                    line-height: 1.5;
-                    text-transform: uppercase;
-                }
-                .footerIcons {
+                        font-size: 16px;
+                        transition: all .4s ease-in-out!important;
+                        -webkit-transition: all .4s ease-in-out!important;
 
-                    .footerIcon {
-                        display: inline-block;
-                        
-                        img {
-                            height: 65px;
-                            display: block;
-                        }
-                        &.footerIcon1 {
-                            margin-right: 10px;
+                        &:hover,
+                        &:focus {
+                            text-decoration: underline;
+                            -webkit-text-decoration-color: @orange; /* Safari */  
+                            text-decoration-color: @orange;
                         }
                     }
                 }
-                &.bigCol {
-                    margin: 0 auto;
-                    padding: 0!important;
-                }
-            }
-        }
-        @media only screen and (min-width: 800px) {
-            .footerRow {
-                display: flex;
-                justify-content: space-between
-            }
-            a.LinkedIn {
-                i {
-                    font-size: 30px;
+                a.LinkedIn {
                     transition: all .4s ease-in-out!important;
+    
+                    i {
+                        font-size: 30px;
+                    }
+                    &:hover,
+                    &:focus {
+                        transform: scale(1.5);
+                    }
                 }
-                &:hover,
-                &:focus {
-                    transform: scale(1.5);
-                }
+            }
+            &.rowOne {
+                padding-bottom: 30px;
+            }
+            &.rowTwo {
+                border-top: 1px solid white;
+                padding-top: 20px;
             }
         }
         &.footerTop {
@@ -116,10 +86,16 @@ footer {
         }
         &.footerBottom {
             background-color: @blue;
-            padding: 30px 5vw;
+            padding: 30px 5vw 20px;
 
             * {
                 color: white;
+            }
+        }
+        @media only screen and (min-width: 800px) {
+            .footerRow {
+                display: flex;
+                justify-content: space-between
             }
         }
     }
