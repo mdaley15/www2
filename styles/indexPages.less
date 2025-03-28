@@ -39,6 +39,9 @@
             .sqs-gallery-container {
                 background: transparent;
                 height: fit-content;
+                padding: 0 39px 0 29px;
+                max-width: 1500px;
+                margin: 0 auto;
                 
                 .sqs-gallery {
                     display: flex;
@@ -172,7 +175,35 @@
                 }
                 .sqs-gallery-meta-container {
                     .sqs-gallery-controls {
-
+                        a {
+                            background: transparent!important;
+                            width: fit-content!important;
+                            height: 50px!important;
+                            margin-top: -25px!important;
+                            cursor: pointer;
+                            
+                            i {
+                                color: @blue;
+                                font-size: 30px;
+                                transition: all .4s ease-in-out;
+                            }
+                            &.previous {
+                                padding-left: 0;
+                            }
+                            &.next {
+                                padding-right: 0;
+                            }
+                            &::before {
+                                content: "";
+                                display: none!important;
+                            }
+                            &:hover,
+                            &:focus {
+                                i {
+                                    color: @drkOrange;
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -192,7 +223,7 @@
                         border-radius: 50%;
                         margin: 0 5px;
                         overflow: hidden;
-                        box-shadow: 1px 1px 1px gray;
+                        // box-shadow: 1px 1px 1px gray;
                         background-color: @blue;
                         
                         &:hover,
