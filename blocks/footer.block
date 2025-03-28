@@ -1,10 +1,12 @@
 <footer class="Footer" role="contentinfo" data-controller="FooterBreakpoints">
     <div class="insideFooter footerTop">
         <div>
-            <h2>Get School Services</h2>
-            <p>Bacon ipsum dolor amet turducken chislic beef, tongue chuck porchetta.</p>
+            <div>
+                <h2>Get School Services</h2>
+                <p>Bacon ipsum dolor amet turducken chislic beef, tongue chuck porchetta.</p>
+            </div>
+            <a class="allBtns" href="">Request More Info</a>
         </div>
-        <a class="allBtns" href="">Request More Info</a>
     </div>
     <div class="insideFooter footerBottom">
 
