@@ -64,7 +64,11 @@ $( document ).ready(function() {
     $('.sqs-block-button-element, .sqs-system-button, .meta p:last-child a').addClass('lift allBtns');
 
     var galleryThumbs = document.querySelectorAll('.sqs-gallery-thumbnails img');
-    console.log(galleryThumbs);
+    galleryThumbs.forEach(thumb => {
+        const wrapper = document.createElement('div');
+        thumb.parentNode.insertBefore(wrapper, thumb);
+        wrapper.appendChild(thumb);
+    });
 
     let accordionDescs = document.querySelectorAll('div.accordion-item__description');
 
