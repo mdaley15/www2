@@ -96,10 +96,6 @@ hr {
 .drkOrangeFill {
     fill: @drkOrange;
 }
-.Index-page-content {
-    padding-top: @tweak-index-page-padding!important;
-    padding-bottom: calc(@tweak-index-page-padding ~"-" 20px)!important;
-}
 .Index-page-scroll-indicator {
     i {
         font-size: 48px;
@@ -159,6 +155,8 @@ hr {
     &:hover,
     &:focus {
         background-color: @drkOrange!important;
+        border-color: @blue;
+        box-shadow: 2px 2px 0 @blue;
     }
     &.sqs-block-button-element--large {
         font-size: 35px !important;
@@ -198,8 +196,6 @@ hr {
         }
     }
     &.stats {
-        padding-bottom: 20px;
-        
         .contentOuter {
             .contentInner {
                 width: 100%;
