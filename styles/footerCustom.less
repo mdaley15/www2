@@ -1,30 +1,4 @@
 footer {
-    position: relative;
-    z-index: 1;
-    
-    &::before {
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 100%;
-        bottom: 0;
-        background-color: @white;
-        z-index: -2;
-    }
-    &::after {
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 100%;
-        bottom: 0;
-        left: 0;
-        background-image: url('/assets/footer.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center 100%;
-        z-index: -1;
-        opacity: .2;
-    }
     .insideFooter {
         margin: 0 auto;
     
@@ -90,7 +64,23 @@ footer {
         &.footerBottom {
             background-color: @blue;
             padding: 0 5vw;
-
+            position: relative;
+            z-index: 1;
+            
+            &::before {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
+                bottom: 0;
+                left: 0;
+                background-image: url('../assets/office.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center 100%;
+                z-index: -1;
+                opacity: .2;
+            }
             * {
                 color: white;
             }
