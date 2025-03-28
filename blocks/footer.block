@@ -1,12 +1,26 @@
 <footer class="Footer" role="contentinfo" data-controller="FooterBreakpoints">
+    <div class="insideFooter footerTop">
+
+    </div>
+    <div class="insideFooter footerBottom">
+    
+    </div>
     <div class="insideFooter">
 
         <div class="footerRow rowOne">
+            <div class="footerCol smallCol colTwo">
+                {.section website}
+                    {.section logoImageUrl}
+                        <img src="../assets/logoWhite.svg" alt="{siteTitle}" class="Header-branding-logo" />
+                    {.or}
+                        {siteTitle}
+                    {.end}
+                {.end}
+            </div>
             <div class="footerCol smallCol colOne">
                 <ul class="quicklinks linksLeft">
                     <li>
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div><a class="address external" href="asdfasdfasdf" target="_blank">Street<br>City, State ZIP</a></div>
+                        <a class="address external" href="asdfasdfasdf" target="_blank">Street<br>City, State ZIP</a>
                     </li>
                     <li>
                         <i class="fas fa-phone-square"></i>
@@ -18,48 +32,23 @@
                     </li>
                 </ul>
             </div>
-            <div class="footerCol smallCol colTwo">
-                <center>
-                    {.section website}
-                        {.section logoImageUrl}
-                            <img src="{logoImageUrl}?format=1500w" alt="{siteTitle}" class="Header-branding-logo" />
-                        {.or}
-                            {siteTitle}
-                        {.end}
-                    {.end}
-                </center>
-            </div>
             <div class="footerCol smallCol colThree">
-                <ul class="quicklinks linksRight">
-                    <li><i class="fas fa-calculator"></i><div><a href="/calculators">Calculators</a></div></li>	
-                    <li><i class="fas fa-exchange-alt"></i><div><a href="/privacy-policy">Privacy Policy</a></div></li>
-                    <li><i class="fas fa-map-marked-alt"></i><div><a href="/branches">Locations/Hours</a></div></li>
-                    <li><i class="fas fa-random"></i> <div>Routing# 253075251</div></li> 
+                <ul class="quicklinks">
+                    <li><a href="/calculators">Calculators</a></li>	
+                    <li><a href="/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="/branches">Locations/Hours</a></li>
+                    <li><a href="/branches">Locations/Hours</a></li>
                 </ul>
+            </div>
+            <div class="footerCol smallCol colFour">
+                {.if website.socialAccounts.0}
+                <div class="Header-social" data-nc-element="social">
+                    {@|apply social-links.block}
+                </div>
+                {.end}
             </div>
         </div>
         <div class="footerRow rowTwo">
-            <div class="footerCol medCol colOne">
-                {.section website}
-                    <p class="footerP" style="white-space:pre-wrap;">*APR = Annual Percentage Rate. Rate based on creditworthiness and term of loan.<br>**APY = Annual Percentage Yield. Rates are subject to change at any time and are not guaranteed.<br>We provide links to third party partners, independent from {siteTitle}. These links are provided only as a convenience. We do not manage the content of those sites. The privacy and security policies of external websites will differ from those of {siteTitle}.</p>
-                {.end}
-            </div>
-            <div class="footerCol smallCol colTwo">
-                <center class="footerIcons">
-                    <div class="footerIcon footerIcon1">
-                        <a class="lift" href="https://www.ncua.gov" target="_blank">
-                            <img src="/assets/ncua.svg" alt="Federally insured by NCUA">
-                        </a>
-                    </div>
-                    <div class="footerIcon footerIcon2">
-                        <a class="lift" href="http://hud.gov/" target="_blank">
-                            <img src="/assets/ehl.svg" alt="Equal Housing Lender">
-                        </a>
-                    </div>
-                </center>
-            </div>
-        </div>
-        <div class="footerRow rowThree">
             <div class="footerCol bigCol">
                 <small>© 2025 Inter-State Studio & Publishing Co.</small>
             </div>
