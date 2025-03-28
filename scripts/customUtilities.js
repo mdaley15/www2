@@ -64,13 +64,16 @@ $( document ).ready(function() {
     $('.sqs-block-button-element, .sqs-system-button, .meta p:last-child a').addClass('lift allBtns');
 
     var galleryThumbs = document.querySelectorAll('.sqs-gallery-thumbnails img');
-    galleryThumbs.forEach(thumb => {
+    galleryThumbs.forEach((thumb, index) => {
         var alt = thumb.getAttribute('alt');
         alt = alt.replace(/(<([^>]+)>)/gi, "");
         thumb.setAttribute('alt', alt);
         const wrapper = document.createElement('div');
         thumb.parentNode.insertBefore(wrapper, thumb);
         wrapper.appendChild(thumb);
+        if (index === 0) {
+            thumb.parentElement.classList.add('sqs-active-slide');
+        }
     });
 
     let accordionDescs = document.querySelectorAll('div.accordion-item__description');
