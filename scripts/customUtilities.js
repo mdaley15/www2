@@ -66,10 +66,8 @@ $( document ).ready(function() {
     var galleryThumbs = document.querySelectorAll('.sqs-gallery-thumbnails img');
     galleryThumbs.forEach(thumb => {
         var alt = thumb.getAttribute('alt');
-        console.log(alt);
         alt = alt.replace(/(<([^>]+)>)/gi, "");
-        // alt = alt.replace(/[^a-zA-Z0-9\s]/g, ""); 
-        console.log(alt);
+        thumb.setAttribute('alt', alt);
         const wrapper = document.createElement('div');
         thumb.parentNode.insertBefore(wrapper, thumb);
         wrapper.appendChild(thumb);
