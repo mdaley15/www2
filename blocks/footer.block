@@ -41,9 +41,8 @@
                 </ul>
             </div>
             <div class="footerCol smallCol colFour">
-                <a href="https://www.linkedin.com/company/inter-state-studio-&amp;-publishing-co-" target="_blank" class="SocialLinks-link LinkedIn" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/company/inter-state-studio-&amp;-publishing-co-" target="_blank" class="LinkedIn" aria-label="LinkedIn">
                     <i class="fa-brands fa-linkedin"></i>
-                    <span class="sr-only">External Website</span>
                 </a>
             </div>
         </div>
