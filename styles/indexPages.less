@@ -55,6 +55,7 @@
                         flex-direction: row-reverse;
                         align-items: flex-start;
                         justify-content: center;
+                        flex-direction: column-reverse;
                         gap: 50px;
                         padding: 50px;
                         width: 100%;
@@ -171,6 +172,21 @@
                         }
                         &.sqs-active-slide {
                             display: flex;
+                        }
+                        @media only screen and (min-width: 641px) {
+                            flex-direction: row-reverse;
+
+                            .meta {
+                                .meta-title {
+                                    font-size: 40px;
+                                    margin-bottom: 20px;
+                                    
+                                    img {
+                                        height: 30px;
+                                        bottom: 3px
+                                    }
+                                }
+                            }
                         }
                     }
                 }
