@@ -1,14 +1,15 @@
 <footer class="Footer" role="contentinfo" data-controller="FooterBreakpoints">
     <div class="insideFooter footerTop">
-
+        <div>
+            <h2>Get School Services</h2>
+            <p>Bacon ipsum dolor amet turducken chislic beef, tongue chuck porchetta.</p>
+        </div>
+        <a class="allBtns" href="">Request More Info</a>
     </div>
     <div class="insideFooter footerBottom">
-    
-    </div>
-    <div class="insideFooter">
 
         <div class="footerRow rowOne">
-            <div class="footerCol smallCol colTwo">
+            <div class="footerCol smallCol colOne">
                 {.section website}
                     {.section logoImageUrl}
                         <img src="../assets/logoWhite.svg" alt="{siteTitle}" class="Header-branding-logo" />
@@ -17,27 +18,24 @@
                     {.end}
                 {.end}
             </div>
-            <div class="footerCol smallCol colOne">
-                <ul class="quicklinks linksLeft">
-                    <li>
-                        <a class="address external" href="asdfasdfasdf" target="_blank">Street<br>City, State ZIP</a>
-                    </li>
-                    <li>
-                        <i class="fas fa-phone-square"></i>
-                        <div><a class="phone local" href="tel:1-123-456-7890" target="_blank">Call: (123) 456-7890</a></div>
-                    </li>
-                    <li>
-                        <i class="fas fa-envelope"></i>
-                        <div><a class="email local" href="mailto:email@email.com" target="_blank">Email: email@email.com</a></div>
-                    </li>
+            <div class="footerCol smallCol colTwo">
+                <ul class="quicklinks">
+                    <li><a href="asdf" target="">Careers</a></li>	
+                    <li><a href="asdf" target="">Franchise Opportunities</a></li>
+                    <li><a href="asdf" target="">Help</a></li>
+                    <li><a href="asdf" target="">Legal</a></li>
+                    <li><a href="asdf" target="">Student Data Privacy</a></li>
+                    <li><a href="asdf" target="">Service Areas</a></li>
                 </ul>
             </div>
             <div class="footerCol smallCol colThree">
                 <ul class="quicklinks">
-                    <li><a href="/calculators">Calculators</a></li>	
-                    <li><a href="/privacy-policy">Privacy Policy</a></li>
-                    <li><a href="/branches">Locations/Hours</a></li>
-                    <li><a href="/branches">Locations/Hours</a></li>
+                    <li><a href="asdf" target="">Privacy Policy</a></li>	
+                    <li><a href="asdf" target="">Cookies Policy</a></li>
+                    <li><a href="asdf" target="">Terms of Use</a></li>
+                    <li><a href="asdf" target="">Web Accessibility</a></li>
+                    <li><a href="asdf" target="">Consent Preferences</a></li>
+                    <li><a href="asdf" target="">Site Map</a></li>
                 </ul>
             </div>
             <div class="footerCol smallCol colFour">
