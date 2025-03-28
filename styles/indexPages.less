@@ -73,7 +73,7 @@
                             z-index: 1;
                         }
                         > img {
-                            width: 100%!important;
+                            width: calc(~"100% - 30px")!important;
                             max-width: 400px;
                             height: auto!important;
                             margin-right: 30px;
@@ -83,7 +83,7 @@
                         }
                         .meta {
                             flex-grow: 1;
-                            margin: 20px 0 0!important;
+                            margin: 0!important;
                             width: 100%;
                             max-width: 100%!important;
                             background: transparent!important;
@@ -95,17 +95,36 @@
                                 
                                 .meta-title {
                                     color: @blue;
-                                    font-size: 40px;
+                                    font-size: 30px;
                                     font-family: oswald;
                                     text-transform: uppercase;
                                     font-weight: 600;
                                     margin-bottom: 20px;
-                                    
-                                    img {
+                                    position: relative;
+                                    padding: 0 0 0 38px;
+                                    display: inline-block;
+    
+                                    &::before {
+                                        content: "";
+                                        position: absolute;
+                                        left: 0;
+                                        top: 10px;
                                         display: inline-block;
+                                        background-image: url('../assets/star.png;');
+                                        background-size: contain;
                                         height: 30px;
+                                        width: 30px;
+                                    }
+                                    &::after {
+                                        content: "";
                                         position: relative;
-                                        bottom: 3px
+                                        bottom: 2px;
+                                        display: inline-block;
+                                        margin-left: 8px;
+                                        background-image: url('../assets/star.png;');
+                                        background-size: contain;
+                                        height: 30px;
+                                        width: 30px;
                                     }
                                 }
                                 .meta-description {
@@ -176,15 +195,15 @@
                         @media only screen and (min-width: 1000px) {
                             flex-direction: row-reverse;
 
+                            img {
+                                width: 100%!important;
+                            }
                             .meta {
+                                margin: 20px 0 0!important;
+
                                 .meta-title {
                                     font-size: 40px;
                                     margin-bottom: 20px;
-                                    
-                                    img {
-                                        height: 30px;
-                                        bottom: 3px
-                                    }
                                 }
                             }
                         }
