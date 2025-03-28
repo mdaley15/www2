@@ -67,7 +67,7 @@ $( document ).ready(function() {
     slides.forEach((slide, index) => {
         var wrap = document.createElement('div');
         slide.parentNode.insertBefore(wrap, slide);
-        wrapper.appendChild(slide);
+        wrap.appendChild(slide);
     });
 
     var galleryThumbs = document.querySelectorAll('.sqs-gallery-thumbnails img');
