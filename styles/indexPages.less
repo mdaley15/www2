@@ -194,6 +194,13 @@
                         overflow: hidden;
                         box-shadow: 1px 1px 1px gray;
                         background-color: @blue;
+                        
+                        &:hover,
+                        &:focus,
+                        &:focus-within,
+                        &.sqs-active-slide {
+                            background-color: @drkOrange;
+                        }
                     }
                     img {
                         width: 100%!important;
@@ -201,6 +208,7 @@
                         opacity: 0!important;
                         cursor: pointer;
                     }
+                    div:has(.sqs-active-slide),
                     .sqs-active-slide {
                         background-color: @drkOrange;
                     }
