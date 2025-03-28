@@ -68,7 +68,7 @@ $( document ).ready(function() {
         var alt = thumb.getAttribute('alt');
         console.log(alt);
         alt = alt.replace(/(<([^>]+)>)/gi, "");
-        alt = alt.replace(/[^a-zA-Z0-9\s]/g, ""); 
+        // alt = alt.replace(/[^a-zA-Z0-9\s]/g, ""); 
         console.log(alt);
         const wrapper = document.createElement('div');
         thumb.parentNode.insertBefore(wrapper, thumb);
