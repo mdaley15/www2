@@ -66,6 +66,7 @@ footer {
             padding: 0 5vw;
             position: relative;
             z-index: 1;
+            border-top: 3px solid @orange;
             
             &::before {
                 position: absolute;
@@ -76,10 +77,11 @@ footer {
                 left: 0;
                 background-image: url('../assets/office.jpg');
                 background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center 100%;
+                background-size: 100%;
+                background-position: center;
                 z-index: -1;
                 opacity: .2;
+                mix-blend-mode: luminosity;
             }
             * {
                 color: white;
