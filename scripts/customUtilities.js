@@ -63,6 +63,9 @@ $( document ).ready(function() {
 
     $('.sqs-block-button-element, .sqs-system-button, .meta p:last-child a').addClass('lift allBtns');
 
+    var galleryThumbs = document.querySelectorAll('.sqs-gallery-thumbnails img');
+    console.log(galleryThumbs);
+
     let accordionDescs = document.querySelectorAll('div.accordion-item__description');
 
     for (let i = 0; i < accordionDescs.length; i++) {
