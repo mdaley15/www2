@@ -38,15 +38,17 @@
 
             .sqs-gallery-container {
                 background: transparent;
+                height: fit-content;
                 
                 .sqs-gallery {
-                    height: fit-content!important;
-                    min-height: 500px;
+                    display: flex;
+                    height: max-content!important;
                     max-width: 1400px;
                     margin: 0 auto;
 
                     .slide {
-                        display: flex!important;
+                        display: none;
+                        position: relative;
                         flex-direction: row-reverse;
                         align-items: center;
                         justify-content: center;
@@ -154,6 +156,9 @@
                             width: 300px;
                             border-radius: 5px;
                             z-index: 0;
+                        }
+                        &.sqs-active-slide {
+                            display: flex;
                         }
                     }
                 }
