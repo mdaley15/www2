@@ -171,11 +171,40 @@
                     }
                 }
                 .sqs-gallery-meta-container {
-                    display: none;
+                    .sqs-gallery-controls {
+
+                    }
                 }
             }
             .sqs-gallery-thumbnails {
                 padding: 0!important;
+                overflow: visible;
+                
+                .sqs-wrapper {
+                    display: flex;
+                    justify-content: center;
+                    width: 100%!important;
+                    position: static!important;
+                    
+                    div {
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 50%;
+                        margin: 0 5px;
+                        overflow: hidden;
+                        box-shadow: 1px 1px 1px gray;
+                        background-color: @blue;
+                    }
+                    img {
+                        width: 100%!important;
+                        height: 100%!important;
+                        opacity: 0!important;
+                        cursor: pointer;
+                    }
+                    .sqs-active-slide {
+                        background-color: @drkOrange;
+                    }
+                }
             }
         }
     }
