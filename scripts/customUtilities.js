@@ -65,7 +65,7 @@ $( document ).ready(function() {
 
     var slides = document.querySelectorAll('#home .slide > img');
     slides.forEach((slide, index) => {
-        var wrap = document.createElement('div');
+        var wrap = document.createElement('div').classList.add('slideImgWrap');
         slide.parentNode.insertBefore(wrap, slide);
         wrap.appendChild(slide);
     });
