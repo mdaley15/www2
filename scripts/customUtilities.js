@@ -15,9 +15,9 @@ $( document ).ready(function() {
     }
     /* Create an alert to show if the browser is IE or not */
     if (isIE()) {
-        console.log('Is IE');
+        // console.log('Is IE');
     } else {
-        console.log('Is NOT IE');
+        // console.log('Is NOT IE');
     }
 
     $('a[href*="#"]:not([href="#"])').click(function() {
@@ -41,7 +41,7 @@ $( document ).ready(function() {
         var ariaLabel = $(this).attr('aria-label');
         ariaLabel = ariaLabel.split('-')[0]
         $(this).attr('aria-label', ariaLabel);
-        console.log(ariaLabel);
+        // console.log(ariaLabel);
     });
 
     $(".sqs-search-page").closest("main.Main").prepend('<section class = "Intro search-page-intro"> </section>');
