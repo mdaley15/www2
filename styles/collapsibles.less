@@ -87,6 +87,7 @@
                 justify-content: center;
                 align-items: center;
                 flex-wrap: wrap;
+                color: @drkOrange;
 
                 .filterBtn {
                     border-top: 0;
@@ -94,6 +95,13 @@
                     border-right: 0;
                     background: transparent;
                     border-bottom: 2px solid transparent;
+                    color: @blue;
+
+                    &:hover,
+                    &:focus,
+                    &.activeBtn {
+                        border-color: @drkOrange;
+                    }
                 }
             }
             .filterText {
