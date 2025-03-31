@@ -88,11 +88,9 @@ $( document ).ready(function() {
     const summaryItems = document.querySelectorAll('.summary-item');
     console.log(summaryItems);
     summaryItems.forEach((item, index) => {
-        let outerText = item.outerText;
-        const firstSpaceIndex = outerText.indexOf(' ');
-        outerText.substring(0, firstSpaceIndex);
-        // outerText = outerText.replace(/\s+/g, '');
-        // console.log(outerText);
-        // item.classList.add(outerText);
+        let innerText = item.innerText;
+        innerText = innerText.split(" ")[0];
+        console.log(innerText);
+        // item.classList.add(innerText);
     });
 });
