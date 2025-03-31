@@ -104,8 +104,20 @@ document.addEventListener('DOMContentLoaded', function() {
 function imgFilter(btn) {
     let filter = btn.getAttribute('data-filter');
     let thisBlock = btn.closest('.col');
+    filterTexts = thisBlock.querySelectorAll('.filterText');
     let thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
     galleryItems = thisGallery.querySelectorAll('.slide');
+    filterTexts.forEach(filterText => {
+        if (filter === 'all') {
+            filterText.classList.remove('hide');
+        } else {
+            if (filterText.classList.contains(filter)) {
+                filterText.classList.remove('hide');
+            } else {
+                filterText.classList.add('hide');
+            }
+        }
+    });
     galleryItems.forEach(item => {
         if (filter === 'all') {
             item.classList.remove('hide');
