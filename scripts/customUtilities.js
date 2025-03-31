@@ -89,8 +89,10 @@ $( document ).ready(function() {
     console.log(galleryItems);
     galleryItems.forEach(item => {
         let category = item.querySelector('.image-slide-title').textContent;
-        category = category.charAt(0).toLowerCase();
-        console.log(category);
+        let firstLetter = category.charAt(0).toLowerCase();
+        let restOfString = category.slice(1);
+        const newCategory = (firstLetter + restOfString).replace(/\s/g, '');
+        console.log(newCategory);
         // item.classList.add(category);
     });
 });
