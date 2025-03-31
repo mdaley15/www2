@@ -103,7 +103,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 function imgFilter(btn) {
     let filter = btn.getAttribute('data-filter');
-    let thisGallery = btn.closest('.sqs-block').siblings('.sqs-block-gallery');
+    let thisBlock = btn.closest('.sqs-block');
+    let thisGallery = thisBlock.siblings('.sqs-block-gallery');
     console.log(thisGallery);
     galleryItems.forEach(item => {
         if (filter === 'all') {
