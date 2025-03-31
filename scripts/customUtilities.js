@@ -86,13 +86,13 @@ $( document ).ready(function() {
 
     // Image Filters
     const summaryItems = document.querySelectorAll('.summary-item');
+    console.log(summaryItems);
     summaryItems.forEach((item, index) => {
-        console.log(item);
         let outerText = item.outerText;
         const firstSpaceIndex = outerText.indexOf(' ');
         outerText.substring(0, firstSpaceIndex);
         // outerText = outerText.replace(/\s+/g, '');
-        console.log(outerText);
+        // console.log(outerText);
         // item.classList.add(outerText);
     });
 });
