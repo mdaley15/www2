@@ -88,5 +88,6 @@ $( document ).ready(function() {
     const summaryItems = document.querySelectorAll('.summary-item');
     summaryItems.forEach((item, index) => {
         console.log(item.outerText);
+        item.classList.add(item.outerText);
     });
 });
