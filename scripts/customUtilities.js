@@ -90,6 +90,6 @@ $( document ).ready(function() {
     summaryItems.forEach(item => {
         let category = item.querySelector('.summary-metadata-item--cats a').text;
         console.log(category);
-        // item.classList.add(innerText);
+        item.classList.add(innerText);
     });
 });
