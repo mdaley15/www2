@@ -85,8 +85,9 @@ $( document ).ready(function() {
     });
 
     // Image Filters
+    const galleryItems = document.querySelectorAll('.sqs-gallery-design-grid .slide');
     const summaryItems = document.querySelectorAll('.summary-item');
-    console.log(summaryItems);
+    console.log(galleryItems);
     summaryItems.forEach(item => {
         let category = item.querySelector('.summary-metadata-item--cats a').text;
         console.log(category);
