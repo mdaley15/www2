@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function imgFilter(btn) {
     let filter = btn.getAttribute('data-filter');
     let thisBlock = btn.closest('.col');
-    let filterBtns = thisBlock.querySelectorAll('.filterBtn:not('+btn+')');
+    let filterBtns = thisBlock.querySelectorAll('.filterBtn');
     console.log(filterBtns);
     // btn.classList.add('activeBtn');
     filterTexts = thisBlock.querySelectorAll('.filterText');
