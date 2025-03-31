@@ -9,9 +9,9 @@ $(document).ready(function() {
         });
     
         if($(this).hasClass("active")) {
-            $(this).children(".sign").html('<i class="fa-solid fa-plus"></i>');
-        } else {
             $(this).children(".sign").html('<i class="fa-solid fa-minus"></i>');
+        } else {
+            $(this).children(".sign").html('<i class="fa-solid fa-plus"></i>');
         }
     });
 });
