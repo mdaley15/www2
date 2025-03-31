@@ -108,14 +108,10 @@ function imgFilter(btn) {
     let thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
     galleryItems = thisGallery.querySelectorAll('.slide');
     filterTexts.forEach(filterText => {
-        if (filter === 'all') {
+        if (filterText.classList.contains(filter)) {
             filterText.classList.remove('hide');
         } else {
-            if (filterText.classList.contains(filter)) {
-                filterText.classList.remove('hide');
-            } else {
-                filterText.classList.add('hide');
-            }
+            filterText.classList.add('hide');
         }
     });
     galleryItems.forEach(item => {
