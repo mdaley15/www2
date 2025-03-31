@@ -89,7 +89,7 @@ $( document ).ready(function() {
     summaryItems.forEach((item, index) => {
         let outerText = item.outerText;
         outerText = outerText.replace(/\s+/g, '');
-        console.log(item.outerText);
-        item.classList.add(item.outerText);
+        console.log(outerText);
+        item.classList.add(outerText);
     });
 });
