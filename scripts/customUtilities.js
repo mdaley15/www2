@@ -103,8 +103,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 function imgFilter(btn) {
     let filter = btn.getAttribute('data-filter');
-    let thisBlock = btn.closest('.sqs-block');
-    let thisGallery = thisBlock.siblings('.sqs-block-gallery');
+    let thisBlock = btn.closest('.col');
+    let thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
     console.log(thisGallery);
     galleryItems.forEach(item => {
         if (filter === 'all') {
