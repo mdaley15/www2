@@ -98,5 +98,5 @@ $( document ).ready(function() {
 });
 
 function imgFilter(btn) {
-    console.log(btn)
+    console.log(btn.getAttribute('data-filter'))
 }
