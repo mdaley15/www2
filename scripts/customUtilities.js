@@ -103,6 +103,15 @@ function imgFilter(btn) {
     console.log(filter);
     galleryItems.forEach(item => {
         if (filter = 'all') {
+            console.log('Clicked "ALL"');
+            item.classList.remove('hide');
+        }
+        if (filter == 'all') {
+            console.log('Clicked "ALL"');
+            item.classList.remove('hide');
+        }
+        if (filter === 'all') {
+            console.log('Clicked "ALL"');
             item.classList.remove('hide');
         }
         if (item.classList.contains(filter)) {
