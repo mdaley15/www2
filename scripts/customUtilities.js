@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let watermark = document.querySelector('.watermark');
     let pageIcon = document.querySelector('.introTitle i');
-    console.log(pageIcon.classList)
+    console.log(pageIcon.classList[1])
 });
 function imgFilter(btn) {
     let filter = btn.getAttribute('data-filter');
