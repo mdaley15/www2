@@ -89,6 +89,7 @@ $( document ).ready(function() {
     console.log(galleryItems);
     galleryItems.forEach(item => {
         let category = item.querySelector('.image-slide-title').textContent;
+        category = category.charAt(0).toLowerCase();
         console.log(category);
         // item.classList.add(category);
     });
