@@ -4,14 +4,14 @@ $(document).ready(function() {
         var current = this;
         $(".collapsible-header").each(function() {
             if($(this) !== current) {
-                $(this).children(".fa-solid").removeClass('fa-plus');
+                $(this).children(".fa-solid").removeClass('fa-minus');
             } 
         });
     
         if($(this).hasClass("active")) {
-            $(this).children(".fa-solid").html('<i class="fa-solid fa-plus"></i>');
+            $(this).children(".fa-solid").removeClass('fa-minus').addClass('fa-plus');
         } else {
-            $(this).children(".fa-solid").html('<i class="fa-solid fa-minus"></i>');
+            $(this).children(".fa-solid").removeClass('fa-plus').addClass('fa-minus');
         }
     });
 });
