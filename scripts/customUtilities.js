@@ -97,6 +97,6 @@ $( document ).ready(function() {
     });
 });
 
-function imgFilter() {
-    console.log(this)
+function imgFilter(btn) {
+    console.log(btn)
 }
