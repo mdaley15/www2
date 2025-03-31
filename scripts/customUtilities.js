@@ -99,10 +99,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 function imgFilter(btn) {
-    console.log(btn.getAttribute('data-filter'));
     let filter = btn.getAttribute('data-filter');
     galleryItems.forEach(item => {
-        let slideFilter = item.classList.contains(filter);
-        console.log(slideFilter);
+        if (!item.classList.contains(filter)) {
+            item.classList.add('hide');
+        }
+        // let slideFilter = item.classList.contains(filter);
+        // console.log(slideFilter);
     });
 }
