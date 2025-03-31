@@ -102,7 +102,7 @@ function imgFilter(btn) {
     let filter = btn.getAttribute('data-filter');
     console.log(filter);
     galleryItems.forEach(item => {
-        if (filter === 'all') {
+        if (filter = 'all') {
             item.classList.remove('hide');
         }
         if (item.classList.contains(filter)) {
