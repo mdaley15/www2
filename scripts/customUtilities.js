@@ -105,11 +105,13 @@ function imgFilter(btn) {
     let filter = btn.getAttribute('data-filter');
     let thisBlock = btn.closest('.col');
     let filterBtns = thisBlock.querySelectorAll('.filterBtn');
-    console.log(filterBtns);
-    // btn.classList.add('activeBtn');
     filterTexts = thisBlock.querySelectorAll('.filterText');
     let thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
     galleryItems = thisGallery.querySelectorAll('.slide');
+    filterBtns.forEach(filterBtn => {
+        filterBtn.classList.remove('activeBtn');
+    });
+    btn.classList.add('activeBtn');
     filterTexts.forEach(filterText => {
         let target = filterText.getAttribute('data-target');
         if (filter == target) {
