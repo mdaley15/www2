@@ -84,11 +84,15 @@ $( document ).ready(function() {
         }
     });
 
-    // Image Filters
 });
-var galleryItems;
+
+// Image Filters
+var thisGallery,
+    galleryItems,
+    filterTexts;
 document.addEventListener('DOMContentLoaded', function() {
     galleryItems = document.querySelectorAll('.sqs-gallery-design-grid .slide');
+    filterTexts = 
     galleryItems.forEach(item => {
         let category = item.querySelector('a').getAttribute('data-title');
         let firstLetter = category.charAt(0).toLowerCase();
@@ -100,7 +104,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 function imgFilter(btn) {
     let filter = btn.getAttribute('data-filter');
-    console.log(filter);
+    thisGallery = btn.closest('.sqs-block').siblings('.sqs-block-gallery');
+    console.log(thisGallery);
     galleryItems.forEach(item => {
         if (filter === 'all') {
             console.log('Clicked "ALL"');
@@ -112,7 +117,5 @@ function imgFilter(btn) {
                 item.classList.add('hide');
             }
         }
-        // let slideFilter = item.classList.contains(filter);
-        // console.log(slideFilter);
     });
 }
