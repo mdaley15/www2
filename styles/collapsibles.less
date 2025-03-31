@@ -67,12 +67,20 @@
             display: none;
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
-            padding: 20px;
+            padding: 20px 20px 10px;
             background-color: @bgOverlay;
             border-top: 1px solid @ltBlue;
 
             li {
                 list-style-type: disc;
+            }
+            .sqs-block {
+                &:first-child {
+                    padding-top: 0!important;
+                }
+                &:last-child {
+                    padding-bottom: 0!important;
+                }
             }
         }
     }
