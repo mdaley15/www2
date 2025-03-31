@@ -88,7 +88,9 @@ $( document ).ready(function() {
     const summaryItems = document.querySelectorAll('.summary-item');
     summaryItems.forEach((item, index) => {
         let outerText = item.outerText;
-        outerText = outerText.replace(/\s+/g, '');
+        const firstSpaceIndex = outerText.indexOf(' ');
+        outerText.substring(0, firstSpaceIndex);
+        // outerText = outerText.replace(/\s+/g, '');
         console.log(outerText);
         item.classList.add(outerText);
     });
