@@ -87,10 +87,9 @@ $( document ).ready(function() {
     // Image Filters
     const summaryItems = document.querySelectorAll('.summary-item');
     console.log(summaryItems);
-    // summaryItems.forEach((item, index) => {
-    //     let innerText = item.innerText;
-    //     innerText = innerText.split(" ")[0];
-    //     console.log(innerText);
-    //     // item.classList.add(innerText);
-    // });
+    summaryItems.forEach(item => {
+        let category = item.firstElementChild('.summary-metadata-item--cats a').text;
+        console.log(category);
+        // item.classList.add(innerText);
+    });
 });
