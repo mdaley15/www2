@@ -93,6 +93,6 @@ $( document ).ready(function() {
         let restOfString = category.slice(1);
         const newCategory = (firstLetter + restOfString).replace(/\s/g, '');
         console.log(newCategory);
-        // item.classList.add(category);
+        item.classList.add(newCategory);
     });
 });
