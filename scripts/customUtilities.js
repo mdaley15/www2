@@ -87,6 +87,8 @@ $( document ).ready(function() {
     // Image Filters
     const summaryItems = document.querySelectorAll('.summary-item');
     summaryItems.forEach((item, index) => {
+        let outerText = item.outerText;
+        outerText = outerText.replace(/\s+/g, '');
         console.log(item.outerText);
         item.classList.add(item.outerText);
     });
