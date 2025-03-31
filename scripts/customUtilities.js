@@ -97,13 +97,13 @@ document.addEventListener('DOMContentLoaded', function() {
         let firstLetter = category.charAt(0).toLowerCase();
         let restOfString = category.slice(1);
         const newCategory = (firstLetter + restOfString).replace(/\s/g, '');
-        console.log(newCategory);
         item.classList.add(newCategory);
     });
 
     let watermark = document.querySelector('.watermark');
     let pageIcon = document.querySelector('.introTitle i');
-    console.log(pageIcon.classList[1])
+    console.log(pageIcon.classList[1]);
+    watermark.classList.add(pageIcon.classList[1]);
 });
 function imgFilter(btn) {
     let filter = btn.getAttribute('data-filter');
