@@ -87,8 +87,7 @@ $( document ).ready(function() {
 });
 
 // Image Filters
-var thisGallery,
-    galleryItems,
+var galleryItems,
     filterTexts;
 document.addEventListener('DOMContentLoaded', function() {
     galleryItems = document.querySelectorAll('.sqs-gallery-design-grid .slide');
@@ -104,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 function imgFilter(btn) {
     let filter = btn.getAttribute('data-filter');
-    thisGallery = btn.closest('.sqs-block').siblings('.sqs-block-gallery');
+    let thisGallery = btn.closest('.sqs-block').siblings('.sqs-block-gallery');
     console.log(thisGallery);
     galleryItems.forEach(item => {
         if (filter === 'all') {
