@@ -100,6 +100,10 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(newCategory);
         item.classList.add(newCategory);
     });
+
+    let watermark = document.querySelector('.watermark');
+    let pageIcon = document.querySelector('.introTitle i');
+    console.log(pageIcon.classList())
 });
 function imgFilter(btn) {
     let filter = btn.getAttribute('data-filter');
