@@ -102,22 +102,15 @@ function imgFilter(btn) {
     let filter = btn.getAttribute('data-filter');
     console.log(filter);
     galleryItems.forEach(item => {
-        if (filter = 'all') {
-            console.log('Clicked "ALL"');
-            item.classList.remove('hide');
-        }
-        if (filter == 'all') {
-            console.log('Clicked "ALL"');
-            item.classList.remove('hide');
-        }
         if (filter === 'all') {
             console.log('Clicked "ALL"');
             item.classList.remove('hide');
-        }
-        if (item.classList.contains(filter)) {
-            item.classList.remove('hide');
         } else {
-            item.classList.add('hide');
+            if (item.classList.contains(filter)) {
+                item.classList.remove('hide');
+            } else {
+                item.classList.add('hide');
+            }
         }
         // let slideFilter = item.classList.contains(filter);
         // console.log(slideFilter);
