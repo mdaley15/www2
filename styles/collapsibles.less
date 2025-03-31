@@ -6,10 +6,10 @@
     
     li {
         list-style-type: none!important;
-        border-radius: 5px;
+        border-radius: 0 0 5px 5px;
         overflow: hidden;
         margin-bottom: 10px;
-        box-shadow: 5px 5px 0 @orange;
+        box-shadow: 0 5px 0 @orange;
         
         .collapsible-header {
             cursor: pointer;
@@ -17,7 +17,7 @@
             align-items: center;
             line-height: 1.5;
             padding: 15px;
-            background-color: @blue;
+            background-color: @white;
             border: 0;
             transition: all .3s ease-in-out;
             -webkit-transition: all .3s ease-in-out;
@@ -29,6 +29,7 @@
                 margin: 0!important;
                 text-align: left;
                 width: 100%;
+                color: @blue;
     
                 .col,
                 .sqs-layout .sqs-row .sqs-block {
@@ -53,13 +54,13 @@
                     // font-size: 1.5em;
                     margin: 0!important;
                     transition: all .3s ease-in-out;
-                    color: white;
+                    color: @blue;
                 }
             }
             &:hover,
             &:focus,
             &.active {
-                background-color: @darkBlue;
+                background-color: @bgOverlay;
                 text-decoration: none!important;
                 outline: none;
 
