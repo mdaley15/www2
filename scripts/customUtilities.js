@@ -88,7 +88,7 @@ $( document ).ready(function() {
     const galleryItems = document.querySelectorAll('.sqs-gallery-design-grid .slide');
     console.log(galleryItems);
     galleryItems.forEach(item => {
-        let category = item.querySelector('.image-slide-title').textContent;
+        let category = item.querySelector('a').getAttribute('data-title');
         let firstLetter = category.charAt(0).toLowerCase();
         let restOfString = category.slice(1);
         const newCategory = (firstLetter + restOfString).replace(/\s/g, '');
