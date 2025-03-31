@@ -106,6 +106,7 @@ function imgFilter(btn) {
             item.classList.remove('hide');
         }
         if (item.classList.contains(filter)) {
+            item.classList.remove('hide');
         } else {
             item.classList.add('hide');
         }
