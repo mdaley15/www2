@@ -85,8 +85,10 @@ $( document ).ready(function() {
     });
 
     // Image Filters
-    const galleryItems = document.querySelectorAll('.sqs-gallery-design-grid .slide');
-    console.log(galleryItems);
+});
+var galleryItems;
+document.addEventListener('DOMContentLoaded', function() {
+    galleryItems = document.querySelectorAll('.sqs-gallery-design-grid .slide');
     galleryItems.forEach(item => {
         let category = item.querySelector('a').getAttribute('data-title');
         let firstLetter = category.charAt(0).toLowerCase();
@@ -96,7 +98,11 @@ $( document ).ready(function() {
         item.classList.add(newCategory);
     });
 });
-
 function imgFilter(btn) {
-    console.log(btn.getAttribute('data-filter'))
+    console.log(btn.getAttribute('data-filter'));
+    let filter = btn.getAttribute('data-filter');
+    galleryItems.forEach(item => {
+        let slideFilter = item.classList.contains(filter);
+        console.log(slideFilter);
+    });
 }
