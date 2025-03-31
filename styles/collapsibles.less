@@ -66,9 +66,11 @@
             display: none;
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
-            padding: 20px 20px 10px;
             background-color: @bgOverlay;
 
+            .sqs-layout {
+                padding: 20px 20px 10px;
+            }
             li {
                 list-style-type: disc;
             }
@@ -170,7 +172,7 @@
     .collapsible-header h3 {
         font-size: 20px;
     }
-    .collapsible-body {
+    .collapsible-body .sqs-layout {
         padding: 10px 10px 0!important;
     }
     .calc-container {
@@ -178,7 +180,7 @@
     }
 }
 @media only screen and (min-width: 800px) {
-    .collapsible-body {
+    .collapsible-body  .sqs-layout {
         padding: 30px 30px 20px!important;
     }
 }
