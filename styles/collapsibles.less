@@ -75,16 +75,23 @@
                 list-style-type: disc;
             }
             .sqs-block {
-                padding-bottom: 0!important;
-                
                 &:first-child {
                     padding-top: 0!important;
                 }
                 &:last-child {
+                    padding-bottom: 0!important;
                 }
             }
             .imgFilter {
                 display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+
+                .filterBtn {
+                    border: 0 0 2px solid transparent;
+                    background: transparent;
+                }
             }
             .filterText {
                 margin-bottom: 0!important;
