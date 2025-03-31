@@ -87,8 +87,6 @@
                 <squarespace:navigation navigationId="secondaryNavigation" template="header-nav" />
             </nav>
 
-            <squarespace:block-field id="myBlock" columns="12"/>
-
             {.if website.socialAccounts.0}
               <div class="Header-social" data-nc-element="social">
                 {@|apply social-links.block}
