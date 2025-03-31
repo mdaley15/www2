@@ -95,4 +95,7 @@ $( document ).ready(function() {
         console.log(newCategory);
         item.classList.add(newCategory);
     });
+    function imgFilter() {
+        console.log(this.getAttribute('data-filter'))
+    }
 });
