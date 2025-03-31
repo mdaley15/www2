@@ -104,6 +104,8 @@ document.addEventListener('DOMContentLoaded', function() {
 function imgFilter(btn) {
     let filter = btn.getAttribute('data-filter');
     let thisBlock = btn.closest('.col');
+    let allButThisOne = thisBlock.querySelectorAll(':not('+btn+')');
+    console.log(allButThisOne);
     filterTexts = thisBlock.querySelectorAll('.filterText');
     let thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
     galleryItems = thisGallery.querySelectorAll('.slide');
