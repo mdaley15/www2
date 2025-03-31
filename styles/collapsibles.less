@@ -6,6 +6,7 @@
     
     li {
         list-style-type: none!important;
+        border-top: 1px solid @blue;
         border-radius: 0 0 5px 5px;
         overflow: hidden;
         margin-bottom: 10px;
@@ -45,18 +46,11 @@
                     }
                 }
             }
-            .sign {
-                display: flex; 
-                justify-content: flex-end;
-                align-items: center;
-                pointer-events: none;
-                
-                i {
-                    font-size: 25px;
-                    margin: 0!important;
-                    transition: all .3s ease-in-out;
-                    color: @blue;
-                }
+            i {
+                font-size: 25px;
+                margin: 0!important;
+                transition: all .3s ease-in-out;
+                color: @blue;
             }
             &:hover,
             &:focus {
@@ -74,7 +68,8 @@
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
             padding: 20px;
-            background-color: #f4f4f4;
+            background-color: @bgOverlay;
+            border-top: 1px solid @ltBlue;
 
             li {
                 list-style-type: disc;
