@@ -85,6 +85,8 @@ $( document ).ready(function() {
     });
 
     // Image Filters
-    const summaryItems = document.querySelectorAll('.summary-item').outerText;
-    console.log(summaryItems);
+    const summaryItems = document.querySelectorAll('.summary-item');
+    summaryItems.forEach((item, index) => {
+        console.log(item.outerText);
+    });
 });
