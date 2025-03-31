@@ -88,7 +88,7 @@ $( document ).ready(function() {
     const galleryItems = document.querySelectorAll('.sqs-gallery-design-grid .slide');
     console.log(galleryItems);
     galleryItems.forEach(item => {
-        let category = item.querySelector('.image-slide-title').text;
+        let category = item.querySelector('.image-slide-title').textContent;
         console.log(category);
         // item.classList.add(category);
     });
