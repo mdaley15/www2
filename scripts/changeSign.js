@@ -4,7 +4,7 @@ $(document).ready(function() {
         var current = this;
         $(".collapsible-header").each(function() {
             if($(this) !== current) {
-                $(this).children(".fa-solid").html('<i class="fa-solid fa-plus"></i>');
+                $(this).children(".fa-solid").removeClass('fa-plus');
             } 
         });
     
