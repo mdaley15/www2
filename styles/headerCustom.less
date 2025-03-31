@@ -127,7 +127,8 @@
         
         &:hover,
         &:focus,
-        &:focus-within {
+        &:focus-within,
+        &:has(.Header-nav-folder-title--active) {
             .navTitle {
                 text-decoration: underline; 
                 text-decoration-color: @drkOrange;
@@ -137,10 +138,15 @@
             }
         }
     }      
+    .Header-nav--primary:has(.Header-nav-folder-title--active) {
+        .navTitle {
+            // text-decoration: underline; 
+            // text-decoration-color: @drkOrange;
+        }
+    }
 }
 .Header-nav--primary .Header-nav-folder-title:hover,
 .Header-nav--primary .Header-nav-folder-title:focus,
-.Header-nav--primary .Header-nav-folder-title--active,
 .Header-nav--primary .Header-nav-item:hover,
 .Header-nav--primary .Header-nav-item:focus,
 .Header-nav--primary .Header-nav-item--active,
@@ -150,6 +156,9 @@
     text-decoration: underline;
     -webkit-text-decoration-color: @orange; /* Safari */  
     text-decoration-color: @orange;
+}
+.Header-nav--primary p.Header-nav-folder-title--active {
+
 }
 .Header-nav-item:first-child .Header-nav-folder {
     // margin-left: -20px;
