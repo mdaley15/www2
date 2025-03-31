@@ -4,14 +4,14 @@ $(document).ready(function() {
         var current = this;
         $(".collapsible-header").each(function() {
             if($(this) !== current) {
-                $(this).children(".sign").html('<i class="far fa-plus"></i>');
+                $(this).children(".sign").html('<i class="fa-solid fa-plus"></i>');
             } 
         });
     
         if($(this).hasClass("active")) {
-            $(this).children(".sign").html('<i class="far fa-plus"></i>');
+            $(this).children(".sign").html('<i class="fa-solid fa-plus"></i>');
         } else {
-            $(this).children(".sign").html('<i class="far fa-minus"></i>');
+            $(this).children(".sign").html('<i class="fa-solid fa-minus"></i>');
         }
     });
 });
