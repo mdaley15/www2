@@ -90,6 +90,6 @@ $( document ).ready(function() {
     galleryItems.forEach(item => {
         let category = item.querySelector('.image-slide-title').text;
         console.log(category);
-        item.classList.add(category);
+        // item.classList.add(category);
     });
 });
