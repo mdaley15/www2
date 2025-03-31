@@ -30,6 +30,7 @@
                 text-align: left;
                 width: 100%;
                 color: @blue;
+                font-size: 30px;
     
                 .col,
                 .sqs-layout .sqs-row .sqs-block {
@@ -51,22 +52,21 @@
                 pointer-events: none;
                 
                 i {
-                    // font-size: 1.5em;
+                    font-size: 25px;
                     margin: 0!important;
                     transition: all .3s ease-in-out;
                     color: @blue;
                 }
             }
             &:hover,
-            &:focus,
-            &.active {
+            &:focus {
                 background-color: @bgOverlay;
                 text-decoration: none!important;
                 outline: none;
-
-                h3,i {
-                    // color: white!important;
-                }
+            }
+            .active {
+                text-decoration: none!important;
+                outline: none;
             }
         }
         .collapsible-body {
