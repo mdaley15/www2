@@ -29,6 +29,16 @@
     
     .Index-page-content {
         padding-bottom: 10px!important;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 99%;
+            left: 0;
+            width: 100%;
+            height: 50vh;
+            background-image: linear-gradient(to top, white 5%, transparent);
+        }
         
         .col, .sqs-block {
             padding: 0!important;
