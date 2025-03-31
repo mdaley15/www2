@@ -100,8 +100,13 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 function imgFilter(btn) {
     let filter = btn.getAttribute('data-filter');
+    console.log(filter);
     galleryItems.forEach(item => {
-        if (!item.classList.contains(filter)) {
+        if (filter == 'all') {
+            item.classList.remove('hide');
+        }
+        if (item.classList.contains(filter)) {
+        } else {
             item.classList.add('hide');
         }
         // let slideFilter = item.classList.contains(filter);
