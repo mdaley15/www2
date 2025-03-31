@@ -96,6 +96,11 @@
                     background: transparent;
                     border-bottom: 2px solid transparent;
                     color: @blue;
+                    padding: 0 0 3px;
+                    line-height: 1;
+                    margin: 5px 10px;
+                    font-family: oswald;
+                    text-transform: uppercase;
 
                     &:hover,
                     &:focus,
@@ -143,10 +148,15 @@
         font-size: 20px;
     }
     .collapsible-body {
-        padding: 10px!important;
+        padding: 10px 10px 0!important;
     }
     .calc-container {
         padding: 5px;
+    }
+}
+@media only screen and (min-width: 800px) {
+    .collapsible-body {
+        padding: 30px 30px 20px;
     }
 }
 
