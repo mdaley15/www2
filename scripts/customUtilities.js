@@ -85,6 +85,6 @@ $( document ).ready(function() {
     });
 
     // Image Filters
-    const summaryItems = document.querySelectorAll('.summary-item');
+    const summaryItems = document.querySelectorAll('.summary-item').outerText;
     console.log(summaryItems);
 });
