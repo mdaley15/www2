@@ -84,14 +84,7 @@ $( document ).ready(function() {
         }
     });
 
-    let accordionDescs = document.querySelectorAll('div.accordion-item__description');
-
-    for (let i = 0; i < accordionDescs.length; i++) {
-        let accordionDesc = accordionDescs[i]
-        let newBlock = document.createElement("div");
-        newBlock.classList.add("sqs-block", "image-block", "sqs-block-image");
-        newBlock.setAttribute("data-block-type", "5");
-        newBlock.setAttribute("id", "accordionImgBlock"+[i]);
-        accordionDesc.append(newBlock);
-    }
+    // Image Filters
+    const summaryItems = document.querySelectorAll('.summary-item');
+    console.log(summaryItems);
 });
