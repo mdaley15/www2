@@ -105,10 +105,9 @@ function imgFilter(btn) {
     let filter = btn.getAttribute('data-filter');
     let thisBlock = btn.closest('.col');
     let thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
-    console.log(thisGallery);
+    galleryItems = thisGallery.querySelectorAll('.slide');
     galleryItems.forEach(item => {
         if (filter === 'all') {
-            console.log('Clicked "ALL"');
             item.classList.remove('hide');
         } else {
             if (item.classList.contains(filter)) {
