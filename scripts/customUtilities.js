@@ -88,19 +88,15 @@ $( document ).ready(function() {
 });
 
 // Image Filters
-var galleries,
-    galleryItems,
+var galleryItems,
     filterTexts;
 document.addEventListener('DOMContentLoaded', function() {
-    galleries = document.querySelectorAll('.sqs-gallery-design-grid');
-    console.log(galleries);
     galleryItems = document.querySelectorAll('.sqs-gallery-design-grid .slide');
     galleryItems.forEach(item => {
         let category = item.querySelector('a').getAttribute('data-title');
         let firstLetter = category.charAt(0).toLowerCase();
         let restOfString = category.slice(1);
         let newCategory = (firstLetter + restOfString).replace(/\s/g, '');
-        console.log(newCategory);
         if (newCategory) {
             item.classList.add(newCategory);
         }
