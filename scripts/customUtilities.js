@@ -88,9 +88,12 @@ $( document ).ready(function() {
 });
 
 // Image Filters
-var galleryItems,
+var galleries,
+    galleryItems,
     filterTexts;
 document.addEventListener('DOMContentLoaded', function() {
+    galleries = document.querySelectorAll('.sqs-gallery-design-grid');
+    console.log(galleries);
     galleryItems = document.querySelectorAll('.sqs-gallery-design-grid .slide');
     galleryItems.forEach(item => {
         let category = item.querySelector('a').getAttribute('data-title');
@@ -130,14 +133,10 @@ function imgFilter(btn) {
         }
     });
     galleryItems.forEach(item => {
-        if (filter === 'all') {
+        if (item.classList.contains(filter)) {
             item.classList.remove('hide');
         } else {
-            if (item.classList.contains(filter)) {
-                item.classList.remove('hide');
-            } else {
-                item.classList.add('hide');
-            }
+            item.classList.add('hide');
         }
     });
 }
