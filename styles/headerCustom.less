@@ -32,9 +32,15 @@
     }
 }
 .Header--top {
+    display: none;
+}
+#topHeader {
     border-bottom: 3px solid @orange;
     box-shadow: 0 0 5px black;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 11;
 
     div[data-nc-container="top-left"] {
