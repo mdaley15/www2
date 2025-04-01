@@ -22,6 +22,13 @@
     {@|apply modal.block}
 
     <div class="Loader"></div>
+
+    <div id="topHeader">
+        <nav class="Header-nav Header-nav--secondary" data-nc-element="secondary-nav" data-content-field="navigation">
+            <squarespace:navigation navigationId="secondaryNavigation" template="header-nav" />
+        </nav>
+    </div>
+    
     {@|apply mobile.block}
 
     <div class="Parallax-host-outer">
@@ -83,9 +90,6 @@
 
           <div data-nc-container="top-right">
           
-            <nav class="Header-nav Header-nav--secondary" data-nc-element="secondary-nav" data-content-field="navigation">
-                <squarespace:navigation navigationId="secondaryNavigation" template="header-nav" />
-            </nav>
 
             {.if website.socialAccounts.0}
               <div class="Header-social" data-nc-element="social">
