@@ -127,7 +127,7 @@
 
             </div>
             <div data-nc-container="bottom-right">
-                <nav class="Header-nav Header-nav--primary" data-nc-element="primary-nav" data-content-field="navigation" tabindex="0">
+                <nav class="Header-nav Header-nav--primary whoWeAre" data-nc-element="primary-nav" data-content-field="navigation" tabindex="0">
                     <squarespace:navigation navigationId="mainNavigation" template="header-nav" />
                 </nav>
                 <nav class="Header-nav Header-nav--primary" data-nc-element="primary-nav" data-content-field="navigation" tabindex="0">
