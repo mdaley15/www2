@@ -1,3 +1,20 @@
+
+#topHeader {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: @blue;
+    border-bottom: 3px solid @orange;
+    box-shadow: 0 0 5px black;
+    z-index: 11;
+    padding: 5px 5vw;
+
+    .starIcon {
+        display: none!important;
+    }
+}
 .Mobile-overlay {
     * {
         outline: none!important;
@@ -32,19 +49,19 @@
     }
 }
 .Header--top {
-    display: none;
-}
-#topHeader {
+    display: block!important;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: @blue;
+    // background-color: @blue;
     border-bottom: 3px solid @orange;
     box-shadow: 0 0 5px black;
     z-index: 11;
-    padding: 5px 5vw;
 
+    div[data-nc-container="top-left"] {
+        display: flex!important;
+    }
     .starIcon {
         display: none!important;
     }
