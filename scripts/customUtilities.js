@@ -100,6 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let firstLetter = category.charAt(0).toLowerCase();
         let restOfString = category.slice(1);
         let newCategory = (firstLetter + restOfString).replace(/\s/g, '');
+        console.log(newCategory);
         item.classList.add(newCategory);
     });
 
