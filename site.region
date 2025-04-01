@@ -27,6 +27,7 @@
         <nav class="Header-nav Header-nav--secondary" data-nc-element="secondary-nav" data-content-field="navigation">
             <squarespace:navigation navigationId="secondaryNavigation" template="header-nav" />
         </nav>
+        <a class="allBtns" href="" target="">ORDER</a>
     </div>
 
     {@|apply mobile.block}
