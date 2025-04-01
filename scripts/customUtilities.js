@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let category = item.querySelector('a').getAttribute('data-title');
         let firstLetter = category.charAt(0).toLowerCase();
         let restOfString = category.slice(1);
-        const newCategory = (firstLetter + restOfString).replace(/\s/g, '');
+        let newCategory = (firstLetter + restOfString).replace(/\s/g, '');
         item.classList.add(newCategory);
     });
 
