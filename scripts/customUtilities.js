@@ -63,6 +63,7 @@ $( document ).ready(function() {
 
     $('.sqs-block-button-element, .sqs-system-button, .meta p:last-child a').addClass('lift allBtns');
 
+    // Index Page Galleries
     var slides = document.querySelectorAll('#home .slide > img');
     slides.forEach((slide, index) => {
         var wrap = document.createElement('div');
@@ -91,7 +92,6 @@ var galleryItems,
     filterTexts;
 document.addEventListener('DOMContentLoaded', function() {
     galleryItems = document.querySelectorAll('.sqs-gallery-design-grid .slide');
-    filterTexts = 
     galleryItems.forEach(item => {
         let category = item.querySelector('a').getAttribute('data-title');
         let firstLetter = category.charAt(0).toLowerCase();
@@ -105,6 +105,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (pageIcon) {
         watermark.classList.add(pageIcon.classList[1]);
     }
+    let startingBtns = document.querySelectorAll('.startingBtn');
+    startingBtns.forEach(btn => {
+        btn.click();
+    });
 });
 function imgFilter(btn) {
     let filter = btn.getAttribute('data-filter');
