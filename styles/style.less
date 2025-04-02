@@ -336,7 +336,6 @@ hr {
                     min-width: 160px;
                     border-radius: 5px;
                     overflow: hidden;
-                    box-shadow: 3px 3px 0 @drkOrange;
                     display: block;
                     
                     img {
@@ -363,7 +362,6 @@ hr {
             }
             &:nth-child(even) {
                 flex-direction: column-reverse;
-                // justify-content: flex-end
             }
             &:nth-child(3n + 1) {
                 border-color: @drkOrange;
@@ -372,6 +370,9 @@ hr {
                 }
                 .dateLine {
                     background: @drkOrange;
+                }
+                .eventContent .eventImg {
+                    box-shadow: 3px 3px 0 @drkOrange;
                 }
             }
             &:nth-child(3n + 2) {
@@ -382,6 +383,9 @@ hr {
                 .dateLine {
                     background: @ltBlue;
                 }
+                .eventContent .eventImg {
+                    box-shadow: 3px 3px 0 @ltBlue;
+                }
             }
             &:nth-child(3n + 3) {
                 border-color: @green;
@@ -390,6 +394,9 @@ hr {
                 }
                 .dateLine {
                     background: @green;
+                }
+                .eventContent .eventImg {
+                    box-shadow: 3px 3px 0 @green;
                 }
             }
             &:hover,
