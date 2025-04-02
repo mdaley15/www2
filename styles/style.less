@@ -263,6 +263,119 @@ hr {
         }
     }
 }
+.timeline {
+    position: relative;
+    height: 300px;
+    
+    .timelineSpine {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0,-50%);
+        width: 100%;
+        height: 20px;
+        border-radius: 50px;
+        background: blue;
+    }
+    .timelineInner {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 30px;
+        height: 100%;
+        
+        .event {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            
+            > h4 {
+                padding: 2px 6px 5px 3px;
+                border: 2px solid transparent;
+                border-radius: 5px;
+                background-color: white;
+                transition: all .4s ease-in-out!important;
+            }
+            .dateLine {
+                width: 2px;
+                height: 110px;
+                background: blue;
+            }
+            h4 {
+                text-shadow: 1.5px 1.5px 0 black;
+                color: orange;
+                
+                span {
+                    text-transform: lowercase;
+                }
+            }
+            .eventContent {
+                opacity: 0;
+                position: absolute;
+                top: 50px;
+                left: 50%;
+                bottom: 50px;
+                transform: translate(-50%,0);
+                width: max-content;
+                max-width: 98%;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                background: #f5f6f9;
+                padding: 20px;
+                border-radius: 20px;
+                box-shadow: 3px 3px 3px rgba(0,0,0,.5);
+                transition: all .4s ease-in-out!important;
+                
+                .eventImg {
+                    position: relative;
+                    height: 100%!important;
+                    aspect-ratio: 1/1!important;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    box-shadow: 3px 3px 0 orange;
+                    display: block;
+                    
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%!important;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                div {
+                    width: auto;
+                    ul {
+                        padding-left: 20px!important;
+                        margin: 10px 0 0;
+                        
+                        li {
+                            font-size: 15px;
+                            white-space: wrap
+                        }
+                    }
+                }
+            }
+            &:nth-child(even) {
+                flex-direction: column-reverse;
+                // justify-content: flex-end
+            }
+            &:hover,
+            &:focus,
+            &:focus-within {
+                > h4 {
+                    border-color: orange;
+                }
+                .eventContent {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
 .Main {
     position: relative;
 
@@ -360,8 +473,51 @@ main .Index-page-content > div,
         display: block!important;
     }
 }
-.yui3-lightbox2-content {
+.yui3-lightbox2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,.5);
+    z-index: 9999;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .yui3-lightbox2-content {
+        position: relative!important;
+        top: 0!important;
+        height: 100%!important;
+        width: 100%;
+        max-width: max-content;
+        height: fit-content;
+        border-radius: 5px;
+        background-color: white!important;
 
+        .sqs-lightbox-slideshow {
+            height: fit-content;
+            
+            .sqs-lightbox-slide {
+                position: relative;
+                height: fit-content;
+                
+                .sqs-lightbox-padder {
+                    position: static;
+                    height: fit-content;
+                    
+                    img {
+                        position: static!important;
+                    }
+                }
+            }
+        }
+        .yui3-lightboxoverlay {
+            display: none;
+        }
+
+    }
 }
 
 /************************************************** tables *********************************************************/
