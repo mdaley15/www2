@@ -38,6 +38,11 @@ body {
     strong {
         font-weight: bold;
     }
+    h4 {
+        font-family: oswald!important;
+        font-size: 25px;
+        margin: 0;
+    }
 }
 .Parallax-host-outer {
     display: block;
@@ -309,6 +314,26 @@ hr {
     @media only screen and (max-width: 500px) {
         .watermark {
             font-size: 250px;
+        }
+    }
+    @media only screen and (min-width: 1000px) {
+        .sqs-html-content {
+            h2 {
+                font-size: 40px;
+
+                &::before,
+                &::after {
+                    width: 30px;
+                    height: 30px;
+                    bottom: 2px;
+                }
+                &::before {
+                    margin-right: 8px;
+                }
+                &::after {
+                    margin-left: 8px;
+                }
+            }
         }
     }
 }
