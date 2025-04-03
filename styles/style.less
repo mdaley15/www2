@@ -167,7 +167,7 @@ hr {
     transition: all .4s ease-in-out!important;
     cursor: pointer;
     opacity: 1!important;
-    display: inline-block;
+    display: inline-block!important;
 
     &:hover,
     &:focus {
@@ -604,9 +604,25 @@ main .Index-page-content > div,
             .actions {
                 ul {
                     padding: 0!important;
+                    li {
+                        background: transparent!important;
+                    }
                 }
                 a {
-
+                    font-size: 35px !important;
+                    padding: 15px 35px 18px!important;
+                    margin: 0 3px 3px 0!important;
+                    background-color: @drkOrange!important;
+                    border: 3.5px solid @blue!important;
+                    box-shadow: 3px 3px 0 @blue!important;
+            
+                    &:hover,
+                    &:focus {
+                        background-color: white!important;
+                        color: @blue!important;
+                        border-color: @drkOrange!important;
+                        box-shadow: 3px 3px 0 @drkOrange;
+                    }
                 }
             }
         }
