@@ -94,11 +94,13 @@ document.addEventListener('DOMContentLoaded', function() {
     galleryItems = document.querySelectorAll('.sqs-gallery-design-grid .slide');
     galleryItems.forEach(item => {
         let category = item.querySelector('a').getAttribute('data-title');
-        let firstLetter = category.charAt(0).toLowerCase();
-        let restOfString = category.slice(1);
-        let newCategory = (firstLetter + restOfString).replace(/\s/g, '');
-        if (newCategory) {
-            item.classList.add(newCategory);
+        if (category) {
+            let firstLetter = category.charAt(0).toLowerCase();
+            let restOfString = category.slice(1);
+            let newCategory = (firstLetter + restOfString).replace(/\s/g, '');
+            if (newCategory) {
+                item.classList.add(newCategory);
+            }
         }
     });
 
