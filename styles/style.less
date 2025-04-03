@@ -588,7 +588,7 @@ main .Index-page-content > div,
         a.sqs-popup-overlay-close {
             top: 5px!important;
             right: 5px!important;
-            padding: 10px!important;
+            padding: 0!important;
             height: 35px!important;
             width: 35px!important;
             display: flex;
@@ -637,7 +637,13 @@ main .Index-page-content > div,
             }
         }
         @media only screen and (max-width: 600px) {
+            a.sqs-popup-overlay-close {
+                width: 30px!important;
+                height: 30px!important;
+            }
             .sqs-slice-group {
+                padding-right: 45px!important;
+                
                 .actions a {
                     font-size: 20px !important;
                     padding: 10px 20px 12px!important;
