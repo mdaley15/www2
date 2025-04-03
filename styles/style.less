@@ -623,7 +623,7 @@ main .Index-page-content > div,
                     padding: 15px 35px 18px!important;
                     margin: 0 3px 3px 0!important;
                     background-color: @drkOrange!important;
-                    border: 3.5px solid @blue!important;
+                    border: 3px solid @blue!important;
                     box-shadow: 3px 3px 0 @blue!important;
             
                     &:hover,
@@ -632,6 +632,22 @@ main .Index-page-content > div,
                         color: @blue!important;
                         border-color: @drkOrange!important;
                         box-shadow: 3px 3px 0 @drkOrange!important;
+                    }
+                }
+            }
+        }
+        @media only screen and (max-width: 600px) {
+            .sqs-slice-group {
+                .actions a {
+                    font-size: 20px !important;
+                    padding: 10px 20px 12px!important;
+                    border-width: 1px!important;
+                    box-shadow: 2px 2px 0 @blue!important;
+                    margin: 0 2px 2px 0!important;
+            
+                    &:hover,
+                    &:focus {
+                        box-shadow: 2px 2px 0 @drkOrange!important;
                     }
                 }
             }
