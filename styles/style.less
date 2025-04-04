@@ -547,11 +547,14 @@ main .Index-page-content > div,
         padding: 120px 100px 75px;
 
         .sqs-lightbox-previous,
-        .sqs-lightbox-previous {
+        .sqs-lightbox-next {
             opacity: 1;
-            color: @drkOrange;
-            font-weight: bold;
-            font-size: 50px;
+
+            &::before {
+                font-weight: bold;
+                font-size: 30px;
+                color: @drkOrange;
+            }
         }
         .sqs-lightbox-slideshow {
             height: fit-content;
