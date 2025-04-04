@@ -543,7 +543,7 @@ main .Index-page-content > div,
         max-height: fit-content;
         border-radius: 5px;
         background-color: white!important;
-        padding: 100px 150px;
+        padding: 150px 100px 75px;
 
         .sqs-lightbox-previous,
         .sqs-lightbox-previous {
@@ -587,23 +587,28 @@ main .Index-page-content > div,
                         color: black;
                         display: flex;
                         flex-direction: column;
+                        pointer-events: none;
                         
                         h1 {
                             color: @blue;
-                            font-size: 40px;
+                            font-size: 35px;
                             margin: 0;
+                            pointer-events: auto;
                         }
                         p {
+                            pointer-events: auto;
                             
                             a {
                                 display: block;
                                 color: inherit;
+                                pointer-events: auto;
                             }
                             &:nth-child(3) {
                                 height: 100%;
                                 display: flex;
                                 flex-direction: column;
-                                justify-content: space-between;
+                                justify-content: flex-end;
+                                pointer-events: none;
                             }
                         }
                     }
