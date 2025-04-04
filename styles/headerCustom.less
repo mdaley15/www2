@@ -142,6 +142,7 @@
             // min-height: 100vh;
 
             > .Header-nav-item {
+                // background: rgba(255,255,255,.8);
                 // padding: 20px;
             }
             a.Header-nav-item,
@@ -240,6 +241,18 @@
                     &:hover,
                     &:focus {
                         border-color: @drkOrange;
+                    }
+                }
+            }
+        }
+        &.whatWeDo {
+            .Header-nav-item:nth-child(2) {
+                a {
+                    &:hover,
+                    &:focus {
+                        text-decoration: underline;
+                        -webkit-text-decoration-color: @orange; /* Safari */  
+                        text-decoration-color: @orange;
                     }
                 }
             }
