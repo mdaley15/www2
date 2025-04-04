@@ -538,14 +538,14 @@ main .Index-page-content > div,
     .yui3-lightbox2-content {
         position: relative!important;
         top: 0!important;
-        height: 100%!important;
-        width: 100%;
-        max-width: 800px;
-        max-height: fit-content;
+        height: fit-content!important;
+        width: fit-content;
+        // max-width: 800px;
+        // max-height: 800px;
         border-radius: 5px;
         background-color: white!important;
         box-shadow: 10px 10px 0 @drkOrange;
-        padding: 60px 60px ;
+        padding: 60px;
 
         .sqs-lightbox-previous,
         .sqs-lightbox-next {
@@ -558,20 +558,23 @@ main .Index-page-content > div,
             }
         }
         .sqs-lightbox-slideshow {
-            height: fit-content;
             position: static;
+            width: fit-content;
+            height: fit-content;
             
             .sqs-lightbox-slide {
                 position: static;
+                width: fit-content;
                 height: fit-content;
                 display: none;
                 
                 .sqs-lightbox-padder {
                     position: static;
                     display: flex;
-                    align-items: center;
-                    height: fit-content;
                     flex-direction: column;
+                    align-items: center;
+                    width: fit-content;
+                    height: fit-content;
                     
                     img {
                         position: static!important;
@@ -607,8 +610,6 @@ main .Index-page-content > div,
                             pointer-events: auto;
                             
                             a {
-                                display: block!important;
-                                color: inherit;
                                 pointer-events: auto;
                             }
                             &:nth-child(3) {
