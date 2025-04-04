@@ -164,12 +164,20 @@
                     background: transparent;
                     transform: none;
                     margin: 0;
+                    height: 0;
                     
                     a {
                         font-weight: 100;
                         text-transform: capitalize;
                         padding: 0;
                         margin: 0 5px 15px 35px;
+                    }
+                }
+                &:hover,
+                &:focus,
+                &:focus-within {
+                    .Header-nav-folder {
+                        height: auto;
                     }
                 }
             }
