@@ -134,12 +134,15 @@
             position: absolute;
             top: 100%;
             right: 0;
-            background: rgba(255,255,255,.8);
             border-radius: 5px;
             display: none;
             flex-direction: column;
             padding: 20px;
+            min-height: 100vh;
 
+            > .Header-nav-item {
+                background: rgba(255,255,255,.8);
+            }
             a.Header-nav-item,
             .Header-nav-folder-title {
                 display: flex;
@@ -164,7 +167,8 @@
                     background: transparent;
                     transform: none;
                     margin: 0;
-                    // height: 0;
+                    height: 0;
+                    overflow: hidden;
                     
                     a {
                         font-weight: 100;
@@ -177,7 +181,7 @@
                 &:focus,
                 &:focus-within {
                     .Header-nav-folder {
-                        // height: auto;
+                        height: auto;
                     }
                 }
             }
