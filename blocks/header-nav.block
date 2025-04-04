@@ -4,7 +4,7 @@
         <a href="{fullUrl}" class="Header-nav-item{.if active} Header-nav-item--active{.end}" data-test="template-nav">{@|apply starIcon.block} <span>{navigationTitle}</span></a>
     {.end}{.or}
     <span class="Header-nav-item Header-nav-item--folder">
-        <p href="{collection.fullUrl}" class="Header-nav-folder-title{.if folderActive} Header-nav-folder-title--active{.end}" data-controller="HeaderNavFolderTouch">{@|apply starIcon.block} <span>{collection.navigationTitle}</span></p>
+        <a href="{collection.fullUrl}" class="Header-nav-folder-title{.if folderActive} Header-nav-folder-title--active{.end}" data-controller="HeaderNavFolderTouch">{@|apply starIcon.block} <span>{collection.navigationTitle}</span></a>
 
             <span class="Header-nav-folder">
                 {.repeated section items}
