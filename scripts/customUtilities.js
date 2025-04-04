@@ -47,6 +47,7 @@ $( document ).ready(function() {
     // var headerLinkRemoveAttr = $('.whatWeDo > .Header-nav-item:nth-child(2) > .Header-nav-folder-title');
     // console.log(headerLinkRemoveAttr);
     $('.whatWeDo .Header-nav-item:first-child > a.Header-nav-folder-title').removeAttr('href');
+    $('.whatWeDo .Header-nav-item:nth-child(2) > a.Header-nav-folder-title').attr('href', '/school-yearbooks');
 
     $(".sqs-search-page").closest("main.Main").prepend('<section class = "Intro search-page-intro"> </section>');
 
