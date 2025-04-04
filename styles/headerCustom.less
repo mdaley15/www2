@@ -3,7 +3,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     background-color: @blue;
     border-bottom: 3px solid @orange;
     box-shadow: 0 0 5px black;
@@ -137,11 +137,12 @@
             border-radius: 5px;
             display: none;
             flex-direction: column;
-            padding: 20px;
+            padding: 0;
             min-height: 100vh;
 
             > .Header-nav-item {
                 background: rgba(255,255,255,.8);
+                padding: 20px;
             }
             a.Header-nav-item,
             .Header-nav-folder-title {
