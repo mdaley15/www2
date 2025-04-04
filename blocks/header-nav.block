@@ -3,7 +3,7 @@
     {.repeated section @}{.collection?}{.folder?}{.index?}{.section collection}
         <a href="{fullUrl}" class="Header-nav-item{.if active} Header-nav-item--active{.end}" data-test="template-nav">{@|apply starIcon.block} <span>{navigationTitle}</span></a>
     {.end}{.or}
-    <span class="Header-nav-item Header-nav-item--folder">
+    <span class="Header-nav-item Header-nav-item--folder" tabindex="0">
         <a href="{collection.fullUrl}" class="Header-nav-folder-title{.if folderActive} Header-nav-folder-title--active{.end}" data-controller="HeaderNavFolderTouch">{@|apply starIcon.block} <span>{collection.navigationTitle}</span></a>
 
             <span class="Header-nav-folder">
