@@ -1,11 +1,11 @@
 $( document ).ready(function() {
 
     $('.whatWeDo .Header-nav-item:first-child > a.Header-nav-folder-title').removeAttr('href');
-    $('.whatWeDo .Header-nav-item:nth-child(2) > a.Header-nav-folder-title').attr('href', '/school-yearbooks');
+    $('.whatWeDo .Header-nav-item:nth-child(2) > .Header-nav-folder-title').attr('href', '/school-yearbooks');
 
     var pathName = window.location.pathname;
     if (pathName.includes("/school-yearbooks")) {
-    $('.whatWeDo .Header-nav-item:nth-child(2) > a.Header-nav-folder-title').addClass('active');
+        $('.whatWeDo .Header-nav-item:nth-child(2) > .Header-nav-folder-title').addClass('active');
     }
     
     /* Sample function that returns boolean in case the browser is Internet Explorer */
