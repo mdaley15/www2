@@ -229,9 +229,16 @@
                     margin: 0;
                     font-size: 28px;
                     color: @blue;
+                    padding: 5px 0;
+                    border-bottom: 2px solid transparent;
+                    text-decoration: none!important;
 
                     .starIcon {
                         display: none!important;
+                    }
+                    &:hover,
+                    &:focus {
+                        border-color: @drkOrange;
                     }
                 }
             }
