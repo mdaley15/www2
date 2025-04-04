@@ -44,6 +44,8 @@ $( document ).ready(function() {
         // console.log(ariaLabel);
     });
 
+    $('.whatWeDo > .Header-nav-item:nth-child(2) > .Header-nav-folder-title').removeAttr('href');
+
     $(".sqs-search-page").closest("main.Main").prepend('<section class = "Intro search-page-intro"> </section>');
 
     $("p:contains('. - 5')").html(function(_, html) {
