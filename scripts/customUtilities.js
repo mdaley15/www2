@@ -70,7 +70,7 @@ $( document ).ready(function() {
     $('.sqs-block-button-element, .sqs-system-button, .meta p:last-child a, .sqs-lightbox-meta p a').addClass('lift allBtns');
 
     // Index Page Galleries
-    var slides = document.querySelectorAll('#home .slide > img');
+    var slides = document.querySelectorAll('#home .slide > img, #school-yearbooks .slide > img');
     slides.forEach((slide, index) => {
         var wrap = document.createElement('div');
         wrap.classList.add('slideImgWrap');
