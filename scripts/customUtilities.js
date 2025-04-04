@@ -61,7 +61,7 @@ $( document ).ready(function() {
     $('a.previous').append('<i class="fas fa-chevron-left"></i>');
     $('a.next').append('<i class="fas fa-chevron-right"></i>');
 
-    $('.sqs-block-button-element, .sqs-system-button, .meta p:last-child a').addClass('lift allBtns');
+    $('.sqs-block-button-element, .sqs-system-button, .meta p:last-child a, .sqs-lightbox-meta p a').addClass('lift allBtns');
 
     // Index Page Galleries
     var slides = document.querySelectorAll('#home .slide > img');
