@@ -44,6 +44,8 @@ $( document ).ready(function() {
         // console.log(ariaLabel);
     });
 
+    var headerLinkRemoveAttr = $('.whatWeDo > .Header-nav-item:nth-child(2) > .Header-nav-folder-title');
+    console.log(headerLinkRemoveAttr);
     $('.whatWeDo > .Header-nav-item:nth-child(2) > .Header-nav-folder-title').removeAttr('href');
 
     $(".sqs-search-page").closest("main.Main").prepend('<section class = "Intro search-page-intro"> </section>');
