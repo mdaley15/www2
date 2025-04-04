@@ -1,8 +1,11 @@
 $( document ).ready(function() {
 
+    $('.whatWeDo .Header-nav-item:first-child > a.Header-nav-folder-title').removeAttr('href');
+    $('.whatWeDo .Header-nav-item:nth-child(2) > a.Header-nav-folder-title').attr('href', '/school-yearbooks');
+
     var pathName = window.location.pathname;
     if (pathName.includes("/school-yearbooks")) {
-        console.log("You're on the School Yearbooks page");
+    $('.whatWeDo .Header-nav-item:nth-child(2) > a.Header-nav-folder-title').addClass('active');
     }
     
     /* Sample function that returns boolean in case the browser is Internet Explorer */
@@ -46,8 +49,6 @@ $( document ).ready(function() {
 
     // var headerLinkRemoveAttr = $('.whatWeDo > .Header-nav-item:nth-child(2) > .Header-nav-folder-title');
     // console.log(headerLinkRemoveAttr);
-    $('.whatWeDo .Header-nav-item:first-child > a.Header-nav-folder-title').removeAttr('href');
-    $('.whatWeDo .Header-nav-item:nth-child(2) > a.Header-nav-folder-title').attr('href', '/school-yearbooks');
 
     $(".sqs-search-page").closest("main.Main").prepend('<section class = "Intro search-page-intro"> </section>');
 
