@@ -117,11 +117,15 @@
         .navTitle {
             font-size: 28px;
             color: @blue;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid transparent;
 
             i {
                 color: @drkOrange;
                 font-size: 25px;
                 transition: all .4s ease-in-out;
+                margin-left: 10px;
             }
         }
         .Header-nav-inner {
@@ -177,8 +181,9 @@
         &:focus,
         &:focus-within {
             .navTitle {
-                text-decoration: underline; 
-                text-decoration-color: @drkOrange;
+                border-color: @drkOrange;
+                // text-decoration: underline;
+                // text-decoration-color: @drkOrange;
             }
             .Header-nav-inner {
                 display: flex;
