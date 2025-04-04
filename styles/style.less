@@ -540,8 +540,8 @@ main .Index-page-content > div,
         top: 0!important;
         height: fit-content!important;
         width: fit-content;
-        height: 100%!important;
-        width: 100%!important;
+        // height: 100%!important;
+        // width: 100%!important;
         // max-width: 800px;
         // max-height: 800px;
         border-radius: 5px;
@@ -563,15 +563,15 @@ main .Index-page-content > div,
             position: static;
             width: fit-content;
             height: fit-content;
-            height: 100%!important;
-            width: 100%!important;
+            // height: 100%!important;
+            // width: 100%!important;
             
             .sqs-lightbox-slide {
                 position: static;
                 width: fit-content;
                 height: fit-content;
-                height: 100%!important;
-                width: 100%!important;
+                // height: 100%!important;
+                // width: 100%!important;
                 display: none;
                 
                 .sqs-lightbox-padder {
@@ -588,7 +588,10 @@ main .Index-page-content > div,
                         position: static!important;
                         width: 100%!important;
                         height: auto!important;
+                        max-width: 100%!important;
+                        max-height: 100%!important;
                         display: block;
+                        flex-grow: 2;
                         border-radius: 5px;
                     }
                     .sqs-lightbox-meta {
