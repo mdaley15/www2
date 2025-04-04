@@ -1,8 +1,8 @@
 $( document ).ready(function() {
 
     var pathName = window.location.pathname;
-    if (pathName.includes("search") || pathName.includes("events/")) {
-        // $(".loginBox").remove();
+    if (pathName.includes("/school-yearbooks")) {
+        console.log("You're on the School Yearbooks page");
     }
     
     /* Sample function that returns boolean in case the browser is Internet Explorer */
