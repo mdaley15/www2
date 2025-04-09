@@ -112,9 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 item.classList.add(newCategory);
             }
         }
-        // itemLink.addEventListener('click', lightboxFilter);
         itemLink.addEventListener('click', function(e) {
-            console.log(e);
             lightboxFilter(this);
         });
     });
@@ -156,10 +154,23 @@ function imgFilter(btn) {
         }
     });
 }
-function lightboxFilter(trigger) {
-    console.log(trigger);
+function lightboxFilter(itemLink) {
+    console.log(itemLink);
+    let thisBlock = itemLink.closest('.col');
+    let activeFilter = thisBlock.querySelector('.activeBtn');
+    if (activeFilter) {
+        console.log(activeFilter);
+    }
     lightbox = document.querySelector('.yui3-lightbox2');
     lightboxItems = lightbox.querySelectorAll('.sqs-lightbox-slide');
-    console.log(lightboxItems);
-    console.log(filter);
+    let category = itemLink.getAttribute('data-title');
+    if (category) {
+        console.log(category);
+        // let firstLetter = category.charAt(0).toLowerCase();
+        // let restOfString = category.slice(1);
+        // let newCategory = (firstLetter + restOfString).replace(/\s/g, '');
+        // if (newCategory) {
+        //     item.classList.add(newCategory);
+        // }
+    }
 }
