@@ -155,6 +155,7 @@ function imgFilter(btn) {
             item.classList.remove('hide');
         } else {
             item.classList.add('hide');
+            item.querySelector('a').classList.remove('js-gallery-lightbox-opener');
         }
     });
 }
