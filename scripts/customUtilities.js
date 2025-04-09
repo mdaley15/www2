@@ -98,7 +98,7 @@ var galleryItems,
     filterTexts;
 document.addEventListener('DOMContentLoaded', function() {
     galleryItems = document.querySelectorAll('.sqs-gallery-design-grid .slide');
-    galleryItems.forEach(item => {
+    galleryItems.forEach((item, index) => {
         let category = item.querySelector('a').getAttribute('data-title');
         if (category) {
             let firstLetter = category.charAt(0).toLowerCase();
@@ -107,6 +107,9 @@ document.addEventListener('DOMContentLoaded', function() {
             if (newCategory) {
                 item.classList.add(newCategory);
             }
+        }
+        if (index === 0) {
+            item.click();
         }
     });
 
