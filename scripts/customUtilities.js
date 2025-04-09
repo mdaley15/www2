@@ -189,6 +189,9 @@ function lightboxFilter(itemLink) {
                     item.remove();
                 }, 2000);
             }
+            let infoBtn = item.querySelector('.sqs-lightbox-meta a');
+            let currentImg = item.querySelector('img');
+            console.log(currentImg);
         });
     }
 }
