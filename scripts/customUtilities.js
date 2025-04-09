@@ -101,7 +101,10 @@ var galleryItems,
     lightboxItems;
 const filterClasses = [];
 document.addEventListener('DOMContentLoaded', function() {
-    galleryItems = document.querySelectorAll('.sqs-gallery-design-grid .slide');
+    let galleries = document.querySelectorAll('.sqs-gallery-design-grid');
+    galleries.forEach(gallery => {
+        galleryItems = gallery.querySelectorAll('.slide');
+    });
     galleryItems.forEach((item, index) => {
         let itemLink = item.querySelector('a');
         let category = itemLink.getAttribute('data-title');
@@ -158,8 +161,8 @@ function imgFilter(btn) {
 function lightboxFilter(itemLink) {
     var activeFilter, category;
     let thisBlock = itemLink.closest('.col');
-    let thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
-    galleryItems = thisGallery.querySelectorAll('.slide');
+    // let thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
+    // galleryItems = thisGallery.querySelectorAll('.slide');
     console.log(galleryItems);
 
 
@@ -170,9 +173,9 @@ function lightboxFilter(itemLink) {
     if (activeFilter) {
         activeFilter = activeFilter.textContent;
         // console.log(activeFilter);
-        let firstLetter = category.charAt(0).toLowerCase();
-        let restOfString = category.slice(1);
-        let newCategory = (firstLetter + restOfString).replace(/\s/g, '');
+        // let firstLetter = category.charAt(0).toLowerCase();
+        // let restOfString = category.slice(1);
+        // let newCategory = (firstLetter + restOfString).replace(/\s/g, '');
         lightboxItems.forEach(item => {
             // console.log(item);
 
