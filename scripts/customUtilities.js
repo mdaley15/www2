@@ -188,7 +188,7 @@ function lightboxFilter(itemLink) {
                 item.classList.add('hide');
                 setTimeout(function() {
                     item.remove();
-                  }, 1000);
+                }, 2000);
             }
         });
     }
