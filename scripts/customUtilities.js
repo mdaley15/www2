@@ -113,6 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 let newCategory = (firstLetter + restOfString).replace(/\s/g, '');
                 if (newCategory) {
                     item.classList.add(newCategory);
+                    item.setAttribute('data-class',newCategory);
                     filterClasses.push(newCategory);
                 }
             }
