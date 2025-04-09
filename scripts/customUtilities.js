@@ -156,7 +156,7 @@ function imgFilter(btn) {
 }
 function lightboxFilter(itemLink) {
     let thisBlock = itemLink.closest('.col');
-    let activeFilter = thisBlock.querySelector('.activeBtn');
+    let activeFilter = thisBlock.querySelector('.activeBtn').textContent;
     lightbox = document.querySelector('.yui3-lightbox2');
     lightboxItems = lightbox.querySelectorAll('.sqs-lightbox-slide');
     let category = itemLink.getAttribute('data-title');
