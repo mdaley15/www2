@@ -159,7 +159,6 @@ function imgFilter(btn) {
     });
 }
 function lightboxFilter(itemLink) {
-    var activeFilter, category;
     const filterClasses = [];
     let thisBlock = itemLink.closest('.col');
     let thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
@@ -176,13 +175,12 @@ function lightboxFilter(itemLink) {
         }
     });
 
-    activeFilter = thisBlock.querySelector('.activeBtn');
+    let activeFilter = thisBlock.querySelector('.activeBtn');
     if (activeFilter) {
         activeFilter = activeFilter.textContent;
         let firstLetter = activeFilter.charAt(0).toLowerCase();
         let restOfString = activeFilter.slice(1);
         activeFilter = (firstLetter + restOfString).replace(/\s/g, '');
-        console.log(activeFilter);
         lightboxItems.forEach(item => {
             if (item.classList.contains(activeFilter)) {
                 item.classList.remove('hide');
