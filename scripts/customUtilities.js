@@ -156,11 +156,12 @@ function imgFilter(btn) {
 }
 function lightboxFilter(itemLink) {
     let thisBlock = itemLink.closest('.col');
-    let activeFilter = thisBlock.querySelector('.activeBtn').textContent;
+    let activeFilter = thisBlock.querySelector('.activeBtn');
     lightbox = document.querySelector('.yui3-lightbox2');
     lightboxItems = lightbox.querySelectorAll('.sqs-lightbox-slide');
     let category = itemLink.getAttribute('data-title');
     if (activeFilter) {
+        activeFilter = activeFilter.textContent;
         console.log(activeFilter);
         let firstLetter = category.charAt(0).toLowerCase();
         let restOfString = category.slice(1);
