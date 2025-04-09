@@ -152,7 +152,7 @@ function imgFilter(btn) {
         }
     });
 }
-function lightboxFilter(item) {
+function lightboxFilter() {
     // Function logic here
-    console.log(item +': clicked! Show Lightbox');
+    console.log(this +': clicked! Show Lightbox');
   }
