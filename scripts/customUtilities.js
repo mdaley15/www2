@@ -104,6 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let galleries = document.querySelectorAll('.sqs-gallery-design-grid');
     galleries.forEach(gallery => {
         galleryItems = gallery.querySelectorAll('.slide');
+        console.log(galleryItems);
     });
     console.log(galleryItems);
     galleryItems.forEach((item, index) => {
