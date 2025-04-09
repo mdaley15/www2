@@ -99,10 +99,10 @@ var galleryItems,
     filterTexts,
     lightbox,
     lightboxItems;
-const filterClasses = [];
 document.addEventListener('DOMContentLoaded', function() {
     let galleries = document.querySelectorAll('.sqs-gallery-design-grid');
     galleries.forEach(gallery => {
+        const filterClasses = [];
         galleryItems = gallery.querySelectorAll('.slide');
         galleryItems.forEach((item, index) => {
             let itemLink = item.querySelector('a');
@@ -113,12 +113,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 let newCategory = (firstLetter + restOfString).replace(/\s/g, '');
                 if (newCategory) {
                     item.classList.add(newCategory);
+                    filterClasses.push(newCategory);
                 }
             }
             itemLink.addEventListener('click', function(e) {
                 lightboxFilter(this);
             });
         });
+        console.log(filterClasses);
     });
 
     let watermark = document.querySelector('.watermark');
@@ -131,12 +133,13 @@ document.addEventListener('DOMContentLoaded', function() {
         btn.click();
     });
 });
+var thisGallery;
 function imgFilter(btn) {
     filter = btn.getAttribute('data-filter');
     let thisBlock = btn.closest('.col');
     let filterBtns = thisBlock.querySelectorAll('.filterBtn');
     filterTexts = thisBlock.querySelectorAll('.filterText');
-    let thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
+    thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
     galleryItems = thisGallery.querySelectorAll('.slide');
     filterBtns.forEach(filterBtn => {
         filterBtn.classList.remove('activeBtn');
