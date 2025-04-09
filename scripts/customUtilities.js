@@ -198,6 +198,7 @@ function lightboxFilter(itemLink) {
         let currentImg = infoBtn.closest('.sqs-lightbox-padder').querySelector('img').getAttribute('data-src');
         let link = infoBtn.getAttribute('href');
         console.log(link);
-
+        link = link + '?' + currentImg;
+        infoBtn.setAttribute('href', link);
     });
 }
