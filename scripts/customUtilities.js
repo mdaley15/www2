@@ -113,8 +113,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         // itemLink.addEventListener('click', lightboxFilter);
-        itemLink.addEventListener('click', function() {
-            // console.log(this);
+        itemLink.addEventListener('click', function(this) {
+            console.log(this);
             lightboxFilter(this);
         });
     });
@@ -156,7 +156,10 @@ function imgFilter(btn) {
         }
     });
 }
-function lightboxFilter() {
+function lightboxFilter(trigger) {
+    console.log(trigger);
     lightbox = document.querySelector('.yui3-lightbox2');
-    console.log(lightbox);
+    lightboxItems = lightbox.querySelectorAll('.sqs-lightbox-slide');
+    console.log(lightboxItems);
+    console.log(filter);
 }
