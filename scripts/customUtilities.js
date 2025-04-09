@@ -170,11 +170,15 @@ function lightboxFilter(itemLink) {
         filterClasses.push(itemClass);
     });
     console.log(filterClasses);
-
-
-    activeFilter = thisBlock.querySelector('.activeBtn');
     lightbox = document.querySelector('.yui3-lightbox2');
     lightboxItems = lightbox.querySelectorAll('.sqs-lightbox-slide');
+    filterClasses.forEach((str, index) => {
+        if (lightboxItems[index]) {
+            lightboxItems[index].classList.add(str);
+        }
+    });
+
+    activeFilter = thisBlock.querySelector('.activeBtn');
     // let category = itemLink.getAttribute('data-title');
     if (activeFilter) {
         activeFilter = activeFilter.textContent;
