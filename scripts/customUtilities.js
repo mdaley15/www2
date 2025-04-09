@@ -155,18 +155,19 @@ function imgFilter(btn) {
     });
 }
 function lightboxFilter(itemLink) {
-    console.log(itemLink);
     let thisBlock = itemLink.closest('.col');
     let activeFilter = thisBlock.querySelector('.activeBtn');
     lightbox = document.querySelector('.yui3-lightbox2');
     lightboxItems = lightbox.querySelectorAll('.sqs-lightbox-slide');
     let category = itemLink.getAttribute('data-title');
     if (activeFilter) {
+        console.log(activeFilter);
         let firstLetter = category.charAt(0).toLowerCase();
         let restOfString = category.slice(1);
         let newCategory = (firstLetter + restOfString).replace(/\s/g, '');
         lightboxItems.forEach(item => {
             console.log(item);
+
             // if (item.classList.contains(filter)) {
             //     item.classList.remove('hide');
             // } else {
