@@ -102,7 +102,6 @@ var galleryItems,
 document.addEventListener('DOMContentLoaded', function() {
     let galleries = document.querySelectorAll('.sqs-gallery-design-grid');
     galleries.forEach(gallery => {
-        const filterClasses = [];
         galleryItems = gallery.querySelectorAll('.slide');
         galleryItems.forEach((item, index) => {
             let itemLink = item.querySelector('a');
@@ -114,7 +113,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (newCategory) {
                     item.classList.add(newCategory);
                     item.setAttribute('data-class',newCategory);
-                    filterClasses.push(newCategory);
                 }
             }
             itemLink.addEventListener('click', function(e) {
@@ -163,10 +161,15 @@ function imgFilter(btn) {
 }
 function lightboxFilter(itemLink) {
     var activeFilter, category;
+    const filterClasses = [];
     let thisBlock = itemLink.closest('.col');
     let thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
-    // galleryItems = thisGallery.querySelectorAll('.slide');
-    console.log(thisGallery);
+    galleryItems = thisGallery.querySelectorAll('.slide');
+    galleryItems.forEach(item => {
+        let itemClass = item.getAttribute('data-class');
+        filterClasses.push(itemClass);
+    });
+    console.log(filterClasses);
 
 
     activeFilter = thisBlock.querySelector('.activeBtn');
