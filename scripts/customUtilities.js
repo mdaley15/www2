@@ -104,22 +104,20 @@ document.addEventListener('DOMContentLoaded', function() {
     let galleries = document.querySelectorAll('.sqs-gallery-design-grid');
     galleries.forEach(gallery => {
         galleryItems = gallery.querySelectorAll('.slide');
-        console.log(galleryItems);
-    });
-    console.log(galleryItems);
-    galleryItems.forEach((item, index) => {
-        let itemLink = item.querySelector('a');
-        let category = itemLink.getAttribute('data-title');
-        if (category) {
-            let firstLetter = category.charAt(0).toLowerCase();
-            let restOfString = category.slice(1);
-            let newCategory = (firstLetter + restOfString).replace(/\s/g, '');
-            if (newCategory) {
-                item.classList.add(newCategory);
+        galleryItems.forEach((item, index) => {
+            let itemLink = item.querySelector('a');
+            let category = itemLink.getAttribute('data-title');
+            if (category) {
+                let firstLetter = category.charAt(0).toLowerCase();
+                let restOfString = category.slice(1);
+                let newCategory = (firstLetter + restOfString).replace(/\s/g, '');
+                if (newCategory) {
+                    item.classList.add(newCategory);
+                }
             }
-        }
-        itemLink.addEventListener('click', function(e) {
-            lightboxFilter(this);
+            itemLink.addEventListener('click', function(e) {
+                lightboxFilter(this);
+            });
         });
     });
 
