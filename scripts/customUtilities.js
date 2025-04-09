@@ -161,12 +161,17 @@ function lightboxFilter(itemLink) {
     lightbox = document.querySelector('.yui3-lightbox2');
     lightboxItems = lightbox.querySelectorAll('.sqs-lightbox-slide');
     let category = itemLink.getAttribute('data-title');
-    if (category && activeFilter) {
+    if (activeFilter) {
         let firstLetter = category.charAt(0).toLowerCase();
         let restOfString = category.slice(1);
         let newCategory = (firstLetter + restOfString).replace(/\s/g, '');
-        if (newCategory) {
-            console.log(newCategory,activeFilter);
-        }
+        lightboxItems.forEach(item => {
+            console.log(item);
+            // if (item.classList.contains(filter)) {
+            //     item.classList.remove('hide');
+            // } else {
+            //     item.classList.add('hide');
+            // }
+        });
     }
 }
