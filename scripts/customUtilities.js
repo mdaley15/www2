@@ -179,13 +179,12 @@ function lightboxFilter(itemLink) {
     });
 
     activeFilter = thisBlock.querySelector('.activeBtn');
-    // let category = itemLink.getAttribute('data-title');
     if (activeFilter) {
         activeFilter = activeFilter.textContent;
-        // console.log(activeFilter);
-        // let firstLetter = category.charAt(0).toLowerCase();
-        // let restOfString = category.slice(1);
-        // let newCategory = (firstLetter + restOfString).replace(/\s/g, '');
+        let firstLetter = activeFilter.charAt(0).toLowerCase();
+        let restOfString = activeFilter.slice(1);
+        activeFilter = (firstLetter + restOfString).replace(/\s/g, '');
+        console.log(activeFilter);
         lightboxItems.forEach(item => {
             // console.log(item);
 
