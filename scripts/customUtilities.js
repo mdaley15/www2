@@ -162,7 +162,7 @@ function lightboxFilter(itemLink) {
     activeFilter = thisBlock.querySelector('.activeBtn');
     lightbox = document.querySelector('.yui3-lightbox2');
     lightboxItems = lightbox.querySelectorAll('.sqs-lightbox-slide');
-    let category = itemLink.getAttribute('data-title');
+    // let category = itemLink.getAttribute('data-title');
     if (activeFilter) {
         activeFilter = activeFilter.textContent;
         // console.log(activeFilter);
