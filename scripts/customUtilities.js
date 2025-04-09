@@ -111,7 +111,6 @@ document.addEventListener('DOMContentLoaded', function() {
             let newCategory = (firstLetter + restOfString).replace(/\s/g, '');
             if (newCategory) {
                 item.classList.add(newCategory);
-                console.log(newCategory);
             }
         }
         itemLink.addEventListener('click', function(e) {
@@ -159,6 +158,11 @@ function imgFilter(btn) {
 function lightboxFilter(itemLink) {
     var activeFilter, category;
     let thisBlock = itemLink.closest('.col');
+    let thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
+    galleryItems = thisGallery.querySelectorAll('.slide');
+    console.log(galleryItems);
+
+
     activeFilter = thisBlock.querySelector('.activeBtn');
     lightbox = document.querySelector('.yui3-lightbox2');
     lightboxItems = lightbox.querySelectorAll('.sqs-lightbox-slide');
