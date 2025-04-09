@@ -188,6 +188,7 @@ function lightboxFilter(itemLink) {
                 item.classList.remove('hide');
             } else {
                 item.classList.add('hide');
+                item.classList.remove('sqs-active-slide');
             }
         });
     }
