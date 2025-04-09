@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 item.classList.add(newCategory);
             }
         }
-        itemLink.addEventListener('click', lightboxFilter);
+        itemLink.addEventListener('click', lightboxFilter(this));
     });
 
     let watermark = document.querySelector('.watermark');
@@ -152,7 +152,7 @@ function imgFilter(btn) {
         }
     });
 }
-function lightboxFilter() {
+function lightboxFilter(item) {
     // Function logic here
-    console.log('Item clicked! Show Lightbox');
+    console.log(item +': clicked! Show Lightbox');
   }
