@@ -119,7 +119,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 lightboxFilter(this);
             });
         });
-        // console.log(filterClasses);
     });
 
     let watermark = document.querySelector('.watermark');
@@ -169,7 +168,6 @@ function lightboxFilter(itemLink) {
         let itemClass = item.getAttribute('data-class');
         filterClasses.push(itemClass);
     });
-    console.log(filterClasses);
     lightbox = document.querySelector('.yui3-lightbox2');
     lightboxItems = lightbox.querySelectorAll('.sqs-lightbox-slide');
     filterClasses.forEach((str, index) => {
@@ -186,13 +184,11 @@ function lightboxFilter(itemLink) {
         activeFilter = (firstLetter + restOfString).replace(/\s/g, '');
         console.log(activeFilter);
         lightboxItems.forEach(item => {
-            // console.log(item);
-
-            // if (item.classList.contains(filter)) {
-            //     item.classList.remove('hide');
-            // } else {
-            //     item.classList.add('hide');
-            // }
+            if (item.classList.contains(activeFilter)) {
+                item.classList.remove('hide');
+            } else {
+                item.classList.add('hide');
+            }
         });
     }
 }
