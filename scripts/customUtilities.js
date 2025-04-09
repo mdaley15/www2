@@ -158,4 +158,5 @@ function imgFilter(btn) {
 }
 function lightboxFilter(trigger) {
     console.log(trigger +': clicked! Show Lightbox');
+    console.log(this);
   }
