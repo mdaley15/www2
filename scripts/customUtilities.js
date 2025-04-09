@@ -156,7 +156,7 @@ function imgFilter(btn) {
         }
     });
 }
-function lightboxFilter(trigger) {
-    console.log(trigger +': clicked! Show Lightbox');
-    console.log(this);
-  }
+function lightboxFilter() {
+    lightbox = document.querySelector('.yui3-lightbox2');
+    console.log(lightbox);
+}
