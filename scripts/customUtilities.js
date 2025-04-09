@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         if (index === 0) {
-            item.click();
+            item.querySelector('a').click();
         }
     });
 
