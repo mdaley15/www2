@@ -95,13 +95,15 @@ $( document ).ready(function() {
 
 // Image Filters
 var galleryItems,
+    filter,
     filterTexts,
     lightbox,
     lightboxItems;
 document.addEventListener('DOMContentLoaded', function() {
     galleryItems = document.querySelectorAll('.sqs-gallery-design-grid .slide');
     galleryItems.forEach((item, index) => {
-        let category = item.querySelector('a').getAttribute('data-title');
+        let itemLink = item.querySelector('a');
+        let category = itemLink.getAttribute('data-title');
         if (category) {
             let firstLetter = category.charAt(0).toLowerCase();
             let restOfString = category.slice(1);
@@ -110,9 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 item.classList.add(newCategory);
             }
         }
-        if (index === 0) {
-            item.querySelector('a').click();
-        }
+        itemLink.addEventListener('click', lightboxFilter);
     });
 
     let watermark = document.querySelector('.watermark');
@@ -126,8 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 function imgFilter(btn) {
-    let filter = btn.getAttribute('data-filter');
-    console.log(filter);
+    filter = btn.getAttribute('data-filter');
     let thisBlock = btn.closest('.col');
     let filterBtns = thisBlock.querySelectorAll('.filterBtn');
     filterTexts = thisBlock.querySelectorAll('.filterText');
@@ -153,3 +152,7 @@ function imgFilter(btn) {
         }
     });
 }
+function lightboxFilter() {
+    // Function logic here
+    console.log('Item clicked! Show Lightbox');
+  }
