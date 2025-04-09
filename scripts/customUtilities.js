@@ -162,6 +162,11 @@ function lightboxFilter(itemLink) {
     lightboxItems = lightbox.querySelectorAll('.sqs-lightbox-slide');
     let category = itemLink.getAttribute('data-title');
     if (category && activeFilter) {
-        console.log(category,activeFilter);
+        let firstLetter = category.charAt(0).toLowerCase();
+        let restOfString = category.slice(1);
+        let newCategory = (firstLetter + restOfString).replace(/\s/g, '');
+        if (newCategory) {
+            console.log(newCategory,activeFilter);
+        }
     }
 }
