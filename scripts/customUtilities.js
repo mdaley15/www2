@@ -114,7 +114,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         // itemLink.addEventListener('click', lightboxFilter);
         itemLink.addEventListener('click', function() {
-            console.log(this);
+            // console.log(this);
+            lightboxFilter(this);
         });
     });
 
@@ -155,7 +156,7 @@ function imgFilter(btn) {
         }
     });
 }
-function lightboxFilter() {
+function lightboxFilter(item) {
     // Function logic here
-    console.log(this +': clicked! Show Lightbox');
+    console.log(item +': clicked! Show Lightbox');
   }
