@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 lightboxFilter(this);
             });
         });
-        console.log(filterClasses);
+        // console.log(filterClasses);
     });
 
     let watermark = document.querySelector('.watermark');
@@ -133,7 +133,6 @@ document.addEventListener('DOMContentLoaded', function() {
         btn.click();
     });
 });
-var thisGallery;
 function imgFilter(btn) {
     filter = btn.getAttribute('data-filter');
     let thisBlock = btn.closest('.col');
@@ -164,9 +163,9 @@ function imgFilter(btn) {
 function lightboxFilter(itemLink) {
     var activeFilter, category;
     let thisBlock = itemLink.closest('.col');
-    // let thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
+    let thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
     // galleryItems = thisGallery.querySelectorAll('.slide');
-    console.log(galleryItems);
+    console.log(thisGallery);
 
 
     activeFilter = thisBlock.querySelector('.activeBtn');
