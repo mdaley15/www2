@@ -95,7 +95,9 @@ $( document ).ready(function() {
 
 // Image Filters
 var galleryItems,
-    filterTexts;
+    filterTexts,
+    lightbox,
+    lightboxItems;
 document.addEventListener('DOMContentLoaded', function() {
     galleryItems = document.querySelectorAll('.sqs-gallery-design-grid .slide');
     galleryItems.forEach((item, index) => {
@@ -125,6 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 function imgFilter(btn) {
     let filter = btn.getAttribute('data-filter');
+    console.log(filter);
     let thisBlock = btn.closest('.col');
     let filterBtns = thisBlock.querySelectorAll('.filterBtn');
     filterTexts = thisBlock.querySelectorAll('.filterText');
