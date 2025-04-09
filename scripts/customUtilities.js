@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 item.classList.add(newCategory);
             }
         }
-        itemLink.addEventListener('click', lightboxFilter(this));
+        itemLink.addEventListener('click', lightboxFilter);
     });
 
     let watermark = document.querySelector('.watermark');
