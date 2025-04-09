@@ -99,6 +99,7 @@ var galleryItems,
     filterTexts,
     lightbox,
     lightboxItems;
+const filterClasses = [];
 document.addEventListener('DOMContentLoaded', function() {
     galleryItems = document.querySelectorAll('.sqs-gallery-design-grid .slide');
     galleryItems.forEach((item, index) => {
@@ -110,6 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
             let newCategory = (firstLetter + restOfString).replace(/\s/g, '');
             if (newCategory) {
                 item.classList.add(newCategory);
+                console.log(newCategory);
             }
         }
         itemLink.addEventListener('click', function(e) {
@@ -155,19 +157,20 @@ function imgFilter(btn) {
     });
 }
 function lightboxFilter(itemLink) {
+    var activeFilter, category;
     let thisBlock = itemLink.closest('.col');
-    let activeFilter = thisBlock.querySelector('.activeBtn');
+    activeFilter = thisBlock.querySelector('.activeBtn');
     lightbox = document.querySelector('.yui3-lightbox2');
     lightboxItems = lightbox.querySelectorAll('.sqs-lightbox-slide');
     let category = itemLink.getAttribute('data-title');
     if (activeFilter) {
         activeFilter = activeFilter.textContent;
-        console.log(activeFilter);
+        // console.log(activeFilter);
         let firstLetter = category.charAt(0).toLowerCase();
         let restOfString = category.slice(1);
         let newCategory = (firstLetter + restOfString).replace(/\s/g, '');
         lightboxItems.forEach(item => {
-            console.log(item);
+            // console.log(item);
 
             // if (item.classList.contains(filter)) {
             //     item.classList.remove('hide');
