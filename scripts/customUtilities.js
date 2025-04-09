@@ -113,8 +113,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         // itemLink.addEventListener('click', lightboxFilter);
-        itemLink.addEventListener('click', function(this) {
-            console.log(this);
+        itemLink.addEventListener('click', function(e) {
+            console.log(e);
             lightboxFilter(this);
         });
     });
