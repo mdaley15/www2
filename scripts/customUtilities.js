@@ -105,6 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
     galleries.forEach(gallery => {
         galleryItems = gallery.querySelectorAll('.slide');
     });
+    console.log(galleryItems);
     galleryItems.forEach((item, index) => {
         let itemLink = item.querySelector('a');
         let category = itemLink.getAttribute('data-title');
