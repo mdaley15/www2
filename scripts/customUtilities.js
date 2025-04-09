@@ -196,7 +196,8 @@ function lightboxFilter(itemLink) {
     infoBtn.addEventListener('click', function(e) {
         e.preventDefault();
         let currentImg = infoBtn.closest('.sqs-lightbox-padder').querySelector('img').getAttribute('data-src');
-        console.log(currentImg);
+        let link = infoBtn.getAttribute('href');
+        console.log(link);
 
     });
 }
