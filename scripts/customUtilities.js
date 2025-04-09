@@ -177,12 +177,8 @@ function lightboxFilter(itemLink) {
     });
 
     let activeFilter = thisBlock.querySelector('.activeBtn');
-    console.log(activeFilter);
     if (activeFilter) {
-        activeFilter = activeFilter.textContent;
-        let firstLetter = activeFilter.charAt(0).toLowerCase();
-        let restOfString = activeFilter.slice(1);
-        activeFilter = (firstLetter + restOfString).replace(/\s/g, '');
+        activeFilter = activeFilter.getAttribute('data-filter');
         console.log(activeFilter);
         lightboxItems.forEach(item => {
             if (item.classList.contains(activeFilter)) {
