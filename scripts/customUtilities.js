@@ -176,6 +176,7 @@ function lightboxFilter(itemLink) {
     });
 
     let activeFilter = thisBlock.querySelector('.activeBtn');
+    console.log(activeFilter);
     if (activeFilter) {
         activeFilter = activeFilter.textContent;
         let firstLetter = activeFilter.charAt(0).toLowerCase();
