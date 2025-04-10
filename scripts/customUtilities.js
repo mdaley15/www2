@@ -34,6 +34,7 @@ $( document ).ready(function() {
         console.log(imgInfo);
         if (imgInfo.length === 2) {
             console.log('Array has 2 objects');
+            imgCategory.innerText(imgInfo[0]);
         }
         if (imgInfo.length === 3) {
             console.log('Array has 3 objects');
