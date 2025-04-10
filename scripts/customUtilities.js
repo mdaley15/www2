@@ -106,9 +106,7 @@ var galleryItems,
     filter,
     filterTexts,
     lightbox,
-    lightboxItems,
-    watermark,
-    watermarkTop;
+    lightboxItems;
 document.addEventListener('DOMContentLoaded', function() {
     let galleries = document.querySelectorAll('.sqs-gallery-design-grid');
     galleries.forEach(gallery => {
@@ -131,12 +129,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    watermark = document.querySelector('.watermark');
-    watermarkTop = watermark.offsetTop;
-    console.log(watermarkTop);
+    let watermark = document.querySelector('.watermark');
     let pageIcon = document.querySelector('.introTitle i');
     if (pageIcon) {
         watermark.classList.add(pageIcon.classList[1]);
+        const mainContent = document.querySelector('.Main-content');
+        const top = mainContent.offsetTop;
+        console.log(top);
+        window.addEventListener('scroll', function() {
+            console.log(top);
+            if (window.scrollY >= top) {
+                watermark.classList.add('fixed');
+            } else {
+                watermark.classList.remove('fixed');
+            }
+        });
     }
     let startingBtns = document.querySelectorAll('.startingBtn');
     startingBtns.forEach(btn => {
@@ -217,14 +224,3 @@ function lightboxFilter(itemLink) {
 }
 
 // sticky elements
-window.addEventListener('scroll', function() {
-    let offset = -50;
-    if (watermark) {
-        console.log(watermarkTop);
-        if (window.scrollY >= watermarkTop) {
-            watermark.classList.add('fixed');
-        } else {
-            watermark.classList.remove('fixed');
-        }
-    }
-});
