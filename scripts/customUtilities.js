@@ -21,16 +21,18 @@ $( document ).ready(function() {
             formImgWrap.classList.add('hide');
         }
         let filename = getStringAfterLastSlash(queryString);
+        // filename = filename.split('-');
         console.log(filename);
-        filename = filename.split('-');
-        console.log(filename);
+        const imgCategory = document.getElementById('imgCategory');
+        const imgSubCategory = document.getElementById('imgSubCategory');
+        const imgStyle = document.getElementById('imgStyle');
     }
     function getStringAfterLastSlash(str) {
         const lastSlashIndex = str.lastIndexOf('/');
         if (lastSlashIndex === -1) {
           return str; // Return the original string if no slash is found
         }
-        return str.substring(lastSlashIndex + 1).split('.')[0];
+        return str.substring(lastSlashIndex + 1).split('.')[0].split('-');
       }
     /* Sample function that returns boolean in case the browser is Internet Explorer */
     function isIE() {
