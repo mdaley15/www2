@@ -43,7 +43,7 @@ $( document ).ready(function() {
         }
         formImgInfo.addEventListener('click', function() {
             const text = this.innerText;
-            navigator.clipboard.writeText(text);
+            navigator.clipboard.writeText(text)
               .then(() => {
                 console.log('Text copied to clipboard');
                 formImgInfo.innerText = 'Copied to clipboard!';
