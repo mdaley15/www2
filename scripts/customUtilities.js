@@ -4,6 +4,7 @@ $( document ).ready(function() {
     $('.whatWeDo .Header-nav-item:nth-child(2) > .Header-nav-folder-title').attr('href', '/school-yearbooks');
 
     var pathName = window.location.pathname;
+    console.log(pathName);
     if (pathName.includes("/school-yearbooks")) {
         $('.whatWeDo .Header-nav-item:nth-child(2) > .Header-nav-folder-title').addClass('active');
     }
