@@ -26,6 +26,12 @@ $( document ).ready(function() {
             let fileInfo = filename[i];
             const fileWithSpaces = addSpacesToCamelCase(fileInfo);
             console.log(fileWithSpaces);
+            if (filename.length === 2) {
+                console.log('Array has 2 objects');
+            }
+            if (filename.length === 3) {
+                console.log('Array has 3 objects');
+            }
         }
         const imgCategory = document.getElementById('imgCategory');
         const imgSubCategory = document.getElementById('imgSubCategory');
