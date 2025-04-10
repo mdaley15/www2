@@ -12,8 +12,13 @@ $( document ).ready(function() {
         const urlParams = new URLSearchParams(queryString);
         console.log(queryString);
 
+        const formImgWrap = document.querySelector('.formImgWrap');
         const formImg = document.getElementById('formImg');
         formImg.setAttribute('src',queryString);
+        if (queryString == "") {
+            console.log('Url does NOT contain image src');
+            formImgWrap.classList.add('hide');
+        }
     }
     
     /* Sample function that returns boolean in case the browser is Internet Explorer */
