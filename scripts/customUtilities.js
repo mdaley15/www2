@@ -25,7 +25,7 @@ $( document ).ready(function() {
         for (let i = 0; i < filename.length; i++) {
             let fileInfo = filename[i];
             const fileWithSpaces = addSpacesToCamelCase(fileInfo);
-            console.log(fileInfo);
+            console.log(fileWithSpaces);
         }
         const imgCategory = document.getElementById('imgCategory');
         const imgSubCategory = document.getElementById('imgSubCategory');
