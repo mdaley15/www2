@@ -7,9 +7,11 @@ $( document ).ready(function() {
     if (pathName.includes("/school-yearbooks")) {
         $('.whatWeDo .Header-nav-item:nth-child(2) > .Header-nav-folder-title').addClass('active');
     }
-    const queryString = window.location.search.substring(1);
-    const urlParams = new URLSearchParams(queryString);
-    console.log(queryString);
+    if (pathName.includes("/contact-us")) {
+        const queryString = window.location.search.substring(1);
+        const urlParams = new URLSearchParams(queryString);
+        console.log(queryString);
+    }
     
     /* Sample function that returns boolean in case the browser is Internet Explorer */
     function isIE() {
