@@ -9,7 +9,7 @@ $( document ).ready(function() {
     }
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    console.log(urlParams);
+    console.log(queryString);
     
     /* Sample function that returns boolean in case the browser is Internet Explorer */
     function isIE() {
