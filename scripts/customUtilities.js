@@ -4,10 +4,11 @@ $( document ).ready(function() {
     $('.whatWeDo .Header-nav-item:nth-child(2) > .Header-nav-folder-title').attr('href', '/school-yearbooks');
 
     var pathName = window.location.pathname;
-    console.log(pathName);
     if (pathName.includes("/school-yearbooks")) {
         $('.whatWeDo .Header-nav-item:nth-child(2) > .Header-nav-folder-title').addClass('active');
     }
+    var urlParams = new URLSearchParams(queryString);
+    console.log(urlParams);
     
     /* Sample function that returns boolean in case the browser is Internet Explorer */
     function isIE() {
