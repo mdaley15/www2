@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let rect = mainContent.getBoundingClientRect();
         console.log(top,window.scrollY,rect.top);
         window.addEventListener('scroll', function() {
-            console.log(top,window.scrollY);
+            console.log(top,window.scrollY.rect.top);
             // if (window.scrollY <= top) {
             //     watermark.classList.add('fixed');
             // } else {
