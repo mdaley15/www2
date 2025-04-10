@@ -49,10 +49,12 @@ $( document ).ready(function() {
                 // formImgInfo.innerText = 'Copied to clipboard!';
                 setTimeout(() => {
                     copiedText.style.opacity = 1;
+                    copiedText.style.visibility = visible;
                 }, 50);
                 setTimeout(() => {
                     // formImgInfo.innerText = text;
                     copiedText.style.opacity = 0;
+                    copiedText.style.visibility = hidden;
                 }, 2000); // 1000 milliseconds = 1 second
               })
               .catch(err => {
