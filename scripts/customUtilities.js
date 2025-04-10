@@ -53,7 +53,7 @@ $( document ).ready(function() {
                 setTimeout(() => {
                     // formImgInfo.innerText = text;
                     copiedText.style.opacity = 0;
-                }, 3000); // 1000 milliseconds = 1 second
+                }, 2000); // 1000 milliseconds = 1 second
               })
               .catch(err => {
                 console.error('Failed to copy text: ', err);
