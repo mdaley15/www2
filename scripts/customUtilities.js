@@ -106,7 +106,9 @@ var galleryItems,
     filter,
     filterTexts,
     lightbox,
-    lightboxItems;
+    lightboxItems,
+    watermark,
+    watermarkTop;
 document.addEventListener('DOMContentLoaded', function() {
     let galleries = document.querySelectorAll('.sqs-gallery-design-grid');
     galleries.forEach(gallery => {
@@ -129,7 +131,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    let watermark = document.querySelector('.watermark');
+    watermark = document.querySelector('.watermark');
+    watermarkTop = watermark.offsetTop;
+    console.log(watermarkTop);
     let pageIcon = document.querySelector('.introTitle i');
     if (pageIcon) {
         watermark.classList.add(pageIcon.classList[1]);
@@ -214,12 +218,10 @@ function lightboxFilter(itemLink) {
 
 // sticky elements
 window.addEventListener('scroll', function() {
-    const watermark = document.querySelector('.watermark');
     let offset = -50;
     if (watermark) {
-        const top = watermark.offsetTop;
-        console.log(top);
-        if (window.scrollY >= top) {
+        console.log(watermarkTop);
+        if (window.scrollY >= watermarkTop) {
             watermark.classList.add('fixed');
         } else {
             watermark.classList.remove('fixed');
