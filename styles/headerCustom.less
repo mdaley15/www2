@@ -205,7 +205,8 @@
                 display: flex;
             }
         }
-        &:has(.Header-nav-folder-title--active) {
+        &:has(.Header-nav-folder-title--active),
+        &:has(.Header-nav-folder-item.active) {
             .navTitle {
                 border-color: @drkOrange;
             }
