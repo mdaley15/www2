@@ -13,6 +13,9 @@ $( document ).ready(function() {
         const urlParams = new URLSearchParams(queryString);
         console.log(queryString);
 
+        const imgCategory = document.getElementById('imgCategory');
+        const imgSubCategory = document.getElementById('imgSubCategory');
+        const imgStyle = document.getElementById('imgStyle');
         const formImgWrap = document.querySelector('.formImgWrap');
         const formImg = document.getElementById('formImg');
         formImg.setAttribute('src',queryString);
@@ -25,6 +28,7 @@ $( document ).ready(function() {
         for (let i = 0; i < filename.length; i++) {
             let fileInfo = filename[i];
             const fileWithSpaces = addSpacesToCamelCase(fileInfo);
+            filename = fileWithSpaces;
             console.log(fileWithSpaces);
             if (filename.length === 2) {
                 console.log('Array has 2 objects');
@@ -33,9 +37,6 @@ $( document ).ready(function() {
                 console.log('Array has 3 objects');
             }
         }
-        const imgCategory = document.getElementById('imgCategory');
-        const imgSubCategory = document.getElementById('imgSubCategory');
-        const imgStyle = document.getElementById('imgStyle');
     }
     function getStringAfterLastSlash(str) {
         const lastSlashIndex = str.lastIndexOf('/');
