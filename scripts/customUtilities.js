@@ -23,7 +23,8 @@ $( document ).ready(function() {
         let filename = getStringAfterLastSlash(queryString);
         // console.log(filename);
         for (let i = 0; i < filename.length; i++) {
-            console.log(filename[i]);
+            let fileInfo = filename[i];
+            console.log(fileInfo);
         }
         const imgCategory = document.getElementById('imgCategory');
         const imgSubCategory = document.getElementById('imgSubCategory');
