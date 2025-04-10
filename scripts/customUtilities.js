@@ -33,6 +33,8 @@ $( document ).ready(function() {
         }
         if (imgInfo.length === 2) {
             console.log('Array has 2 objects');
+            imgSubCategory.remove();
+            formImgInfo.querySelector('.3Split').remove();
             imgCategory.innerText = imgInfo[0];
             imgStyle.innerText = imgInfo[1];
         }
