@@ -16,7 +16,8 @@ $( document ).ready(function() {
         const formImgWrap = document.querySelector('.formImgWrap');
         const formImg = document.getElementById('formImg');
         formImg.setAttribute('src',queryString);
-        console.log(queryString.split());
+        const lastSlashIndex = queryString.lastIndexOf('/');
+        console.log(lastSlashIndex);
         if (queryString == "") {
             console.log('Url does NOT contain image src');
             formImgWrap.classList.add('hide');
