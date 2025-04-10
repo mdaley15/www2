@@ -11,6 +11,9 @@ $( document ).ready(function() {
         const queryString = window.location.search.substring(1);
         const urlParams = new URLSearchParams(queryString);
         console.log(queryString);
+
+        const formImg = document.getElementById('formImg');
+        formImg.setAttribute('src',queryString);
     }
     
     /* Sample function that returns boolean in case the browser is Internet Explorer */
