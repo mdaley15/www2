@@ -14,11 +14,11 @@ $( document ).ready(function() {
 
         const formImgWrap = document.querySelector('.formImgWrap');
         const formImgInfo = document.querySelector('.formImgInfo');
-        const imgCategory = document.getElementById('imgCategory');
-        const imgSubCategory = document.getElementById('imgSubCategory');
-        const threeSplit = document.querySelector('.3Split');
-        const imgStyle = document.getElementById('imgStyle');
-        const copiedText = document.getElementById('copied');
+        const imgCategory = formImgInfo.getElementById('imgCategory');
+        const imgSubCategory = formImgInfo.getElementById('imgSubCategory');
+        const threeSplit = formImgInfo.querySelector('.threeSplit');
+        const imgStyle = formImgInfo.getElementById('imgStyle');
+        const copiedText = formImgInfo.getElementById('copied');
         const formImg = document.getElementById('formImg');
         formImg.setAttribute('src',queryString);
         if (queryString == "") {
