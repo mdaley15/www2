@@ -16,15 +16,19 @@ $( document ).ready(function() {
         const formImgWrap = document.querySelector('.formImgWrap');
         const formImg = document.getElementById('formImg');
         formImg.setAttribute('src',queryString);
-        let lastSlashIndex = queryString.lastIndexOf('/');
-        lastSlashIndex = lastSlashIndex.substring(lastSlashIndex + 1);
-        console.log(lastSlashIndex);
+        const filename = getStringAfterLastSlash(queryString);
         if (queryString == "") {
             console.log('Url does NOT contain image src');
             formImgWrap.classList.add('hide');
         }
     }
-    
+    function getStringAfterLastSlash(str) {
+        const lastSlashIndex = str.lastIndexOf('/');
+        if (lastSlashIndex === -1) {
+          return str; // Return the original string if no slash is found
+        }
+        return str.substring(lastSlashIndex + 1);
+      }
     /* Sample function that returns boolean in case the browser is Internet Explorer */
     function isIE() {
         ua = navigator.userAgent;
