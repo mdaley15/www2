@@ -30,14 +30,14 @@ $( document ).ready(function() {
             let fileInfo = filename[i];
             const fileWithSpaces = addSpacesToCamelCase(fileInfo);
             imgInfo.push(fileWithSpaces);
-            if (filename.length === 2) {
-                console.log('Array has 2 objects');
-            }
-            if (filename.length === 3) {
-                console.log('Array has 3 objects');
-            }
         }
         console.log(imgInfo);
+        if (imgInfo.length === 2) {
+            console.log('Array has 2 objects');
+        }
+        if (imgInfo.length === 3) {
+            console.log('Array has 3 objects');
+        }
     }
     function getStringAfterLastSlash(str) {
         const lastSlashIndex = str.lastIndexOf('/');
