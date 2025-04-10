@@ -16,12 +16,14 @@ $( document ).ready(function() {
         const formImgWrap = document.querySelector('.formImgWrap');
         const formImg = document.getElementById('formImg');
         formImg.setAttribute('src',queryString);
-        const filename = getStringAfterLastSlash(queryString);
-        console.log(filename);
         if (queryString == "") {
             console.log('Url does NOT contain image src');
             formImgWrap.classList.add('hide');
         }
+        const filename = getStringAfterLastSlash(queryString);
+        console.log(filename);
+        let category = filename.split('-');
+        console.log(category);
     }
     function getStringAfterLastSlash(str) {
         const lastSlashIndex = str.lastIndexOf('/');
