@@ -22,16 +22,15 @@ $( document ).ready(function() {
         }
         const filename = getStringAfterLastSlash(queryString);
         console.log(filename);
-        // let category = filename.split('-');
-        // console.log(category);
+        filename = filename.split('-');
+        console.log(filename);
     }
     function getStringAfterLastSlash(str) {
         const lastSlashIndex = str.lastIndexOf('/');
         if (lastSlashIndex === -1) {
           return str; // Return the original string if no slash is found
         }
-        str = str.substring(lastSlashIndex + 1).split('.')[0];
-        return str.filename.split('-');
+        return str.substring(lastSlashIndex + 1).split('.')[0];
       }
     /* Sample function that returns boolean in case the browser is Internet Explorer */
     function isIE() {
