@@ -24,6 +24,7 @@ $( document ).ready(function() {
         // console.log(filename);
         for (let i = 0; i < filename.length; i++) {
             let fileInfo = filename[i];
+            const fileWithSpaces = addSpacesToCamelCase(fileInfo);
             console.log(fileInfo);
         }
         const imgCategory = document.getElementById('imgCategory');
@@ -33,10 +34,15 @@ $( document ).ready(function() {
     function getStringAfterLastSlash(str) {
         const lastSlashIndex = str.lastIndexOf('/');
         if (lastSlashIndex === -1) {
-          return str; // Return the original string if no slash is found
+            return str; // Return the original string if no slash is found
         }
         return str.substring(lastSlashIndex + 1).split('.')[0].split('-');
-      }
+    }
+    function addSpacesToCamelCase(fileInfo) {
+        // return fileInfo.replace(/([A-Z])/g, ' $1').trim();
+        const spacedString = fileInfo.replace(/([A-Z])/g, ' $1');
+        return spacedString.charAt(0).toUpperCase() + spacedString.slice(1);
+    }
     /* Sample function that returns boolean in case the browser is Internet Explorer */
     function isIE() {
         ua = navigator.userAgent;
