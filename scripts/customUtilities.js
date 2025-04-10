@@ -16,6 +16,7 @@ $( document ).ready(function() {
         const formImgInfo = document.querySelector('.formImgInfo');
         const imgCategory = document.getElementById('imgCategory');
         const imgSubCategory = document.getElementById('imgSubCategory');
+        const threeSplit = document.querySelector('.3Split');
         const imgStyle = document.getElementById('imgStyle');
         const copiedText = document.getElementById('copied');
         const formImg = document.getElementById('formImg');
@@ -34,7 +35,7 @@ $( document ).ready(function() {
         if (imgInfo.length === 2) {
             console.log('Array has 2 objects');
             imgSubCategory.remove();
-            formImgInfo.querySelector('.3Split').remove();
+            threeSplit.remove();
             imgCategory.innerText = imgInfo[0];
             imgStyle.innerText = imgInfo[1];
         }
