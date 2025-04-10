@@ -7,7 +7,7 @@ $( document ).ready(function() {
     if (pathName.includes("/school-yearbooks")) {
         $('.whatWeDo .Header-nav-item:nth-child(2) > .Header-nav-folder-title').addClass('active');
     }
-    const queryString = window.location.search;
+    const queryString = window.location.search.substring(1);
     const urlParams = new URLSearchParams(queryString);
     console.log(queryString);
     
