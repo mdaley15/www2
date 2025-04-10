@@ -20,7 +20,7 @@ $( document ).ready(function() {
             console.log('Url does NOT contain image src');
             formImgWrap.classList.add('hide');
         }
-        const filename = getStringAfterLastSlash(queryString);
+        let filename = getStringAfterLastSlash(queryString);
         console.log(filename);
         filename = filename.split('-');
         console.log(filename);
