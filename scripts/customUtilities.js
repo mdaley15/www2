@@ -211,3 +211,16 @@ function lightboxFilter(itemLink) {
     //     e.preventDefault();
     // });
 }
+
+// sticky elements
+window.addEventListener('scroll', function() {
+    const watermark = document.querySelector('.watermark');
+    if (watermark) {
+        const rect = watermark.getBoundingClientRect();
+        if (rect.top <= 0) {
+            watermark.classList.add('fixed');
+        } else {
+            watermark.classList.remove('fixed');
+        }
+    }
+});
