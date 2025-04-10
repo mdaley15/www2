@@ -217,7 +217,7 @@ window.addEventListener('scroll', function() {
     const watermark = document.querySelector('.watermark');
     if (watermark) {
         const rect = watermark.getBoundingClientRect();
-        if (rect.top <= 100) {
+        if (rect.top <= 50) {
             watermark.classList.add('fixed');
         } else {
             watermark.classList.remove('fixed');
