@@ -135,9 +135,9 @@ document.addEventListener('DOMContentLoaded', function() {
         watermark.classList.add(pageIcon.classList[1]);
         const mainContent = document.querySelector('.Main-content');
         const top = mainContent.offsetTop;
-        console.log(top);
+        console.log(top,window.scrollY);
         window.addEventListener('scroll', function() {
-            console.log(top,this.window.scrollY);
+            console.log(top,window.scrollY);
             if (window.scrollY <= top) {
                 watermark.classList.add('fixed');
             } else {
