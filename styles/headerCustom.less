@@ -195,8 +195,7 @@
         }
         &:hover,
         &:focus,
-        &:focus-within,
-        &:has(.Header-nav-folder-title--active) {
+        &:focus-within {
             .navTitle {
                 border-color: @drkOrange;
                 // text-decoration: underline;
@@ -204,6 +203,11 @@
             }
             .Header-nav-inner {
                 display: flex;
+            }
+        }
+        &:has(.Header-nav-folder-title--active) {
+            .navTitle {
+                border-color: @drkOrange;
             }
         }
         a.Header-nav-item,
@@ -259,6 +263,13 @@
                         -webkit-text-decoration-color: @orange; /* Safari */  
                         text-decoration-color: @orange;
                     }
+                }
+            }
+            .Header-nav-item:nth-child(3) {
+                &.active {
+                    text-decoration: underline;
+                    -webkit-text-decoration-color: @orange; /* Safari */  
+                    text-decoration-color: @orange;
                 }
             }
         }

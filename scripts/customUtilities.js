@@ -8,6 +8,7 @@ $( document ).ready(function() {
         $('.whatWeDo .Header-nav-item:nth-child(2) > .Header-nav-folder-title').addClass('active');
     }
     if (pathName.includes("/contact-us")) {
+        $('.whatWeDo .Header-nav-item:nth-child(3) > .Header-nav-folder-title').addClass('active');
         const queryString = window.location.search.substring(1);
         const urlParams = new URLSearchParams(queryString);
         console.log(queryString);
