@@ -17,6 +17,7 @@ $( document ).ready(function() {
         const imgCategory = document.getElementById('imgCategory');
         const imgSubCategory = document.getElementById('imgSubCategory');
         const imgStyle = document.getElementById('imgStyle');
+        const copiedText = document.getElementById('copied');
         const formImg = document.getElementById('formImg');
         formImg.setAttribute('src',queryString);
         if (queryString == "") {
@@ -45,10 +46,13 @@ $( document ).ready(function() {
             const text = this.innerText;
             navigator.clipboard.writeText(text)
               .then(() => {
-                console.log('Text copied to clipboard');
-                formImgInfo.innerText = 'Copied to clipboard!';
+                // formImgInfo.innerText = 'Copied to clipboard!';
                 setTimeout(() => {
-                    formImgInfo.innerText = text;
+                    copiedText.style.opacity = 1;
+                }, 50);
+                setTimeout(() => {
+                    // formImgInfo.innerText = text;
+                    copiedText.style.opacity = 0;
                 }, 3000); // 1000 milliseconds = 1 second
               })
               .catch(err => {

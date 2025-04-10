@@ -791,6 +791,19 @@ main .Index-page-content > div,
             padding: 0 10px;
             border: 1px solid @blue;
             border-radius: 5px;
+            position: relative;
+            cursor: pointer;
+
+            #copied {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background: white;
+                border-radius: 6px;
+                opacity: 0;
+                transition: all .3s ease-in-out;
+            }
         }
         img {
             border-radius: 5px;
