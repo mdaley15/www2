@@ -11,7 +11,6 @@ $( document ).ready(function() {
         $('.whatWeDo .Header-nav-item:nth-child(3)').addClass('active');
         const queryString = window.location.search.substring(1);
         const urlParams = new URLSearchParams(queryString);
-        console.log(queryString);
 
         const imgCategory = document.getElementById('imgCategory');
         const imgSubCategory = document.getElementById('imgSubCategory');
@@ -24,21 +23,22 @@ $( document ).ready(function() {
             formImgWrap.classList.add('hide');
         }
         let filename = getStringAfterLastSlash(queryString);
-        console.log(filename);
         var imgInfo = [];
         for (let i = 0; i < filename.length; i++) {
             let fileInfo = filename[i];
             const fileWithSpaces = addSpacesToCamelCase(fileInfo);
             imgInfo.push(fileWithSpaces);
         }
-        console.log(imgInfo);
-        console.log(imgInfo[0]);
         if (imgInfo.length === 2) {
             console.log('Array has 2 objects');
             imgCategory.innerText = imgInfo[0];
+            imgStyle.innerText = imgInfo[1];
         }
         if (imgInfo.length === 3) {
             console.log('Array has 3 objects');
+            imgCategory.innerText = imgInfo[0];
+            imgSubCategory.innerText = imgInfo[1];
+            imgStyle.innerText = imgInfo[2];
         }
     }
     function getStringAfterLastSlash(str) {
