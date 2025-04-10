@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const mainContent = document.querySelector('.Main-content');
         const top = mainContent.offsetTop;
         let rect = mainContent.getBoundingClientRect();
-        console.log(top,window.scrollY);
+        console.log(top,window.scrollY,rect.top);
         window.addEventListener('scroll', function() {
             console.log(top,window.scrollY);
             // if (window.scrollY <= top) {
