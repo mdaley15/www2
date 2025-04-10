@@ -21,8 +21,10 @@ $( document ).ready(function() {
             formImgWrap.classList.add('hide');
         }
         let filename = getStringAfterLastSlash(queryString);
-        // filename = filename.split('-');
-        console.log(filename);
+        // console.log(filename);
+        for (let i = 0; i < filename.length; i++) {
+            console.log(filename[i]);
+        }
         const imgCategory = document.getElementById('imgCategory');
         const imgSubCategory = document.getElementById('imgSubCategory');
         const imgStyle = document.getElementById('imgStyle');
