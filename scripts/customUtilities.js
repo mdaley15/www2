@@ -135,13 +135,19 @@ document.addEventListener('DOMContentLoaded', function() {
         watermark.classList.add(pageIcon.classList[1]);
         const mainContent = document.querySelector('.Main-content');
         const top = mainContent.offsetTop;
+        let rect = mainContent.getBoundingClientRect();
         console.log(top,window.scrollY);
         window.addEventListener('scroll', function() {
             console.log(top,window.scrollY);
-            if (window.scrollY <= top) {
-                watermark.classList.add('fixed');
+            // if (window.scrollY <= top) {
+            //     watermark.classList.add('fixed');
+            // } else {
+            //     watermark.classList.remove('fixed');
+            // }
+            if (rect.top <= 50) {
+              watermark.classList.add("fixed_navbar");
             } else {
-                watermark.classList.remove('fixed');
+              watermark.classList.remove("fixed_navbar");
             }
         });
     }
