@@ -32,6 +32,7 @@ $( document ).ready(function() {
             imgInfo.push(fileWithSpaces);
         }
         console.log(imgInfo);
+        console.log(imgInfo[0]);
         if (imgInfo.length === 2) {
             console.log('Array has 2 objects');
             imgCategory.innerText = imgInfo[0];
