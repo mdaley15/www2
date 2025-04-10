@@ -21,7 +21,7 @@ $( document ).ready(function() {
             formImgWrap.classList.add('hide');
         }
         let filename = getStringAfterLastSlash(queryString);
-        // console.log(filename);
+        console.log(filename);
         for (let i = 0; i < filename.length; i++) {
             let fileInfo = filename[i];
             const fileWithSpaces = addSpacesToCamelCase(fileInfo);
