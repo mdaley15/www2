@@ -215,7 +215,7 @@ function lightboxFilter(itemLink) {
 // sticky elements
 window.addEventListener('scroll', function() {
     const watermark = document.querySelector('.watermark');
-    let offset = 50;
+    let offset = -50;
     if (watermark) {
         const rect = watermark.getBoundingClientRect();
         console.log(rect);
