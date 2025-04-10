@@ -13,12 +13,12 @@ $( document ).ready(function() {
         const urlParams = new URLSearchParams(queryString);
 
         const formImgWrap = document.querySelector('.formImgWrap');
-        const formImgInfo = document.querySelector('.formImgInfo');
-        const imgCategory = formImgInfo.getElementById('imgCategory');
-        const imgSubCategory = formImgInfo.getElementById('imgSubCategory');
+        const formImgInfo = formImgWrap.querySelector('.formImgInfo');
+        const imgCategory = document.getElementById('imgCategory');
+        const imgSubCategory = document.getElementById('imgSubCategory');
         const threeSplit = formImgInfo.querySelector('.threeSplit');
-        const imgStyle = formImgInfo.getElementById('imgStyle');
-        const copiedText = formImgInfo.getElementById('copied');
+        const imgStyle = document.getElementById('imgStyle');
+        const copiedText = document.getElementById('copied');
         const formImg = document.getElementById('formImg');
         formImg.setAttribute('src',queryString);
         if (queryString == "") {
