@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let pageIcon = document.querySelector('.introTitle i');
     if (pageIcon) {
         watermark.classList.add(pageIcon.classList[1]);
-        const mainContent = document.querySelector('.Main-content');
+        const mainContent = document.querySelector('.Main');
         const top = mainContent.offsetTop;
         let rect = mainContent.getBoundingClientRect();
         console.log(top,window.scrollY,rect.top);
