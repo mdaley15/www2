@@ -30,7 +30,7 @@ $( document ).ready(function() {
         if (lastSlashIndex === -1) {
           return str; // Return the original string if no slash is found
         }
-        return str.substring(lastSlashIndex + 1);
+        return str.substring(lastSlashIndex + 1).split('.')[0];
       }
     /* Sample function that returns boolean in case the browser is Internet Explorer */
     function isIE() {
