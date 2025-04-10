@@ -43,10 +43,13 @@ $( document ).ready(function() {
         }
         formImgInfo.addEventListener('click', function() {
             const text = this.innerText;
-            navigator.clipboard.writeText(text)
+            navigator.clipboard.writeText(text);
               .then(() => {
                 console.log('Text copied to clipboard');
-                // Optionally, provide user feedback, e.g., change the div's text or background color briefly
+                formImgInfo.innerText = 'Copied to clipboard!';
+                setTimeout(() => {
+                    formImgInfo.innerText = text;
+                }, 3000); // 1000 milliseconds = 1 second
               })
               .catch(err => {
                 console.error('Failed to copy text: ', err);
