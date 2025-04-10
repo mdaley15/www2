@@ -139,15 +139,10 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(top,window.scrollY,rect.top);
         window.addEventListener('scroll', function() {
             console.log(top,window.scrollY,rect.top);
-            // if (window.scrollY <= top) {
-            //     watermark.classList.add('fixed');
-            // } else {
-            //     watermark.classList.remove('fixed');
-            // }
-            if (rect.top <= 50) {
-              watermark.classList.add("fixed_navbar");
+            if (window.scrollY >= rect.top) {
+                watermark.classList.add('fixed');
             } else {
-              watermark.classList.remove("fixed_navbar");
+                watermark.classList.remove('fixed');
             }
         });
     }
