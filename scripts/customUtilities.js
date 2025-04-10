@@ -25,11 +25,11 @@ $( document ).ready(function() {
         }
         let filename = getStringAfterLastSlash(queryString);
         console.log(filename);
+        var imgInfo = [];
         for (let i = 0; i < filename.length; i++) {
             let fileInfo = filename[i];
             const fileWithSpaces = addSpacesToCamelCase(fileInfo);
-            filename = fileWithSpaces;
-            console.log(fileWithSpaces);
+            imgInfo.push(fileWithSpaces);
             if (filename.length === 2) {
                 console.log('Array has 2 objects');
             }
@@ -37,6 +37,7 @@ $( document ).ready(function() {
                 console.log('Array has 3 objects');
             }
         }
+        console.log(imgInfo);
     }
     function getStringAfterLastSlash(str) {
         const lastSlashIndex = str.lastIndexOf('/');
