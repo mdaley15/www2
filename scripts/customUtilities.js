@@ -273,12 +273,14 @@ function lightboxFilter(itemLink) {
     }
     let currentItem = lightbox.querySelector('.sqs-active-slide');
     let infoBtn = currentItem.querySelector('.sqs-lightbox-meta a');
-    let currentImg = infoBtn.closest('.sqs-lightbox-padder').querySelector('img').getAttribute('data-src');
+    let currentImg = infoBtn.closest('.sqs-lightbox-padder').querySelector('img');
+    let imgSrc = currentImg.getAttribute('data-src');
     let link = infoBtn.getAttribute('href');
     console.log(link);
     // link = link + '?' + currentImg;
-    link = '/contact-us?' + currentImg;
+    link = '/contact-us?' + imgSrc;
     infoBtn.setAttribute('href', link);
+
     const aspectRatio = getRenderedAspectRatio(currentImg);
     console.log('Aspect ratio:', aspectRatio);
 }
