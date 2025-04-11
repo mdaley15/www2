@@ -294,7 +294,7 @@ function lightboxFilter(itemLink) {
     infoBtn.setAttribute('href', link);
 }
 function getRenderedAspectRatio(itemImg) {
-    const width = itemImg.offsetWidth;
-    const height = itemImg.offsetHeight;
+    const width = itemImg.naturalWidth;
+    const height = itemImg.naturalHeight;
     return width / height;
 }
