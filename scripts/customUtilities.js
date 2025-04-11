@@ -279,9 +279,11 @@ function lightboxFilter(itemLink) {
     // link = link + '?' + currentImg;
     link = '/contact-us?' + currentImg;
     infoBtn.setAttribute('href', link);
-    // infoBtn.addEventListener('click', function(e) {
-    //     e.preventDefault();
-    // });
+    const aspectRatio = getRenderedAspectRatio(currentImg);
+    console.log('Aspect ratio:', aspectRatio);
 }
-
-// sticky elements
+function getRenderedAspectRatio(currentImg) {
+    const width = currentImg.offsetWidth;
+    const height = currentImg.offsetHeight;
+    return width / height;
+}
