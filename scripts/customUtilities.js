@@ -285,7 +285,8 @@ function lightboxFilter(itemLink) {
 
     lightboxItems.forEach(item => {
         let img = item.querySelector('.thumb-image');
-        console.log(img);
+        let imgRatio = img.getAttribute('data-image-demensions');
+        console.log(imgRatio);
     });
 }
 function getRenderedAspectRatio(itemImg) {
