@@ -302,11 +302,11 @@ hr {
             > h4 {
                 position: relative;
                 padding: 2px 6px 5px 3px;
-                border: 2px solid transparent;
                 border-radius: 5px;
                 background-color: white;
                 transition: all .4s ease-in-out!important;
-                box-shadow: 2px 2px 2px transparent;
+                border: 2px solid inherit;
+                box-shadow: 2px 2px 2px rgba(0,0,0, .5);
                 cursor: pointer;
                 pointer-events: auto;
             }
@@ -418,8 +418,8 @@ hr {
             &:focus,
             &:focus-within {
                 > h4 {
-                    border-color: inherit;
-                    box-shadow: 2px 2px 2px rgba(0,0,0, .5);
+                    border-color: transparent;
+                    box-shadow: 2px 2px 2px transparent;
                 }
                 .eventContent {
                     opacity: 1;
