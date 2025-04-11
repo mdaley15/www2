@@ -279,10 +279,12 @@ function lightboxFilter(itemLink) {
     let infoBtn = currentItem.querySelector('.sqs-lightbox-meta a');
     let currentImg = infoBtn.closest('.sqs-lightbox-padder').querySelector('img');
     console.log(currentImg);
+    console.log(infoBtn);
     let imgSrc = currentImg.getAttribute('data-src');
     let link = infoBtn.getAttribute('href');
     link = '/contact-us?' + imgSrc;
     infoBtn.setAttribute('href', link);
+    console.log(infoBtn);
 }
 function getRenderedAspectRatio(itemImg) {
     const width = itemImg.naturalWidth;
