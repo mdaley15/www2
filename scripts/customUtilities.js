@@ -277,11 +277,13 @@ function lightboxFilter(itemLink) {
     }
     let currentItem = lightbox.querySelector('.sqs-active-slide');
     let infoBtn = currentItem.querySelector('.sqs-lightbox-meta a');
-    let currentImg = infoBtn.closest('.sqs-lightbox-padder').querySelector('img');
-    let imgSrc = currentImg.getAttribute('data-src');
-    let link = infoBtn.getAttribute('href');
-    link = '/contact-us?' + imgSrc;
-    infoBtn.setAttribute('href', link);
+    if (infoBtn) {
+        let currentImg = infoBtn.closest('.sqs-lightbox-padder').querySelector('img');
+        let imgSrc = currentImg.getAttribute('data-src');
+        let link = infoBtn.getAttribute('href');
+        link = '/contact-us?' + imgSrc;
+        infoBtn.setAttribute('href', link);
+    }
 
     lightboxItems.forEach(item => {
         let img = item.querySelector('.thumb-image');
