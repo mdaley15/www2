@@ -184,6 +184,7 @@
     <squarespace:script src="testimonialSlider.js" combo="false"/>
     <squarespace:script src="jquery.flexslider.js" combo="false"/>
     <!-- <squarespace:script src="customSearch.js" combo="false"/> -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4740283.js"></script>
 
     {squarespace-footers}
 
