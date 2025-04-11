@@ -191,8 +191,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
             let parentEl = itemImg.parentNode;
+            var aspectRatio;
             itemImg.addEventListener('load', () => {
-                const aspectRatio = itemImg.naturalWidth / itemImg.naturalHeight;
+                aspectRatio = itemImg.naturalWidth / itemImg.naturalHeight;
                 console.log('Aspect ratio:', aspectRatio);
             });
             // const aspectRatio = getRenderedAspectRatio(itemImg);
