@@ -245,22 +245,15 @@ function imgFilter(btn) {
 }
 function lightboxFilter(itemLink) {
     const filterClasses = [];
-    const imgRatios = [];
-    lightbox = document.querySelector('.yui3-lightbox2');
-    lightboxItems = lightbox.querySelectorAll('.sqs-lightbox-slide');
-    let currentItem = lightbox.querySelector('.sqs-active-slide');
-    let infoBtn = currentItem.querySelector('.sqs-lightbox-meta a');
-    let currentImg = infoBtn.closest('.sqs-lightbox-padder').querySelector('img');
     let thisBlock = itemLink.closest('.col');
     let thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
     galleryItems = thisGallery.querySelectorAll('.slide');
     galleryItems.forEach(item => {
         let itemClass = item.getAttribute('data-class');
-        let aspectRatio = currentImg.getAttribute('data-image-dimensions');
         filterClasses.push(itemClass);
-        imgRatios.push(aspectRatio);
     });
-    console.log(imgRatios);
+    lightbox = document.querySelector('.yui3-lightbox2');
+    lightboxItems = lightbox.querySelectorAll('.sqs-lightbox-slide');
     filterClasses.forEach((str, index) => {
         if (lightboxItems[index]) {
             lightboxItems[index].classList.add(str);
@@ -270,6 +263,7 @@ function lightboxFilter(itemLink) {
     let activeFilter = thisBlock.querySelector('.activeBtn');
     if (activeFilter) {
         activeFilter = activeFilter.getAttribute('data-filter');
+        console.log(activeFilter);
         lightboxItems.forEach(item => {
             if (item.classList.contains(activeFilter)) {
                 item.classList.remove('hide');
@@ -281,6 +275,9 @@ function lightboxFilter(itemLink) {
             }
         });
     }
+    let currentItem = lightbox.querySelector('.sqs-active-slide');
+    let infoBtn = currentItem.querySelector('.sqs-lightbox-meta a');
+    let currentImg = infoBtn.closest('.sqs-lightbox-padder').querySelector('img');
     let imgSrc = currentImg.getAttribute('data-src');
     let link = infoBtn.getAttribute('href');
     link = '/contact-us?' + imgSrc;
