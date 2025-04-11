@@ -288,13 +288,13 @@ function lightboxFilter(itemLink) {
     lightboxItems.forEach(item => {
         let img = item.querySelector('.thumb-image');
         let imgRatio = img.getAttribute('data-image-dimensions');
-        console.log(imgRatio);
         let width = imgRatio.split('x', 1)[0].toString();
         let height = imgRatio.split('x')[1].toString();
-        console.log(width+', ',height);
         if (width < height) {
+            console.log('Portrait');
             img.classList.add('portrait');
         } else {
+            console.log('Landscape');
             img.classList.add('landscape');
         }
     });
