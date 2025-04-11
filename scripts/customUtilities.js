@@ -291,7 +291,7 @@ function lightboxFilter(itemLink) {
         console.log(imgRatio);
         let width = imgRatio.split('x', 1)[0];
         let height = imgRatio.split('x', 1)[1];
-        console.log(width,height);
+        console.log(width+', ',height);
     });
 }
 function getRenderedAspectRatio(itemImg) {
