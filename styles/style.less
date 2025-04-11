@@ -856,7 +856,6 @@ main .Index-page-content > div,
                         border-right: 0!important;
                         border-bottom: 0!important;
                         border-radius: 0 0 5px 5px;
-                        box-shadow: 0 3px 0 @drkOrange;
                     }
                 }
                 ul {
@@ -885,6 +884,27 @@ main .Index-page-content > div,
                     .hs-richtext {
                         font-size: 14px;
                         line-height: 1.5;
+                    }
+                }
+                &:nth-child(3n + 1) {
+                    .input {
+                        > input, > select, > textarea {
+                            box-shadow: 0 3px 0 @drkOrange;
+                        }
+                    }
+                }
+                &:nth-child(3n + 2) {
+                    .input {
+                        > input, > select, > textarea {
+                            box-shadow: 0 3px 0 @ltBlue;
+                        }
+                    }
+                }
+                &:nth-child(3n + 3) {
+                    .input {
+                        > input, > select, > textarea {
+                            box-shadow: 0 3px 0 @green;
+                        }
                     }
                 }
                 &.form-columns-3 {
