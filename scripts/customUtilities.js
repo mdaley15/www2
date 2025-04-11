@@ -274,11 +274,13 @@ function lightboxFilter(itemLink) {
         // let infoBtn = item.querySelector('.sqs-lightbox-meta a');
         let padder = item.querySelector('.sqs-lightbox-padder');
         let infoBtn = document.createElement('a');
+        const text = document.createTextNode('Get More Info');
+        infoBtn.appendChild(text);
+        infoBtn.classList.add('allBtns');
         let itemImg = item.querySelector('img');
         let imgSrc = itemImg.getAttribute('data-src');
         let link = '/contact-us?' + imgSrc;
         infoBtn.setAttribute('href', link);
-        infoBtn.classList.add('allBtns');
         padder.appendChild(infoBtn);
     });
 
