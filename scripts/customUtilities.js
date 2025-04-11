@@ -32,15 +32,19 @@ $( document ).ready(function() {
             const fileWithSpaces = addSpacesToCamelCase(fileInfo);
             imgInfo.push(fileWithSpaces);
         }
+        if (imgInfo.length === 1) {
+            imgCategory.innerText = imgInfo[0];
+            imgSubCategory.remove();
+            threeSplit.remove();
+            imgStyle.remove();
+        }
         if (imgInfo.length === 2) {
-            console.log('Array has 2 objects');
             imgSubCategory.remove();
             threeSplit.remove();
             imgCategory.innerText = imgInfo[0];
             imgStyle.innerText = imgInfo[1];
         }
         if (imgInfo.length === 3) {
-            console.log('Array has 3 objects');
             imgCategory.innerText = imgInfo[0];
             imgSubCategory.innerText = imgInfo[1];
             imgStyle.innerText = imgInfo[2];
@@ -175,6 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
         galleryItems = gallery.querySelectorAll('.slide');
         galleryItems.forEach((item, index) => {
             let itemLink = item.querySelector('a');
+            let itemImg = item.querySelector('img.thumb-image');
             let category = itemLink.getAttribute('data-title');
             if (category) {
                 let firstLetter = category.charAt(0).toLowerCase();
@@ -184,6 +189,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     item.classList.add(newCategory);
                     item.setAttribute('data-class',newCategory);
                 }
+            }
+            let parentEl = itemImg.parentNode;
+            const aspectRatio = getRenderedAspectRatio(itemImg);
+            console.log(parentEl);
+            console.log('Aspect ratio:', aspectRatio);
+            if (aspectRatio == 0.8) {
+                parentEl.classList.add('portrait');
+            } else {
+                parentEl.classList.add('landscape')
             }
             itemLink.addEventListener('click', function(e) {
                 lightboxFilter(this);
@@ -276,17 +290,10 @@ function lightboxFilter(itemLink) {
     let currentImg = infoBtn.closest('.sqs-lightbox-padder').querySelector('img');
     let imgSrc = currentImg.getAttribute('data-src');
     let link = infoBtn.getAttribute('href');
-    console.log(link);
-    // link = link + '?' + currentImg;
     link = '/contact-us?' + imgSrc;
     infoBtn.setAttribute('href', link);
-
-    let parentEl = currentImg.parentNode;
-    const aspectRatio = getRenderedAspectRatio(currentImg);
-    console.log(parentEl);
-    console.log('Aspect ratio:', aspectRatio);
 }
-function getRenderedAspectRatio(currentImg) {
+function getRenderedAspectRatio(itemImg) {
     const width = currentImg.offsetWidth;
     const height = currentImg.offsetHeight;
     return width / height;
