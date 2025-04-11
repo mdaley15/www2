@@ -259,6 +259,19 @@ function lightboxFilter(itemLink) {
             lightboxItems[index].classList.add(str);
         }
     });
+    lightboxItems.forEach(item => {
+        let img = item.querySelector('.thumb-image');
+        let imgRatio = img.getAttribute('data-image-dimensions');
+        let width = imgRatio.split('x', 1)[0].toString();
+        let height = imgRatio.split('x')[1].toString();
+        if (width < height) {
+            console.log('Portrait');
+            img.classList.add('portrait');
+        } else {
+            console.log('Landscape');
+            img.classList.add('landscape');
+        }
+    });
 
     let activeFilter = thisBlock.querySelector('.activeBtn');
     if (activeFilter) {
@@ -284,23 +297,4 @@ function lightboxFilter(itemLink) {
         link = '/contact-us?' + imgSrc;
         infoBtn.setAttribute('href', link);
     }
-
-    lightboxItems.forEach(item => {
-        let img = item.querySelector('.thumb-image');
-        let imgRatio = img.getAttribute('data-image-dimensions');
-        let width = imgRatio.split('x', 1)[0].toString();
-        let height = imgRatio.split('x')[1].toString();
-        if (width < height) {
-            console.log('Portrait');
-            img.classList.add('portrait');
-        } else {
-            console.log('Landscape');
-            img.classList.add('landscape');
-        }
-    });
-}
-function getRenderedAspectRatio(itemImg) {
-    const width = itemImg.naturalWidth;
-    const height = itemImg.naturalHeight;
-    return width / height;
 }
