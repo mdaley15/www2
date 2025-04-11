@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 parentEl.classList.add('landscape')
             }
             itemLink.addEventListener('click', function(e) {
-                lightboxFilter(this);
+                lightboxFilter(this,aspectRatio);
             });
         });
     });
@@ -259,7 +259,7 @@ function imgFilter(btn) {
         }
     });
 }
-function lightboxFilter(itemLink) {
+function lightboxFilter(itemLink, aspectRatio) {
     const filterClasses = [];
     let thisBlock = itemLink.closest('.col');
     let thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
