@@ -298,3 +298,13 @@ function lightboxFilter(itemLink) {
         infoBtn.setAttribute('href', link);
     }
 }
+document.addEventListener('click', function(event) {
+    const lightbox = document.querySelector('.yui3-lightbox2');
+    if (lightbox) {
+        const closeBtn = lightbox.querySelector('.sqs-lightbox-close');
+        const el = lightbox.querySelector('.yui3-lightbox2-content');
+        if (el && !el.contains(event.target)) {
+            closeBtn.click();
+        }
+    }
+});
