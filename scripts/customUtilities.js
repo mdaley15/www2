@@ -191,9 +191,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
             let parentEl = itemImg.parentNode;
-            const aspectRatio = getRenderedAspectRatio(itemImg);
-            console.log(itemImg);
-            console.log('Aspect ratio:', aspectRatio);
+            itemImg.addEventListener('load', () => {
+                const aspectRatio = itemImg.naturalWidth / itemImg.naturalHeight;
+                console.log('Aspect ratio:', aspectRatio);
+            });
+            // const aspectRatio = getRenderedAspectRatio(itemImg);
+            // console.log(itemImg);
+            // console.log('Aspect ratio:', aspectRatio);
             if (aspectRatio == 0.8) {
                 parentEl.classList.add('portrait');
             } else {
