@@ -262,8 +262,8 @@ function lightboxFilter(itemLink) {
     lightboxItems.forEach(item => {
         let img = item.querySelector('.thumb-image');
         let imgRatio = img.getAttribute('data-image-dimensions');
-        let width = imgRatio.split('x', 1)[0].toString();
-        let height = imgRatio.split('x')[1].toString();
+        let width = Number(imgRatio.split('x', 1)[0]);
+        let height = Number(imgRatio.split('x')[1]);
         if (width < height) {
             console.log('Portrait');
             img.classList.add('portrait');
