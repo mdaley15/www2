@@ -292,6 +292,11 @@ function lightboxFilter(itemLink) {
         let width = imgRatio.split('x', 1)[0];
         let height = imgRatio.split('x')[1];
         console.log(width+', ',height);
+        if (width > height) {
+            img.classList.add('portrait');
+        } else {
+            img.classList.add('landscape');
+        }
     });
 }
 function getRenderedAspectRatio(itemImg) {
