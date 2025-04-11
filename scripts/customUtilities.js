@@ -265,10 +265,10 @@ function lightboxFilter(itemLink) {
         let width = Number(imgRatio.split('x', 1)[0]);
         let height = Number(imgRatio.split('x')[1]);
         if (width < height) {
-            console.log('Portrait');
             img.classList.add('portrait');
+        } else if (width == height) {
+            img.classList.add('square');
         } else {
-            console.log('Landscape');
             img.classList.add('landscape');
         }
     });
