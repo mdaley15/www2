@@ -278,6 +278,7 @@ function lightboxFilter(itemLink) {
     let currentItem = lightbox.querySelector('.sqs-active-slide');
     let infoBtn = currentItem.querySelector('.sqs-lightbox-meta a');
     let currentImg = infoBtn.closest('.sqs-lightbox-padder').querySelector('img');
+    console.log(currentImg);
     let imgSrc = currentImg.getAttribute('data-src');
     let link = infoBtn.getAttribute('href');
     link = '/contact-us?' + imgSrc;
