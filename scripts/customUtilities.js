@@ -271,6 +271,14 @@ function lightboxFilter(itemLink) {
         } else {
             img.classList.add('landscape');
         }
+        let infoBtn = item.querySelector('.sqs-lightbox-meta a');
+        if (infoBtn) {
+            let currentImg = infoBtn.closest('.sqs-lightbox-padder').querySelector('img');
+            let imgSrc = currentImg.getAttribute('data-src');
+            let link = infoBtn.getAttribute('href');
+            link = '/contact-us?' + imgSrc;
+            infoBtn.setAttribute('href', link);
+        }
     });
 
     let activeFilter = thisBlock.querySelector('.activeBtn');
@@ -287,15 +295,6 @@ function lightboxFilter(itemLink) {
                 }, 2000);
             }
         });
-    }
-    let currentItem = lightbox.querySelector('.sqs-active-slide');
-    let infoBtn = currentItem.querySelector('.sqs-lightbox-meta a');
-    if (infoBtn) {
-        let currentImg = infoBtn.closest('.sqs-lightbox-padder').querySelector('img');
-        let imgSrc = currentImg.getAttribute('data-src');
-        let link = infoBtn.getAttribute('href');
-        link = '/contact-us?' + imgSrc;
-        infoBtn.setAttribute('href', link);
     }
 }
 document.addEventListener('click', function(event) {
