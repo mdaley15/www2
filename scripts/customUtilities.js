@@ -179,7 +179,6 @@ document.addEventListener('DOMContentLoaded', function() {
         galleryItems = gallery.querySelectorAll('.slide');
         galleryItems.forEach((item, index) => {
             let itemLink = item.querySelector('a');
-            let itemImg = item.querySelector('img.thumb-image');
             let category = itemLink.getAttribute('data-title');
             if (category) {
                 let firstLetter = category.charAt(0).toLowerCase();
@@ -190,23 +189,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     item.setAttribute('data-class',newCategory);
                 }
             }
-            let parentEl = itemImg.parentNode;
-            var aspectRatio;
-            itemImg.addEventListener('load', () => {
-                aspectRatio = itemImg.naturalWidth / itemImg.naturalHeight;
-                console.log(itemImg);
-                console.log('Aspect ratio:', aspectRatio);
-            });
-            // const aspectRatio = getRenderedAspectRatio(itemImg);
-            // console.log(itemImg);
-            // console.log('Aspect ratio:', aspectRatio);
-            if (aspectRatio == '0.8') {
-                parentEl.classList.add('portrait');
-            } else {
-                parentEl.classList.add('landscape')
-            }
             itemLink.addEventListener('click', function(e) {
-                lightboxFilter(this,aspectRatio);
+                lightboxFilter(this);
             });
         });
     });
@@ -259,7 +243,7 @@ function imgFilter(btn) {
         }
     });
 }
-function lightboxFilter(itemLink, aspectRatio) {
+function lightboxFilter(itemLink) {
     const filterClasses = [];
     let thisBlock = itemLink.closest('.col');
     let thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
