@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // const aspectRatio = getRenderedAspectRatio(itemImg);
             // console.log(itemImg);
             // console.log('Aspect ratio:', aspectRatio);
-            if (aspectRatio == 0.8) {
+            if (aspectRatio == '0.8') {
                 parentEl.classList.add('portrait');
             } else {
                 parentEl.classList.add('landscape')
