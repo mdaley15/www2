@@ -271,14 +271,15 @@ function lightboxFilter(itemLink) {
         } else {
             img.classList.add('landscape');
         }
-        let infoBtn = item.querySelector('.sqs-lightbox-meta a');
-        if (infoBtn) {
-            let currentImg = infoBtn.closest('.sqs-lightbox-padder').querySelector('img');
-            let imgSrc = currentImg.getAttribute('data-src');
-            let link = infoBtn.getAttribute('href');
-            link = '/contact-us?' + imgSrc;
-            infoBtn.setAttribute('href', link);
-        }
+        // let infoBtn = item.querySelector('.sqs-lightbox-meta a');
+        let padder = item.querySelector('.sqs-lightbox-padder');
+        let infoBtn = document.createElement('a');
+        let itemImg = item.querySelector('img');
+        let imgSrc = itemImg.getAttribute('data-src');
+        let link = '/contact-us?' + imgSrc;
+        infoBtn.setAttribute('href', link);
+        infoBtn.classList.add('allBtns');
+        padder.appendChild(infoBtn);
     });
 
     let activeFilter = thisBlock.querySelector('.activeBtn');
