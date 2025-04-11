@@ -625,21 +625,29 @@ main .Index-page-content > div,
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    width: calc(~"100vw - 160px");
-                    height: calc(~"100vh - 150px");
-                    max-height: fit-content!important;
-                    max-width: 500px!important;
+                    // width: calc(~"100vw - 160px");
+                    // height: calc(~"100vh - 150px");
+                    height: fit-content!important;
+                    width: fit-content!important;
+                    // max-height: fit-content!important;
+                    // max-width: 500px!important;
                     
                     img {
                         position: static!important;
-                        width: 100%!important;
+                        width: 100vw!important;
                         height: auto!important;
-                        max-width: 100%!important;
-                        max-height: 100%!important;
+                        // max-width: 100%!important;
+                        // max-height: 100%!important;
                         display: block;
                         flex-grow: 2;
                         border-radius: 5px;
                         box-shadow: 2px 2px 7px rgba(0, 0, 0, .5);
+                    }
+                    img[data-image-dimensions="800x1000"] {
+                        max-width: 500px!important;
+                    }
+                    img[data-image-dimensions="300x240"] {
+                        max-width: 700px!important;
                     }
                     .sqs-lightbox-meta {
                         position: static!important;
