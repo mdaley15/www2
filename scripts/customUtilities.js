@@ -282,6 +282,11 @@ function lightboxFilter(itemLink) {
     let link = infoBtn.getAttribute('href');
     link = '/contact-us?' + imgSrc;
     infoBtn.setAttribute('href', link);
+
+    lightboxItems.forEach(item => {
+        let img = item.querySelector('.thumb-image');
+        console.log(img);
+    });
 }
 function getRenderedAspectRatio(itemImg) {
     const width = itemImg.naturalWidth;
