@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             let parentEl = itemImg.parentNode;
             const aspectRatio = getRenderedAspectRatio(itemImg);
-            // console.log(parentEl);
+            console.log(itemImg);
             console.log('Aspect ratio:', aspectRatio);
             if (aspectRatio == 0.8) {
                 parentEl.classList.add('portrait');
