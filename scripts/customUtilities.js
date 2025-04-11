@@ -290,7 +290,7 @@ function lightboxFilter(itemLink) {
         let imgRatio = img.getAttribute('data-image-dimensions');
         console.log(imgRatio);
         let width = imgRatio.split('x', 1)[0];
-        let height = imgRatio.split('x', 1)[1];
+        let height = imgRatio.split('x')[1];
         console.log(width+', ',height);
     });
 }
