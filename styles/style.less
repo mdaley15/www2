@@ -823,6 +823,75 @@ main .Index-page-content > div,
             box-shadow: 5px 5px 0 @drkOrange;
         }
     }
+    .hbspt-form {
+        width: 100%;
+        
+        form {
+            width: 100%;
+            
+            fieldset {
+                max-width: 100%;
+                margin-bottom: 10px!important;
+                
+                label {
+                    color: black;
+                    font-size: 14px;
+                    
+                    .hs-form-required {
+                        color: darkred;
+                    }
+                }
+                .input {
+                    > input, > select, > textarea {
+                        width: 100%!important;
+                        padding: 5px 10px;
+                        font-size: 16px;
+                        min-height: 40px;
+                        height: auto!important;
+                        background-color: @bgOverlay;
+                        border-top: 1px solid @blue!important;
+                        border-left: 0!important;
+                        border-right: 0!important;
+                        border-bottom: 0!important;
+                        border-radius: 0 0 5px 5px;
+                        box-shadow: 0 3px 0 @drkOrange;
+                    }
+                }
+                ul {
+                    margin: 0!important;
+                    padding-left: 15px!important;
+                    list-style: none!important;
+                        
+                    label {
+                        display: flex;
+                    }
+                    label {
+                        input {
+                            margin-right: 10px!important;
+                        }
+                        span {
+                            margin: 0!important;
+                        }
+                    }
+                    .hs-error-msg {
+                        color: darkred;
+                    }
+                }
+                .legal-consent-container {
+                    .hs-richtext {
+                        font-size: 14px;
+                        line-height: 1.5;
+                        color: @blue
+                    }
+                }
+                &.form-columns-3 {
+                    > div {
+                        width: 33.3333%!important
+                    }
+                }
+            }
+        }
+    }
 }
 /************************************************** tables *********************************************************/
 .twoColumn th,
