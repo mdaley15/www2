@@ -194,6 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
             var aspectRatio;
             itemImg.addEventListener('load', () => {
                 aspectRatio = itemImg.naturalWidth / itemImg.naturalHeight;
+                console.log(itemImg);
                 console.log('Aspect ratio:', aspectRatio);
             });
             // const aspectRatio = getRenderedAspectRatio(itemImg);
