@@ -281,7 +281,9 @@ function lightboxFilter(itemLink) {
     link = '/contact-us?' + imgSrc;
     infoBtn.setAttribute('href', link);
 
+    let parentEl = currentImg.parentNode;
     const aspectRatio = getRenderedAspectRatio(currentImg);
+    console.log(parentEl);
     console.log('Aspect ratio:', aspectRatio);
 }
 function getRenderedAspectRatio(currentImg) {
