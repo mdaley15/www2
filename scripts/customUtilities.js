@@ -245,13 +245,17 @@ function imgFilter(btn) {
 }
 function lightboxFilter(itemLink) {
     const filterClasses = [];
+    const imgRatios = [];
     let thisBlock = itemLink.closest('.col');
     let thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
     galleryItems = thisGallery.querySelectorAll('.slide');
     galleryItems.forEach(item => {
         let itemClass = item.getAttribute('data-class');
+        let aspectRatio = currentImg.getAttribute('data-image-dimensions');
         filterClasses.push(itemClass);
+        imgRatios.push(aspectRatio);
     });
+    console.log(imgRatios);
     lightbox = document.querySelector('.yui3-lightbox2');
     lightboxItems = lightbox.querySelectorAll('.sqs-lightbox-slide');
     filterClasses.forEach((str, index) => {
