@@ -244,6 +244,7 @@ function imgFilter(btn) {
     });
 }
 function lightboxFilter(itemLink) {
+    var pathName = window.location.pathname;
     const filterClasses = [];
     let thisBlock = itemLink.closest('.col');
     let thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
@@ -271,17 +272,19 @@ function lightboxFilter(itemLink) {
         } else {
             img.classList.add('landscape');
         }
-        // let infoBtn = item.querySelector('.sqs-lightbox-meta a');
         let padder = item.querySelector('.sqs-lightbox-padder');
         let infoBtn = document.createElement('a');
         const text = document.createTextNode('Get More Info');
         infoBtn.appendChild(text);
         infoBtn.classList.add('allBtns');
-        let itemImg = item.querySelector('img');
-        let imgSrc = itemImg.getAttribute('data-src');
+        // let itemImg = item.querySelector('img');
+        let imgSrc = img.getAttribute('data-src');
         let link = '/contact-us?' + imgSrc;
         infoBtn.setAttribute('href', link);
         padder.appendChild(infoBtn);
+        if (pathName.includes("/cover-designs-themes")) {
+            
+        };
     });
 
     let activeFilter = thisBlock.querySelector('.activeBtn');
