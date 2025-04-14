@@ -284,7 +284,7 @@ function lightboxFilter(itemLink) {
             let filename = imgSrc.substring(lastSlashIndex + 1);
             filename = filename.split(".", 1)[0];
             let newImgPth = '../assets/'+filename+'.webp';
-            console.log(newImgPth);
+            console.log(img,newImgPth);
             img.setAttribute('src', '../assets/'+filename+'.webp');
         };
         let link = '/contact-us?' + imgSrc;
