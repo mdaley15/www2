@@ -292,12 +292,7 @@ function lightboxFilter(itemLink) {
         const text = document.createTextNode('Get More Info');
         infoBtn.appendChild(text);
         infoBtn.classList.add('allBtns');
-        var link;
-        // if (pathName.includes("/cover-designs-themes")) {
-        //     link = '/contact-us?' + imgDataSrc;
-        // } else {
-        // }
-        link = '/contact-us?' + imgDataSrc;
+        let link = '/contact-us?' + imgDataSrc;
         infoBtn.setAttribute('href', link);
         padder.appendChild(infoBtn);
     });
