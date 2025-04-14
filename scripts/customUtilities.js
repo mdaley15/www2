@@ -282,6 +282,7 @@ function lightboxFilter(itemLink) {
         let imgSrc = img.getAttribute('data-src');
         if (pathName.includes("/cover-designs-themes")) {
             let filename = imgSrc.lastIndexOf('/');
+            filename = filename.substring(lastSlashIndex + 1);
             console.log(filename);
             // let newImgPth = filename.split(".", 1)[0];
             // console.log(newImgPth);
