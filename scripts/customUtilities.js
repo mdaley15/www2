@@ -278,7 +278,6 @@ function lightboxFilter(itemLink) {
         const text = document.createTextNode('Get More Info');
         infoBtn.appendChild(text);
         infoBtn.classList.add('allBtns');
-        // let itemImg = item.querySelector('img');
         let imgSrc = img.getAttribute('data-src');
         if (pathName.includes("/cover-designs-themes")) {
             let lastSlashIndex = imgSrc.lastIndexOf('/');
