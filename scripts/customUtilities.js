@@ -275,6 +275,7 @@ function lightboxFilter(itemLink) {
             img.setAttribute('data-src', newImgPth);
             img.setAttribute('src', newImgPth);
             img.setAttribute('data-image', newImgPth);
+            imgDataSrc = newImgPth;
         };
         let imgRatio = img.getAttribute('data-image-dimensions');
         let width = Number(imgRatio.split('x', 1)[0]);
@@ -291,7 +292,12 @@ function lightboxFilter(itemLink) {
         const text = document.createTextNode('Get More Info');
         infoBtn.appendChild(text);
         infoBtn.classList.add('allBtns');
-        let link = '/contact-us?' + imgDataSrc;
+        var link;
+        // if (pathName.includes("/cover-designs-themes")) {
+        //     link = '/contact-us?' + imgDataSrc;
+        // } else {
+        // }
+        link = '/contact-us?' + imgDataSrc;
         infoBtn.setAttribute('href', link);
         padder.appendChild(infoBtn);
     });
