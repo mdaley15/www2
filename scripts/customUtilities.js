@@ -279,12 +279,13 @@ function lightboxFilter(itemLink) {
         infoBtn.classList.add('allBtns');
         // let itemImg = item.querySelector('img');
         let imgSrc = img.getAttribute('data-src');
+        if (pathName.includes("/cover-designs-themes")) {
+            let newImgPth = imgSrc.split(".", 1)[0];
+            console.log(newImgPth);
+        };
         let link = '/contact-us?' + imgSrc;
         infoBtn.setAttribute('href', link);
         padder.appendChild(infoBtn);
-        if (pathName.includes("/cover-designs-themes")) {
-            
-        };
     });
 
     let activeFilter = thisBlock.querySelector('.activeBtn');
