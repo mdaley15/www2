@@ -265,6 +265,9 @@ function lightboxFilter(itemLink) {
         let img = item.querySelector('.thumb-image');
         let imgDataSrc = img.getAttribute('data-src');
         if (pathName.includes("/cover-designs-themes")) {
+            img.setAttribute('data-src', '');
+            img.setAttribute('src', '');
+            img.setAttribute('data-image', '');
             let lastSlashIndex = imgDataSrc.lastIndexOf('/');
             let filename = imgDataSrc.substring(lastSlashIndex + 1);
             filename = filename.split(".", 1)[0];
@@ -296,7 +299,6 @@ function lightboxFilter(itemLink) {
     let activeFilter = thisBlock.querySelector('.activeBtn');
     if (activeFilter) {
         activeFilter = activeFilter.getAttribute('data-filter');
-        console.log(activeFilter);
         lightboxItems.forEach(item => {
             if (item.classList.contains(activeFilter)) {
                 item.classList.remove('hide');
