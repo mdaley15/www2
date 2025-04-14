@@ -278,16 +278,20 @@ function lightboxFilter(itemLink) {
         const text = document.createTextNode('Get More Info');
         infoBtn.appendChild(text);
         infoBtn.classList.add('allBtns');
-        let imgSrc = img.getAttribute('data-src');
+        let imgDataSrc = img.getAttribute('data-src');
+        let imgSrc = img.getAttribute('src');
+        let imgDataImg = img.getAttribute('data-image');
         if (pathName.includes("/cover-designs-themes")) {
-            let lastSlashIndex = imgSrc.lastIndexOf('/');
-            let filename = imgSrc.substring(lastSlashIndex + 1);
+            let lastSlashIndex = imgDataSrc.lastIndexOf('/');
+            let filename = imgDataSrc.substring(lastSlashIndex + 1);
             filename = filename.split(".", 1)[0];
             let newImgPth = '../assets/'+filename+'.webp';
             console.log(img,newImgPth);
-            img.setAttribute('src', '../assets/'+filename+'.webp');
+            img.setAttribute('data-src', newImgPth);
+            img.setAttribute('src', newImgPth);
+            img.setAttribute('data-image', newImgPth);
         };
-        let link = '/contact-us?' + imgSrc;
+        let link = '/contact-us?' + imgDataSrc;
         infoBtn.setAttribute('href', link);
         padder.appendChild(infoBtn);
     });
