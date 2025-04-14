@@ -70,13 +70,6 @@ $( document ).ready(function() {
               });
           });
     }
-    function getStringAfterLastSlash(str) {
-        const lastSlashIndex = str.lastIndexOf('/');
-        if (lastSlashIndex === -1) {
-            return str; // Return the original string if no slash is found
-        }
-        return str.substring(lastSlashIndex + 1).split('.')[0].split('-');
-    }
     function addSpacesToCamelCase(fileInfo) {
         // return fileInfo.replace(/([A-Z])/g, ' $1').trim();
         const spacedString = fileInfo.replace(/([A-Z])/g, ' $1');
@@ -166,6 +159,14 @@ $( document ).ready(function() {
     });
 
 });
+
+function getStringAfterLastSlash(str) {
+    const lastSlashIndex = str.lastIndexOf('/');
+    if (lastSlashIndex === -1) {
+        return str; // Return the original string if no slash is found
+    }
+    return str.substring(lastSlashIndex + 1).split('.')[0].split('-');
+}
 
 // Image Filters
 var galleryItems,
