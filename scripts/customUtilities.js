@@ -287,6 +287,7 @@ function lightboxFilter(itemLink) {
             console.log(filename);
             // let newImgPth = filename.split(".", 1)[0];
             // console.log(newImgPth);
+            img.setAttribute('src', '../assets/'+filename+'.webp');
         };
         let link = '/contact-us?' + imgSrc;
         infoBtn.setAttribute('href', link);
