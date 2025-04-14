@@ -281,10 +281,10 @@ function lightboxFilter(itemLink) {
         // let itemImg = item.querySelector('img');
         let imgSrc = img.getAttribute('data-src');
         if (pathName.includes("/cover-designs-themes")) {
-            let filename = getStringAfterLastSlash(imgSrc);
+            let filename = imgSrc.lastIndexOf('/');
             console.log(filename);
-            let newImgPth = filename.split(".", 1)[0];
-            console.log(newImgPth);
+            // let newImgPth = filename.split(".", 1)[0];
+            // console.log(newImgPth);
         };
         let link = '/contact-us?' + imgSrc;
         infoBtn.setAttribute('href', link);
