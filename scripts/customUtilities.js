@@ -273,8 +273,8 @@ function lightboxFilter(itemLink) {
             filename = filename.split(".", 1)[0];
             let newImgPth = '../assets/'+filename+'.webp';
             img.setAttribute('data-src', newImgPth);
-            img.setAttribute('src', newImgPth);
-            img.setAttribute('data-image', newImgPth);
+            // img.setAttribute('src', newImgPth);
+            // img.setAttribute('data-image', newImgPth);
             imgDataSrc = newImgPth;
         };
         let imgRatio = img.getAttribute('data-image-dimensions');
