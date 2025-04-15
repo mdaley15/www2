@@ -1,4 +1,8 @@
 $( document ).ready(function() {
+    let introBlock = document.querySelector('.Intro');
+    if (!introBlock) {
+        console.log('There is no Intro Block on this page');
+    }
 
     $('.whatWeDo .Header-nav-item:first-child > a.Header-nav-folder-title').removeAttr('href');
     $('.whatWeDo .Header-nav-item:nth-child(2) > .Header-nav-folder-title').attr('href', '/school-yearbooks');
