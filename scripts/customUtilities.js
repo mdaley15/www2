@@ -32,30 +32,32 @@ $( document ).ready(function() {
         }
         let filename = getStringAfterLastSlash(queryString);
         let category = getStringAfterQM(queryString);
-        console.log(category);
-        var imgInfo = [];
-        for (let i = 0; i < filename.length; i++) {
-            let fileInfo = filename[i];
-            const fileWithSpaces = addSpacesToCamelCase(fileInfo);
-            imgInfo.push(fileWithSpaces);
-        }
-        if (imgInfo.length === 1) {
-            imgCategory.innerText = imgInfo[0];
-            imgSubCategory.remove();
-            threeSplit.remove();
-            imgStyle.remove();
-        }
-        if (imgInfo.length === 2) {
-            imgSubCategory.remove();
-            threeSplit.remove();
-            imgCategory.innerText = imgInfo[0];
-            imgStyle.innerText = imgInfo[1];
-        }
-        if (imgInfo.length === 3) {
-            imgCategory.innerText = imgInfo[0];
-            imgSubCategory.innerText = imgInfo[1];
-            imgStyle.innerText = imgInfo[2];
-        }
+        let categoryWSpaces = addSpacesToCamelCase(category);
+        console.log(categoryWSpaces);
+        imgCategory.innerText = categoryWSpaces;
+        // var imgInfo = [];
+        // for (let i = 0; i < filename.length; i++) {
+        //     let fileInfo = filename[i];
+        //     const fileWithSpaces = addSpacesToCamelCase(fileInfo);
+        //     imgInfo.push(fileWithSpaces);
+        // }
+        // if (imgInfo.length === 1) {
+        //     imgCategory.innerText = imgInfo[0];
+        //     imgSubCategory.remove();
+        //     threeSplit.remove();
+        //     imgStyle.remove();
+        // }
+        // if (imgInfo.length === 2) {
+        //     imgSubCategory.remove();
+        //     threeSplit.remove();
+        //     imgCategory.innerText = imgInfo[0];
+        //     imgStyle.innerText = imgInfo[1];
+        // }
+        // if (imgInfo.length === 3) {
+        //     imgCategory.innerText = imgInfo[0];
+        //     imgSubCategory.innerText = imgInfo[1];
+        //     imgStyle.innerText = imgInfo[2];
+        // }
         formImgInfo.addEventListener('click', function() {
             const text = this.innerText;
             navigator.clipboard.writeText(text)
