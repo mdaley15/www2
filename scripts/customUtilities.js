@@ -2,7 +2,10 @@ $( document ).ready(function() {
     let introBlock = document.querySelector('.Intro');
     let body = document.querySelector('body');
     if (!introBlock) {
-        body.classList.add('noIntro');
+        let main = document.querySelector('.Main');
+        if (main) {
+            body.classList.add('noIntro');
+        }
     }
 
     $('.whatWeDo .Header-nav-item:first-child > a.Header-nav-folder-title').removeAttr('href');
