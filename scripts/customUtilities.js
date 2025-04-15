@@ -26,6 +26,7 @@ $( document ).ready(function() {
         const copiedText = document.getElementById('copied');
         const formImg = document.getElementById('formImg');
         formImg.setAttribute('src',queryString);
+        console.log(queryString);
         if (queryString == "") {
             console.log('Url does NOT contain image src');
             formImgWrap.classList.add('hide');
