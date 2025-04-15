@@ -208,7 +208,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const mainContent = document.querySelector('.Main');
     let intro = document.querySelector('.Intro');
     let rect = mainContent.getBoundingClientRect();
-    console.log(window.scrollY,rect.top);
     if (pageIcon) {
         watermark.classList.add(pageIcon.classList[1]);
         window.addEventListener('scroll', function() {
