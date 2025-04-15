@@ -281,7 +281,8 @@ function lightboxFilter(itemLink) {
         const lastClass = classList[classList.length - 1];
         console.log(lastClass);
         let img = item.querySelector('.thumb-image');
-        let imgDataSrc = img.getAttribute('data-src');
+        // let imgDataSrc = img.getAttribute('data-src');
+        let imgDataSrc = lastClass;
         if (pathName.includes("/cover-designs-themes")) {
             img.setAttribute('data-src', '');
             img.setAttribute('src', '');
