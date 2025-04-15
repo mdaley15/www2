@@ -31,8 +31,7 @@ $( document ).ready(function() {
             formImgWrap.classList.add('hide');
         }
         let filename = getStringAfterLastSlash(queryString);
-        let category = queryString.lastIndexOf('?');
-        category = category.substring(category + 1)
+        let category = getStringAfterQM(queryString);
         console.log(category);
         var imgInfo = [];
         for (let i = 0; i < filename.length; i++) {
@@ -174,6 +173,13 @@ function getStringAfterLastSlash(str) {
         return str; // Return the original string if no slash is found
     }
     return str.substring(lastSlashIndex + 1).split('.')[0].split('-');
+}
+function getStringAfterQM(str) {
+    const lastQMIndex = str.lastIndexOf('?');
+    if (lastQMIndex === -1) {
+        return str; // Return the original string if no slash is found
+    }
+    return str.substring(lastQMIndex + 1);
 }
 
 // Image Filters
