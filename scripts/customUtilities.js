@@ -216,10 +216,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let watermark = document.querySelector('.watermark');
     let pageIcon = document.querySelector('.introTitle i');
-    const mainContent = document.querySelector('.Main');
     let intro = document.querySelector('.Intro');
-    let rect = mainContent.getBoundingClientRect();
     if (pageIcon) {
+        const mainContent = document.querySelector('.Main');
+        let rect = mainContent.getBoundingClientRect();
         watermark.classList.add(pageIcon.classList[1]);
         window.addEventListener('scroll', function() {
             if (intro) {
@@ -294,7 +294,7 @@ function lightboxFilter(itemLink) {
         let img = item.querySelector('.thumb-image');
         let imgDataSrc = img.getAttribute('data-src');
         let fileType = imgDataSrc.split('.').pop();
-        var coverLastClass;
+        var coverPath;
         if (pathName.includes("/cover-designs-themes")) {
             img.setAttribute('data-src', '');
             img.setAttribute('src', '');
@@ -307,7 +307,7 @@ function lightboxFilter(itemLink) {
             img.setAttribute('src', newImgPth);
             img.setAttribute('alt', 'Yearbook cover assets');
             img.classList.add('ybAssets');
-            coverLastClass = newImgPth;
+            coverPath = newImgPth;
         };
         let imgRatio = img.getAttribute('data-image-dimensions');
         let width = Number(imgRatio.split('x', 1)[0]);
@@ -326,7 +326,7 @@ function lightboxFilter(itemLink) {
         infoBtn.classList.add('allBtns');
         var link;
         if (pathName.includes("/cover-designs-themes")) {
-            link = '/contact-us?' + coverLastClass+'?'+lastClass;
+            link = '/contact-us?' + coverPath+'?'+lastClass;
         } else {
             link = '/contact-us?' + imgDataSrc+'?'+lastClass;
         }
