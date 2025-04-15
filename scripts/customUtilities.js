@@ -206,16 +206,24 @@ document.addEventListener('DOMContentLoaded', function() {
     let watermark = document.querySelector('.watermark');
     let pageIcon = document.querySelector('.introTitle i');
     const mainContent = document.querySelector('.Main');
+    let intro = document.querySelector('.Intro');
     let rect = mainContent.getBoundingClientRect();
     console.log(window.scrollY,rect.top);
     if (pageIcon) {
         watermark.classList.add(pageIcon.classList[1]);
         window.addEventListener('scroll', function() {
-            console.log(window.scrollY,rect.top+35);
-            if (Number(window.scrollY) >= Number(rect.top+35)) {
-                watermark.classList.add('fixed');
+            if (intro) {
+                if (Number(window.scrollY) >= Number(rect.top-85)) {
+                    watermark.classList.add('fixed');
+                } else {
+                    watermark.classList.remove('fixed');
+                }
             } else {
-                watermark.classList.remove('fixed');
+                if (Number(window.scrollY) >= Number(rect.top+35)) {
+                    watermark.classList.add('fixed');
+                } else {
+                    watermark.classList.remove('fixed');
+                }
             }
         });
     }
