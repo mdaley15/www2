@@ -31,7 +31,7 @@ $( document ).ready(function() {
             formImgWrap.classList.add('hide');
         }
         let filename = getStringAfterLastSlash(queryString);
-        let category = str.lastIndexOf('?');
+        let category = queryString.lastIndexOf('?');
         console.log(category);
         var imgInfo = [];
         for (let i = 0; i < filename.length; i++) {
