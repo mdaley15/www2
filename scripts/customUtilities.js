@@ -312,10 +312,11 @@ function lightboxFilter(itemLink) {
         const text = document.createTextNode('Get More Info');
         infoBtn.appendChild(text);
         infoBtn.classList.add('allBtns');
+        var link;
         if (pathName.includes("/cover-designs-themes")) {
-            let link = '/contact-us?' + lastClass;
+            link = '/contact-us?' + lastClass;
         } else {
-            let link = '/contact-us?' + lastClass+'.'+fileType;
+            link = '/contact-us?' + lastClass+'.'+fileType;
         }
         infoBtn.setAttribute('href', link);
         padder.appendChild(infoBtn);
