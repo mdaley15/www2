@@ -316,7 +316,10 @@ function lightboxFilter(itemLink) {
         });
         console.log(activeItems);
         if (activeItems.length === 1) {
-            let nextPrev = document.querySelectorAll('.sqs-lightbox-previous, .sqs-lightbox-next').remove();
+            let prev = document.querySelector('.sqs-lightbox-previous');
+            let next = document.querySelector('.sqs-lightbox-next');
+            prev.remove();
+            next.remove();
         }
     }
 }
