@@ -277,6 +277,7 @@ function lightboxFilter(itemLink) {
             img.setAttribute('data-src', newImgPth);
             img.setAttribute('src', newImgPth);
             img.setAttribute('alt', 'Yearbook cover assets');
+            img.classList.add('ybAssets');
             imgDataSrc = newImgPth;
         };
         let imgRatio = img.getAttribute('data-image-dimensions');
