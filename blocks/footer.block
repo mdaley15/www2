@@ -27,7 +27,7 @@
                     <li><a href="asdf" target="">Help</a></li>
                     <li><a href="asdf" target="">Legal</a></li>
                     <li><a href="asdf" target="">Student Data Privacy</a></li>
-                    <li><a href="asdf" target="">Service Areas</a></li>
+                    <li><a href="/service-areas" target="">Service Areas</a></li>
                 </ul>
             </div>
             <div class="footerCol smallCol colThree">
