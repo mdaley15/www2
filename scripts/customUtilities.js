@@ -316,7 +316,7 @@ function lightboxFilter(itemLink) {
         if (pathName.includes("/cover-designs-themes")) {
             link = '/contact-us?' + lastClass;
         } else {
-            link = '/contact-us?' + imgDataSrc;
+            link = '/contact-us?' + imgDataSrc+'?'+lastClass;
         }
         infoBtn.setAttribute('href', link);
         padder.appendChild(infoBtn);
