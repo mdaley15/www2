@@ -312,6 +312,7 @@ function lightboxFilter(itemLink) {
                 }, 2000);
             }
         });
+        console.log(lightboxItems);
     }
 }
 document.addEventListener('click', function(event) {
