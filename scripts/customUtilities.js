@@ -304,6 +304,7 @@ function lightboxFilter(itemLink) {
         activeFilter = activeFilter.getAttribute('data-filter');
         lightboxItems.forEach(item => {
             if (item.classList.contains(activeFilter)) {
+                console.log(item);
                 item.classList.remove('hide');
             } else {
                 item.classList.add('hide');
@@ -312,8 +313,8 @@ function lightboxFilter(itemLink) {
                 }, 2000);
             }
         });
+        console.log(lightboxItems);
     }
-    console.log(lightboxItems);
 }
 document.addEventListener('click', function(event) {
     const lightbox = document.querySelector('.yui3-lightbox2');
