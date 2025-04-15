@@ -292,6 +292,7 @@ function lightboxFilter(itemLink) {
         let img = item.querySelector('.thumb-image');
         let imgDataSrc = img.getAttribute('data-src');
         let fileType = imgDataSrc.split('.').pop();
+        var coverLastClass;
         if (pathName.includes("/cover-designs-themes")) {
             img.setAttribute('data-src', '');
             img.setAttribute('src', '');
@@ -304,7 +305,7 @@ function lightboxFilter(itemLink) {
             img.setAttribute('src', newImgPth);
             img.setAttribute('alt', 'Yearbook cover assets');
             img.classList.add('ybAssets');
-            lastClass = newImgPth;
+            coverLastClass = newImgPth;
         };
         let imgRatio = img.getAttribute('data-image-dimensions');
         let width = Number(imgRatio.split('x', 1)[0]);
@@ -323,7 +324,7 @@ function lightboxFilter(itemLink) {
         infoBtn.classList.add('allBtns');
         var link;
         if (pathName.includes("/cover-designs-themes")) {
-            link = '/contact-us?' + lastClass+'?'+lastClass;
+            link = '/contact-us?' + coverLastClass+'?'+lastClass;
         } else {
             link = '/contact-us?' + imgDataSrc+'?'+lastClass;
         }
