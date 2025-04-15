@@ -323,7 +323,7 @@ function lightboxFilter(itemLink) {
         infoBtn.classList.add('allBtns');
         var link;
         if (pathName.includes("/cover-designs-themes")) {
-            link = '/contact-us?' + lastClass;
+            link = '/contact-us?' + lastClass+'?'+lastClass;
         } else {
             link = '/contact-us?' + imgDataSrc+'?'+lastClass;
         }
