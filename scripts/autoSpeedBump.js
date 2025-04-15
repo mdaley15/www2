@@ -3,6 +3,7 @@ $( document ).ready(function() {
 
     $( 'a' ).each(function() {
         theLink = this.hostname+'';
+        console.log(theLink);
         if( location.hostname === this.hostname || !this.hostname.length) {
             $(this).addClass('local');
         } else {
