@@ -316,7 +316,7 @@ function lightboxFilter(itemLink) {
         });
         console.log(activeItems);
         if (activeItems.length === 1) {
-            document.querySelectorAll('.sqs-lightbox-previous, .sqs-lightbox-next').remove();
+            let nextPrev = document.querySelectorAll('.sqs-lightbox-previous, .sqs-lightbox-next').remove();
         }
     }
 }
