@@ -302,9 +302,10 @@ function lightboxFilter(itemLink) {
     let activeFilter = thisBlock.querySelector('.activeBtn');
     if (activeFilter) {
         activeFilter = activeFilter.getAttribute('data-filter');
+        let activeItems = [];
         lightboxItems.forEach(item => {
             if (item.classList.contains(activeFilter)) {
-                console.log(item);
+                activeItems.push(item);
                 item.classList.remove('hide');
             } else {
                 item.classList.add('hide');
@@ -313,7 +314,7 @@ function lightboxFilter(itemLink) {
                 }, 2000);
             }
         });
-        console.log(lightboxItems);
+        console.log(activeItems);
     }
 }
 document.addEventListener('click', function(event) {
