@@ -26,12 +26,13 @@ $( document ).ready(function() {
         const copiedText = document.getElementById('copied');
         const formImg = document.getElementById('formImg');
         formImg.setAttribute('src',queryString);
-        console.log(queryString);
         if (queryString == "") {
             console.log('Url does NOT contain image src');
             formImgWrap.classList.add('hide');
         }
         let filename = getStringAfterLastSlash(queryString);
+        let category = str.lastIndexOf('?');
+        console.log(category);
         var imgInfo = [];
         for (let i = 0; i < filename.length; i++) {
             let fileInfo = filename[i];
