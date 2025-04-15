@@ -191,7 +191,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
             itemLink.addEventListener('click', function(e) {
-                lightboxFilter(this);
+                if (itemLink.getAttribute('role') === 'button') {
+                    lightboxFilter(this);
+                }
             });
         });
     });
