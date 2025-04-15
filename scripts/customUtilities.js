@@ -205,10 +205,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let watermark = document.querySelector('.watermark');
     let pageIcon = document.querySelector('.introTitle i');
+    const mainContent = document.querySelector('.Main');
+    let rect = mainContent.getBoundingClientRect();
     if (pageIcon) {
         watermark.classList.add(pageIcon.classList[1]);
-        const mainContent = document.querySelector('.Main');
-        let rect = mainContent.getBoundingClientRect();
         window.addEventListener('scroll', function() {
             console.log(rect.top-85);
             if (window.scrollY >= rect.top-85) {
