@@ -277,8 +277,9 @@ function lightboxFilter(itemLink) {
         }
     });
     lightboxItems.forEach(item => {
-        let category = item.classList;
-        console.log(category);
+        let classList = item.classList;
+        const lastClass = classList[classList.length - 1];
+        console.log(lastClass);
         let img = item.querySelector('.thumb-image');
         let imgDataSrc = img.getAttribute('data-src');
         if (pathName.includes("/cover-designs-themes")) {
