@@ -312,8 +312,8 @@ function lightboxFilter(itemLink) {
                 }, 2000);
             }
         });
-        console.log(lightboxItems);
     }
+    console.log(lightboxItems);
 }
 document.addEventListener('click', function(event) {
     const lightbox = document.querySelector('.yui3-lightbox2');
