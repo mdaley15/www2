@@ -32,6 +32,7 @@ $( document ).ready(function() {
         }
         let filename = getStringAfterLastSlash(queryString);
         let category = queryString.lastIndexOf('?');
+        category = category.substring(category + 1)
         console.log(category);
         var imgInfo = [];
         for (let i = 0; i < filename.length; i++) {
