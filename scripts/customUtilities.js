@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
         watermark.classList.add(pageIcon.classList[1]);
         window.addEventListener('scroll', function() {
             console.log(window.scrollY,rect.top);
-            if (Number(window.scrollY) >= Number(rect.top-85)) {
+            if (Number(window.scrollY) >= Number(rect.top+85)) {
                 watermark.classList.add('fixed');
             } else {
                 watermark.classList.remove('fixed');
