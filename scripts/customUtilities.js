@@ -1,7 +1,9 @@
 $( document ).ready(function() {
     let introBlock = document.querySelector('.Intro');
+    let mainBlock = document.querySelector('.Main');
     if (!introBlock) {
         console.log('There is no Intro Block on this page');
+        mainBlock.classList.add('noIntro');
     }
 
     $('.whatWeDo .Header-nav-item:first-child > a.Header-nav-folder-title').removeAttr('href');
