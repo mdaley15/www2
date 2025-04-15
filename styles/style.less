@@ -48,6 +48,14 @@ html {
             font-weight: 600;
             margin: 0;
         }
+        &.noIntro {
+            .Header--bottom {
+                background: transparent!important;
+            }
+            .Content-outer {
+                padding-top: 150px;
+            }
+        }
     }
 }
 .Parallax-host-outer {
@@ -116,6 +124,21 @@ hr {
 }
 .drkOrangeFill {
     fill: @drkOrange;
+}
+h1.introTitle {
+    font-size: 60px;
+    text-shadow: 0 2px 7px white;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    i {
+        color: @drkOrange;
+        font-size: 40px;
+        margin-right: 15px;
+    }
 }
 .Index-page-scroll-indicator {
     i {
@@ -439,11 +462,6 @@ hr {
                 }
             }
         }
-    }
-}
-.Content-outer {
-    &.noIntro {
-        padding-top: 150px;
     }
 }
 .Main {
