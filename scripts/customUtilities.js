@@ -282,6 +282,7 @@ function lightboxFilter(itemLink) {
         console.log(lastClass);
         let img = item.querySelector('.thumb-image');
         let imgDataSrc = img.getAttribute('data-src');
+        let fileType = imgDataSrc.split('.').pop();
         if (pathName.includes("/cover-designs-themes")) {
             img.setAttribute('data-src', '');
             img.setAttribute('src', '');
@@ -311,7 +312,11 @@ function lightboxFilter(itemLink) {
         const text = document.createTextNode('Get More Info');
         infoBtn.appendChild(text);
         infoBtn.classList.add('allBtns');
-        let link = '/contact-us?' + lastClass;
+        if (pathName.includes("/cover-designs-themes")) {
+            let link = '/contact-us?' + lastClass;
+        } else {
+            let link = '/contact-us?' + lastClass+'.'+fileType;
+        }
         infoBtn.setAttribute('href', link);
         padder.appendChild(infoBtn);
     });
