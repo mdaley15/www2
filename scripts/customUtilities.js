@@ -227,23 +227,25 @@ document.addEventListener('DOMContentLoaded', function() {
     let intro = document.querySelector('.Intro');
     if (pageIcon) {
         const mainContent = document.querySelector('.Main');
-        let rect = mainContent.getBoundingClientRect();
-        watermark.classList.add(pageIcon.classList[1]);
-        window.addEventListener('scroll', function() {
-            if (intro) {
-                if (Number(window.scrollY) >= Number(rect.top-85)) {
-                    watermark.classList.add('fixed');
+        if (mainContent) {
+            let rect = mainContent.getBoundingClientRect();
+            watermark.classList.add(pageIcon.classList[1]);
+            window.addEventListener('scroll', function() {
+                if (intro) {
+                    if (Number(window.scrollY) >= Number(rect.top-85)) {
+                        watermark.classList.add('fixed');
+                    } else {
+                        watermark.classList.remove('fixed');
+                    }
                 } else {
-                    watermark.classList.remove('fixed');
+                    if (Number(window.scrollY) >= Number(rect.top+35)) {
+                        watermark.classList.add('fixed');
+                    } else {
+                        watermark.classList.remove('fixed');
+                    }
                 }
-            } else {
-                if (Number(window.scrollY) >= Number(rect.top+35)) {
-                    watermark.classList.add('fixed');
-                } else {
-                    watermark.classList.remove('fixed');
-                }
-            }
-        });
+            });
+        }
     }
     let startingBtns = document.querySelectorAll('.startingBtn');
     startingBtns.forEach(btn => {
