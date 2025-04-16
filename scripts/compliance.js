@@ -93,21 +93,21 @@ $(document).ready(function() {
         $('.Mobile-bar-menu').focus();
     });
     /*keydown*/
-    $(".Mobile-overlay-nav-item").keydown(function(e) {
-        if (e.which == 13 || e.which == 32 || e.which == 9) {
-            setTimeout(function() {
-                var el = $(".Mobile-overlay-folder.is-active-folder").children(".Mobile-overlay-folder-item");
-                $(el)[0].focus();
-            }, 500);
-        }
-    });
+    // $(".Mobile-overlay-nav-item").keydown(function(e) {
+    //     if (e.which == 13 || e.which == 32 || e.which == 9) {
+    //         setTimeout(function() {
+    //             var el = $(".Mobile-overlay-folder.is-active-folder").children(".Mobile-overlay-folder-item");
+    //             $(el)[0].focus();
+    //         }, 500);
+    //     }
+    // });
     /*Click*/
-    $('.Mobile-overlay-nav-item').on('click', function(e) {
-        setTimeout(function() {
-            var el = $('.Mobile-overlay-folder.is-active-folder').children('.Mobile-overlay-folder-item');
-            $(el)[0].focus();
-        }, 500);
-    });
+    // $('.Mobile-overlay-nav-item').on('click', function(e) {
+    //     setTimeout(function() {
+    //         var el = $('.Mobile-overlay-folder.is-active-folder').children('.Mobile-overlay-folder-item');
+    //         $(el)[0].focus();
+    //     }, 500);
+    // });
     $(function() {
         $(".Mobile-overlay-folder-item--toggle").bind("tap", tapHandler);
  
