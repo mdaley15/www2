@@ -298,7 +298,7 @@ function lightboxFilter(itemLink) {
     lightboxItems.forEach(item => {
         let classList = item.classList;
         let lastClass = classList[classList.length - 1];
-        console.log(lastClass);
+        // console.log(lastClass);
         let img = item.querySelector('.thumb-image');
         let imgDataSrc = img.getAttribute('data-src');
         let fileType = imgDataSrc.split('.').pop();
