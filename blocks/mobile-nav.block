@@ -9,7 +9,10 @@
             </a>
           {.end}
         {.or}
-            <div class="Mobile-overlay-nav-item Mobile-overlay-nav-item--folder">{collection.navigationTitle}</div>
+            <div class="Mobile-overlay-nav-item Mobile-overlay-nav-item--folder">
+                {@|apply starIcon.block} 
+                <span>{collection.navigationTitle}</span>
+            </div>
             {.repeated section items}
                     {.collection?}
                     <a href="{collection.fullUrl}" class="Mobile-overlay-folder-item">
