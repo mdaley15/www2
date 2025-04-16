@@ -65,11 +65,11 @@
     <div class="Mobile-overlay-menu" data-controller="MobileOverlayFolders">
       <div class="Mobile-overlay-menu-main">
         <nav class="Mobile-overlay-nav Mobile-overlay-nav--primary" data-content-field="navigation">
-          <squarespace:navigation navigationId="mainNavigation" template="mobile-nav" /> 
+            <squarespace:navigation navigationId="mainNavigation" template="mobile-nav" />
         </nav>
         <nav class="Mobile-overlay-nav Mobile-overlay-nav--secondary" data-content-field="navigation">
-          <squarespace:navigation navigationId="mainNavigation2" template="mobile-nav" />
-                {@|apply social-links.block}
+            <squarespace:navigation navigationId="mainNavigation2" template="mobile-nav" />
+            <squarespace:navigation navigationId="mainNavigation2" template="mobile-nav-folder" />
         </nav>
       </div>
       <div class="Mobile-overlay-folders" data-content-field="navigation">

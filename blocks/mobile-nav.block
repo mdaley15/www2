@@ -12,6 +12,7 @@
           <button class="Mobile-overlay-nav-item Mobile-overlay-nav-item--folder" data-controller-folder-toggle="{collection.urlId}">
             <span class="Mobile-overlay-nav-item--folder-label">{collection.navigationTitle}</span>
           </button>
+          {@|apply mobile-nav-folder.block}
         {.end}
       {.or}
         {.section collection}
