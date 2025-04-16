@@ -74,7 +74,17 @@ body.is-mobile-overlay-active {
             outline: none!important;
         }
         .Mobile-overlay-nav {
-            padding-top: 0;
+
+            .Mobile-overlay-nav-item {
+                padding-top: 0!important;
+                &::after {
+                    content: "";
+                    display: none;
+                }
+            }
+            .Mobile-overlay-folder-item {
+                padding-bottom: 5px;
+            }
         }
         button, a {
             &:hover,
