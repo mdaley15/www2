@@ -77,9 +77,10 @@ body.is-mobile-overlay-active {
         .Mobile-overlay-nav {
 
             .Mobile-overlay-nav-item {
-                padding-top: 0!important;
+                padding: 0!important;
                 display: flex;
                 align-items: center;
+                margin-top: 15px;
 
                 .starIcon {
                     height: 17px;
@@ -89,9 +90,15 @@ body.is-mobile-overlay-active {
                     content: "";
                     display: none;
                 }
+                &:first-child {
+                    margin-top: 0;
+                }
             }
             .Mobile-overlay-folder-item {
-                padding-bottom: 5px;
+                padding-bottom: 0;
+                margin-left: 23px;
+                text-transform: capitalize;
+                font-weight: 500;
             }
         }
         button, a {
