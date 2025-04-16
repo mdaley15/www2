@@ -9,7 +9,7 @@
             </a>
           {.end}
         {.or}
-            <div class="Mobile-overlay-nav-item Mobile-overlay-nav-item--folder" data-controller-folder-toggle="{collection.urlId}">
+            <div class="Mobile-overlay-nav-item Mobile-overlay-nav-item--folder">
                 <span class="Mobile-overlay-nav-item--folder-label">{collection.navigationTitle}</span>
             </div>
             {.repeated section items}
