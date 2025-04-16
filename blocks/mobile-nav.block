@@ -5,7 +5,7 @@
         {.index?}
           {.section collection}
             <a href="{fullUrl}" class="Mobile-overlay-nav-item">
-              {navigationTitle}
+              {@|apply starIcon.block} {navigationTitle}
             </a>
           {.end}
         {.or}
@@ -30,14 +30,14 @@
       {.or}
         {.section collection}
           <a href="{fullUrl}" class="Mobile-overlay-nav-item">
-            {navigationTitle}
+            {@|apply starIcon.block} {navigationTitle}
           </a>
         {.end}
       {.end}
     {.end}
     {.section externalLink}
       <a href="{url}"{.section newWindow} target="_blank"{.end} class="Mobile-overlay-nav-item">
-        {title}
+        {@|apply starIcon.block} {title}
       </a>
     {.end}
   {.end}
