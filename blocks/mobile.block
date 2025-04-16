@@ -72,10 +72,10 @@
             <squarespace:navigation navigationId="mainNavigation2" template="mobile-nav-folder" />
         </nav>
       </div>
-      <div class="Mobile-overlay-folders" data-content-field="navigation">
+      <!--<div class="Mobile-overlay-folders" data-content-field="navigation">
         <squarespace:navigation navigationId="mainNavigation" template="mobile-nav-folder" />
         <squarespace:navigation navigationId="mainNavigation2" template="mobile-nav-folder" />
-      </div>
+      </div> -->
     </div>
     <button class="Mobile-overlay-close" aria-label="Close Mobile Menu" data-controller="MobileOverlayToggle">
       <svg class="Icon Icon--close" viewBox="0 0 16 16">

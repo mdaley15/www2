@@ -11,7 +11,7 @@ $(document).ready(function() {
     $('.Mobile-overlay').addClass('notVisible');
     $('.Mobile-overlay').attr('tabindex', '0');
     $('.Mobile-overlay-folder').addClass('notVisible');
-    $('.Mobile-overlay-nav-item--folder').attr('aria-haspopup', 'true');
+    // $('.Mobile-overlay-nav-item--folder').attr('aria-haspopup', 'true');
     $('.notVisible').attr('tabindex', '0');
     $('.is-active-folder').attr('tabindex', '0');
     $('.Mobile-overlay-folder-item--toggle').attr('role', 'button');
