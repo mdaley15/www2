@@ -4,6 +4,7 @@ $(document).ready(function() {
         var current = this;
         let otherHeaders = $(this).closest('li').siblings('li').find('.collapsible-header');
         console.log(otherHeaders);
+            otherHeaders.children(".fa-solid").removeClass('fa-minus').addClass('fa-plus');
         $(".collapsible-header").each(function() {
             // if($(this) !== current) {
             //     $(this).children(".fa-solid").removeClass('fa-minus').addClass('fa-plus');
