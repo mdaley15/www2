@@ -214,6 +214,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     lightboxFilter(this);
                 }
             });
+            itemLink.addEventListener('keydown', function(e) {
+                if (itemLink.getAttribute('role') === 'button') {
+                    lightboxFilter(this);
+                }
+            });
         });
     });
 
