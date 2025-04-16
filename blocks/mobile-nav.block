@@ -9,9 +9,9 @@
             </a>
           {.end}
         {.or}
-            <button class="Mobile-overlay-nav-item Mobile-overlay-nav-item--folder" data-controller-folder-toggle="{collection.urlId}">
+            <div class="Mobile-overlay-nav-item Mobile-overlay-nav-item--folder" data-controller-folder-toggle="{collection.urlId}">
                 <span class="Mobile-overlay-nav-item--folder-label">{collection.navigationTitle}</span>
-            </button>
+            </div>
             {.repeated section items}
                     {.collection?}
                     <a href="{collection.fullUrl}" class="Mobile-overlay-folder-item">
