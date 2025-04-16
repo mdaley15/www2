@@ -47,9 +47,15 @@
     
         .Mobile-bar-search,
         .Mobile-bar-menu {
+            border-radius: 5px;
+            box-shadow: 0 0 3px inset transparent;
+            background-color: transparent;
+            transition: all .3s ease-in-out;
+
             &:hover,
             &:focus {
-                stroke: @drkOrange!important;
+                box-shadow: 0 0 3px inset black;
+                background-color: white;
             }
         }
     }
