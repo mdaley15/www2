@@ -729,7 +729,19 @@ main .Index-page-content > div,
         .sqs-lightbox-meta-trigger {
             display: none;
         }
+        @media only screen and (max-width: 500px) {
+            padding: 35px 30px 30px;
 
+            .sqs-lightbox-slideshow {
+                .sqs-lightbox-slide {
+                    .sqs-lightbox-padder {
+                        img {
+                            width: calc(~"100vw - 110px")!important;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 .yui-popup-container-node {
