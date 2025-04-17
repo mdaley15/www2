@@ -102,6 +102,14 @@
             }
             .sqs-block {
                 padding-top: 0!important;
+                @media screen and (max-width: 640px) {
+                    &:first-child {
+                        padding-top: 0!important;
+                    }
+                    &:last-child {
+                        padding-bottom: 0!important;
+                    }
+                }
 
                 &:last-child {
                     padding-bottom: 0!important;
