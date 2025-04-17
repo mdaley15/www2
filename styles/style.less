@@ -247,6 +247,19 @@ h1.introTitle {
 
         .contentInner {
             width: 100%;
+
+            figure {
+                max-width: 100%!important;
+
+                .image-block-wrapper {
+                    width: 100%;
+                    max-width: 300px!important;
+                    margin: 0 auto;
+                }
+            }
+            img {
+                border-radius: 5px;
+            }
         }
     }
     .sqs-block {
@@ -307,39 +320,11 @@ h1.introTitle {
         }
     }
     &.threeWide {
+        align-items: flex-start;
+
         .contentOuter {
             @media only screen and (min-width: 800px) {
                 width: 33.3333%;
-            }
-        }
-        &.threeImgs {
-            align-items: flex-start;
-            .contentOuter {
-                padding: 10px;
-
-                .contentInner {
-                    figure {
-                        max-width: 300px!important;
-                    }
-                    img {
-                        border-radius: 5px;
-                    }
-                }
-            }
-        }
-        &.threeText {
-            align-items: flex-start;
-            margin: -20px;
-
-            .contentOuter {
-                .contentInner {
-                    figure {
-                        max-width: 300px!important;
-                    }
-                    img {
-                        border-radius: 5px;
-                    }
-                }
             }
         }
     }
