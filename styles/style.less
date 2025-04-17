@@ -337,7 +337,7 @@ h1.introTitle {
                 p {
                     font-size: 15px;
                     line-height: 1.3;
-                    margin: 20px;
+                    margin-top: 20px;
                 }
                 .sqs-block {
                     padding: 0!important;
@@ -349,6 +349,21 @@ h1.introTitle {
             }
             @media only screen and (min-width: 800px) {
                 width: 33.3333%;
+            }
+        }
+    }
+    &.oneTwo {
+        align-items: flex-start;
+        .innerWrap {
+        }
+        @media only screen and (min-width: 800px) {
+            .innerWrap {
+                &.oneThird {
+                    width: 33.3333%;
+                }
+                &.twoThirds {
+                    width: 66.6666%;
+                }
             }
         }
     }
