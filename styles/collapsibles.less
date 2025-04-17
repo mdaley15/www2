@@ -35,6 +35,11 @@
                 .col,
                 .sqs-layout .sqs-row .sqs-block {
                     padding: 0!important;
+                    @media screen and (max-width: 640px) {
+                        &:first-child {
+                            padding-top: 0!important;
+                        }
+                    }
                 }
                 .collapsibleTitle {
                     width: 100%;
