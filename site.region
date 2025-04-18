@@ -116,8 +116,7 @@
                 <a href="/" class="Header-branding" data-nc-element="branding" data-content-field="site-title">
                     {.section website}
                     {.section logoImageUrl}
-                        <img src="{logoImageUrl}?format=1500w" alt="{siteTitle}" class="Header-branding-logo" data-aos="fade-down"
-     data-aos-easing="ease-out-back" data-aos-delay="300" data-aos-duration="1000"/>
+                        <img src="{logoImageUrl}?format=1500w" alt="{siteTitle}" class="Header-branding-logo" data-aos="fade-down" data-aos-easing="ease-out-back" data-aos-delay="300" data-aos-duration="1000"/>
                     {.or}
                         {siteTitle}
                     {.end}
@@ -127,7 +126,7 @@
             </div>
             <div data-nc-container="bottom-center">
             </div>
-            <div data-nc-container="bottom-right">
+            <div data-nc-container="bottom-right" data-aos="fade-down" data-aos-easing="ease-out-back" data-aos-delay="600" data-aos-duration="1000">
                 <nav class="Header-nav Header-nav--primary whoWeAre" data-nc-element="primary-nav" data-content-field="navigation" tabindex="0">
                     <squarespace:navigation navigationId="mainNavigation" template="header-nav" />
                 </nav>
