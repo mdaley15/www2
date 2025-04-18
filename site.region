@@ -11,7 +11,7 @@
     <squarespace:script src = "jquery-3.2.1.min.js" combo = "false">
     <squarespace:script src = "materialize.js" combo = "false">
     <squarespace:script src = "pdfFinder.js" combo = "false">
-    <script src = "https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.js"></script>
+    <script src = "https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <squarespace:script src = "customUtilities.js" combo = "false">
     <!-- <squarespace:script src = "autoSpeedBump.js" combo = "false"> -->
 
