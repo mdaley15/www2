@@ -116,7 +116,8 @@
                 <a href="/" class="Header-branding" data-nc-element="branding" data-content-field="site-title">
                     {.section website}
                     {.section logoImageUrl}
-                        <img src="{logoImageUrl}?format=1500w" alt="{siteTitle}" class="Header-branding-logo" data-aos="fade-down" data-aos-delay="300" data-aos-duration="500"/>
+                        <img src="{logoImageUrl}?format=1500w" alt="{siteTitle}" class="Header-branding-logo" data-aos="fade-down"
+     data-aos-easing="linear" data-aos-delay="300" data-aos-duration="500"/>
                     {.or}
                         {siteTitle}
                     {.end}
