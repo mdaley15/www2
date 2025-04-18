@@ -13,6 +13,35 @@
     justify-content: flex-end;
     align-items: center;
 
+    .Header-nav--secondary {
+        a {
+            > span:nth-child(2) {
+                position: relative;
+            }
+            .label {
+                    position: absolute;
+                    top: 110%;
+                    left: 50%;
+                    transform: translate(-50%,0);
+                    display: block;
+                    color: white!important;
+                    background: @blue;
+                    padding: 5px 6px 6px;
+                    border-radius: 0 0 5px 5px;
+                    font-size: 15px;
+                    line-height: 1;
+                    opacity: 0;
+                    transition: all .3s ease-in-out;
+                }
+            &:hover,
+            &:focus {
+                .label {
+                    opacity: 1;
+                    width: auto;
+                }
+            }
+        }
+    }
     .starIcon {
         display: none!important;
     }
