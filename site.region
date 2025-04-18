@@ -187,5 +187,9 @@
 
     {squarespace-footers}
 
+    <script>
+        AOS.init();
+    </script>
+
   </body>
 </html>
