@@ -273,14 +273,16 @@ function imgFilter(btn) {
             filterText.classList.add('hide');
         }
     });
-    galleryItems.forEach(item => {
-        if (item.classList.contains(filter)) {
-            item.classList.remove('hide');
-        } else {
-            item.classList.add('hide');
-            item.querySelector('a').classList.remove('js-gallery-lightbox-opener');
-        }
-    });
+    if (galleryItems) {
+        galleryItems.forEach(item => {
+            if (item.classList.contains(filter)) {
+                item.classList.remove('hide');
+            } else {
+                item.classList.add('hide');
+                item.querySelector('a').classList.remove('js-gallery-lightbox-opener');
+            }
+        });
+    }
 }
 function lightboxFilter(itemLink) {
     var pathName = window.location.pathname;
