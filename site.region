@@ -115,7 +115,7 @@
             </div>
             <div data-nc-container="bottom-center">
 
-              <a href="/" class="Header-branding" data-nc-element="branding" data-content-field="site-title">
+              <a href="/" class="Header-branding" data-nc-element="branding" data-content-field="site-title" data-aos="fade-down">
                 {.section website}
                   {.section logoImageUrl}
                     <img src="{logoImageUrl}?format=1500w" alt="{siteTitle}" class="Header-branding-logo" />
