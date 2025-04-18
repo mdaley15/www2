@@ -258,7 +258,9 @@ function imgFilter(btn) {
     let filterBtns = thisBlock.querySelectorAll('.filterBtn');
     filterTexts = thisBlock.querySelectorAll('.filterText');
     thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
-    galleryItems = thisGallery.querySelectorAll('.slide');
+    if (thisGallery) {
+        galleryItems = thisGallery.querySelectorAll('.slide');
+    }
     filterBtns.forEach(filterBtn => {
         filterBtn.classList.remove('activeBtn');
     });
