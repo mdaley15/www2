@@ -303,15 +303,36 @@
                         border-radius: 50%;
                         margin: 0 5px;
                         overflow: hidden;
-                        // box-shadow: 1px 1px 1px gray;
+                        box-shadow: 1px 1px 1px transparent;
                         background-color: @blue;
                         transition: all .2s ease-in-out;
                         
-                        &:hover,
-                        &:focus,
-                        &:focus-within,
-                        &.sqs-active-slide {
-                            background-color: @drkOrange;
+                        &:nth-child(3n + 1) {
+                            &:hover,
+                            &:focus,
+                            &:focus-within,
+                            &.sqs-active-slide {
+                                background-color: @drkOrange;
+                                box-shadow: 1px 1px 1px black;
+                            }
+                        }
+                        &:nth-child(3n + 2) {
+                            &:hover,
+                            &:focus,
+                            &:focus-within,
+                            &.sqs-active-slide {
+                                background-color: @ltBlue;
+                                box-shadow: 1px 1px 1px black;
+                            }
+                        }
+                        &:nth-child(3n + 3) {
+                            &:hover,
+                            &:focus,
+                            &:focus-within,
+                            &.sqs-active-slide {
+                                background-color: @green;
+                                box-shadow: 1px 1px 1px black;
+                            }
                         }
                     }
                     img {
@@ -320,7 +341,6 @@
                         opacity: 0!important;
                         cursor: pointer;
                     }
-                    // div:has(.sqs-active-slide),
                     .sqs-active-slide {
                         background-color: @drkOrange;
                     }
