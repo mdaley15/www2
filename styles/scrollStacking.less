@@ -10,41 +10,47 @@
     height: 500px;
     background: #999;
     width: 100%;
-    color: white;
-    font-size: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     z-index: 1;
     position: sticky;
     transition: all 0.3s ease;
     top: 100px;
-    margin-top: calc(~"var(--index) * var(--cardTopPadding)");
+    padding-top: calc(~"var(--index) * var(--cardTopPadding)");
+
+    .sectionContent {
+        width: 100%;
+        height: 100%;
+        color: white;
+        font-size: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 .snap-section:nth-child(1) {
-    background: #ff6f61; 
     z-index: 1;
     --index: 0;
+    .sectionContent {
+        background: #ff6f61; 
+    }
 }
 .snap-section:nth-child(2) { 
-    background: #6b5b95; 
     z-index: 2;
-    --index: 1;
+    --index: 2;
+    .sectionContent {
+        background: #6b5b95; 
+    }
 }
 .snap-section:nth-child(3) { 
-    background: #88b04b; 
     z-index: 3;
-    --index: 2;
+    --index: 4;
+    .sectionContent {
+        background: #88b04b; 
+    }
 }
 .snap-section:nth-child(4) { 
-    background: #0f4c75; 
     z-index: 4;
-    --index: 3;
-}
-
-.snap-section.fixed {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%,0);
+    --index: 6;
+    .sectionContent {
+        background: #0f4c75; 
+    }
 }
