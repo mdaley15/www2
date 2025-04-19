@@ -2,7 +2,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     let gallery = document.querySelector('.sqs-gallery-block-stacked .sqs-gallery');
     if (gallery) {
-        // let imgWrappers = gallery.querySelectorAll('.image-wrapper');
         const elements = gallery.querySelectorAll(':scope > div'); // Select elements to wrap
         const chunkSize = 2;
         
@@ -17,17 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
             for (let j = 0; j < chunkSize && i + j < elements.length; j++) {
                 card.appendChild(elements[i + j]);
             }
-            
-            // Insert the wrapper before the first element in the chunk
-            // if (elements[i]) {
-            //     gallery.insertBefore(card, elements[i]);
-            // } else {
-            //     // If there are no more elements, append to the parent
-            //     if (elements.length > 0) {
-            //         gallery.appendChild(card);
-            //     }
-            // }
             gallery.appendChild(cardWrapper);
+        }
+        let wrappers = gallery.querySelectorAll('.cardWrapper');
+        for (let i = 0; i < wrappers.length; i++) {
+            let wrapper = wrapper[i];
+            console.log(wrapper);
         }
     }
 });
