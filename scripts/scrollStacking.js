@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let gallery = document.querySelector('.sqs-gallery');
     if (gallery) {
         // let imgWrappers = gallery.querySelectorAll('.image-wrapper');
-        const elements = gallery.querySelectorAll('> div'); // Select elements to wrap
+        const elements = gallery.querySelectorAll(':scope > div'); // Select elements to wrap
         const chunkSize = 2;
         
         for (let i = 0; i < elements.length; i += chunkSize) {
