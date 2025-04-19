@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             gallery.appendChild(cardWrapper);
         }
-        let cards = gallery.querySelectorAll('.card');
+        let cards = gallery.querySelectorAll('.cardWrapper');
         var height = [];
         for (let i = 0; i < cards.length; i++) {
             let card = cards[i];
