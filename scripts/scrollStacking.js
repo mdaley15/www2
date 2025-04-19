@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
             let newHeight = Math.max(...height);
             console.log(newHeight);
             cards.forEach(card => {
-                card.style.height = newHeight;
+                card.style.height = newHeight+"px";
             });
         }, 1000);
 
