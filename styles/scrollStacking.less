@@ -105,8 +105,29 @@
                         }
                     }
                 }
+                @media only screen and (max-width: 499px) {
+                    padding: 30px;
+
+                    .image-wrapper {
+                        padding-right: 15px;
+                    }
+                }
                 @media only screen and (min-width: 1000px) {
                     flex-direction: row-reverse;
+
+                    img {
+                        width: 100%!important;
+                    }
+                    .meta {
+                        margin: 20px 0 0!important;
+
+                        .meta-inside {
+                            .meta-title {
+                                font-size: 40px;
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
                 }
             }
             &:nth-child(3n + 1) {
