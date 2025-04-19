@@ -24,12 +24,12 @@ document.addEventListener('DOMContentLoaded', function() {
             for (let i = 0; i < cards.length; i++) {
                 let card = cards[i];
                 height.push(card.scrollHeight);
-                console.log('scrollHeight:',card.scrollHeight);
             }
             console.log(height);
-            console.log(Math.max(...height));
+            let newHeight = Math.max(...height);
+            console.log(newHeight);
             cards.forEach(card => {
-                card.style.height = Math.max(...height);
+                card.style.height = newHeight;
             });
         }, 1000);
 
