@@ -23,6 +23,10 @@ document.addEventListener('DOMContentLoaded', function() {
         for (let i = 0; i < cards.length; i++) {
             let card = cards[i];
             height.push(card.getBoundingClientRect().height);
+            console.log('getBoundingClientRect:',card.getBoundingClientRect().height);
+            console.log('clientHeight:',card.clientHeight);
+            console.log('offsetHeight:',card.offsetHeight);
+            console.log('scrollHeight:',card.scrollHeight);
         }
         console.log(height);
         console.log(Math.max(...height));
