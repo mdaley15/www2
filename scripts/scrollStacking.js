@@ -18,12 +18,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             gallery.appendChild(cardWrapper);
         }
-        let wrappers = gallery.querySelectorAll('.cardWrapper');
+        let wrappers = gallery.querySelectorAll('.card');
         var height = [];
         for (let i = 0; i < wrappers.length; i++) {
             let wrapper = wrappers[i];
             height.push(wrapper.getBoundingClientRect().height);
         }
-        console.log(Math.max(...height))
+        console.log(Math.max(...height));
+
     }
 });
