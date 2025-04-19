@@ -1,5 +1,8 @@
 :root {
     --cardTopPadding: 10px;
+    --cards: 4;
+    --cardTopPadding: 10px;
+    --cardMargin: 4vw;
 }
 #test-cards {
     overflow: clip;
@@ -25,6 +28,8 @@
     .sqs-gallery {
         max-width: 1400px;
         margin: 0 auto;
+        margin-bottom: var(--cardMargin);
+        padding-bottom: calc(~"var(--cards) * var(--cardTopPadding)");
 
         .cardWrapper {
             width: 100%;
