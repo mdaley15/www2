@@ -1,6 +1,64 @@
 :root {
     --cardTopPadding: 10px;
 }
+#test-cards {
+    overflow: clip;
+
+    .sqs-gallery {
+        .cardWrapper {
+            width: 100%;
+            z-index: 1;
+            position: sticky;
+            transition: all 0.3s ease;
+            top: 100px;
+            padding-top: calc(~"var(--index) * var(--cardTopPadding)");
+
+            .card {
+                display: flex;
+                gap: 50px;
+                align-items: flex-start;
+                justify-content: center;
+                padding: 50px;
+                width: 100%;
+                background-color: @bgOverlay;
+                border-radius: 5px;
+                
+                &:nth-child(3n + 1) {
+                    box-shadow: 0px 0px 8px rgba(0,0,0,.2), 10px 10px 0 @drkOrange;
+
+                    .slideImgWrap::before {
+                        background-color: @drkOrange;
+                    }
+                }
+                &:nth-child(3n + 2) {
+                    box-shadow: 0px 0px 8px rgba(0,0,0,.2), 10px 10px 0 @ltBlue;
+                    
+                    .slideImgWrap::before {
+                        background-color: @ltBlue;
+                    }
+                }
+                &:nth-child(3n + 3) {
+                    box-shadow: 0px 0px 8px rgba(0,0,0,.2), 10px 10px 0 @green;
+                    
+                    .slideImgWrap::before {
+                        background-color: @green;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 .spacer, .after-scroll {
     padding: 2rem;
     background: #f0f0f0;
