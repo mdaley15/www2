@@ -17,11 +17,11 @@ document.addEventListener('DOMContentLoaded', function() {
         
           // Insert the wrapper before the first element in the chunk
           if (elements[i]) {
-              elements[i].parentNode.insertBefore(card, elements[i]);
+              gallery.insertBefore(card, elements[i]);
           } else {
               // If there are no more elements, append to the parent
               if (elements.length > 0) {
-                  elements[0].parentNode.appendChild(card);
+                  gallery.appendChild(card);
               }
           }
         }
