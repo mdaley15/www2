@@ -28,8 +28,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             console.log(height);
             console.log(Math.max(...height));
+            cards.forEach(card => {
+                card.style.height = Math.max(...height);
+            });
         }, 1000);
-        console.log("Waited 1 second")
 
     }
 });
