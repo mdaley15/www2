@@ -182,29 +182,30 @@
                     }
                 }
             }
+        }
+    }
+}
+#cards {
+    .sqs-gallery {
+        .cardWrapper {
             &:nth-child(1) {
                 z-index: 1;
                 --index: 0;
-                --margin: 8;
+                --margin: 6;
             }
             &:nth-child(2) {
                 z-index: 2;
                 --index: 2;
-                --margin: 6;
+                --margin: 4;
             }
             &:nth-child(3) {
                 z-index: 3;
                 --index: 4;
-                --margin: 4;
+                --margin: 2;
             }
             &:nth-child(4) {
                 z-index: 4;
                 --index: 6;
-                --margin: 2;
-            }
-            &:nth-child(5) {
-                z-index: 5;
-                --index: 8;
                 --margin: 0;
             }
         }
@@ -214,6 +215,39 @@
     .sqs-block-gallery {
         .sqs-gallery {
             margin-top: 50px!important;
+
+            .cardWrapper {
+                &:nth-child(1) {
+                    z-index: 1;
+                    --index: 0;
+                    --margin: 8;
+                }
+                &:nth-child(2) {
+                    z-index: 2;
+                    --index: 2;
+                    --margin: 6;
+                }
+                &:nth-child(3) {
+                    z-index: 3;
+                    --index: 4;
+                    --margin: 4;
+                }
+                &:nth-child(4) {
+                    z-index: 4;
+                    --index: 6;
+                    --margin: 2;
+                }
+                &:nth-child(5) {
+                    z-index: 5;
+                    --index: 8;
+                    --margin: 0;
+                }
+                &:last-child {
+                    z-index: 5;
+                    --index: 8;
+                    --margin: 0;
+                }
+            }
         }
     }
 }
