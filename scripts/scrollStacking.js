@@ -1,6 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    let gallery = document.querySelector('.sqs-gallery');
+    let gallery = document.querySelector('.sqs-gallery-block-stacked .sqs-gallery');
     if (gallery) {
         // let imgWrappers = gallery.querySelectorAll('.image-wrapper');
         const elements = gallery.querySelectorAll(':scope > div'); // Select elements to wrap
