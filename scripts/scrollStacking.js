@@ -1,26 +1,29 @@
-const sections = document.querySelectorAll('.snap-section');
-const releaseOffset = 100; // pixels past last section to release
 
-window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-
-    sections.forEach((section, index) => {
-        const offsetTop = section.offsetTop;
-
-        // Fix section when it reaches top
-        if (scrollY >= offsetTop) {
-            console.log(scrollY, offsetTop);
-            section.classList.add('fixed');
+document.addEventListener('DOMContentLoaded', function() {
+    let gallery = document.querySelector('.sqs-gallery');
+    if (gallery) {
+        // let imgWrappers = gallery.querySelectorAll('.image-wrapper');
+        const elements = gallery.querySelectorAll('> div'); // Select elements to wrap
+        const chunkSize = 2;
+        
+        for (let i = 0; i < elements.length; i += chunkSize) {
+          const card = document.createElement('div'); // Create wrapper div
+          card.classList.add('card'); // Add class to the wrapper (optional)
+        
+          // Append elements to the wrapper
+          for (let j = 0; j < chunkSize && i + j < elements.length; j++) {
+            wrapper.appendChild(elements[i + j]);
+          }
+        
+          // Insert the wrapper before the first element in the chunk
+          if (elements[i]) {
+              elements[i].parentNode.insertBefore(wrapper, elements[i]);
+          } else {
+              // If there are no more elements, append to the parent
+              if (elements.length > 0) {
+                  elements[0].parentNode.appendChild(wrapper);
+              }
+          }
         }
-    });
-
-    // Check if user scrolled past the stacked group
-    const lastSection = sections[sections.length - 1];
-    console.log(lastSection);
-    const lastBottom = lastSection.offsetTop + lastSection.offsetHeight;
-
-    if (scrollY > lastBottom + releaseOffset) {
-        // Release all fixed sections
-        sections.forEach(section => section.classList.remove('fixed'));
     }
 });
