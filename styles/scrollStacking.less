@@ -7,7 +7,7 @@
     .sqs-gallery {
         max-width: 1400px;
         margin: 0 auto;
-        
+
         .cardWrapper {
             width: 100%;
             z-index: 1;
@@ -26,6 +26,22 @@
                 background-color: @bgOverlay;
                 border-radius: 5px;
 
+                .snap-section:nth-child(1) {
+                    z-index: 1;
+                    --index: 0;
+                }
+                .snap-section:nth-child(2) {
+                    z-index: 2;
+                    --index: 2;
+                }
+                .snap-section:nth-child(3) {
+                    z-index: 3;
+                    --index: 4;
+                }
+                .snap-section:nth-child(4) {
+                    z-index: 4;
+                    --index: 6;
+                }
                 &:nth-child(3n + 1) {
                     box-shadow: 0px 0px 8px rgba(0,0,0,.2), 10px 10px 0 @drkOrange;
 
