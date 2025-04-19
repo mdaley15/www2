@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let wrappers = gallery.querySelectorAll('.cardWrapper');
         for (let i = 0; i < wrappers.length; i++) {
             let wrapper = wrappers[i];
-            console.log(wrapper);
+            console.log(wrapper.getBoundingClientRect().height);
         }
     }
 });
