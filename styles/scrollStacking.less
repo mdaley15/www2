@@ -1,0 +1,33 @@
+.spacer, .after-scroll {
+    padding: 2rem;
+    background: #f0f0f0;
+    text-align: center;
+}
+.stack-container {
+    height: 400vh;
+}
+.snap-section {
+    height: 100vh;
+    background: #999;
+    width: 100%;
+    color: white;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    position: sticky;
+    top: 40px;
+    transition: all 0.3s ease;
+}
+.snap-section:nth-child(1) { background: #ff6f61; z-index: 4; }
+.snap-section:nth-child(2) { background: #6b5b95; z-index: 3; }
+.snap-section:nth-child(3) { background: #88b04b; z-index: 2; }
+.snap-section:nth-child(4) { background: #0f4c75; z-index: 1; }
+
+.snap-section.fixed {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+}
