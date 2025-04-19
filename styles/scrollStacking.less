@@ -18,28 +18,28 @@
     z-index: 1;
     position: sticky;
     transition: all 0.3s ease;
-    // top: 100px;
-    top: calc(~"var(--index) * var(--cardTopPadding)");
+    top: 100px;
+    margin-top: calc(~"var(--index) * var(--cardTopPadding)");
 }
 .snap-section:nth-child(1) {
     background: #ff6f61; 
     z-index: 1;
-    --index: 10;
+    --index: 0;
 }
 .snap-section:nth-child(2) { 
     background: #6b5b95; 
     z-index: 2;
-    --index: 11;
+    --index: 1;
 }
 .snap-section:nth-child(3) { 
     background: #88b04b; 
     z-index: 3;
-    --index: 12;
+    --index: 2;
 }
 .snap-section:nth-child(4) { 
     background: #0f4c75; 
     z-index: 4;
-    --index: 13;
+    --index: 3;
 }
 
 .snap-section.fixed {
