@@ -12,16 +12,16 @@ document.addEventListener('DOMContentLoaded', function() {
         
           // Append elements to the wrapper
           for (let j = 0; j < chunkSize && i + j < elements.length; j++) {
-            wrapper.appendChild(elements[i + j]);
+            card.appendChild(elements[i + j]);
           }
         
           // Insert the wrapper before the first element in the chunk
           if (elements[i]) {
-              elements[i].parentNode.insertBefore(wrapper, elements[i]);
+              elements[i].parentNode.insertBefore(card, elements[i]);
           } else {
               // If there are no more elements, append to the parent
               if (elements.length > 0) {
-                  elements[0].parentNode.appendChild(wrapper);
+                  elements[0].parentNode.appendChild(card);
               }
           }
         }
