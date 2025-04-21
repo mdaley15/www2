@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log(heightDiff);
                 let marginBottom = cardWrapper.style.marginBottom;
                 console.log(marginBottom);
-                cardWrapper.css('margin-bottom', heightDiff);
+                cardWrapper.style.marginBottom = heightDiff + 'px';
             });
         }, 1000);
 
