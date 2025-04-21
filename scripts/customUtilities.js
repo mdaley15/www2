@@ -401,18 +401,16 @@ waitForElementObserver('.yui-popup-container-node', () => {
     body.style.overflow = 'hidden';
 
     document.addEventListener('click', function(event) {
-        console.log(this);
-        const closeBtn = this.querySelector('.sqs-popup-overlay-close');
-        const el = this.querySelector('.sqs-slice-group');
+        const closeBtn = popup.querySelector('.sqs-popup-overlay-close');
+        const el = popup.querySelector('.sqs-slice-group');
         if (el && !el.contains(event.target)) {
             closeBtn.click();
             body.style.overflow = 'auto';
             body.style.overflowX = 'hidden';
         }
     });
-    console.log(popup);
-    let animatedPop = document.querySelector('.sqs-slide-layer-content');
-    animatedPop.addEventListener('mouseEnter', function(event) {
+    let animatedPop = popup.querySelector('.sqs-slide-layer-content');
+    animatedPop.addEventListener('mouseenter', function(event) {
         animatedPop.classList.add('pause');
     });
 });
