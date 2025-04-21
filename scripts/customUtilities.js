@@ -409,7 +409,7 @@ waitForElementObserver(popup, () => {
             body.style.overflowX = 'hidden';
         }
     });
-    let animatedPop = popup.querySelector('.sqs-slide-layer-content');
+    let animatedPop = document.querySelector('.sqs-slide-layer-content');
     console.log(animatedPop);
     animatedPop.addEventListener('mouseenter', function(event) {
         animatedPop.classList.add('pause');
