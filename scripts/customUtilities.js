@@ -416,4 +416,7 @@ waitForElementObserver(popup, () => {
     animatedPop.addEventListener('mouseenter', function(event) {
         animatedPop.classList.add('pause');
     });
+    animatedPop.addEventListener('mouseleave', function(event) {
+        animatedPop.classList.remove('pause');
+    });
 });
