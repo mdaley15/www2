@@ -381,12 +381,14 @@ document.addEventListener('click', function(event) {
         }
     }
 });
-var popup;
+var popup,
+    animatedPop;
 function waitForElementObserver(selector, callback) {
     const observer = new MutationObserver((mutations) => {
         if (popup = document.querySelector('.yui-popup-container-node')) {
             observer.disconnect();
             callback();
+            animatedPop = document.querySelector('.sqs-slide-layer-content');
         }
     });
   
@@ -395,7 +397,6 @@ function waitForElementObserver(selector, callback) {
         subtree: true,
     });
 }
-var animatedPop = document.querySelector('.sqs-slide-layer-content');
 console.log(animatedPop);
 waitForElementObserver(popup, () => {
     console.log('Popup exists!');
