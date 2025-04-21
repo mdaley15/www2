@@ -398,11 +398,11 @@ function waitForElementObserver(selector, callback) {
 waitForElementObserver(popup, () => {
     console.log('Popup exists!');
     let body = document.querySelector('body');
-    body.style.overflow = 'hidden';
     console.log(popup);
-    let animatedPop = popup.querySelector('.sqs-slide-layer-content');
+    let animatedPop = document.querySelector('.sqs-slide-layer-content');
     console.log(animatedPop);
 
+    body.style.overflow = 'hidden';
     document.addEventListener('click', function(event) {
         const closeBtn = popup.querySelector('.sqs-popup-overlay-close');
         const el = popup.querySelector('.sqs-slice-group');
