@@ -196,6 +196,7 @@ var galleryItems,
 document.addEventListener('DOMContentLoaded', function() {
     let sqsPopup = document.querySelector('.yui-popup-container-node');
     if (sqsPopup) {
+        console.log('Popup is present');
         this.body.style.overflow = 'hidden';
     }
     let galleries = document.querySelectorAll('.sqs-gallery-design-grid');
