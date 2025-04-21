@@ -410,4 +410,8 @@ waitForElementObserver('.yui-popup-container-node', () => {
             body.style.overflowX = 'hidden';
         }
     });
+    let animatedPop = document.querySelector('.sqs-slide-layer-content');
+    animatedPop.addEventListener('mouseEnter', function(event) {
+        animatedPop.classList.add('pause');
+    });
 });
