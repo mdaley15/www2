@@ -19,17 +19,17 @@ document.addEventListener('DOMContentLoaded', function() {
             gallery.appendChild(cardWrapper);
         }
         setTimeout(() => {
-            let cards = gallery.querySelectorAll('.card');
+            let cardWrappers = gallery.querySelectorAll('.cardWrapper');
             var heights = [];
-            for (let i = 0; i < cards.length; i++) {
-                let card = cards[i];
+            for (let i = 0; i < cardWrappers.length; i++) {
+                let card = cardWrappers[i];
                 let height = card.scrollHeight;
                 heights.push(height);
             }
             console.log(heights);
             let maxHeight = Math.max(...heights);
             console.log(maxHeight);
-            cards.forEach(card => {
+            cardWrappers.forEach(card => {
                 // card.style.height = maxHeight+"px";
                 let height = card.scrollHeight;
                 let heightDiff = maxHeight - height;
