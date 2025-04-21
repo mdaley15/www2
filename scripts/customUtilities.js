@@ -399,7 +399,7 @@ waitForElementObserver(popup, () => {
     console.log('Popup exists!');
     let body = document.querySelector('body');
     console.log(popup);
-    let animatedPop = popup.querySelector('.sqs-slide-layer-content');
+    let animatedPop = popup.querySelector('.sqs-popup-overlay-close');
 
     body.style.overflow = 'hidden';
     document.addEventListener('click', function(event) {
