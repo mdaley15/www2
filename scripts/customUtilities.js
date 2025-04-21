@@ -397,5 +397,5 @@ function waitForElementObserver(selector, callback) {
 }
 waitForElementObserver('.yui-popup-container-node', () => {
     console.log('Popup exists!');
-    this.body.style.overflow = 'hidden';
+    document.querySelector('body').style.overflow = 'hidden';
 });
