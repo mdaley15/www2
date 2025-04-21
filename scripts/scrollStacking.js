@@ -29,14 +29,14 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log(heights);
             let maxHeight = Math.max(...heights);
             console.log(maxHeight);
-            cardWrappers.forEach(card => {
-                // card.style.height = maxHeight+"px";
-                let height = card.scrollHeight;
+            cardWrappers.forEach(cardWrapper => {
+                // cardWrapper.style.height = maxHeight+"px";
+                let height = cardWrapper.scrollHeight;
                 let heightDiff = maxHeight - height;
                 console.log(heightDiff);
-                let marginBottom = card.style.marginBottom;
+                let marginBottom = cardWrapper.style.marginBottom;
                 console.log(marginBottom);
-                // card.style.marginBottom = heightDiff;
+                cardWrapper.css('margin-bottom', heightDiff);
             });
         }, 1000);
 
