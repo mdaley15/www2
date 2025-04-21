@@ -395,7 +395,7 @@ function waitForElementObserver(selector, callback) {
         subtree: true,
     });
 }
-waitForElementObserver('.yui-popup-container-node', () => {
+waitForElementObserver(popup, () => {
     console.log('Popup exists!');
     let body = document.querySelector('body');
     body.style.overflow = 'hidden';
@@ -410,6 +410,7 @@ waitForElementObserver('.yui-popup-container-node', () => {
         }
     });
     let animatedPop = popup.querySelector('.sqs-slide-layer-content');
+    console.log(animatedPop);
     animatedPop.addEventListener('mouseenter', function(event) {
         animatedPop.classList.add('pause');
     });
