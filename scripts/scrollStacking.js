@@ -20,16 +20,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         setTimeout(() => {
             let cards = gallery.querySelectorAll('.card');
-            var height = [];
+            var heights = [];
             for (let i = 0; i < cards.length; i++) {
                 let card = cards[i];
-                height.push(card.scrollHeight);
+                let height = card.scrollHeight;
+                heights.push(height);
             }
-            console.log(height);
-            let newHeight = Math.max(...height);
+            console.log(heights);
+            let newHeight = Math.max(...heights);
             console.log(newHeight);
             cards.forEach(card => {
-                card.style.height = newHeight+"px";
+                // card.style.height = newHeight+"px";
+                console.log(height);
             });
         }, 1000);
 
