@@ -397,7 +397,8 @@ function waitForElementObserver(selector, callback) {
 }
 waitForElementObserver('.yui-popup-container-node', () => {
     console.log('Popup exists!');
-    document.querySelector('body').style.overflow = 'hidden';
+    let body = document.querySelector('body');
+    body.style.overflow = 'hidden';
 
     document.addEventListener('click', function(event) {
         console.log(this);
@@ -405,6 +406,7 @@ waitForElementObserver('.yui-popup-container-node', () => {
         const el = this.querySelector('.sqs-slice-group');
         if (el && !el.contains(event.target)) {
             closeBtn.click();
+            body.style.overflow = 'initial';
         }
     });
 });
