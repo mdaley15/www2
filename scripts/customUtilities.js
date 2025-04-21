@@ -186,23 +186,6 @@ function getStringAfterQM(str) {
     }
     return str.substring(lastQMIndex + 1);
 }
-function waitForElementObserver(selector, callback) {
-    const observer = new MutationObserver((mutations) => {
-      if (document.querySelector('.yui-popup-container-node')) {
-        observer.disconnect();
-        callback();
-      }
-    });
-  
-    observer.observe(document.documentElement, {
-      childList: true,
-      subtree: true,
-    });
-  }
-  
-  waitForElementObserver('.yui-popup-container-node', () => {
-    console.log('Popup exists!');
-});
 // Image Filters
 var galleryItems,
     filter,
@@ -210,11 +193,6 @@ var galleryItems,
     lightbox,
     lightboxItems;
 document.addEventListener('DOMContentLoaded', function() {
-    let sqsPopup = document.querySelector('.yui-popup-container-node');
-    if (sqsPopup) {
-        console.log('Popup is present');
-        this.body.style.overflow = 'hidden';
-    }
     let galleries = document.querySelectorAll('.sqs-gallery-design-grid');
     galleries.forEach(gallery => {
         galleryItems = gallery.querySelectorAll('.slide');
@@ -402,4 +380,22 @@ document.addEventListener('click', function(event) {
             closeBtn.click();
         }
     }
+});
+
+function waitForElementObserver(selector, callback) {
+    const observer = new MutationObserver((mutations) => {
+        if (document.querySelector('.yui-popup-container-node')) {
+            observer.disconnect();
+            callback();
+        }
+    });
+  
+    observer.observe(document.documentElement, {
+        childList: true,
+        subtree: true,
+    });
+}
+waitForElementObserver('.yui-popup-container-node', () => {
+    console.log('Popup exists!');
+    this.body.style.overflow = 'hidden';
 });
