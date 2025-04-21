@@ -32,8 +32,9 @@ document.addEventListener('DOMContentLoaded', function() {
             cards.forEach(card => {
                 // card.style.height = maxHeight+"px";
                 let height = card.scrollHeight;
-                let newHeight = maxHeight - height;
-                console.log(newHeight);
+                let heightDiff = maxHeight - height;
+                console.log(heightDiff);
+                card.style.marginBottom = heightDiff;
             });
         }, 1000);
 
