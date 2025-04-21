@@ -381,10 +381,11 @@ document.addEventListener('click', function(event) {
         }
     }
 });
-var popup;
+var popup,
+    animatedPop;
 function waitForElementObserver(selector, callback) {
     const observer = new MutationObserver((mutations) => {
-        if (popup = document.querySelector('.yui-popup-container-node')) {
+        if ((popup = document.querySelector('.yui-popup-container-node')) && (animatedPop = document.querySelector('.sqs-slide-layer-content'))) {
             observer.disconnect();
             callback();
         }
@@ -399,7 +400,7 @@ waitForElementObserver(popup, () => {
     console.log('Popup exists!');
     let body = document.querySelector('body');
     console.log(popup);
-    let animatedPop = popup.querySelector('.sqs-popup-overlay-close');
+    console.log(animatedPop);
 
     body.style.overflow = 'hidden';
     document.addEventListener('click', function(event) {
