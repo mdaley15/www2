@@ -381,10 +381,10 @@ document.addEventListener('click', function(event) {
         }
     }
 });
-
+var popup;
 function waitForElementObserver(selector, callback) {
     const observer = new MutationObserver((mutations) => {
-        if (document.querySelector('.yui-popup-container-node')) {
+        if (popup = document.querySelector('.yui-popup-container-node')) {
             observer.disconnect();
             callback();
         }
@@ -410,6 +410,7 @@ waitForElementObserver('.yui-popup-container-node', () => {
             body.style.overflowX = 'hidden';
         }
     });
+    console.log(popup);
     let animatedPop = document.querySelector('.sqs-slide-layer-content');
     animatedPop.addEventListener('mouseEnter', function(event) {
         animatedPop.classList.add('pause');
