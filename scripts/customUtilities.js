@@ -395,11 +395,11 @@ function waitForElementObserver(selector, callback) {
         subtree: true,
     });
 }
+var animatedPop = document.querySelector('.sqs-slide-layer-content');
 waitForElementObserver(popup, () => {
     console.log('Popup exists!');
     let body = document.querySelector('body');
     console.log(popup);
-    let animatedPop = document.querySelector('.sqs-slide-layer-content');
     console.log(animatedPop);
 
     body.style.overflow = 'hidden';
