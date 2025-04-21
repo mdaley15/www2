@@ -27,11 +27,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 heights.push(height);
             }
             console.log(heights);
-            let newHeight = Math.max(...heights);
-            console.log(newHeight);
+            let maxHeight = Math.max(...heights);
+            console.log(maxHeight);
             cards.forEach(card => {
-                // card.style.height = newHeight+"px";
-                console.log(height);
+                // card.style.height = maxHeight+"px";
+                let height = card.scrollHeight;
+                let newHeight = maxHeight - height;
+                console.log(newHeight);
             });
         }, 1000);
 
