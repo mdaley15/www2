@@ -398,4 +398,13 @@ function waitForElementObserver(selector, callback) {
 waitForElementObserver('.yui-popup-container-node', () => {
     console.log('Popup exists!');
     document.querySelector('body').style.overflow = 'hidden';
+
+    document.addEventListener('click', function(event) {
+        console.log(this);
+        const closeBtn = lightbox.querySelector('.sqs-popup-overlay-close');
+        const el = lightbox.querySelector('.sqs-slice-group');
+        if (el && !el.contains(event.target)) {
+            closeBtn.click();
+        }
+    });
 });
