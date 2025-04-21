@@ -399,6 +399,8 @@ waitForElementObserver(popup, () => {
     console.log('Popup exists!');
     let body = document.querySelector('body');
     body.style.overflow = 'hidden';
+    let animatedPop = document.querySelector('.sqs-slide-layer-content');
+    console.log(animatedPop);
 
     document.addEventListener('click', function(event) {
         const closeBtn = popup.querySelector('.sqs-popup-overlay-close');
@@ -409,8 +411,6 @@ waitForElementObserver(popup, () => {
             body.style.overflowX = 'hidden';
         }
     });
-    let animatedPop = document.querySelector('.sqs-slide-layer-content');
-    console.log(animatedPop);
     animatedPop.addEventListener('mouseenter', function(event) {
         animatedPop.classList.add('pause');
     });
