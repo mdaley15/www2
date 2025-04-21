@@ -194,6 +194,10 @@ var galleryItems,
     lightbox,
     lightboxItems;
 document.addEventListener('DOMContentLoaded', function() {
+    let sqsPopup = document.querySelector('.yui-popup-container-node');
+    if (sqsPopup) {
+        this.body.style.overflow = 'hidden';
+    }
     let galleries = document.querySelectorAll('.sqs-gallery-design-grid');
     galleries.forEach(gallery => {
         galleryItems = gallery.querySelectorAll('.slide');

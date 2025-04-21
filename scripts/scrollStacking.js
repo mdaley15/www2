@@ -33,9 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 // cardWrapper.style.height = maxHeight+"px";
                 let height = cardWrapper.scrollHeight;
                 let heightDiff = maxHeight - height;
-                console.log(heightDiff);
-                let marginBottom = cardWrapper.style.marginBottom;
-                console.log(marginBottom);
                 cardWrapper.style.marginBottom = heightDiff + 'px';
             });
         }, 1000);
