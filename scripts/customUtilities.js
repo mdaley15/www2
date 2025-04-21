@@ -406,7 +406,8 @@ waitForElementObserver('.yui-popup-container-node', () => {
         const el = this.querySelector('.sqs-slice-group');
         if (el && !el.contains(event.target)) {
             closeBtn.click();
-            body.style.overflow = 'initial';
+            body.style.overflow = 'auto';
+            body.style.overflowX = 'hidden';
         }
     });
 });
