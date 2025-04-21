@@ -396,11 +396,11 @@ function waitForElementObserver(selector, callback) {
     });
 }
 var animatedPop = document.querySelector('.sqs-slide-layer-content');
+console.log(animatedPop);
 waitForElementObserver(popup, () => {
     console.log('Popup exists!');
     let body = document.querySelector('body');
     console.log(popup);
-    console.log(animatedPop);
 
     body.style.overflow = 'hidden';
     document.addEventListener('click', function(event) {
