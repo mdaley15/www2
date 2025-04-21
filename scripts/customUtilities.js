@@ -401,8 +401,8 @@ waitForElementObserver('.yui-popup-container-node', () => {
 
     document.addEventListener('click', function(event) {
         console.log(this);
-        const closeBtn = lightbox.querySelector('.sqs-popup-overlay-close');
-        const el = lightbox.querySelector('.sqs-slice-group');
+        const closeBtn = this.querySelector('.sqs-popup-overlay-close');
+        const el = this.querySelector('.sqs-slice-group');
         if (el && !el.contains(event.target)) {
             closeBtn.click();
         }
