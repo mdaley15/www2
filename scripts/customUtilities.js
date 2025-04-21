@@ -386,9 +386,9 @@ var popup,
 function waitForElementObserver(selector, callback) {
     const observer = new MutationObserver((mutations) => {
         if (popup = document.querySelector('.yui-popup-container-node')) {
+            animatedPop = document.querySelector('.sqs-slide-layer-content');
             observer.disconnect();
             callback();
-            animatedPop = document.querySelector('.sqs-slide-layer-content');
         }
     });
   
