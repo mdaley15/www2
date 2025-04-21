@@ -34,7 +34,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 let height = card.scrollHeight;
                 let heightDiff = maxHeight - height;
                 console.log(heightDiff);
-                console.log(card.style.marginBottom);
+                let marginBottom = card.style.marginBottom;
+                console.log(marginBottom);
                 // card.style.marginBottom = heightDiff;
             });
         }, 1000);
