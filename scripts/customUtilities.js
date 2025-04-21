@@ -397,7 +397,6 @@ function waitForElementObserver(selector, callback) {
         subtree: true,
     });
 }
-console.log(animatedPop);
 waitForElementObserver(popup, () => {
     console.log('Popup exists!');
     let body = document.querySelector('body');
@@ -413,6 +412,7 @@ waitForElementObserver(popup, () => {
             body.style.overflowX = 'hidden';
         }
     });
+    console.log(animatedPop);
     animatedPop.addEventListener('mouseenter', function(event) {
         animatedPop.classList.add('pause');
     });
