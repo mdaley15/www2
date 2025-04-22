@@ -395,10 +395,26 @@ h1.introTitle {
                 margin: 0!important;
                 padding: 0!important;
                 list-style: none;
+                
+                li {
+                    display: flex;
+                    align-items: flex-start;
+                    margin-bottom: 5px;
+                    
+                    img {
+                        margin-right: 10px;
+                        height: 15px;
+                        position: relative;
+                        top: 6px
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
             }
             &.oneThird {
                 .contentInner {
-                    max-width: 400px;
+                    // max-width: 400px;
                 }
             }
         }
