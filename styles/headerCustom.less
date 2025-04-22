@@ -290,12 +290,10 @@ body.is-mobile-overlay-active {
             }
         }
         a.Header-nav-item,
-        .Header-nav-item:nth-child(2) a.Header-nav-folder-title,
         .Header-nav-folder-item {
             &:hover,
             &:focus,
-            &.Header-nav-folder-item--active,
-            &.Header-nav-folder-title--active {
+            &.Header-nav-folder-item--active {
                 text-decoration: underline;
                 -webkit-text-decoration-color: @orange; /* Safari */  
                 text-decoration-color: @orange;
@@ -339,6 +337,8 @@ body.is-mobile-overlay-active {
             .Header-nav-item:nth-child(2) {
                 .Header-nav-folder-title {
                     
+                    &:hover,
+                    &:focus,
                     &.active {
                         text-decoration: underline;
                         -webkit-text-decoration-color: @orange; /* Safari */  
