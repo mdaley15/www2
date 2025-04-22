@@ -379,9 +379,21 @@ h1.introTitle {
             }
         }
         &.shadowImgs {
-            img {
-                border-radius: 5px;
-                box-shadow: 2px 2px 7px rgba(0, 0, 0, .5);
+            .sqs-block-image-link {
+                .image-block-wrapper {
+                    border-radius: 5px;
+                    box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+    
+                    img {
+                        transition: all .3s ease-in-out;
+                    }
+                }
+                &:hover,
+                &:focus {
+                    img {
+                        transform: scale(1.3);
+                    }
+                }
             }
         }
     }
