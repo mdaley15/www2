@@ -264,13 +264,6 @@ body.is-mobile-overlay-active {
                         margin: 0 5px 10px 35px;
                     }
                 }
-                &:hover,
-                &:focus,
-                &:focus-within {
-                    .Header-nav-folder {
-                        // height: auto;
-                    }
-                }
             }
             * {
                 position: static!important;
@@ -297,10 +290,12 @@ body.is-mobile-overlay-active {
             }
         }
         a.Header-nav-item,
+        a.Header-nav-folder-title,
         .Header-nav-folder-item {
             &:hover,
             &:focus,
-            &.Header-nav-folder-item--active {
+            &.Header-nav-folder-item--active,
+            &.Header-nav-folder-title--active {
                 text-decoration: underline;
                 -webkit-text-decoration-color: @orange; /* Safari */  
                 text-decoration-color: @orange;
