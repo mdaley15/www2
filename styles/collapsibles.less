@@ -148,19 +148,21 @@
                             &:last-child {
                                 margin-bottom: 0;
                             }
-                        }
-                        strong {
-                            display: block;
-                            color: @blue;
-                            font-family: oswald !important;
-                            font-size: 25px;
-                            text-transform: uppercase;
-                            letter-spacing: -.02em;
-                            font-weight: 600;
-                            margin: 0 0 10px;
-                            line-height: 1.2;
-                            @media only screen and (max-width: 640px) {
-                                font-size: 22px!important;
+                            &:first-child {
+                                strong {
+                                    display: block;
+                                    color: @blue;
+                                    font-family: oswald !important;
+                                    font-size: 25px;
+                                    text-transform: uppercase;
+                                    letter-spacing: -.02em;
+                                    font-weight: 600;
+                                    margin: 0 0 10px;
+                                    line-height: 1.2;
+                                    @media only screen and (max-width: 640px) {
+                                        font-size: 22px!important;
+                                    }
+                                }
                             }
                         }
                     }
