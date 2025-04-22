@@ -32,7 +32,7 @@
             </div>
             <div class="footerCol smallCol colThree">
                 <ul class="quicklinks">
-                    <li><a href="asdf" target="">Privacy Policy</a></li>	
+                    <li><a href="http://inter-state.com/privacy" target="_blank">Privacy Policy</a></li>	
                     <li><a href="asdf" target="">Cookies Policy</a></li>
                     <li><a href="asdf" target="">Terms of Use</a></li>
                     <li><a href="asdf" target="">Web Accessibility</a></li>
