@@ -391,27 +391,6 @@ h1.introTitle {
                 border-bottom: 1px solid @drkOrange;
                 padding-bottom: 10px;
             }
-            ul {
-                margin: 0!important;
-                padding: 0!important;
-                list-style: none;
-                
-                li {
-                    display: flex;
-                    align-items: flex-start;
-                    margin-bottom: 5px;
-                    
-                    img {
-                        margin-right: 10px;
-                        height: 15px;
-                        position: relative;
-                        top: 6px
-                    }
-                    &:last-child {
-                        margin-bottom: 0;
-                    }
-                }
-            }
             &.oneThird {
                 .contentInner {
                     // max-width: 400px;
@@ -439,6 +418,27 @@ h1.introTitle {
     }
     &.marginTopZero {
         margin-top: 20px!important;
+    }
+}
+ul.starUL {
+    margin: 0!important;
+    padding: 0!important;
+    list-style: none;
+    
+    li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 5px;
+        
+        img {
+            margin-right: 10px;
+            height: 15px;
+            position: relative;
+            top: 6px
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 .threeWide {
