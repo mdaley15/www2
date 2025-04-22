@@ -378,24 +378,6 @@ h1.introTitle {
                 width: 33.3333%;
             }
         }
-        &.shadowImgs {
-            .sqs-block-image-link {
-                .image-block-wrapper {
-                    border-radius: 5px;
-                    box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
-    
-                    img {
-                        transition: all .3s ease-in-out;
-                    }
-                }
-                &:hover,
-                &:focus {
-                    img {
-                        transform: scale(.95);
-                    }
-                }
-            }
-        }
     }
     &.fiveWide {
         .contentOuter {
@@ -441,6 +423,24 @@ h1.introTitle {
                     justify-content: center;
                     flex-wrap: wrap;
                     align-items: flex-start;
+                }
+            }
+        }
+    }
+    &.shadowImgs {
+        .sqs-block-image-link {
+            .image-block-wrapper {
+                border-radius: 5px;
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+
+                img {
+                    transition: all .3s ease-in-out;
+                }
+            }
+            &:hover,
+            &:focus {
+                img {
+                    transform: scale(.95);
                 }
             }
         }
