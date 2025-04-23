@@ -12,6 +12,7 @@ $( document ).ready(function() {
     allLinks.forEach(link => {
         if (link.textContent.includes('inter-state')) {
             console.log(link);
+            link.classList.add('noWrap');
         }
     });
 
