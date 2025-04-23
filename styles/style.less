@@ -261,6 +261,12 @@ h1.introTitle {
         justify-content: center;
         align-items: center;
 
+        @media only screen and (max-width: 640px) {
+            .sqs-block {
+                padding-top: 0!important;
+                padding-bottom: 0!important;
+            }
+        }
         .contentInner {
             width: 100%;
 
@@ -675,7 +681,7 @@ ul.starUL {
     }
     @media only screen and (max-width: 640px) {
         .sqs-layout .row .sqs-block {
-            padding-top: 0!important;
+            // padding-top: 0!important;
             // padding-bottom: 0!important;
         }
     }
