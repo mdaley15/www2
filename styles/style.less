@@ -384,7 +384,13 @@ h1.introTitle {
             margin: 0!important;
         }
         .contentOuter {
+            @media only screen and (min-width: 501px) {
+                width: 50%;
+            }
             @media only screen and (min-width: 800px) {
+                width: 33.3333%;
+            }
+            @media only screen and (min-width: 1100px) {
                 width: 20%;
             }
         }
@@ -431,6 +437,8 @@ h1.introTitle {
         }
     }
     &.shadowImgs {
+        align-items: flex-start;
+
         .sqs-block-image-link {
             .image-block-wrapper {
                 border-radius: 5px;
