@@ -476,7 +476,6 @@ h1.introTitle {
         .sqs-block-image-link {
             .image-block-wrapper {
                 border-radius: 5px;
-                box-shadow: 7px 7px 0 @drkOrange, 2px 2px 5px rgba(0, 0, 0, .3);
 
                 img {
                     transition: all .3s ease-in-out;
@@ -486,6 +485,23 @@ h1.introTitle {
             &:focus {
                 img {
                     transform: scale(.95);
+                }
+            }
+        }
+        .contentOuter {
+            &:nth-child(3n + 1) {
+                .image-block-wrapper {
+                    box-shadow: 7px 7px 0 @drkOrange, 2px 2px 5px rgba(0, 0, 0, .3);
+                }
+            }
+            &:nth-child(3n + 2) {
+                .image-block-wrapper {
+                    box-shadow: 7px 7px 0 @ltBlue 2px 2px 5px rgba(0, 0, 0, .3);
+                }
+            }
+            &:nth-child(3n + 3) {
+                .image-block-wrapper {
+                    box-shadow: 7px 7px 0 @green, 2px 2px 5px rgba(0, 0, 0, .3);
                 }
             }
         }
