@@ -7,6 +7,13 @@ $( document ).ready(function() {
             body.classList.add('noIntro');
         }
     }
+    
+    const allLinks = document.querySelectorAll('a');
+    allLinks.forEach(link => {
+        if (link.textContent.includes('inter-state')) {
+            console.log(link);
+        }
+    });
 
     $('.whatWeDo .Header-nav-item:first-child > a.Header-nav-folder-title').removeAttr('href');
     $('.whatWeDo .Header-nav-item:nth-child(2) > .Header-nav-folder-title').attr('href', '/school-yearbooks');
