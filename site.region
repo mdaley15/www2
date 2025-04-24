@@ -182,9 +182,9 @@
     <squarespace:script src="changeSign.js" combo="false"/>
     <squarespace:script src="scrollStacking.js" combo="false"/>
     <script>
-    setTimeout(function () {
-        window.scrollTo(0,0);
-    },2);
+    $(document).ready(function(){
+        $(this).scrollTop(0);
+    });
     </script>
     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4740283.js"></script>
 
