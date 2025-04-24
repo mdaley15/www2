@@ -1,5 +1,6 @@
 
 function preventAnchorScroll() {
+    console.log('running preventAnchorScroll function');
     var scrollToTop = function () {
         $(window).scrollTop(0);
     };
