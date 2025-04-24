@@ -1,5 +1,6 @@
 $( document ).ready(function() {
     var pathName = window.location.pathname;
+    var href = window.location.href;
     let introBlock = document.querySelector('.Intro');
     let body = document.querySelector('body');
     if (!introBlock) {
@@ -16,10 +17,10 @@ $( document ).ready(function() {
         }
     });
 
-    if (pathName.includes("#")) {
-        console.log(pathName);
+    if (href.includes("#")) {
+        console.log(href);
     } else {
-        console.log(window.location);
+        console.log(href);
     }
 
     $('.whatWeDo .Header-nav-item:first-child > a.Header-nav-folder-title').removeAttr('href');
