@@ -432,7 +432,6 @@ waitForElementObserver(popup, () => {
 
 function anchorScroll() {
     if (window.location.hash) {
-        window.scrollTo(0,0);
         $('body').removeClass('is-mobile-overlay-active');
         var hash = window.location.hash.substring(1);
         const target = document.getElementById(hash+'_hash');
