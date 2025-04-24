@@ -235,22 +235,24 @@ document.addEventListener('DOMContentLoaded', function() {
         const mainContent = document.querySelector('.Main');
         if (mainContent) {
             let rect = mainContent.getBoundingClientRect();
-            watermark.classList.add(pageIcon.classList[1]);
-            window.addEventListener('scroll', function() {
-                if (intro) {
-                    if (Number(window.scrollY) >= Number(rect.top-85)) {
-                        watermark.classList.add('fixed');
+            if (watermark) {
+                watermark.classList.add(pageIcon.classList[1]);
+                window.addEventListener('scroll', function() {
+                    if (intro) {
+                        if (Number(window.scrollY) >= Number(rect.top-85)) {
+                            watermark.classList.add('fixed');
+                        } else {
+                            watermark.classList.remove('fixed');
+                        }
                     } else {
-                        watermark.classList.remove('fixed');
+                        if (Number(window.scrollY) >= Number(rect.top+35)) {
+                            watermark.classList.add('fixed');
+                        } else {
+                            watermark.classList.remove('fixed');
+                        }
                     }
-                } else {
-                    if (Number(window.scrollY) >= Number(rect.top+35)) {
-                        watermark.classList.add('fixed');
-                    } else {
-                        watermark.classList.remove('fixed');
-                    }
-                }
-            });
+                });
+            }
         }
     }
     let startingBtns = document.querySelectorAll('.startingBtn');
