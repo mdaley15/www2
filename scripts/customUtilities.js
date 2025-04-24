@@ -1,30 +1,50 @@
 
-window.addEventListener('load', function(event) {
-    console.log("Let's check if a hash exists");
+function preventAnchorScroll() {
+    var scrollToTop = function () {
+        $(window).scrollTop(0);
+    };
     if (window.location.hash) {
-        event.preventDefault();
-        var hash = window.location.hash.substring(1);
-        const target = document.getElementById(hash);
-        console.log(target);
-        $('body').removeClass('is-mobile-overlay-active');
-        var offset = -100; // <-- change the value here
-        if (target) {
-            let expanded = target.getAttribute('aria-expanded');
-            if (expanded) {
-                console.log(expanded);
-                // target.click();
-            }
-            console.log(target.getBoundingClientRect().top);
-            console.log(target.getBoundingClientRect().top + offset);
-            setTimeout(function() {
-                $('html, body').animate({
-                    scrollTop: target.getBoundingClientRect().top + offset
-                }, 1000);
-            }, 500);
-            return false;
-        }
+        // handler is executed at most once
+        $(window).one('scroll', scrollToTop);
     }
-});
+
+    // make sure to release scroll 1 second after document readiness
+    // to avoid negative UX
+    $(function () {
+        setTimeout(
+            function () {
+                $(window).off('scroll', scrollToTop);
+            },
+            1000
+        );
+    });
+}
+// window.addEventListener('load', function(event) {
+//     console.log("Let's check if a hash exists");
+//     if (window.location.hash) {
+//         event.preventDefault();
+//         var hash = window.location.hash.substring(1);
+//         const target = document.getElementById(hash);
+//         console.log(target);
+//         $('body').removeClass('is-mobile-overlay-active');
+//         var offset = -100; // <-- change the value here
+//         if (target) {
+//             let expanded = target.getAttribute('aria-expanded');
+//             if (expanded) {
+//                 console.log(expanded);
+//                 // target.click();
+//             }
+//             console.log(target.getBoundingClientRect().top);
+//             console.log(target.getBoundingClientRect().top + offset);
+//             setTimeout(function() {
+//                 $('html, body').animate({
+//                     scrollTop: target.getBoundingClientRect().top + offset
+//                 }, 1000);
+//             }, 500);
+//             return false;
+//         }
+//     }
+// });
 $( document ).ready(function() {
     let introBlock = document.querySelector('.Intro');
     let body = document.querySelector('body');
