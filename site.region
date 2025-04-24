@@ -9,7 +9,9 @@
 
     {squarespace-headers}
     <script>
-        document.body.scrollTo({ top: ... })
+    setTimeout(function () {
+        window.scrollTo(0,0);
+    },2);
     </script>
     <squarespace:script src = "jquery-3.2.1.min.js" combo = "false">
     <squarespace:script src = "materialize.js" combo = "false">
