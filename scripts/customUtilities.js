@@ -15,10 +15,10 @@ $( document ).ready(function() {
         }
     });
 
-    window.addEventListener('hashchange', function(event) {
-        event.preventDefault();
+    window.addEventListener('load', function(event) {
         console.log("Let's check if a hash exists");
         if (window.location.hash) {
+            event.preventDefault();
             var hash = window.location.hash.substring(1);
             const target = document.getElementById(hash);
             console.log(target);
