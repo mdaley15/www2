@@ -18,6 +18,12 @@ $( document ).ready(function() {
     $('.whatWeDo .Header-nav-item:first-child > a.Header-nav-folder-title').removeAttr('href');
     $('.whatWeDo .Header-nav-item:nth-child(2) > .Header-nav-folder-title').attr('href', '/yearbooks');
     $('.Mobile-overlay-nav--secondary .Mobile-overlay-nav-item:nth-child(2) > span').contents().unwrap().wrap('<a></a>');
+    var anchor = document.querySelector('.Mobile-overlay-nav--secondary .Mobile-overlay-nav-item:nth-child(2) > span'),
+    atag = document.createElement("a");
+
+    atag.innerHTML = anchor.innerHTML;
+
+    anchor.parentNode.replaceChild(atag,anchor);
 
     var pathName = window.location.pathname;
     if (pathName.includes("/yearbooks")) {
