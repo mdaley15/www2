@@ -1,7 +1,7 @@
 $( document ).ready(function() {
     console.log(window.location);
     var pathName = window.location.pathname;
-    var href = window.location.href;
+    var hash = window.location.hash;
     let introBlock = document.querySelector('.Intro');
     let body = document.querySelector('body');
     if (!introBlock) {
@@ -18,10 +18,10 @@ $( document ).ready(function() {
         }
     });
 
-    if (href.includes("#")) {
-        console.log(href);
+    if (hash) {
+        console.log(hash);
     } else {
-        console.log(href);
+        console.log('No Hash');
     }
 
     $('.whatWeDo .Header-nav-item:first-child > a.Header-nav-folder-title').removeAttr('href');
