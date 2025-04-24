@@ -19,7 +19,7 @@ $( document ).ready(function() {
     $('.whatWeDo .Header-nav-item:nth-child(2) > .Header-nav-folder-title').attr('href', '/yearbooks');
 
     var pathName = window.location.pathname;
-    if (pathName.includes("/school-yearbooks")) {
+    if (pathName.includes("/yearbooks")) {
         $('.whatWeDo .Header-nav-item:nth-child(2) > .Header-nav-folder-title').addClass('active');
     }
     if (pathName.includes("/contact-us")) {
