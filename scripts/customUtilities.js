@@ -24,7 +24,7 @@ $( document ).ready(function() {
         if (target) {
             console.log('target element exists');
             $('html, body').animate({
-                scrollTop: target.offset().top + offset
+                scrollTop: target.getBoundingClientRect().top + offset
             }, 1000);
             target.click();
             return false;
