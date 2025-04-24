@@ -20,7 +20,7 @@ $( document ).ready(function() {
     
     var mobileMenuBtn = document.querySelector('.Mobile-bar-menu');
     mobileMenuBtn.addEventListener('click', function(e) {
-        var span = document.querySelector('.Mobile-overlay-nav--secondary .Mobile-overlay-nav-item:nth-child(2) > span'),
+        var span = document.querySelector('.Mobile-overlay-nav--secondary .Mobile-overlay-nav-item:nth-child(6) > span'),
             atag = document.createElement("a");
         console.log(span);
     
