@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+    var pathName = window.location.pathname;
     let introBlock = document.querySelector('.Intro');
     let body = document.querySelector('body');
     if (!introBlock) {
@@ -15,10 +16,13 @@ $( document ).ready(function() {
         }
     });
 
+    if (pathName.includes("#")) {
+        console.log(pathName);
+    }
+
     $('.whatWeDo .Header-nav-item:first-child > a.Header-nav-folder-title').removeAttr('href');
     $('.whatWeDo .Header-nav-item:nth-child(2) > .Header-nav-folder-title').attr('href', '/school-yearbooks');
 
-    var pathName = window.location.pathname;
     if (pathName.includes("/school-yearbooks")) {
         $('.whatWeDo .Header-nav-item:nth-child(2) > .Header-nav-folder-title').addClass('active');
     }
