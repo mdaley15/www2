@@ -52,7 +52,9 @@ $( document ).ready(function() {
             let expanded = target.getAttribute('aria-expanded');
             if (expanded) {
                 console.log(expanded);
-                // target.click();
+                if (expanded == false) {
+                    target.click();
+                }
             }
             console.log(target.getBoundingClientRect().top);
             console.log(target.getBoundingClientRect().top + offset);
