@@ -453,8 +453,8 @@ function anchorScroll() {
                 $('html, body').animate({
                     scrollTop: target.getBoundingClientRect().top + offset
                 }, 1000);
+                return false;
             }, 1000);
-            // return false;
         }
     }
 }
