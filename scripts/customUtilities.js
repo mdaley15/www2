@@ -52,7 +52,7 @@ $( document ).ready(function() {
             let expanded = target.getAttribute('aria-expanded');
             if (expanded) {
                 console.log(expanded);
-                if (expanded == false) {
+                if (expanded == 'false') {
                     target.click();
                 }
             }
