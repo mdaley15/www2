@@ -319,7 +319,6 @@ function lightboxFilter(itemLink) {
         let fileType = imgDataSrc.split('.').pop();
         var coverPath;
         if ((pathName.includes("/cover-designs-themes")) || (pathName.includes("/sports-and-clubs-photography") && thisBlock.classList.contains('switchImgs'))) {
-            console.log(thisBlock);
             img.setAttribute('data-src', '');
             img.setAttribute('src', '');
             img.setAttribute('data-image', '');
@@ -335,7 +334,7 @@ function lightboxFilter(itemLink) {
             img.setAttribute('alt', 'Yearbook cover assets');
             img.classList.add('ybAssets');
         }
-        if (pathName.includes("/sports-and-clubs-photography")) {
+        if (pathName.includes("/sports-and-clubs-photography") && thisBlock.classList.contains('switchImgs')) {
             img.setAttribute('alt', 'Sports + Clubs image assets');
             img.classList.add('scAssets');
         }
