@@ -450,10 +450,10 @@ function anchorScroll() {
             console.log(target.getBoundingClientRect().top);
             console.log(target.getBoundingClientRect().top + offset);
             setTimeout(function() {
+                window.scrollTo(0,0);
                 $('html, body').animate({
                     scrollTop: target.getBoundingClientRect().top + offset
                 }, 1000);
-                return false;
             }, 1000);
         }
     }
