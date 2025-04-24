@@ -17,14 +17,17 @@ $( document ).ready(function() {
 
     $('.whatWeDo .Header-nav-item:first-child > a.Header-nav-folder-title').removeAttr('href');
     $('.whatWeDo .Header-nav-item:nth-child(2) > .Header-nav-folder-title').attr('href', '/yearbooks');
-    // $('.Mobile-overlay-nav--secondary .Mobile-overlay-nav-item:nth-child(2) > span').contents().unwrap().wrap('<a></a>');
-    var span = document.querySelector('.Mobile-overlay-nav--secondary .Mobile-overlay-nav-item:nth-child(2) > span'),
-        atag = document.createElement("a");
-    console.log(span);
-
-    atag.innerHTML = span.innerHTML;
-
-    span.parentNode.replaceChild(atag,span);
+    
+    var mobileMenuBtn = document.querySelector('.Mobile-bar-menu');
+    mobileMenuBtn.addEventListener('click', function(e) {
+        var span = document.querySelector('.Mobile-overlay-nav--secondary .Mobile-overlay-nav-item:nth-child(2) > span'),
+            atag = document.createElement("a");
+        console.log(span);
+    
+        atag.innerHTML = span.innerHTML;
+    
+        span.parentNode.replaceChild(atag,span);
+    });
 
     var pathName = window.location.pathname;
     if (pathName.includes("/yearbooks")) {
