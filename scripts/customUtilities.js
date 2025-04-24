@@ -454,7 +454,7 @@ function anchorScroll() {
                 $('html, body').animate({
                     scrollTop: target.getBoundingClientRect().top + offset
                 }, 1000);
-            }, 1000);
+            }, 500);
         }
     }
 }
