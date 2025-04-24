@@ -18,7 +18,8 @@ $( document ).ready(function() {
 
     if (window.location.hash) {
         var hash = window.location.hash.substring(1);
-        console.log(hash);        
+        const element = document.getElementById(hash);
+        console.log(element);
     }
 
     $('.whatWeDo .Header-nav-item:first-child > a.Header-nav-folder-title').removeAttr('href');
