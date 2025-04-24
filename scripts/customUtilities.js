@@ -18,8 +18,17 @@ $( document ).ready(function() {
 
     if (window.location.hash) {
         var hash = window.location.hash.substring(1);
-        const element = document.getElementById(hash);
+        const target = document.getElementById(hash);
         console.log(element);
+        $('body').removeClass('is-mobile-overlay-active');
+        var offset = -100; // <-- change the value here
+        if (target.length) {
+            $('html, body').animate({
+                scrollTop: target.offset().top + offset
+            }, 1000);
+            target.click();
+            return false;
+        }
     }
 
     $('.whatWeDo .Header-nav-item:first-child > a.Header-nav-folder-title').removeAttr('href');
