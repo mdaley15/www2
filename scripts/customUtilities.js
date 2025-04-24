@@ -1,5 +1,4 @@
 $( document ).ready(function() {
-    console.log(window.location);
     let introBlock = document.querySelector('.Intro');
     let body = document.querySelector('body');
     if (!introBlock) {
@@ -22,7 +21,8 @@ $( document ).ready(function() {
         console.log(target);
         $('body').removeClass('is-mobile-overlay-active');
         var offset = -100; // <-- change the value here
-        if (target.length) {
+        if (target) {
+            console.log('target element exists');
             $('html, body').animate({
                 scrollTop: target.offset().top + offset
             }, 1000);
