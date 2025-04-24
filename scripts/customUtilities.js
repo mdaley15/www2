@@ -432,12 +432,12 @@ waitForElementObserver(popup, () => {
 
 function anchorScroll() {
     if (window.location.hash) {
-        $('body').removeClass('is-mobile-overlay-active');
         var hash = window.location.hash.substring(1);
         const target = document.getElementById(hash+'_hash');
         console.log(target);
         var offset = -100; // <-- change the value here
         if (target) {
+            $('body').removeClass('is-mobile-overlay-active');
             let expanded = target.getAttribute('aria-expanded');
             if (expanded) {
                 console.log(expanded);
