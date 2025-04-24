@@ -23,6 +23,8 @@ $( document ).ready(function() {
         var offset = -100; // <-- change the value here
         if (target) {
             target.click();
+            console.log(target.getBoundingClientRect().top);
+            console.log(target.getBoundingClientRect().top + offset);
             $('html, body').animate({
                 scrollTop: target.getBoundingClientRect().top + offset
             }, 1000);
