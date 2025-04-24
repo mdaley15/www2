@@ -1,5 +1,4 @@
 $( document ).ready(function() {
-    anchorScroll();
     let introBlock = document.querySelector('.Intro');
     let body = document.querySelector('body');
     if (!introBlock) {

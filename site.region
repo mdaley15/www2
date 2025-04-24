@@ -13,8 +13,8 @@
     <squarespace:script src = "pdfFinder.js" combo = "false">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src = "https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>window.scrollTo(0,0);</script>
     <squarespace:script src = "customUtilities.js" combo = "false">
+    <script>window.scrollTo(0,0);anchorScroll();</script>
     <!-- <squarespace:script src = "autoSpeedBump.js" combo = "false"> -->
 
   </head>
