@@ -55,6 +55,8 @@ $( document ).ready(function() {
                 if (expanded == 'false') {
                     target.click();
                 }
+            } else {
+                target.click();
             }
             console.log(target.getBoundingClientRect().top);
             console.log(target.getBoundingClientRect().top + offset);
