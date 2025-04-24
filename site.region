@@ -163,7 +163,7 @@
               {squarespace.main-content}
             {.or}
               <section class="Main-content" id="main-content" data-content-field="main-content" id="main-content">
-                <i class="watermark fa-solid" aria-hidden="true"></i>
+                <!-- <i class="watermark fa-solid" aria-hidden="true"></i> -->
                 {squarespace.main-content}
               </section>
             {.end}
