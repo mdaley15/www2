@@ -296,7 +296,7 @@ function imgFilter(btn) {
 function lightboxFilter(itemLink) {
     var pathName = window.location.pathname;
     const filterClasses = [];
-    let thisBlock = itemLink.closest('.col');
+    let thisBlock = itemLink.closest('.collapsible-body');
     let thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
     galleryItems = thisGallery.querySelectorAll('.slide');
     galleryItems.forEach(item => {
@@ -318,7 +318,8 @@ function lightboxFilter(itemLink) {
         let imgDataSrc = img.getAttribute('data-src');
         let fileType = imgDataSrc.split('.').pop();
         var coverPath;
-        if ((pathName.includes("/cover-designs-themes")) || (pathName.includes("/sports-and-clubs-photography"))) {
+        if ((pathName.includes("/cover-designs-themes")) || (pathName.includes("/sports-and-clubs-photography") && thisBlock.classList.contains('switchImgs'))) {
+            console.log(thisBlock);
             img.setAttribute('data-src', '');
             img.setAttribute('src', '');
             img.setAttribute('data-image', '');
