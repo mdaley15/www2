@@ -19,7 +19,7 @@ $( document ).ready(function() {
     if (pathName.includes("#")) {
         console.log(pathName);
     } else {
-        console.log(pathName);
+        console.log(window.location);
     }
 
     $('.whatWeDo .Header-nav-item:first-child > a.Header-nav-folder-title').removeAttr('href');
