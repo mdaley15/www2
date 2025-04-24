@@ -454,7 +454,7 @@ function anchorScroll() {
                     scrollTop: target.getBoundingClientRect().top + offset
                 }, 1000);
             }, 1000);
-            return false;
+            // return false;
         }
     }
 }
