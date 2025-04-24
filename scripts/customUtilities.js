@@ -22,11 +22,10 @@ $( document ).ready(function() {
         $('body').removeClass('is-mobile-overlay-active');
         var offset = -100; // <-- change the value here
         if (target) {
-            console.log('target element exists');
+            target.click();
             $('html, body').animate({
                 scrollTop: target.getBoundingClientRect().top + offset
             }, 1000);
-            target.click();
             return false;
         }
     }
