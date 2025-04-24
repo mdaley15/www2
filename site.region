@@ -8,16 +8,16 @@
     <script src="https://kit.fontawesome.com/50b8ef033d.js" crossorigin="anonymous"></script>
 
     {squarespace-headers}
-    <script>
-    setTimeout(function () {
-        window.scrollTo(0,0);
-    },2);
-    </script>
     <squarespace:script src = "jquery-3.2.1.min.js" combo = "false">
     <squarespace:script src = "materialize.js" combo = "false">
     <squarespace:script src = "pdfFinder.js" combo = "false">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src = "https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    setTimeout(function () {
+        window.scrollTo(0,0);
+    },2);
+    </script>
     <squarespace:script src = "customUtilities.js" combo = "false">
     <!-- <squarespace:script src = "autoSpeedBump.js" combo = "false"> -->
 
