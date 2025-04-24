@@ -182,7 +182,7 @@
     <squarespace:script src="changeSign.js" combo="false"/>
     <squarespace:script src="scrollStacking.js" combo="false"/>
     <script>
-    $(document).ready(function(){
+    $(document).ready(function() {
         anchorScroll();
     });
     </script>
