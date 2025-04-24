@@ -19,7 +19,7 @@ $( document ).ready(function() {
     if (window.location.hash) {
         var hash = window.location.hash.substring(1);
         const target = document.getElementById(hash);
-        console.log(element);
+        console.log(target);
         $('body').removeClass('is-mobile-overlay-active');
         var offset = -100; // <-- change the value here
         if (target.length) {
