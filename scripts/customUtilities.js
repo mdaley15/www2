@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+    console.log(window.location);
     var pathName = window.location.pathname;
     var href = window.location.href;
     let introBlock = document.querySelector('.Intro');
