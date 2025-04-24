@@ -317,7 +317,7 @@ function lightboxFilter(itemLink) {
         let imgDataSrc = img.getAttribute('data-src');
         let fileType = imgDataSrc.split('.').pop();
         var coverPath;
-        if (pathName.includes("/cover-designs-themes")) {
+        if ((pathName.includes("/cover-designs-themes")) || (pathName.includes("/sports-and-clubs-photography"))) {
             img.setAttribute('data-src', '');
             img.setAttribute('src', '');
             img.setAttribute('data-image', '');
