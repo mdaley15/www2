@@ -22,7 +22,11 @@ $( document ).ready(function() {
         $('body').removeClass('is-mobile-overlay-active');
         var offset = -100; // <-- change the value here
         if (target) {
-            target.click();
+            let expanded = target.getAttribute('aria-expanded');
+            if (expanded) {
+                console.log(expanded);
+                // target.click();
+            }
             console.log(target.getBoundingClientRect().top);
             console.log(target.getBoundingClientRect().top + offset);
             setTimeout(function() {
