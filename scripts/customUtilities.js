@@ -327,13 +327,14 @@ function lightboxFilter(itemLink) {
             let newImgPth = '../assets/'+filename+'.webp';
             img.setAttribute('data-src', newImgPth);
             img.setAttribute('src', newImgPth);
-            img.setAttribute('alt', 'Yearbook cover assets');
             coverPath = newImgPth;
         };
         if (pathName.includes("/cover-designs-themes")) {
+            img.setAttribute('alt', 'Yearbook cover assets');
             img.classList.add('ybAssets');
         }
         if (pathName.includes("/sports-and-clubs-photography")) {
+            img.setAttribute('alt', 'Sports + Clubs image assets');
             img.classList.add('scAssets');
         }
         let imgRatio = img.getAttribute('data-image-dimensions');
