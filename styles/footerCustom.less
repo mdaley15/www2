@@ -69,6 +69,7 @@ footer {
                     }
                     h3 {
                         margin: 0;
+                        line-height: 1.2;
                     }
                     p {
                         margin: 0;
@@ -76,7 +77,6 @@ footer {
                 }
                 a.allBtns {
                     white-space: nowrap;
-                    font-size: 25px !important;
                 }
             }
         }
@@ -106,6 +106,13 @@ footer {
                 color: white;
             }
         }
+        @media only screen and (max-width: 640px) {
+            &.footerTop {
+                h3 {
+                    font-size: 22px;
+                }
+            }
+        }
         @media only screen and (min-width: 800px) {
             &.footerTop > div {
                 display: flex;
@@ -114,6 +121,9 @@ footer {
 
                 div {
                     margin: 0 20px 0 0;
+                }
+                a.allBtns {
+                    font-size: 25px !important;
                 }
             }
             .footerRow {
