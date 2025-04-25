@@ -182,7 +182,7 @@ $( document ).ready(function() {
             event.preventDefault();
         }
     });
-    var titles = document.querySelectorAll('.image-caption strong, h1, h2, h3, h4');
+    var titles = document.querySelectorAll('.image-caption strong, h2, h3, h4');
     titles.forEach(title => {
         let titleText = title.textContent;
         let plusSigns = titleText.replace(/\+/g, '<span class="drkOrange">+</span>');
