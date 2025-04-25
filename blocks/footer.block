@@ -14,7 +14,7 @@
             <div class="footerCol smallCol colOne">
                 {.section website}
                     {.section logoImageUrl}
-                        <img src="../assets/logoWhite.svg" alt="{siteTitle}" class="Header-branding-logo" />
+                        <img src="../assets/logoWhite.svg" alt="{siteTitle}" class="footerLogo" />
                     {.or}
                         {siteTitle}
                     {.end}
