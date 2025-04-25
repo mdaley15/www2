@@ -183,9 +183,11 @@ $( document ).ready(function() {
         }
     });
     var titles = document.querySelectorAll('.image-caption strong, h1, h2, h3, h4');
-    let titleText = titles.innerText;
-    // let plusSigns = titleText.match(/\+/g);
-    console.log(titleText);
+    titles.forEach(title => {
+        let titleText = title.textContent;
+        // let plusSigns = titleText.match(/\+/g);
+        console.log(titleText);
+    });
 });
 
 function getStringAfterLastSlash(str) {
