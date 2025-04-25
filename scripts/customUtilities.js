@@ -183,7 +183,9 @@ $( document ).ready(function() {
         }
     });
     var titles = document.querySelectorAll('.image-caption strong, h1, h2, h3, h4');
-    console.log(titles);
+    let titleText = titles.textContent;
+    let plusSigns = titleText.match(/\+/g);
+    console.log(titleText);
 });
 
 function getStringAfterLastSlash(str) {
