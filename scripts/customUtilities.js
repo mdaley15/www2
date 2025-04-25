@@ -193,7 +193,7 @@ $( document ).ready(function() {
     paragraphs.forEach(paragraph => {
         let paragraphText = paragraph.textContent;
         let noWrap = paragraphText.replace(/(\b\w+-\w+\b)/g, '<span class="noWrap">+</span>');
-        paragraph.innerHTML = plusSigns;
+        paragraph.innerHTML = noWrap;
         console.log(paragraphText);
     });
 });
