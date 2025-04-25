@@ -186,7 +186,7 @@ $( document ).ready(function() {
     titles.forEach(title => {
         let titleText = title.textContent;
         let plusSigns = titleText.match(/\+/g);
-        titleText = titleText.replace(/\+/g, '$1<span class="drkOrange">+</span>');
+        titleText = titleText.replace(/\+/g, '<span class="drkOrange">+</span>');
         console.log(titleText);
     });
 });
