@@ -185,7 +185,11 @@ $( document ).ready(function() {
     var titles = document.querySelectorAll('.image-caption strong, h1, h2, h3, h4');
     titles.forEach(title => {
         let titleText = title.textContent;
-        // let plusSigns = titleText.match(/\+/g);
+        let plusSigns = titleText.match(/\+/g);
+        titleText = titleText.replace(/\+/g, '$1<span class="drkOrange">+</span>');
+        plusSigns.forEach(title => {
+
+        });
         console.log(titleText);
     });
 });
