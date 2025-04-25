@@ -182,6 +182,8 @@ $( document ).ready(function() {
             event.preventDefault();
         }
     });
+    var titles = document.querySelectorAll('.image-caption strong, h1, h2, h3, h4');
+    console.log(titles);
 });
 
 function getStringAfterLastSlash(str) {
