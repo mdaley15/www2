@@ -194,8 +194,7 @@ $( document ).ready(function() {
         const hasHyphenatedWord = /\b\w+-\w+\b/.test(paragraphText);
         if (hasHyphenatedWord) {
             let noWrap = paragraphText.replace(/-/g, '‑');
-            console.log(noWrap);
-            // paragraph.textContent = noWrap;
+            paragraph.textContent = noWrap;
             // console.log(paragraphText);
         }
     });
