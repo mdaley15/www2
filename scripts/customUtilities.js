@@ -189,6 +189,13 @@ $( document ).ready(function() {
         title.innerHTML = plusSigns;
         console.log(titleText);
     });
+    var paragraphs = document.querySelectorAll('p');
+    paragraphs.forEach(paragraph => {
+        let paragraphText = paragraph.textContent;
+        let noWrap = paragraphText.replace(/(\b\w+-\w+\b)/g, '<span class="noWrap">+</span>');
+        paragraph.innerHTML = plusSigns;
+        console.log(paragraphText);
+    });
 });
 
 function getStringAfterLastSlash(str) {
