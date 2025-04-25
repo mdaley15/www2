@@ -187,7 +187,6 @@ $( document ).ready(function() {
         let titleText = title.textContent;
         let plusSigns = titleText.replace(/\+/g, '<span class="drkOrange">+</span>');
         title.innerHTML = plusSigns;
-        console.log(titleText);
     });
     var paragraphs = document.querySelectorAll('p');
     paragraphs.forEach(paragraph => {
