@@ -183,7 +183,7 @@ $( document ).ready(function() {
         }
     });
     var titles = document.querySelectorAll('.image-caption strong, h1, h2, h3, h4');
-    let titleText = titles.textContent;
+    let titleText = titles.innerText;
     // let plusSigns = titleText.match(/\+/g);
     console.log(titleText);
 });

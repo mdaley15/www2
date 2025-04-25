@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 let height = card.scrollHeight;
                 heights.push(height);
             }
-            console.log(heights);
+            // console.log(heights);
             let maxHeight = Math.max(...heights);
-            console.log(maxHeight);
+            // console.log(maxHeight);
             cardWrappers.forEach(cardWrapper => {
                 // cardWrapper.style.height = maxHeight+"px";
                 let height = cardWrapper.scrollHeight;
