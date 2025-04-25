@@ -196,10 +196,7 @@ $( document ).ready(function() {
         const regex = /(?=\S*['-])([a-zA-Z0-9'-]+)/gm;
         if (hasHyphenatedWord) {
             let noWrap = paragraphText.replace(regex, '<span class="noWrap">$&</span>');
-            // let noWrap = paragraphText.replace(/-/g, '‑');
-            console.log(noWrap);
             paragraph.innerHTML = noWrap;
-            // console.log(paragraphText);
         }
     });
 });
