@@ -22,21 +22,22 @@
             </div>
             <div class="footerCol smallCol colTwo">
                 <ul class="quicklinks">
-                    <li><a href="asdf" target="">Careers</a></li>	
+                    <li><a href="asdf" target="">Careers</a></li>
                     <li><a href="asdf" target="">Franchise Opportunities</a></li>
                     <li><a href="asdf" target="">Help</a></li>
-                    <li><a href="asdf" target="">Legal</a></li>
-                    <li><a href="asdf" target="">Student Data Privacy</a></li>
+                    <!-- <li><a href="asdf" target="">Legal</a></li>
+                    <li><a href="asdf" target="">Student Data Privacy</a></li>-->
                     <li><a href="/service-areas" target="">Service Areas</a></li>
                 </ul>
             </div>
             <div class="footerCol smallCol colThree">
                 <ul class="quicklinks">
                     <li><a href="http://inter-state.com/privacy" target="_blank">Privacy Policy</a></li>	
-                    <li><a href="asdf" target="">Cookies Policy</a></li>
-                    <li><a href="asdf" target="">Terms of Use</a></li>
-                    <li><a href="asdf" target="">Web Accessibility</a></li>
+                    <!-- <li><a href="asdf" target="">Cookies Policy</a></li>asdf
+                    <li><a href="asdf" target="">Terms of Use</a></li>asdf
+                    <li><a href="asdf" target="">Web Accessibility</a></li> -->
                     <li><a href="asdf" target="">Consent Preferences</a></li>
+                    <li><a href="asdf" target="">Specials + Promotions</a></li>
                     <li><a href="asdf" target="">Site Map</a></li>
                 </ul>
             </div>
