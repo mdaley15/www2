@@ -192,9 +192,13 @@ $( document ).ready(function() {
     var paragraphs = document.querySelectorAll('p');
     paragraphs.forEach(paragraph => {
         let paragraphText = paragraph.textContent;
-        let noWrap = paragraphText.replace(/(\b\w+-\w+\b)/g, '<span class="noWrap">+</span>');
-        paragraph.innerHTML = noWrap;
-        console.log(paragraphText);
+        const hasHyphenatedWord = /\b\w+-\w+\b/.test(paragraphText);
+        if (hasHyphenatedWord) {
+            console.log("Paragraph with hyphenated word:", paragraph);
+            // let noWrap = paragraphText.replace(/(\b\w+-\w+\b)/g, '<span class="noWrap">+</span>');
+            // paragraph.innerHTML = noWrap;
+            // console.log(paragraphText);
+        }
     });
 });
 
