@@ -177,7 +177,11 @@ $( document ).ready(function() {
             thumb.parentElement.classList.add('sqs-active-slide');
         }
     });
-
+    document.addEventListener('contextmenu', function(event) {
+        if (event.target.tagName === 'IMG') {
+            event.preventDefault();
+        }
+    });
 });
 
 function getStringAfterLastSlash(str) {
