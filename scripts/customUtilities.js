@@ -193,8 +193,8 @@ $( document ).ready(function() {
         let paragraphText = paragraph.textContent;
         const hasHyphenatedWord = /\b\w+-\w+\b/.test(paragraphText);
         if (hasHyphenatedWord) {
-            let noWrap = paragraphText.replaceAll('-', '&#x2011;');
-            paragraph.textContent = noWrap;
+            let noWrap = paragraphText.replace(/-/g, '‑');
+            // paragraph.textContent = noWrap;
             // console.log(paragraphText);
         }
     });
