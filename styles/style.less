@@ -766,6 +766,14 @@ ul.starUL {
                 .eventContent {
                     flex-direction: column;
                     max-width: calc(~"100% - 125px");
+                    top: 50%;
+                    bottom: unset;
+                    transform: translate(-50%, -50%);
+
+                    .eventImg {
+                        height: 160px!important;
+                        min-height: 160px!important;
+                    }
                 }
                 &:nth-child(even) {
                     flex-direction: row-reverse;
