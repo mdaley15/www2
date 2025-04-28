@@ -749,6 +749,19 @@ ul.starUL {
             top: 0;
             left: 50%;
             transform: translate(-50%, 0);
+            width: 15px;
+            height: 100%;
+        }
+        .timelineInner {
+            flex-direction: column;
+
+            .event {
+                flex-direction: row;
+
+                &:nth-child(even) {
+                    flex-direction: row-reverse;
+                }
+            }
         }
     }
 }
