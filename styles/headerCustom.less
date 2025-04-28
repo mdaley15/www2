@@ -90,13 +90,16 @@ body.is-mobile-overlay-active {
         padding-top: 0!important;
         padding-bottom: 20px!important;
         background: transparent;
-        background-image: linear-gradient(to bottom, white 60%, transparent)!important;
+        background-image: linear-gradient(to bottom, white, transparent)!important;
     
+        .Mobile-bar-branding-logo {
+            filter: drop-shadow(0 0 4px #fff) drop-shadow(2px 2px 10px #fff);
+        }
         .Mobile-bar-search,
         .Mobile-bar-menu {
             border-radius: 5px;
             box-shadow: 0 0 3px transparent;
-            background-color: transparent;
+            background-color: white;
             transition: all .3s ease-in-out;
 
             &:hover,
