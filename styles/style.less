@@ -754,13 +754,17 @@ ul.starUL {
         }
         .timelineInner {
             flex-direction: column;
+            padding: 0;
 
             .event {
                 flex-direction: row;
 
                 .dateLine {
                     height: 2px;
-                    width: calc(~"50% - 41.5px");
+                    width: calc(~"50% - 56px");
+                }
+                .eventContent {
+                    max-width: calc(~"100% - 100px");
                 }
                 &:nth-child(even) {
                     flex-direction: row-reverse;
