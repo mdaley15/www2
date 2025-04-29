@@ -15,7 +15,7 @@ $( document ).ready(function() {
         }
     });
 
-    $('.whatWeDo .Header-nav-item:first-child > a.Header-nav-folder-title').removeAttr('href');
+    $('.whatWeDo .Header-nav-item:first-child > a.Header-nav-folder-title').attr('href', '/school-photography');
     $('.whatWeDo .Header-nav-item:nth-child(2) > .Header-nav-folder-title').attr('href', '/yearbooks');
     $('.Mobile-overlay-nav--secondary .Mobile-overlay-nav-item:nth-child(6) > span').contents().unwrap().wrap('<a href="/yearbooks"></a>');
 
