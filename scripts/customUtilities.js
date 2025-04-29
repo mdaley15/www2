@@ -24,6 +24,9 @@ $( document ).ready(function() {
     if (pathName.includes("/yearbooks")) {
         $('.whatWeDo .Header-nav-item:nth-child(2) > .Header-nav-folder-title').addClass('active');
     }
+    if (pathName.includes("/school-photography")) {
+        $('.whatWeDo .Header-nav-item:first-child > .Header-nav-folder-title').addClass('active');
+    }
     if (pathName.includes("/contact-us")) {
         $('.whatWeDo .Header-nav-item:nth-child(3)').addClass('active');
         const queryString = window.location.search.substring(1);
