@@ -199,6 +199,7 @@ $( document ).ready(function() {
         const hasHyphenatedWord = /\b\w+-\w+\b/.test(paragraphText);
         const regex = /(?=\S*['-])([a-zA-Z0-9'-]+)/gm;
         if (hasHyphenatedWord) {
+            console.log(regex);
             paragraphText.replace(regex, '<span class="noWrap">$&</span>');
             // paragraph.innerHTML = noWrap;
             // paragraph.textContent = noWrap;
