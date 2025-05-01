@@ -190,8 +190,11 @@ $( document ).ready(function() {
     var titles = document.querySelectorAll('.image-caption strong, h2, h3, h4');
     titles.forEach(title => {
         let titleText = title.textContent;
-        let plusSigns = titleText.replace(/\+/g, '<span class="drkOrange">+</span>');
-        title.innerHTML = plusSigns;
+        const hasPlus = /\+/g.test(titleText);
+        if (hasPlus) {
+            let plusSigns = titleText.replace(/\+/g, '<span class="drkOrange">+</span>');
+            title.innerHTML = plusSigns;
+        }
     });
     var paragraphs = document.querySelectorAll('p');
     paragraphs.forEach(paragraph => {
