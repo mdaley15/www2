@@ -202,7 +202,6 @@ $( document ).ready(function() {
         if (hasHyphenatedWord) {
             if (strong) {
                 let strongText = strong.textContent;
-                console.log(strongText);
                 let noWrap = strongText.replace(regex, '<span class="noWrap">$&</span>');
                 strong.innerHTML = noWrap;
             } else {
