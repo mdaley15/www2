@@ -204,7 +204,7 @@ $( document ).ready(function() {
                 let strongText = strong.textContent;
                 console.log(strongText);
                 let noWrap = strongText.replace(regex, '<span class="noWrap">$&</span>');
-                strongText.innerHTML = noWrap;
+                strong.innerHTML = noWrap;
             } else {
                 let noWrap = paragraphText.replace(regex, '<span class="noWrap">$&</span>');
                 paragraph.innerHTML = noWrap;
