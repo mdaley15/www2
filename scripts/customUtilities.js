@@ -193,7 +193,7 @@ $( document ).ready(function() {
         let plusSigns = titleText.replace(/\+/g, '<span class="drkOrange">+</span>');
         title.innerHTML = plusSigns;
     });
-    var paragraphs = document.querySelectorAll('p');
+    var paragraphs = document.querySelectorAll('p, strong');
     paragraphs.forEach(paragraph => {
         let paragraphText = paragraph.textContent;
         const hasHyphenatedWord = /\b\w+-\w+\b/.test(paragraphText);
@@ -201,6 +201,7 @@ $( document ).ready(function() {
         if (hasHyphenatedWord) {
             let noWrap = paragraphText.replace(regex, '<span class="noWrap">$&</span>');
             // paragraph.innerHTML = noWrap;
+            paragraph.textContent = noWrap;
         }
     });
 });
