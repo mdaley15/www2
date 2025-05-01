@@ -193,16 +193,20 @@ $( document ).ready(function() {
         let plusSigns = titleText.replace(/\+/g, '<span class="drkOrange">+</span>');
         title.innerHTML = plusSigns;
     });
-    var paragraphs = document.querySelectorAll('p, strong');
+    var paragraphs = document.querySelectorAll('p');
     paragraphs.forEach(paragraph => {
+        const strong = paragraph.querySelector('strong');
         let paragraphText = paragraph.textContent;
         const hasHyphenatedWord = /\b\w+-\w+\b/.test(paragraphText);
         const regex = /(?=\S*['-])([a-zA-Z0-9'-]+)/gm;
         if (hasHyphenatedWord) {
-            console.log(regex);
-            paragraphText.replace(regex, '<span class="noWrap">$&</span>');
-            // paragraph.innerHTML = noWrap;
-            // paragraph.textContent = noWrap;
+            if (strong) {
+                let noWrap = strong.replace(regex, '<span class="noWrap">$&</span>');
+                strong.innerHTML = noWrap;
+            } else {
+                let noWrap = paragraphText.replace(regex, '<span class="noWrap">$&</span>');
+                paragraph.innerHTML = noWrap;
+            }
         }
     });
 });
