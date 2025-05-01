@@ -199,9 +199,9 @@ $( document ).ready(function() {
         const hasHyphenatedWord = /\b\w+-\w+\b/.test(paragraphText);
         const regex = /(?=\S*['-])([a-zA-Z0-9'-]+)/gm;
         if (hasHyphenatedWord) {
-            let noWrap = paragraphText.replace(regex, '<span class="noWrap">$&</span>');
+            paragraphText.replace(regex, '<span class="noWrap">$&</span>');
             // paragraph.innerHTML = noWrap;
-            paragraph.textContent = noWrap;
+            // paragraph.textContent = noWrap;
         }
     });
 });
