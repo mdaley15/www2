@@ -195,6 +195,7 @@ $( document ).ready(function() {
     });
     var paragraphs = document.querySelectorAll('p');
     paragraphs.forEach(paragraph => {
+        const aTag = paragraph.querySelector('a');
         const strong = paragraph.querySelector('strong');
         let paragraphText = paragraph.textContent;
         const hasHyphenatedWord = /\b\w+-\w+\b/.test(paragraphText);
@@ -204,6 +205,8 @@ $( document ).ready(function() {
                 let strongText = strong.textContent;
                 let noWrap = strongText.replace(regex, '<span class="noWrap">$&</span>');
                 strong.innerHTML = noWrap;
+            } else if (aTag) {
+
             } else {
                 let noWrap = paragraphText.replace(regex, '<span class="noWrap">$&</span>');
                 paragraph.innerHTML = noWrap;
