@@ -73,7 +73,7 @@ $(document).ready(function() {
                 console.log("time to scroll to open header");
                 $('html, body').animate({
                     scrollTop: objectTop - 80
-                }, 500);
+                }, 360);
             }
         }, 500);
     });
