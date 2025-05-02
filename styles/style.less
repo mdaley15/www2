@@ -285,6 +285,37 @@ h1.introTitle {
         display: none!important;
     }
 }
+.linksWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: @drkOrange;
+    font-weight: bold;
+    font-size: 24px;
+
+    .link {
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        background: transparent;
+        border-bottom: 2px solid transparent;
+        color: @blue;
+        padding: 3px 0;
+        line-height: 1;
+        margin: 5px 10px;
+        font-family: oswald;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 501;
+
+        &:hover,
+        &:focus,
+        &.activeBtn {
+            border-color: @drkOrange;
+        }
+    }
+}
 .contentWrap {
     display: flex;
     justify-content: center;
