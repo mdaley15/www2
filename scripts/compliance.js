@@ -64,14 +64,15 @@ $(document).ready(function() {
         }
         // var header = el.find('.collapsible-header');
         var doc = document.documentElement;
-        var top = (window.scrollY || doc.scrollTop)  - (doc.clientTop || 0);
+        var top = (window.scrollY || doc.scrollTop) - (doc.clientTop || 0);
         var objectTop = $(this).offset().top;
         console.log(top+",",objectTop);
     
-        if(objectTop < top || objectTop > top + window.innerHeight - 100 ){
-          $('html, body').animate({
-            scrollTop: objectTop - 10
-          }, 500);
+        if(objectTop < top || objectTop > top + window.innerHeight - 100 ) {
+            console.log("time to scroll to open header");
+            $('html, body').animate({
+                scrollTop: objectTop - 10
+            }, 500);
         }
     });
     $('.collapsible-header').keydown(function(e) {
