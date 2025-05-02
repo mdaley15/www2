@@ -174,9 +174,9 @@
       <!-- {@|apply chat.block} -->
 
     </div>
-    <button id="toTop" onclick='window.scrollTo(0,0);' ari-label="Back To Top">
+    <a id="toTop" href="#" ari-label="Back To Top">
         <i class="fa-solid fa-arrow-up"></i>
-    </button>
+    </a>
 
     <squarespace:script src="site-bundle.js" combo="false" />
     <squarespace:script src="compliance.js" combo="false"/>
