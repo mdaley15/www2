@@ -74,7 +74,7 @@ $(document).ready(function() {
 
         // Set the body or html to position: fixed
         document.body.style.position = 'fixed';
-        document.body.style.top = `-${scrollY}px`;
+        // document.body.style.top = `-${scrollY}px`;
         document.body.style.overflow = 'hidden';
 
         // Reset position and overflow after animation
