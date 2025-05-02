@@ -169,12 +169,13 @@
             }
             .imgFilter {
                 display: flex;
-                // justify-content: center;
+                justify-content: center;
                 align-items: center;
                 flex-wrap: wrap;
                 color: @drkOrange;
                 font-weight: bold;
                 font-size: 24px;
+                margin: 0 -10px;
 
                 .filterBtn {
                     border-top: 0;
@@ -196,6 +197,9 @@
                     &.activeBtn {
                         border-color: @drkOrange;
                     }
+                }
+                @media only screen and (min-width: 800px) {
+                    justify-content: flex-start;
                 }
             }
             .filterText {
