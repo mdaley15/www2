@@ -80,7 +80,7 @@ $(document).ready(function() {
         // Reset position and overflow after animation
         setTimeout(function() {
             document.body.style.position = 'static';
-            document.body.style.top = '';
+            // document.body.style.top = '';
             document.body.style.overflow = '';
             // Optionally, scroll back to the original position
             // window.scrollTo(0, scrollY);
