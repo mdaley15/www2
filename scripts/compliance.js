@@ -75,7 +75,7 @@ $(document).ready(function() {
                     scrollTop: objectTop - 80
                 }, 360);
             }
-        }, 500);
+        }, 360);
     });
     $('.collapsible-header').keydown(function(e) {
         if (e.which == 13 || e.which == 32) {
