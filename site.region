@@ -174,7 +174,7 @@
       <!-- {@|apply chat.block} -->
 
     </div>
-    <a id="toTop" href="#" ari-label="Back To Top">
+    <a id="toTop" href="#" onclick='window.scrollTo({ top: 0, left: 0, behavior: "smooth"});' ari-label="Back To Top">
         <i class="fa-solid fa-arrow-up"></i>
     </a>
 
