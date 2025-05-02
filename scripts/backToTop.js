@@ -12,10 +12,10 @@ function scrollFunction() {
 }
 function scrollToTop() {
     // console.log(window.scrollY);
-    // window.scrollTo({
-    //     top: 0,
-    //     left: 0,
-    //     behavior: "smooth"
-    // });
-    mainHeader.scrollIntoView({ block: "start", behavior: "smooth" })
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+    });
+    // mainHeader.scrollIntoView({ block: "start", behavior: "smooth" })
 }
