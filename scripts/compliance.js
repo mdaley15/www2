@@ -63,12 +63,12 @@ $(document).ready(function() {
             $(this).attr('aria-expanded', 'true');
         }
         // var header = el.find('.collapsible-header');
-        var doc = document.documentElement;
-        var top = (window.scrollY || doc.scrollTop) - (doc.clientTop || 0);
-        var objectTop = $(this).offset().top;
-        console.log(top+",",objectTop);
     
         setTimeout(() => {
+            var doc = document.documentElement;
+            var top = (window.scrollY || doc.scrollTop) - (doc.clientTop || 0);
+            var objectTop = $(this).offset().top;
+            console.log(top+",",objectTop);
             if (objectTop < top || objectTop > top + window.innerHeight - 100 ) {
                 console.log("time to scroll to open header");
                 $('html, body').animate({
