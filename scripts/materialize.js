@@ -1450,11 +1450,11 @@ if (Vel) {
           object.parent().removeClass('active');
         }
         if (object.parent().hasClass('active')) {
-          object.siblings('.collapsible-body').stop(true, false).slideDown({ duration: 1350, easing: "easeOutQuart", queue: false, complete: function () {
+          object.siblings('.collapsible-body').stop(true, false).slideDown({ duration: 350, easing: "easeOutQuart", queue: false, complete: function () {
               $(this).css('height', '');
             } });
         } else {
-          object.siblings('.collapsible-body').stop(true, false).slideUp({ duration: 1350, easing: "easeOutQuart", queue: false, complete: function () {
+          object.siblings('.collapsible-body').stop(true, false).slideUp({ duration: 350, easing: "easeOutQuart", queue: false, complete: function () {
               $(this).css('height', '');
             } });
         }
@@ -1475,7 +1475,7 @@ if (Vel) {
             });
           }
         });
-
+        
       }
 
       // Expandable Open
