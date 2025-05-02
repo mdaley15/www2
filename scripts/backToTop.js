@@ -3,8 +3,8 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
     var scrollHeight = 76;
-    if (window.scrollY > (76+"vh")) {
-        toTopBtn.style.display = "flex";
+    if (window.scrollY > 800) {
+        toTopBtn.style.display = "block";
     } else {
         toTopBtn.style.display = "none";
     }
