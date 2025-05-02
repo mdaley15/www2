@@ -63,8 +63,8 @@ $(document).ready(function() {
             $(this).attr('aria-expanded', 'true');
         }
         // Get the related panel
-        const panel = $(this).nextElementSibling;
-        console.log(this);
+        const panel = this.nextElementSibling;
+        console.log(panel);
 
         // Get the current scroll position (optional, for resetting)
         const scrollY = window.scrollY;
