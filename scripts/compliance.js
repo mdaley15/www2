@@ -78,14 +78,16 @@ $(document).ready(function() {
         document.body.style.overflow = 'hidden';
 
         // Reset position and overflow after animation
-        panel.addEventListener('transitionend', () => {
+        setTimeout(function() {
             document.body.style.position = 'static';
             document.body.style.top = '';
             document.body.style.overflow = '';
-
             // Optionally, scroll back to the original position
             window.scrollTo(0, scrollY);
-        });
+        }, 400);
+        // panel.addEventListener('transitionend', () => {
+
+        // });
     });
     $('.collapsible-header').keydown(function(e) {
         if (e.which == 13 || e.which == 32) {
