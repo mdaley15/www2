@@ -1391,6 +1391,23 @@ main .Index-page-content > div,
         }
     }
 }
+/************************************************** Back to top *********************************************************/
+#toTop {
+    position: fixed;
+    bottom: 75px;
+    right: 10px;
+    z-index: 99999;
+    border-radius: 5px;
+    border: 1px solid @drkOrange;
+    background-color: @blue;
+    color: white;
+    transition: all .3s ease-in-out;
+        
+    &:hover,
+    &:focus {
+        transform: scale(1.2)
+    }
+}
 /************************************************** tables *********************************************************/
 .twoColumn th,
 .twoColumn td {
