@@ -1,4 +1,5 @@
 let toTopBtn = document.getElementById("toTop");
+let mainHeader = document.querySelector('.Header--bottom');
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -10,10 +11,11 @@ function scrollFunction() {
     }
 }
 function scrollToTop() {
-    console.log(window.scrollY);
-    window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "smooth"
-    });
+    // console.log(window.scrollY);
+    // window.scrollTo({
+    //     top: 0,
+    //     left: 0,
+    //     behavior: "smooth"
+    // });
+    mainHeader.scrollIntoView({ block: "start", behavior: "smooth" })
 }
