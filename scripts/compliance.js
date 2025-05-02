@@ -66,7 +66,7 @@ $(document).ready(function() {
         var doc = document.documentElement;
         var top = (window.scrollY || doc.scrollTop)  - (doc.clientTop || 0);
         var objectTop = $(this).offset().top;
-        console.log(objectTop);
+        console.log(top+",",objectTop);
     
         if(objectTop < top || objectTop > top + window.innerHeight - 100 ){
           $('html, body').animate({
