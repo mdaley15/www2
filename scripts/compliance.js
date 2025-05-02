@@ -62,32 +62,16 @@ $(document).ready(function() {
         } else {
             $(this).attr('aria-expanded', 'true');
         }
-        // Get the related panel
-        const panel = this.nextElementSibling;
-        console.log(panel);
-
-        // Get the current scroll position (optional, for resetting)
-        const scrollY = window.scrollY;
-
-        // Store the current body or html position
-        const currentPosition = document.body.style.position;
-
-        // Set the body or html to position: fixed
-        document.body.style.position = 'fixed';
-        // document.body.style.top = `-${scrollY}px`;
-        document.body.style.overflow = 'hidden';
-
-        // Reset position and overflow after animation
-        setTimeout(function() {
-            document.body.style.position = 'static';
-            // document.body.style.top = '';
-            document.body.style.overflow = '';
-            // Optionally, scroll back to the original position
-            // window.scrollTo(0, scrollY);
-        }, 400);
-        // panel.addEventListener('transitionend', () => {
-
-        // });
+        // var header = el.find('.collapsible-header');
+        var doc = document.documentElement;
+        var top = (window.scrollY || doc.scrollTop)  - (doc.clientTop || 0);
+        var objectTop = this.offset().top;
+    
+        if(objectTop < top || objectTop > top + window.innerHeight - 100 ){
+          $('html, body').animate({
+            scrollTop: objectTop - 10
+          }, 500);
+        }
     });
     $('.collapsible-header').keydown(function(e) {
         if (e.which == 13 || e.which == 32) {
