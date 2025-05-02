@@ -68,12 +68,14 @@ $(document).ready(function() {
         var objectTop = $(this).offset().top;
         console.log(top+",",objectTop);
     
-        if(objectTop < top || objectTop > top + window.innerHeight - 100 ) {
-            console.log("time to scroll to open header");
-            $('html, body').animate({
-                scrollTop: objectTop - 10
-            }, 500);
-        }
+        setTimeout(() => {
+            if (objectTop < top || objectTop > top + window.innerHeight - 100 ) {
+                console.log("time to scroll to open header");
+                $('html, body').animate({
+                    scrollTop: objectTop - 10
+                }, 500);
+            }
+        }, 500);
     });
     $('.collapsible-header').keydown(function(e) {
         if (e.which == 13 || e.which == 32) {
