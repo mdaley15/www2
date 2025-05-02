@@ -72,7 +72,7 @@ $(document).ready(function() {
             if (objectTop < top || objectTop > top + window.innerHeight - 100 ) {
                 console.log("time to scroll to open header");
                 $('html, body').animate({
-                    scrollTop: objectTop - 10
+                    scrollTop: objectTop - 80
                 }, 500);
             }
         }, 500);
