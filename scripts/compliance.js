@@ -83,7 +83,7 @@ $(document).ready(function() {
             document.body.style.top = '';
             document.body.style.overflow = '';
             // Optionally, scroll back to the original position
-            window.scrollTo(0, scrollY);
+            // window.scrollTo(0, scrollY);
         }, 400);
         // panel.addEventListener('transitionend', () => {
 
