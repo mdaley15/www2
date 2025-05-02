@@ -64,7 +64,7 @@ $(document).ready(function() {
         }
         // Get the related panel
         const panel = $(this).nextElementSibling;
-        console.log(panel);
+        console.log(this);
 
         // Get the current scroll position (optional, for resetting)
         const scrollY = window.scrollY;
