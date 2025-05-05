@@ -94,11 +94,6 @@ $( document ).ready(function() {
               });
           });
     }
-    var hsFormBtn = document.querySelector('.hs_submit .actions .hs-button');
-    console.log(hsFormBtn);
-    if (hsFormBtn) {
-        console.log("Hubspot button exists!");
-    }
     function addSpacesToCamelCase(fileInfo) {
         // return fileInfo.replace(/([A-Z])/g, ' $1').trim();
         const spacedString = fileInfo.replace(/([A-Z])/g, ' $1');
@@ -305,6 +300,12 @@ document.addEventListener('DOMContentLoaded', function() {
     startingBtns.forEach(btn => {
         btn.click();
     });
+    
+    var hsFormBtn = document.querySelector('.hs_submit .actions .hs-button');
+    console.log(hsFormBtn);
+    if (hsFormBtn) {
+        console.log("Hubspot button exists!");
+    }
 });
 function imgFilter(btn) {
     filter = btn.getAttribute('data-filter');
