@@ -490,13 +490,14 @@ waitForElementObserver(popup || submitMessage, () => {
         });
     }
     if (submitMessage) {
+        let formWrapper = document.getElementById('contactFormWrap');
+        requestAnimationFrame(() => {
+            const height = submitMessage.offsetHeight;
+            console.log('Element height:', height);
+            formWrapper.style.minHeight = height+"px";
+        });
         let hideOnSubmit = document.querySelector('.hideOnSubmit');
         hideOnSubmit.classList.add('hide');
-        const rect = submitMessage.getBoundingClientRect();
-        const height = rect.height;
-        console.log(rect, height);
-        let formWrapper = document.getElementById('contactFormWrap');
-        formWrapper.style.minHeight = height+"px";
     }
 });
 
