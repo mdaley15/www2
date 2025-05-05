@@ -466,10 +466,10 @@ function waitForElementObserver(selector, callback) {
 }
 waitForElementObserver(popup || submitMessage, () => {
     if (popup) {
-        console.log('Popup exists!');
         let body = document.querySelector('body');
-        console.log(popup);
-        console.log(animatedPop);
+        // console.log('Popup exists!');
+        // console.log(popup);
+        // console.log(animatedPop);
     
         body.style.overflow = 'hidden';
         document.addEventListener('click', function(event) {
@@ -493,7 +493,6 @@ waitForElementObserver(popup || submitMessage, () => {
         let formWrapper = document.getElementById('contactFormWrap');
         requestAnimationFrame(() => {
             const height = submitMessage.offsetHeight;
-            console.log('Element height:', height);
             formWrapper.style.minHeight = height+"px";
         });
         let hideOnSubmit = document.querySelector('.hideOnSubmit');
