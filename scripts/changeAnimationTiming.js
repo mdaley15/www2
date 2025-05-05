@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log(stats);
     stats.forEach(stat => {
         if (screen.width < 1300) {
+            console.log(screen.width);
             stat.setAttribute('data-aos-anchor-placement', 'top-bottom');
             stat.setAttribute('data-aos-delay', '200');
         }
