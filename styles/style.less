@@ -1343,13 +1343,18 @@ main .Index-page-content > div,
                         padding: 5px 10px;
                         font-size: 16px;
                         min-height: 40px!important;
-                        height: auto!important;
                         background-color: @bgOverlay;
                         border-top: 1px solid @blue!important;
                         border-left: 0!important;
                         border-right: 0!important;
                         border-bottom: 0!important;
                         border-radius: 0 0 5px 5px;
+                    }
+                    > input, > select {
+                        min-height: 40px!important;
+                    }
+                    > textarea {
+                        min-height: 60px!important;
                     }
                 }
                 ul {
