@@ -94,6 +94,10 @@ $( document ).ready(function() {
               });
           });
     }
+    let hsFormBtn = document.querySelector('.hs_submit .actions .hs-button');
+    if (hsFormBtn) {
+        console.log("Hubspot button exists!");
+    }
     function addSpacesToCamelCase(fileInfo) {
         // return fileInfo.replace(/([A-Z])/g, ' $1').trim();
         const spacedString = fileInfo.replace(/([A-Z])/g, ' $1');
