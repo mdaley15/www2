@@ -180,6 +180,7 @@
 
     <squarespace:script src="site-bundle.js" combo="false" />
     <squarespace:script src="compliance.js" combo="false"/>
+    <squarespace:script src="mobileNavActive.js" combo="false"/>
     <squarespace:script src="changeSign.js" combo="false"/>
     <squarespace:script src="scrollStacking.js" combo="false"/>
     <squarespace:script src="changeAnimationTiming.js" combo="false"/>
