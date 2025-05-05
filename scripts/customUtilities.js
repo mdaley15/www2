@@ -42,13 +42,13 @@ $( document ).ready(function() {
         const formImg = document.getElementById('formImg');
         formImg.setAttribute('src',queryString);
         if (queryString == "") {
-            console.log('Url does NOT contain image src');
+            // console.log('Url does NOT contain image src');
             formImgWrap.classList.add('hide');
         }
         let filename = getStringAfterLastSlash(queryString);
         let category = getStringAfterQM(queryString);
         let categoryWSpaces = addSpacesToCamelCase(category);
-        console.log(categoryWSpaces);
+        // console.log(categoryWSpaces);
         imgCategory.innerText = categoryWSpaces;
         // var imgInfo = [];
         // for (let i = 0; i < filename.length; i++) {
@@ -94,7 +94,7 @@ $( document ).ready(function() {
               });
           });
     }
-    let hsFormBtn = document.querySelector('.hs_submit .actions .hs-button');
+    var hsFormBtn = document.querySelector('.hs_submit .actions .hs-button');
     if (hsFormBtn) {
         console.log("Hubspot button exists!");
     }
