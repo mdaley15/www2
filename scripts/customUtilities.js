@@ -465,29 +465,33 @@ function waitForElementObserver(selector, callback) {
     });
 }
 waitForElementObserver(popup || submitMessage, () => {
-    console.log('Popup exists!');
-    console.log(submitMessage);
-    let body = document.querySelector('body');
-    console.log(popup);
-    console.log(animatedPop);
-
-    body.style.overflow = 'hidden';
-    document.addEventListener('click', function(event) {
-        const closeBtn = popup.querySelector('.sqs-popup-overlay-close');
-        const el = popup.querySelector('.sqs-slice-group');
-        if (el && !el.contains(event.target)) {
-            closeBtn.click();
-            body.style.overflow = 'auto';
-            body.style.overflowX = 'hidden';
-        }
-    });
-    console.log(animatedPop);
-    animatedPop.addEventListener('mouseenter', function(event) {
-        animatedPop.classList.add('pause');
-    });
-    animatedPop.addEventListener('mouseleave', function(event) {
-        animatedPop.classList.remove('pause');
-    });
+    if (popup) {
+        console.log('Popup exists!');
+        let body = document.querySelector('body');
+        console.log(popup);
+        console.log(animatedPop);
+    
+        body.style.overflow = 'hidden';
+        document.addEventListener('click', function(event) {
+            const closeBtn = popup.querySelector('.sqs-popup-overlay-close');
+            const el = popup.querySelector('.sqs-slice-group');
+            if (el && !el.contains(event.target)) {
+                closeBtn.click();
+                body.style.overflow = 'auto';
+                body.style.overflowX = 'hidden';
+            }
+        });
+        console.log(animatedPop);
+        animatedPop.addEventListener('mouseenter', function(event) {
+            animatedPop.classList.add('pause');
+        });
+        animatedPop.addEventListener('mouseleave', function(event) {
+            animatedPop.classList.remove('pause');
+        });
+    }
+    if (submitMessage) {
+        console.log(submitMessage);
+    }
 });
 
 function anchorScroll() {
