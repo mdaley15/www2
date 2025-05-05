@@ -94,6 +94,9 @@ $( document ).ready(function() {
               });
           });
     }
+    $('.hs_submit .actions .hs-button').click(function() {
+        alert("Zubmit button clicked");
+    });
     function addSpacesToCamelCase(fileInfo) {
         // return fileInfo.replace(/([A-Z])/g, ' $1').trim();
         const spacedString = fileInfo.replace(/([A-Z])/g, ' $1');
@@ -301,13 +304,6 @@ document.addEventListener('DOMContentLoaded', function() {
         btn.click();
     });
     
-    var hsFormBtn = document.querySelector('.hs_submit .actions .hs-button');
-    setTimeout(() => {
-        console.log(hsFormBtn);
-        if (hsFormBtn) {
-            console.log("Hubspot button exists!");
-        }
-    }, 500);
 });
 function imgFilter(btn) {
     filter = btn.getAttribute('data-filter');
