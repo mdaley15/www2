@@ -302,10 +302,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     var hsFormBtn = document.querySelector('.hs_submit .actions .hs-button');
-    console.log(hsFormBtn);
-    if (hsFormBtn) {
-        console.log("Hubspot button exists!");
-    }
+    setTimeout(() => {
+        console.log(hsFormBtn);
+        if (hsFormBtn) {
+            console.log("Hubspot button exists!");
+        }
+    }, 500);
 });
 function imgFilter(btn) {
     filter = btn.getAttribute('data-filter');
