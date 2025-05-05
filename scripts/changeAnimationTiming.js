@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(window.innerWidth);
         if (window.innerWidth < 1300) {
             console.log(window.innerWidth);
-            stat.setAttribute('data-aos-anchor-placement', 'top-bottom');
+            stat.setAttribute('data-aos-anchor-placement', 'center-bottom');
             stat.setAttribute('data-aos-delay', '200');
         }
     });
