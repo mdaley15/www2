@@ -95,6 +95,7 @@ $( document ).ready(function() {
           });
     }
     var hsFormBtn = document.querySelector('.hs_submit .actions .hs-button');
+    console.log(hsFormBtn);
     if (hsFormBtn) {
         console.log("Hubspot button exists!");
     }
