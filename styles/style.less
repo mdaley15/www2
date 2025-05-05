@@ -710,7 +710,8 @@ ul.starUL {
                 div {
                     width: auto;
                     ul {
-                        padding-left: 20px!important;
+                        padding: 0important;
+                        list-style: none;
                         margin: 10px 0 0;
                         
                         li {
@@ -718,6 +719,9 @@ ul.starUL {
                             white-space: wrap;
                             line-height: 1.4;
                             margin-bottom: 5px;
+                        }
+                        @media only screen and (max-width: 899px) {
+                            text-align: center!important;
                         }
                     }
                 }
