@@ -491,10 +491,10 @@ waitForElementObserver(popup || submitMessage, () => {
     }
     if (submitMessage) {
         let hideOnSubmit = document.querySelector('.hideOnSubmit');
-        const rect = submitMessage.getBoundingClientRect();
+        const rect = submitMessage.clientHeight;
         const height = rect.height;
         let formWrapper = document.getElementById('contactFormWrap');
-        formWrapper.style.minHeight = height+"px";
+        formWrapper.style.minHeight = rect+"px";
         hideOnSubmit.classList.add('hide');
     }
 });
