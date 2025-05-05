@@ -491,9 +491,9 @@ waitForElementObserver(popup || submitMessage, () => {
     }
     if (submitMessage) {
         let hideOnSubmit = document.querySelector('.hideOnSubmit');
-        const rect = submitMessage.getBoundingClientRect();
+        const rect = submitMessage.offsetHeight;
         const height = rect.height;
-        console.log(height);
+        console.log(rect);
         let formWrapper = document.getElementById('contactFormWrap');
         formWrapper.style.minHeight = height+"px";
         hideOnSubmit.classList.add('hide');
