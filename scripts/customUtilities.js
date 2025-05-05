@@ -494,7 +494,7 @@ waitForElementObserver(popup || submitMessage, () => {
         const rect = submitMessage.getBoundingClientRect();
         const height = rect.height;
         let formWrapper = document.getElementById('contactFormWrap');
-        formWrapper.style.minHeight = height+"px";
+        formWrapper.style.minHeight = height;
         hideOnSubmit.classList.add('hide');
     }
 });
