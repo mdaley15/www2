@@ -94,9 +94,6 @@ $( document ).ready(function() {
               });
           });
     }
-    $('.hs_submit .actions .hs-button').click(function() {
-        alert("Zubmit button clicked");
-    });
     function addSpacesToCamelCase(fileInfo) {
         // return fileInfo.replace(/([A-Z])/g, ' $1').trim();
         const spacedString = fileInfo.replace(/([A-Z])/g, ' $1');
@@ -442,11 +439,18 @@ document.addEventListener('click', function(event) {
     }
 });
 var popup,
-    animatedPop;
+    animatedPop,
+    submitMessage;
 function waitForElementObserver(selector, callback) {
     const observer = new MutationObserver((mutations) => {
         if ((popup = document.querySelector('.yui-popup-container-node')) && (animatedPop = document.querySelector('.sqs-slide-layer-content'))) {
             observer.disconnect();
+            callback();
+        }
+    });
+    const otherObserver = new MutationObserver((mutations) => {
+        if (submitMessage = document.querySelector('.submitted-message')) {
+            otherObserver.disconnect();
             callback();
         }
     });
@@ -455,9 +459,14 @@ function waitForElementObserver(selector, callback) {
         childList: true,
         subtree: true,
     });
+    otherObserver.observe(document.documentElement, {
+        childList: true,
+        subtree: true,
+    });
 }
-waitForElementObserver(popup, () => {
+waitForElementObserver(popup || submitMessage, () => {
     console.log('Popup exists!');
+    console.log(submitMessage);
     let body = document.querySelector('body');
     console.log(popup);
     console.log(animatedPop);
