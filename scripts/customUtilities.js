@@ -490,7 +490,8 @@ waitForElementObserver(popup || submitMessage, () => {
         });
     }
     if (submitMessage) {
-        console.log(submitMessage);
+        let hideOnSubmit = document.querySelector('.hideOnSubmit');
+        hideOnSubmit.classList.add('hide');
     }
 });
 
