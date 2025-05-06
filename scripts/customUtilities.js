@@ -194,7 +194,7 @@ $( document ).ready(function() {
         thumb.parentNode.insertBefore(wrapper, thumb);
         wrapper.appendChild(thumb);
         if (index === 0) {
-            thumb.parentElement.classList.add('sqs-active-slide');
+            // thumb.parentElement.classList.add('sqs-active-slide');
         }
     });
     document.addEventListener('contextmenu', function(event) {
