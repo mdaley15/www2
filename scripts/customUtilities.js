@@ -404,6 +404,8 @@ function lightboxFilter(itemLink) {
             } else {
                 link = '/contact-us?' + imgDataSrc+'?'+lastClass;
             }
+        } else {
+            link = '/contact-us?' + imgDataSrc+'?'+lastClass;
         }
         infoBtn.setAttribute('href', link);
         padder.appendChild(infoBtn);
