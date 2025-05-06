@@ -1,6 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     var pathName = window.location.pathname;
     console.log(pathName);
-    let mobileNav = document.querySelectorAll('.Mobile-overlay-menu-main a');
-    console.log(mobileNav);
+    let mobileLinks = document.querySelectorAll('.Mobile-overlay-menu-main a');
+    console.log(mobileLinks);
+    mobileLinks.forEach(link => {
+        let href = link.getAttribute('href');
+        if (href.includes(pathName)) {
+            console.log(link);
+        }
+    });
 });
