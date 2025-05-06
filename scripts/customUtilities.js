@@ -518,7 +518,7 @@ function anchorScroll() {
         var hash = window.location.hash.substring(1);
         const target = document.getElementById(hash);
         const targetHash = document.getElementById(hash+'_hash');
-        console.log(target,targetHash);
+        // console.log(target,targetHash);
         var offset = -100; // <-- change the value here
         if (target || targetHash) {
             $('body').removeClass('is-mobile-overlay-active');
