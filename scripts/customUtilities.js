@@ -31,7 +31,7 @@ $( document ).ready(function() {
         $('.whatWeDo .Header-nav-item:nth-child(3)').addClass('active');
         const queryString = window.location.search.substring(1);
         const urlParams = new URLSearchParams(queryString);
-        console.log(window.location.search);
+        console.log(queryString);
 
         const formImgWrap = document.querySelector('.formImgWrap');
         const formImgInfo = formImgWrap.querySelector('.formImgInfo');
