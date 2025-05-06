@@ -51,12 +51,12 @@ $( document ).ready(function() {
         let categoryWSpaces = addSpacesToCamelCase(category);
         console.log(categoryWSpaces);
         imgCategory.innerText = categoryWSpaces;
-        // var imgInfo = [];
-        // for (let i = 0; i < filename.length; i++) {
-        //     let fileInfo = filename[i];
-        //     const fileWithSpaces = addSpacesToCamelCase(fileInfo);
-        //     imgInfo.push(fileWithSpaces);
-        // }
+        var imgInfo = [];
+        for (let i = 0; i < filename.length; i++) {
+            let fileInfo = filename[i];
+            const fileWithSpaces = addSpacesToCamelCase(fileInfo);
+            imgInfo.push(fileWithSpaces);
+        }
         // if (imgInfo.length === 1) {
         //     imgCategory.innerText = imgInfo[0];
         //     imgSubCategory.remove();
