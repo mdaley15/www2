@@ -520,6 +520,9 @@ function anchorScroll() {
         const targetHash = document.getElementById(hash+'_hash');
         console.log(target,targetHash);
         var offset = -100; // <-- change the value here
+        if (target || targetHash) {
+            $('body').removeClass('is-mobile-overlay-active');
+        }
         if (targetHash) {
             let expanded = targetHash.getAttribute('aria-expanded');
             if (expanded) {
@@ -530,14 +533,18 @@ function anchorScroll() {
             } else {
                 targetHash.click();
             }
-        }
-        if (target || targetHash) {
-            $('body').removeClass('is-mobile-overlay-active');
             setTimeout(function() {
                 window.scrollTo(0,0);
                 $('html, body').animate({
-                    scrollTop: target.getBoundingClientRect().top + offset,
                     scrollTop: targetHash.getBoundingClientRect().top + offset
+                }, 1000);
+            }, 500);
+        }
+        if (target) {
+            setTimeout(function() {
+                window.scrollTo(0,0);
+                $('html, body').animate({
+                    scrollTop: target.getBoundingClientRect().top + offset
                 }, 1000);
             }, 500);
         }
