@@ -174,7 +174,7 @@
       <!-- {@|apply chat.block} -->
 
     </div>
-    <button id="toTop" onclick="scrollToTop();" ari-label="Back To Top">
+    <button id="toTop" onclick="scrollToTop();" aria-label="Back To Top">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
