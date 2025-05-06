@@ -50,12 +50,14 @@ $( document ).ready(function() {
         let categoryWSpaces = addSpacesToCamelCase(category);
         console.log(categoryWSpaces);
         let imgInfo = [];
+        var fileInfo;
         for (let i = 0; i < filename.length; i++) {
-            let fileInfo = filename[i];
+            fileInfo = filename[i];
             const fileWithSpaces = addSpacesToCamelCase(fileInfo);
             imgInfo.push(fileWithSpaces);
-            console.log(fileInfo);
+            
         }
+        console.log(fileInfo);
         imgCategory.innerText = categoryWSpaces;
         // if (imgInfo[0] == webp) {
         //     imgCategory.innerText = imgInfo[0];
