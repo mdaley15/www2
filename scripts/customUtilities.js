@@ -360,7 +360,7 @@ function lightboxFilter(itemLink) {
         let fileType = imgDataSrc.split('.').pop();
         var coverPath;
         console.log(window.innerWidth);
-        if (window.innerWidth < 641) {
+        if (window.innerWidth > 640) {
             if ((pathName.includes("/cover-designs-themes")) || (pathName.includes("/sports-and-clubs-photography") && thisBlock.classList.contains('switchImgs'))) {
                 img.setAttribute('data-src', '');
                 img.setAttribute('src', '');
@@ -398,7 +398,7 @@ function lightboxFilter(itemLink) {
         infoBtn.appendChild(text);
         infoBtn.classList.add('allBtns');
         var link;
-        if (window.innerWidth < 641) {
+        if (window.innerWidth > 640) {
             if ((pathName.includes("/cover-designs-themes")) || (pathName.includes("/sports-and-clubs-photography") && thisBlock.classList.contains('switchImgs'))) {
                 link = '/contact-us?' + coverPath+'?'+lastClass;
             } else {
