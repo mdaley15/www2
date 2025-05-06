@@ -518,10 +518,9 @@ function anchorScroll() {
         var hash = window.location.hash.substring(1);
         const target = document.getElementById(hash);
         const targetHash = document.getElementById(hash+'_hash');
-        console.log(target);
+        console.log(target,targetHash);
         var offset = -100; // <-- change the value here
-        if (target || targetHash) {
-            $('body').removeClass('is-mobile-overlay-active');
+        if (targetHash) {
             let expanded = targetHash.getAttribute('aria-expanded');
             if (expanded) {
                 console.log(expanded);
@@ -531,8 +530,9 @@ function anchorScroll() {
             } else {
                 targetHash.click();
             }
-            console.log(target.getBoundingClientRect().top);
-            console.log(target.getBoundingClientRect().top + offset);
+        }
+        if (target || targetHash) {
+            $('body').removeClass('is-mobile-overlay-active');
             setTimeout(function() {
                 window.scrollTo(0,0);
                 $('html, body').animate({
