@@ -58,7 +58,7 @@ $( document ).ready(function() {
         }
         console.log(fileInfo);
         if (fileInfo == 'webp') {
-            imgCategory.innerText = imgInfo[0].split('/')[0];
+            imgCategory.innerText = categoryWSpaces.split('/')[0];
         } else {
             imgCategory.innerText = categoryWSpaces;
         }
