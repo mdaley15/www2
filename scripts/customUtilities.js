@@ -49,7 +49,7 @@ $( document ).ready(function() {
         let filename = getStringAfterLastSlash(queryString);
         let category = getStringAfterQM(queryString);
         let categoryWSpaces = addSpacesToCamelCase(category);
-        console.log(filename);
+        console.log(categoryWSpaces);
         imgCategory.innerText = categoryWSpaces;
         // var imgInfo = [];
         // for (let i = 0; i < filename.length; i++) {
