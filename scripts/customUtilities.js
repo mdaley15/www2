@@ -30,6 +30,7 @@ $( document ).ready(function() {
     if (pathName.includes("/contact-us")) {
         $('.whatWeDo .Header-nav-item:nth-child(3)').addClass('active');
         const queryString = window.location.search.substring(1);
+        console.log(queryString);
         const urlParams = new URLSearchParams(queryString);
 
         const formImgWrap = document.querySelector('.formImgWrap');
