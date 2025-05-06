@@ -53,14 +53,14 @@ $( document ).ready(function() {
         imgCategory.innerText = categoryWSpaces;
         for (let i = 0; i < filename.length; i++) {
             let fileInfo = filename[i];
-            console.log(imgInfo);
+            console.log(fileInfo);
         }
-        if (imgInfo[0] == webp) {
-            imgCategory.innerText = imgInfo[0];
-            imgSubCategory.remove();
-            threeSplit.remove();
-            imgStyle.remove();
-        }
+        // if (imgInfo[0] == webp) {
+        //     imgCategory.innerText = imgInfo[0];
+        //     imgSubCategory.remove();
+        //     threeSplit.remove();
+        //     imgStyle.remove();
+        // }
         // for (let i = 0; i < filename.length; i++) {
         //     let fileInfo = filename[i];
         //     const fileWithSpaces = addSpacesToCamelCase(fileInfo);
