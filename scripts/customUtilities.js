@@ -375,14 +375,14 @@ function lightboxFilter(itemLink) {
             coverPath = newImgPth;
         };
         if (window.innerWidth > 640) {
-            if (pathName.includes("/cover-designs-themes")) {
-                img.setAttribute('alt', 'Yearbook cover assets');
-                img.classList.add('ybAssets');
-            }
-            if (pathName.includes("/sports-and-clubs-photography") && thisBlock.classList.contains('switchImgs')) {
-                img.setAttribute('alt', 'Sports + Clubs image assets');
-                img.classList.add('scAssets');
-            }
+        }
+        if (pathName.includes("/cover-designs-themes")) {
+            img.setAttribute('alt', 'Yearbook cover assets');
+            img.classList.add('ybAssets');
+        }
+        if (pathName.includes("/sports-and-clubs-photography") && thisBlock.classList.contains('switchImgs')) {
+            img.setAttribute('alt', 'Sports + Clubs image assets');
+            img.classList.add('scAssets');
         }
         let imgRatio = img.getAttribute('data-image-dimensions');
         let width = Number(imgRatio.split('x', 1)[0]);
