@@ -59,6 +59,7 @@ $( document ).ready(function() {
         console.log(fileInfo);
         if (fileInfo == 'webp') {
             imgCategory.innerText = categoryWSpaces.split('/')[0];
+            formImg.classList.add('webp');
         } else {
             imgCategory.innerText = categoryWSpaces;
         }
