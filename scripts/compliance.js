@@ -2,7 +2,7 @@
 $(document).ready(function() {
     
     $('.external').append('<span class="sr-only">External Website</span>');
-    $('section.cards').attr('id', 'main-content');
+    $('main.Index').attr('id', 'main-content');
     $('#main-content').attr('tabindex', '0');
     $('.external').attr('onclick', 'focusMethod()');
     $('.external').attr('onkeypress', 'focusMethod()');
