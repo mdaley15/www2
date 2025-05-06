@@ -398,12 +398,8 @@ function lightboxFilter(itemLink) {
         infoBtn.appendChild(text);
         infoBtn.classList.add('allBtns');
         var link;
-        if (window.innerWidth > 640) {
-            if ((pathName.includes("/cover-designs-themes")) || (pathName.includes("/sports-and-clubs-photography") && thisBlock.classList.contains('switchImgs'))) {
-                link = '/contact-us?' + coverPath+'?'+lastClass;
-            } else {
-                link = '/contact-us?' + imgDataSrc+'?'+lastClass;
-            }
+        if ((pathName.includes("/cover-designs-themes")) || (pathName.includes("/sports-and-clubs-photography") && thisBlock.classList.contains('switchImgs'))) {
+            link = '/contact-us?' + coverPath+'?'+lastClass;
         } else {
             link = '/contact-us?' + imgDataSrc+'?'+lastClass;
         }
