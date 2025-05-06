@@ -49,6 +49,7 @@ $( document ).ready(function() {
         let category = getStringAfterQM(queryString);
         let categoryWSpaces = addSpacesToCamelCase(category);
         console.log(categoryWSpaces);
+        let imgInfo = [];
         for (let i = 0; i < filename.length; i++) {
             let fileInfo = filename[i];
             const fileWithSpaces = addSpacesToCamelCase(fileInfo);
