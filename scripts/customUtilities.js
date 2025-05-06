@@ -402,7 +402,7 @@ function lightboxFilter(itemLink) {
         infoBtn.classList.add('allBtns');
         var link;
         if ((pathName.includes("/cover-designs-themes")) || (pathName.includes("/sports-and-clubs-photography") && thisBlock.classList.contains('switchImgs'))) {
-            link = '/contact-us?' + coverPath+'?'+lastClass+'-webp';
+            link = '/contact-us?' + coverPath+'?'+lastClass+'/webp';
         } else {
             link = '/contact-us?' + imgDataSrc+'?'+lastClass;
         }
