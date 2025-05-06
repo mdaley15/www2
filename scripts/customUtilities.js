@@ -57,6 +57,7 @@ $( document ).ready(function() {
             const fileWithSpaces = addSpacesToCamelCase(fileInfo);
             imgInfo.push(fileWithSpaces);
         }
+        console.log(imgInfo);
         // if (imgInfo.length === 1) {
         //     imgCategory.innerText = imgInfo[0];
         //     imgSubCategory.remove();
