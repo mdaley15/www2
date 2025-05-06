@@ -1,4 +1,4 @@
-<footer class="Footer" role="contentinfo" data-controller="FooterBreakpoints">
+<footer class="Footer" id="footer" role="contentinfo" data-controller="FooterBreakpoints">
     <div class="insideFooter footerTop">
         <div>
             <div>
