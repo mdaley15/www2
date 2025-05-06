@@ -516,26 +516,28 @@ waitForElementObserver(popup || submitMessage, () => {
 function anchorScroll() {
     if (window.location.hash) {
         var hash = window.location.hash.substring(1);
-        const target = document.getElementById(hash+'_hash');
+        const target = document.getElementById(hash);
+        const targetHash = document.getElementById(hash+'_hash');
         console.log(target);
         var offset = -100; // <-- change the value here
-        if (target) {
+        if (target || targetHash) {
             $('body').removeClass('is-mobile-overlay-active');
-            let expanded = target.getAttribute('aria-expanded');
+            let expanded = targetHash.getAttribute('aria-expanded');
             if (expanded) {
                 console.log(expanded);
                 if (expanded == 'false') {
-                    target.click();
+                    targetHash.click();
                 }
             } else {
-                target.click();
+                targetHash.click();
             }
             console.log(target.getBoundingClientRect().top);
             console.log(target.getBoundingClientRect().top + offset);
             setTimeout(function() {
                 window.scrollTo(0,0);
                 $('html, body').animate({
-                    scrollTop: target.getBoundingClientRect().top + offset
+                    scrollTop: target.getBoundingClientRect().top + offset,
+                    scrollTop: targetHash.getBoundingClientRect().top + offset
                 }, 1000);
             }, 500);
         }
