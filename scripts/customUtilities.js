@@ -55,16 +55,13 @@ $( document ).ready(function() {
             fileInfo = filename[i];
             const fileWithSpaces = addSpacesToCamelCase(fileInfo);
             imgInfo.push(fileWithSpaces);
-            
         }
         console.log(fileInfo);
-        imgCategory.innerText = categoryWSpaces;
-        // if (imgInfo[0] == webp) {
-        //     imgCategory.innerText = imgInfo[0];
-        //     imgSubCategory.remove();
-        //     threeSplit.remove();
-        //     imgStyle.remove();
-        // }
+        if (fileInfo == webp) {
+            imgCategory.innerText = imgInfo[0].split('/')[0];
+        } else {
+            imgCategory.innerText = categoryWSpaces;
+        }
         // if (imgInfo.length === 1) {
         //     imgCategory.innerText = imgInfo[0];
         //     imgSubCategory.remove();
