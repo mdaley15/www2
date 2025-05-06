@@ -57,7 +57,7 @@ $( document ).ready(function() {
             imgInfo.push(fileWithSpaces);
         }
         console.log(fileInfo);
-        if (fileInfo == webp) {
+        if (fileInfo == 'webp') {
             imgCategory.innerText = imgInfo[0].split('/')[0];
         } else {
             imgCategory.innerText = categoryWSpaces;
