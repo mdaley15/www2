@@ -359,25 +359,27 @@ function lightboxFilter(itemLink) {
         let imgDataSrc = img.getAttribute('data-src');
         let fileType = imgDataSrc.split('.').pop();
         var coverPath;
-        if ((pathName.includes("/cover-designs-themes")) || (pathName.includes("/sports-and-clubs-photography") && thisBlock.classList.contains('switchImgs'))) {
-            img.setAttribute('data-src', '');
-            img.setAttribute('src', '');
-            img.setAttribute('data-image', '');
-            let lastSlashIndex = imgDataSrc.lastIndexOf('/');
-            let filename = imgDataSrc.substring(lastSlashIndex + 1);
-            filename = filename.split(".", 1)[0];
-            let newImgPth = '../assets/'+filename+'.webp';
-            img.setAttribute('data-src', newImgPth);
-            img.setAttribute('src', newImgPth);
-            coverPath = newImgPth;
-        };
-        if (pathName.includes("/cover-designs-themes")) {
-            img.setAttribute('alt', 'Yearbook cover assets');
-            img.classList.add('ybAssets');
-        }
-        if (pathName.includes("/sports-and-clubs-photography") && thisBlock.classList.contains('switchImgs')) {
-            img.setAttribute('alt', 'Sports + Clubs image assets');
-            img.classList.add('scAssets');
+        if (window.innerWidth < 641) {
+            if ((pathName.includes("/cover-designs-themes")) || (pathName.includes("/sports-and-clubs-photography") && thisBlock.classList.contains('switchImgs'))) {
+                img.setAttribute('data-src', '');
+                img.setAttribute('src', '');
+                img.setAttribute('data-image', '');
+                let lastSlashIndex = imgDataSrc.lastIndexOf('/');
+                let filename = imgDataSrc.substring(lastSlashIndex + 1);
+                filename = filename.split(".", 1)[0];
+                let newImgPth = '../assets/'+filename+'.webp';
+                img.setAttribute('data-src', newImgPth);
+                img.setAttribute('src', newImgPth);
+                coverPath = newImgPth;
+            };
+            if (pathName.includes("/cover-designs-themes")) {
+                img.setAttribute('alt', 'Yearbook cover assets');
+                img.classList.add('ybAssets');
+            }
+            if (pathName.includes("/sports-and-clubs-photography") && thisBlock.classList.contains('switchImgs')) {
+                img.setAttribute('alt', 'Sports + Clubs image assets');
+                img.classList.add('scAssets');
+            }
         }
         let imgRatio = img.getAttribute('data-image-dimensions');
         let width = Number(imgRatio.split('x', 1)[0]);
@@ -395,10 +397,12 @@ function lightboxFilter(itemLink) {
         infoBtn.appendChild(text);
         infoBtn.classList.add('allBtns');
         var link;
-        if ((pathName.includes("/cover-designs-themes")) || (pathName.includes("/sports-and-clubs-photography") && thisBlock.classList.contains('switchImgs'))) {
-            link = '/contact-us?' + coverPath+'?'+lastClass;
-        } else {
-            link = '/contact-us?' + imgDataSrc+'?'+lastClass;
+        if (window.innerWidth < 641) {
+            if ((pathName.includes("/cover-designs-themes")) || (pathName.includes("/sports-and-clubs-photography") && thisBlock.classList.contains('switchImgs'))) {
+                link = '/contact-us?' + coverPath+'?'+lastClass;
+            } else {
+                link = '/contact-us?' + imgDataSrc+'?'+lastClass;
+            }
         }
         infoBtn.setAttribute('href', link);
         padder.appendChild(infoBtn);
