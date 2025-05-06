@@ -466,7 +466,6 @@ function waitForElementObserver(selector, callback) {
             callback();
         }
     });
-  
     observer.observe(document.documentElement, {
         childList: true,
         subtree: true,
@@ -508,7 +507,9 @@ waitForElementObserver(popup || submitMessage, () => {
             formWrapper.style.minHeight = height+"px";
         });
         let hideOnSubmit = document.querySelector('.hideOnSubmit');
+        const formImgWrap = document.querySelector('.formImgWrap');
         hideOnSubmit.classList.add('hide');
+        formImgWrap.classList.add('hide');
     }
 });
 
