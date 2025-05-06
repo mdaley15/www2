@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let href = link.getAttribute('href');
         if (href.includes(pathName)) {
             console.log(link);
+            link.classList.add('active');
         }
     });
 });
