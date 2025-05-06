@@ -1320,6 +1320,13 @@ main .Index-page-content > div,
             margin: 0 auto;
             height: 250px;
             box-shadow: 5px 5px 0 @drkOrange;
+
+            &.webp {
+                @media only screen and (max-width: 640px) {
+                    height: auto;
+                    width: 90%;
+                }
+            }
         }
     }
     .hbspt-form {
