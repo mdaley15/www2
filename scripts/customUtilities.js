@@ -361,14 +361,14 @@ function lightboxFilter(itemLink) {
         var coverPath;
         
         if ((pathName.includes("/cover-designs-themes")) || (pathName.includes("/sports-and-clubs-photography") && thisBlock.classList.contains('switchImgs'))) {
-            img.setAttribute('data-src', '');
-            img.setAttribute('src', '');
-            img.setAttribute('data-image', '');
             let lastSlashIndex = imgDataSrc.lastIndexOf('/');
             let filename = imgDataSrc.substring(lastSlashIndex + 1);
             filename = filename.split(".", 1)[0];
             let newImgPth = '../assets/'+filename+'.webp';
             if (window.innerWidth > 640) {
+                img.setAttribute('data-src', '');
+                img.setAttribute('src', '');
+                img.setAttribute('data-image', '');
                 img.setAttribute('data-src', newImgPth);
                 img.setAttribute('src', newImgPth);
             }
