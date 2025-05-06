@@ -21,6 +21,15 @@ $( document ).ready(function() {
     $('.Mobile-overlay-nav--secondary .Mobile-overlay-nav-item:nth-child(6) > span').contents().unwrap().wrap('<a href="/yearbooks"></a>');
 
     var pathName = window.location.pathname;
+    let mobileLinks = document.querySelectorAll('.Mobile-overlay-menu-main a');
+    mobileLinks.forEach(link => {
+        console.log(link);
+        let href = link.getAttribute('href');
+        if (href == pathName) {
+            console.log(link);
+            link.classList.add('active');
+        }
+    });
     if (pathName.includes("/yearbooks")) {
         $('.whatWeDo .Header-nav-item:nth-child(2) > .Header-nav-folder-title').addClass('active');
     }
