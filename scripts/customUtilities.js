@@ -359,6 +359,7 @@ function lightboxFilter(itemLink) {
         let imgDataSrc = img.getAttribute('data-src');
         let fileType = imgDataSrc.split('.').pop();
         var coverPath;
+        console.log(window.innerWidth);
         if (window.innerWidth < 641) {
             if ((pathName.includes("/cover-designs-themes")) || (pathName.includes("/sports-and-clubs-photography") && thisBlock.classList.contains('switchImgs'))) {
                 img.setAttribute('data-src', '');
