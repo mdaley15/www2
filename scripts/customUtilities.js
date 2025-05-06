@@ -31,7 +31,6 @@ $( document ).ready(function() {
         $('.whatWeDo .Header-nav-item:nth-child(3)').addClass('active');
         const queryString = window.location.search.substring(1);
         const urlParams = new URLSearchParams(queryString);
-        console.log(queryString);
 
         const formImgWrap = document.querySelector('.formImgWrap');
         const formImgInfo = formImgWrap.querySelector('.formImgInfo');
@@ -50,21 +49,18 @@ $( document ).ready(function() {
         let category = getStringAfterQM(queryString);
         let categoryWSpaces = addSpacesToCamelCase(category);
         console.log(categoryWSpaces);
-        imgCategory.innerText = categoryWSpaces;
         for (let i = 0; i < filename.length; i++) {
             let fileInfo = filename[i];
+            const fileWithSpaces = addSpacesToCamelCase(fileInfo);
+            imgInfo.push(fileWithSpaces);
             console.log(fileInfo);
         }
+        imgCategory.innerText = categoryWSpaces;
         // if (imgInfo[0] == webp) {
         //     imgCategory.innerText = imgInfo[0];
         //     imgSubCategory.remove();
         //     threeSplit.remove();
         //     imgStyle.remove();
-        // }
-        // for (let i = 0; i < filename.length; i++) {
-        //     let fileInfo = filename[i];
-        //     const fileWithSpaces = addSpacesToCamelCase(fileInfo);
-        //     imgInfo.push(fileWithSpaces);
         // }
         // if (imgInfo.length === 1) {
         //     imgCategory.innerText = imgInfo[0];
