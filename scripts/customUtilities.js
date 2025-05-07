@@ -20,9 +20,10 @@ $( document ).ready(function() {
     $('.whatWeDo .Header-nav-item:nth-child(2) > .Header-nav-folder-title').attr('href', '/yearbooks');
     $('.Mobile-overlay-nav--secondary .Mobile-overlay-nav-item:nth-child(6) > span').contents().unwrap().wrap('<a href="/yearbooks"></a>');
 
+    console.log(window.location);
     var pathName = window.location.pathname,
         href = window.location.href;
-    if (href == "https://www2.inter-state.com/" || "www2.inter-state.com" || "https://www2.inter-state.com") {
+    if (href == "https://www2.inter-state.com/" || "https://www2.inter-state.com" || "www2.inter-state.com" || "www2.inter-state.com/") {
         // window.location.replace("https://inter-state.com/");
         console.log('Redirect this href');
     } else {
