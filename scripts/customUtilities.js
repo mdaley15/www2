@@ -507,12 +507,9 @@ waitForElementObserver(popup || submitMessage, () => {
                 body.style.overflowX = 'hidden';
             }
         });
-        console.log(animatedPop);
-        let heading = animatedPop.querySelector('h1');
-        let headingID = heading.getAttribute('id');
-        let headingText = heading.innerText;
-        console.log(headingID,headingText);
-        let newHeading = document.createElement('div');
+        let modal = popup.querySelector('.sqs-popup-overlay');
+        console.log(modal);
+        
         $('#sqs-slash-page-header').contents().unwrap().wrap('<div id="sqs-slash-page-header"></div>');
 
         animatedPop.addEventListener('mouseenter', function(event) {
