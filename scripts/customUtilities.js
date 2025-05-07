@@ -509,7 +509,6 @@ waitForElementObserver(popup || submitMessage, () => {
         });
         let modal = popup.querySelector('.sqs-popup-overlay');
         modal.setAttribute('aria-modal', 'true');
-        console.log(modal);
         
         $('#sqs-slash-page-header').contents().unwrap().wrap('<div id="sqs-slash-page-header"></div>');
 
