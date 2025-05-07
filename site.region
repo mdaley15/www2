@@ -125,7 +125,7 @@
             <div data-nc-container="bottom-center">
             </div>
             <div data-nc-container="bottom-right">
-                <nav class="Header-nav Header-nav--primary whoWeAre" data-nc-element="primary-nav" data-content-field="navigation" tabindex="0" data-aos="fade-down" data-aos-easing="ease-out-back" data-aos-delay="600" data-aos-duration="1000">
+                <nav class="Header-nav Header-nav--primary whoWeAre" data-nc-element="primary-nav" data-content-field="navigation" data-aos="fade-down" data-aos-easing="ease-out-back" data-aos-delay="600" data-aos-duration="1000">
                     <squarespace:navigation navigationId="mainNavigation" template="header-nav" />
                 </nav>
                 <nav class="Header-nav Header-nav--primary whatWeDo" data-nc-element="primary-nav" data-content-field="navigation" data-aos="fade-down" data-aos-easing="ease-out-back" data-aos-delay="900" data-aos-duration="1000">
