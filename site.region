@@ -24,7 +24,7 @@
     <div class="Loader"></div>
 
     <div id="topHeader">
-        <nav class="Header-nav Header-nav--secondary" data-nc-element="secondary-nav" data-content-field="navigation">
+        <nav class="Header-nav Header-nav--secondary" data-nc-element="secondary-nav" data-content-field="navigation" role="navigation">
             <squarespace:navigation navigationId="secondaryNavigation" template="header-nav" />
         </nav>
         <a class="allBtns" href="https://inter-state.com/FlyerEntry" target="">ORDER</a>
@@ -91,9 +91,6 @@
 
           <div data-nc-container="top-right">
           
-            <nav class="Header-nav Header-nav--secondary" role="navigation" data-nc-element="secondary-nav" data-content-field="navigation">
-                <squarespace:navigation navigationId="secondaryNavigation" template="header-nav" />
-            </nav>
 
             {.if website.socialAccounts.0}
               <div class="Header-social" data-nc-element="social">
