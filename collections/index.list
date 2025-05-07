@@ -93,12 +93,12 @@
           {mainContent}
         </div>
         {.background-source-video?}
-          <figure class="Index-page-image" data-parallax-image-wrapper>
+          <figure class="Index-page-image" role="none" data-parallax-image-wrapper>
             {@|apply background-media.block}
           </figure>
         {.or}
           {.section mainImage}
-            <figure class="Index-page-image" data-parallax-image-wrapper>
+            <figure class="Index-page-image" role="none" data-parallax-image-wrapper>
               {@|apply background-media.block}
             </figure>
           {.end}
