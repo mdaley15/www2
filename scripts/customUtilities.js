@@ -22,8 +22,8 @@ $( document ).ready(function() {
 
     var pathName = window.location.pathname,
         href = window.location.href;
-    if (href == "https://www2.inter-state.com/") {
-
+    if (href == "https://www2.inter-state.com/" || "www2.inter-state.com" || "https://www2.inter-state.com") {
+        window.location.replace("https://inter-state.com/");
     } else {
         console.log(href);
     }
