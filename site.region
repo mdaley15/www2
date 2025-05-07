@@ -24,7 +24,7 @@
     <div class="Loader"></div>
 
     <div id="topHeader">
-        <nav class="Header-nav Header-nav--secondary" data-nc-element="secondary-nav" data-content-field="navigation" role="navigation">
+        <nav class="Header-nav Header-nav--secondary" data-nc-element="secondary-nav" data-content-field="navigation" role="none">
             <squarespace:navigation navigationId="secondaryNavigation" template="header-nav" />
         </nav>
         <a class="allBtns" href="https://inter-state.com/FlyerEntry" target="">ORDER</a>
