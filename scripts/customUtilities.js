@@ -496,9 +496,7 @@ waitForElementObserver(popup || submitMessage, () => {
         // console.log('Popup exists!');
         // console.log(popup);
         // console.log(animatedPop);
-        let heading = popup.querySelector('h1');
-        console.log(heading);
-        
+
         body.style.overflow = 'hidden';
         document.addEventListener('click', function(event) {
             const closeBtn = popup.querySelector('.sqs-popup-overlay-close');
@@ -510,6 +508,9 @@ waitForElementObserver(popup || submitMessage, () => {
             }
         });
         console.log(animatedPop);
+        let heading = animatedPop.querySelector('h1');
+        console.log(heading);
+        
         animatedPop.addEventListener('mouseenter', function(event) {
             animatedPop.classList.add('pause');
         });
