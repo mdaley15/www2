@@ -509,8 +509,10 @@ waitForElementObserver(popup || submitMessage, () => {
         });
         console.log(animatedPop);
         let heading = animatedPop.querySelector('h1');
-        console.log(heading);
-        
+        let headingID = heading.getAttribute('id');
+        let headingText = heading.innerText;
+        console.log(headingID,headingText);
+
         animatedPop.addEventListener('mouseenter', function(event) {
             animatedPop.classList.add('pause');
         });
