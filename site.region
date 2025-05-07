@@ -91,7 +91,7 @@
 
           <div data-nc-container="top-right">
           
-            <nav class="Header-nav Header-nav--secondary" data-nc-element="secondary-nav" data-content-field="navigation" role="navigation">
+            <nav class="Header-nav Header-nav--secondary" role="navigation" data-nc-element="secondary-nav" data-content-field="navigation">
                 <squarespace:navigation navigationId="secondaryNavigation" template="header-nav" />
             </nav>
 
