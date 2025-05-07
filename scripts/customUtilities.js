@@ -22,7 +22,11 @@ $( document ).ready(function() {
 
     var pathName = window.location.pathname,
         href = window.location.href;
-    console.log(href);
+    if (href == "https://www2.inter-state.com/") {
+
+    } else {
+        console.log(href);
+    }
     let mobileLinks = document.querySelectorAll('.Mobile-overlay-menu-main a');
     mobileLinks.forEach(link => {
         let href = link.getAttribute('href');
