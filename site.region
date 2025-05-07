@@ -129,7 +129,7 @@
                     <squarespace:navigation navigationId="mainNavigation" template="header-nav" />
                 </nav>
                 <nav class="Header-nav Header-nav--primary whatWeDo" data-nc-element="primary-nav" data-content-field="navigation" tabindex="0" data-aos="fade-down" data-aos-easing="ease-out-back" data-aos-delay="900" data-aos-duration="1000">
-                    <span class="navTitle">What We Do <i class="fa-solid fa-chevron-down"></i></span>
+                    <span class="navTitle" role="button">What We Do <i class="fa-solid fa-chevron-down"></i></span>
                     <squarespace:navigation navigationId="mainNavigation2" template="header-nav" />
                 </nav>
 
