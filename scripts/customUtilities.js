@@ -512,6 +512,8 @@ waitForElementObserver(popup || submitMessage, () => {
         let headingID = heading.getAttribute('id');
         let headingText = heading.innerText;
         console.log(headingID,headingText);
+        let newHeading = document.createElement('div');
+        heading.contents().unwrap().wrap('<div id="sqs-slash-page-header"></div>');
 
         animatedPop.addEventListener('mouseenter', function(event) {
             animatedPop.classList.add('pause');
