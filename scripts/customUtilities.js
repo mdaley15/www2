@@ -20,7 +20,7 @@ $( document ).ready(function() {
     $('.whatWeDo .Header-nav-item:nth-child(2) > .Header-nav-folder-title').attr('href', '/yearbooks');
     $('.Mobile-overlay-nav--secondary .Mobile-overlay-nav-item:nth-child(6) > span').contents().unwrap().wrap('<a href="/yearbooks"></a>');
 
-    console.log(window.location);
+    // console.log(window.location);
     var pathName = window.location.pathname,
         href = window.location.href;
     if (href == "https://www2.inter-state.com/" || "https://www2.inter-state.com" || "www2.inter-state.com" || "www2.inter-state.com/") {
@@ -545,7 +545,7 @@ function anchorScroll() {
         if (targetHash) {
             let expanded = targetHash.getAttribute('aria-expanded');
             if (expanded) {
-                console.log(expanded);
+                // console.log(expanded);
                 if (expanded == 'false') {
                     targetHash.click();
                 } else {
