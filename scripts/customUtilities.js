@@ -546,9 +546,6 @@ function anchorScroll() {
             let expanded = targetHash.getAttribute('aria-expanded');
             if (expanded) {
                 console.log(expanded);
-                if (expanded == 'false') {
-                    targetHash.click();
-                }
                 setTimeout(function() {
                     window.scrollTo(0,0);
                     $('html, body').animate({
