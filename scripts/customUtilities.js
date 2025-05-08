@@ -546,12 +546,16 @@ function anchorScroll() {
             let expanded = targetHash.getAttribute('aria-expanded');
             if (expanded) {
                 console.log(expanded);
-                setTimeout(function() {
-                    window.scrollTo(0,0);
-                    $('html, body').animate({
-                        scrollTop: targetHash.getBoundingClientRect().top + offset
-                    }, 1000);
-                }, 500);
+                if (expanded == 'false') {
+                    targetHash.click();
+                } else {
+                    setTimeout(function() {
+                        window.scrollTo(0,0);
+                        $('html, body').animate({
+                            scrollTop: targetHash.getBoundingClientRect().top + offset
+                        }, 1000);
+                    }, 500);
+                }
             } else {
                 targetHash.click();
             }
