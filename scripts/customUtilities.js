@@ -23,7 +23,7 @@ $( document ).ready(function() {
     // console.log(window.location);
     var pathName = window.location.pathname,
         href = window.location.href;
-    if (href == "https://www2.inter-state.com/" || "https://www2.inter-state.com" || "www2.inter-state.com" || "www2.inter-state.com/") {
+    if (href == "https://schools.inter-state.com/" || "https://schools.inter-state.com" || "schools.inter-state.com" || "schools.inter-state.com/") {
         // window.location.replace("https://inter-state.com/");
         // console.log('Redirect this href');
     } else {
