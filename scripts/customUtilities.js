@@ -549,15 +549,15 @@ function anchorScroll() {
                 if (expanded == 'false') {
                     targetHash.click();
                 }
+                setTimeout(function() {
+                    window.scrollTo(0,0);
+                    $('html, body').animate({
+                        scrollTop: targetHash.getBoundingClientRect().top + offset
+                    }, 1000);
+                }, 500);
             } else {
                 targetHash.click();
             }
-            // setTimeout(function() {
-            //     window.scrollTo(0,0);
-            //     $('html, body').animate({
-            //         scrollTop: targetHash.getBoundingClientRect().top + offset
-            //     }, 1000);
-            // }, 500);
         }
         if (target) {
             setTimeout(function() {
