@@ -8,7 +8,7 @@
         list-style-type: none!important;
         border-top: 1px solid @blue;
         border-radius: 0 0 5px 5px;
-        overflow: hidden;
+        // overflow: hidden;
         margin-bottom: 15px;
         
         .collapsible-header {
@@ -61,6 +61,9 @@
                 background-color: @bgOverlay;
                 text-decoration: none!important;
                 outline: none;
+            }
+            &:focus-visible {
+                outline: 2px solid @drkOrange;
             }
             .active {
                 text-decoration: none!important;
