@@ -284,9 +284,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
             itemLink.addEventListener('keydown', function(e) {
-                if (itemLink.getAttribute('role') === 'button') {
-                    lightboxFilter(this);
-                }
+                if (e.which == 13 || e.which == 32) {
+                    if (itemLink.getAttribute('role') === 'button') {
+                        lightboxFilter(this);
+                    }
+                };
             });
         });
     });
