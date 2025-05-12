@@ -1,5 +1,4 @@
 function imgFilter(btn) {
-    console.log(btn);
     filter = btn.getAttribute('data-filter');
     let thisBlock = btn.closest('.col');
     let filterBtns = thisBlock.querySelectorAll('.filterBtn');
@@ -38,16 +37,16 @@ function imgFilter(btn) {
             }
         });
     }
-    if(event) {
-        console.log(btn,event);
-        if (event.key === 'ArrowLeft') {
-            console.log('Left arrow pressed');
-            // Add your left arrow action here
-        } else if (event.key === 'ArrowRight') {
-            console.log('Right arrow pressed');
+    // if(event) {
+    //     console.log(btn,event);
+    //     if (event.key === 'ArrowLeft') {
+    //         console.log('Left arrow pressed');
+    //         // Add your left arrow action here
+    //     } else if (event.key === 'ArrowRight') {
+    //         console.log('Right arrow pressed');
             
-        }
-    }
+    //     }
+    // }
 }
 
 'use strict';
