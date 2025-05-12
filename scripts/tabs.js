@@ -104,6 +104,16 @@ class TabsAutomatic {
             flag = true;
             break;
 
+        case 'Enter':
+            imgFilter(event.currentTarget);
+            flag = true;
+            break;
+
+        case ' ':
+            imgFilter(event.currentTarget);
+            flag = true;
+            break;
+
         default:
             break;
         }
