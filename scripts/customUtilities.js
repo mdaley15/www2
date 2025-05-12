@@ -327,7 +327,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
 });
 function imgFilter(btn) {
-    console.log(btn);
     filter = btn.getAttribute('data-filter');
     let thisBlock = btn.closest('.col');
     let filterBtns = thisBlock.querySelectorAll('.filterBtn');
