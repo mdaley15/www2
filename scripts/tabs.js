@@ -92,7 +92,7 @@ class TabsAutomatic {
             }
         }
         console.log(currentTab);
-        // currentTab.click();
+        newImgFilter(currentTab);
     }
 
     setSelectedToPreviousTab(currentTab) {
@@ -126,13 +126,11 @@ class TabsAutomatic {
         switch (event.key) {
         case 'ArrowLeft':
             this.setSelectedToPreviousTab(tgt);
-            newImgFilter(tgt);
             flag = true;
             break;
 
         case 'ArrowRight':
             this.setSelectedToNextTab(tgt);
-            newImgFilter(tgt);
             flag = true;
             break;
 
