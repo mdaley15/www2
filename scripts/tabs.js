@@ -96,7 +96,7 @@ class TabsAutomatic {
             }
         }
         console.log(currentTab);
-        currentTab.click();
+        // currentTab.click();
     }
 
     setSelectedToPreviousTab(currentTab) {
