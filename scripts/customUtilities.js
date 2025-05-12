@@ -335,7 +335,8 @@ function imgFilter(btn,event) {
     if (thisGallery) {
         galleryItems = thisGallery.querySelectorAll('.slide');
     }
-    var tabs = [];
+    var tabs = [],
+        tabPanels = [];
     filterBtns.forEach(filterBtn => {
         filterBtn.classList.remove('activeBtn');
         filterBtn.setAttribute('tabindex','-1');
@@ -346,6 +347,7 @@ function imgFilter(btn,event) {
     btn.setAttribute('tabindex','0');
     btn.setAttribute('aria-selected','true');
     filterTexts.forEach(filterText => {
+        tabPanels.push(filterText);
         let target = filterText.getAttribute('data-target');
         if (filter == target) {
             filterText.classList.remove('hide');
