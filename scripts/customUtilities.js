@@ -63,7 +63,7 @@ $( document ).ready(function() {
         let filename = getStringAfterLastSlash(queryString);
         let category = getStringAfterQM(queryString);
         let categoryWSpaces = addSpacesToCamelCase(category);
-        console.log(categoryWSpaces);
+        // console.log(categoryWSpaces);
         let imgInfo = [];
         var fileInfo;
         for (let i = 0; i < filename.length; i++) {
@@ -71,7 +71,7 @@ $( document ).ready(function() {
             const fileWithSpaces = addSpacesToCamelCase(fileInfo);
             imgInfo.push(fileWithSpaces);
         }
-        console.log(fileInfo);
+        // console.log(fileInfo);
         if (fileInfo == 'webp') {
             imgCategory.innerText = categoryWSpaces.split('/')[0];
             formImg.classList.add('webp');
