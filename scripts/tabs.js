@@ -92,7 +92,6 @@ class TabsAutomatic {
                 tab.setAttribute('aria-selected', 'true');
                 tab.classList.add('activeBtn');
                 tab.removeAttribute('tabindex');
-                tab.click();
                 this.tabpanels[i].classList.remove('hide');
                 if (setFocus) {
                     tab.focus();
