@@ -71,7 +71,11 @@ class TabsAutomatic {
         }
 
         this.setSelectedTab(this.firstTab, false);
-        this.firstTab.click();
+
+        let startingBtns = document.querySelectorAll('.startingBtn');
+        startingBtns.forEach(btn => {
+            btn.click();
+        });
     }
 
     setSelectedTab(currentTab, setFocus) {
@@ -182,13 +186,4 @@ document.addEventListener('DOMContentLoaded', function() {
     for (var i = 0; i < tablists.length; i++) {
         new TabsAutomatic(tablists[i]);
     }
-    let startingBtns = document.querySelectorAll('.startingBtn');
-    startingBtns.forEach(btn => {
-        // console.log(btn);
-        btn.addEventListener("click", function() {
-            imgFilter(btn);
-            // console.log('filter '+btn+' clicked');
-        });
-        btn.click();
-    });
 });
