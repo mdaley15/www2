@@ -187,7 +187,7 @@ class TabsAutomatic {
 
 // Initialize tablist
 document.addEventListener('DOMContentLoaded', function() {
-    var tablists = document.querySelectorAll('[role=tablist].imgFilter');
+    var tablists = document.querySelectorAll('[role=tablist]#testing');
     for (var i = 0; i < tablists.length; i++) {
         new TabsAutomatic(tablists[i]);
     }
