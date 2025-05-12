@@ -327,7 +327,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
 });
 function imgFilter(btn,event) {
-    console.log(btn,event);
     filter = btn.getAttribute('data-filter');
     let thisBlock = btn.closest('.col');
     let filterBtns = thisBlock.querySelectorAll('.filterBtn');
@@ -367,16 +366,6 @@ function imgFilter(btn,event) {
             console.log('Right arrow pressed');
             // Add your right arrow action here
         }
-    }
-}
-function tab(btn,event) {
-    console.log(btn,event);
-    if (event.key === 'ArrowLeft') {
-        console.log('Left arrow pressed');
-        // Add your left arrow action here
-    } else if (event.key === 'ArrowRight') {
-        console.log('Right arrow pressed');
-        // Add your right arrow action here
     }
 }
 function lightboxFilter(itemLink) {
