@@ -344,7 +344,7 @@ function imgFilter(btn,event) {
         tabs.push(filterBtn);
     });
     btn.classList.add('activeBtn');
-    btn.setAttribute('tabindex','0');
+    btn.removeAttribute('tabindex');
     btn.setAttribute('aria-selected','true');
     filterTexts.forEach(filterText => {
         tabPanels.push(filterText);
