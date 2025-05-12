@@ -69,9 +69,9 @@ class TabsAutomatic {
             }
             this.lastTab = tab;
             // this.firstTab.click();
-            if (tab.classList.contains('startingBtn')) {
-                console.log(tab);
-            }
+            // if (tab.classList.contains('startingBtn')) {
+            //     console.log(tab);
+            // }
         }
 
         this.setSelectedTab(this.firstTab, false);
@@ -95,6 +95,7 @@ class TabsAutomatic {
                 this.tabpanels[i].classList.remove('hide');
                 if (setFocus) {
                     tab.focus();
+                    tab.click();
                 }
             } else {
                 tab.setAttribute('aria-selected', 'false');
