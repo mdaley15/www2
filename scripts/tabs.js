@@ -192,9 +192,12 @@ document.addEventListener('DOMContentLoaded', function() {
     for (var i = 0; i < tablists.length; i++) {
         new TabsAutomatic(tablists[i]);
     }
-    let startingBtns = document.querySelectorAll('.startingBtn');
+    startingBtns = document.querySelectorAll('.startingBtn');
     startingBtns.forEach(btn => {
         console.log(btn);
-        btn.click(event);
+        btn.addEventListener("click", function() {
+            imgFilter(btn);
+        });
+        btn.click();
     });
 });
