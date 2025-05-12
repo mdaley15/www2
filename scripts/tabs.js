@@ -63,7 +63,9 @@ class TabsAutomatic {
                 tab.setAttribute('aria-selected', 'true');
                 tab.classList.add('activeBtn');
                 tab.removeAttribute('tabindex');
-                this.tabpanels[i].classList.remove('hide');
+                if (this.tabpanels[i]) {
+                    this.tabpanels[i].classList.remove('hide');
+                }
                 if (setFocus) {
                     tab.focus();
                 }
@@ -71,7 +73,9 @@ class TabsAutomatic {
                 tab.setAttribute('aria-selected', 'false');
                 tab.classList.remove('activeBtn');
                 tab.tabIndex = -1;
-                this.tabpanels[i].classList.add('hide');
+                if (this.tabpanels[i]) {
+                    this.tabpanels[i].classList.add('hide');
+                }
             }
         }
         imgFilter(currentTab);
