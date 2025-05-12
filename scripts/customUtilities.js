@@ -335,9 +335,11 @@ function imgFilter(btn,event) {
     if (thisGallery) {
         galleryItems = thisGallery.querySelectorAll('.slide');
     }
+    var tabs = [];
     filterBtns.forEach(filterBtn => {
         filterBtn.classList.remove('activeBtn');
         filterBtn.setAttribute('tabindex','-1');
+        tabs.push(filterBtn);
     });
     btn.classList.add('activeBtn');
     btn.setAttribute('tabindex','0');
@@ -345,8 +347,10 @@ function imgFilter(btn,event) {
         let target = filterText.getAttribute('data-target');
         if (filter == target) {
             filterText.classList.remove('hide');
+            filterText.setAttribute('aria-selected','true');
         } else {
             filterText.classList.add('hide');
+            filterText.setAttribute('aria-selected','false');
         }
     });
     if (galleryItems) {
