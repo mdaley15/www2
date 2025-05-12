@@ -120,6 +120,7 @@ class TabsAutomatic {
 // Initialize tablist
 window.addEventListener('load', function () {
     var tablists = document.querySelectorAll('[role=tablist].filterBtn');
+    console.log(tablists);
     for (var i = 0; i < tablists.length; i++) {
         new TabsAutomatic(tablists[i]);
     }
