@@ -68,18 +68,9 @@ class TabsAutomatic {
                 this.firstTab = tab;
             }
             this.lastTab = tab;
-            // this.firstTab.click();
-            // if (tab.classList.contains('startingBtn')) {
-            //     console.log(tab);
-            // }
         }
 
         this.setSelectedTab(this.firstTab, false);
-
-        // let startingBtns = document.querySelectorAll('.startingBtn');
-        // startingBtns.forEach(btn => {
-        //     btn.click();
-        // });
     }
 
     setSelectedTab(currentTab, setFocus) {
@@ -136,26 +127,25 @@ class TabsAutomatic {
         switch (event.key) {
         case 'ArrowLeft':
             this.setSelectedToPreviousTab(tgt);
-            imgFilter(event.currentTarget);
+            imgFilter(tgt);
             flag = true;
             break;
 
         case 'ArrowRight':
             this.setSelectedToNextTab(tgt);
-            imgFilter(event.currentTarget);
-            console.log(event.currentTarget);
+            imgFilter(tgt);
             flag = true;
             break;
 
         case 'Home':
             this.setSelectedTab(this.firstTab);
-            imgFilter(event.currentTarget);
+            imgFilter(this.firstTab);
             flag = true;
             break;
 
         case 'End':
             this.setSelectedTab(this.lastTab);
-            imgFilter(event.currentTarget);
+            imgFilter(this.lastTab);
             flag = true;
             break;
 
