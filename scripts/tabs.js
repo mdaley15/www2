@@ -68,7 +68,10 @@ class TabsAutomatic {
                 this.firstTab = tab;
             }
             this.lastTab = tab;
-            this.firstTab.click();
+            // this.firstTab.click();
+            if (tab.classList.contains('startingBtn')) {
+                console.log(tab);
+            }
         }
 
         this.setSelectedTab(this.firstTab, false);
