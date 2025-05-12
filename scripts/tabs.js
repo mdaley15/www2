@@ -4,13 +4,13 @@ class TabsAutomatic {
     constructor(groupNode) {
         this.tablistNode = groupNode;
 
-        console.log(groupNode);
         this.tabs = [];
 
         this.firstTab = null;
         this.lastTab = null;
 
         this.tabs = Array.from(this.tablistNode.querySelectorAll('[role=tab]'));
+        console.log(this.tabs);
         this.tabpanels = [];
 
         for (var i = 0; i < this.tabs.length; i += 1) {
