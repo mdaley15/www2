@@ -71,7 +71,7 @@ class TabsAutomatic {
         }
 
         this.setSelectedTab(this.firstTab, false);
-        console.log(this);
+        this.firstTab.click();
     }
 
     setSelectedTab(currentTab, setFocus) {
