@@ -71,6 +71,7 @@ class TabsAutomatic {
         }
 
         this.setSelectedTab(this.firstTab, false);
+        console.log(this);
     }
 
     setSelectedTab(currentTab, setFocus) {
@@ -183,10 +184,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     let startingBtns = document.querySelectorAll('.startingBtn');
     startingBtns.forEach(btn => {
-        console.log(btn,this);
+        // console.log(btn);
         btn.addEventListener("click", function() {
             imgFilter(btn);
-            console.log('filter '+btn+' clicked');
+            // console.log('filter '+btn+' clicked');
         });
         btn.click();
     });
