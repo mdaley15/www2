@@ -149,11 +149,13 @@ class TabsAutomatic {
             break;
 
         case 'Enter':
+            this.setSelectedTab(event.currentTarget);
             newImgFilter(event.currentTarget);
             flag = true;
             break;
 
         case ' ':
+            this.setSelectedTab(event.currentTarget);
             newImgFilter(event.currentTarget);
             flag = true;
             break;
@@ -169,6 +171,7 @@ class TabsAutomatic {
     }
 
     onClick(event) {
+        this.setSelectedTab(event.currentTarget);
         newImgFilter(event.currentTarget);
     }
 }
