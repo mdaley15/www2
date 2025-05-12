@@ -144,6 +144,7 @@ class TabsAutomatic {
         case 'ArrowRight':
             this.setSelectedToNextTab(tgt);
             imgFilter(event.currentTarget);
+            console.log(event.currentTarget);
             flag = true;
             break;
 
