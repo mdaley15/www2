@@ -94,6 +94,7 @@ class TabsAutomatic {
                 this.tabpanels[i].classList.add('hide');
             }
             console.log(currentTab);
+            currentTab.click();
         }
     }
 
