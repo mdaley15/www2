@@ -37,7 +37,9 @@ class TabsAutomatic {
 
             tab.tabIndex = -1;
             tab.setAttribute('aria-selected', 'false');
-            this.tabpanels.push(tabpanel);
+            if (tabpanel) {
+                this.tabpanels.push(tabpanel);
+            }
 
             tab.addEventListener('keydown', this.onKeydown.bind(this));
             tab.addEventListener('click', this.onClick.bind(this));
