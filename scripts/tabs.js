@@ -93,6 +93,7 @@ class TabsAutomatic {
                 tab.tabIndex = -1;
                 this.tabpanels[i].classList.add('hide');
             }
+            console.log(currentTab);
         }
     }
 
@@ -123,7 +124,6 @@ class TabsAutomatic {
     onKeydown(event) {
         var tgt = event.currentTarget,
         flag = false;
-        console.log(tgt);
 
         switch (event.key) {
         case 'ArrowLeft':
