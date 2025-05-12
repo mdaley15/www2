@@ -326,8 +326,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
 });
-function imgFilter(btn,event) {
-    console.log(event);
+function imgFilter(btn) {
     filter = btn.getAttribute('data-filter');
     let thisBlock = btn.closest('.col');
     let filterBtns = thisBlock.querySelectorAll('.filterBtn');
@@ -358,13 +357,16 @@ function imgFilter(btn,event) {
             }
         });
     }
-    if (event.key === 'ArrowLeft') {
-        console.log('Left arrow pressed');
-        // Add your left arrow action here
-    } else if (event.key === 'ArrowRight') {
-        console.log('Right arrow pressed');
-        // Add your right arrow action here
-    }
+}
+function tab(event) {
+    console.log(event);
+    // if (event.key === 'ArrowLeft') {
+    //     console.log('Left arrow pressed');
+    //     // Add your left arrow action here
+    // } else if (event.key === 'ArrowRight') {
+    //     console.log('Right arrow pressed');
+    //     // Add your right arrow action here
+    // }
 }
 function lightboxFilter(itemLink) {
     var pathName = window.location.pathname;
