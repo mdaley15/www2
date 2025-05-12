@@ -4,6 +4,7 @@ class TabsAutomatic {
     constructor(groupNode) {
         this.tablistNode = groupNode;
 
+        console.log(groupNode);
         this.tabs = [];
 
         this.firstTab = null;
