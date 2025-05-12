@@ -358,7 +358,7 @@ function imgFilter(btn,event) {
             }
         });
     }
-    if(event.key) {
+    if(event) {
         console.log(btn,event);
         if (event.key === 'ArrowLeft') {
             console.log('Left arrow pressed');
