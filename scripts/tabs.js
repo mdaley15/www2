@@ -96,7 +96,6 @@ class TabsAutomatic {
 
         case 'Home':
             this.setSelectedTab(this.firstTab);
-            imgFilter(event.currentTarget);
             flag = true;
             break;
 
