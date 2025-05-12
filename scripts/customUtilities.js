@@ -358,8 +358,8 @@ function imgFilter(btn) {
         });
     }
 }
-function tab(event) {
-    console.log(event);
+function tab(btn,event) {
+    console.log(btn,event);
     if (event.key === 'ArrowLeft') {
         console.log('Left arrow pressed');
         // Add your left arrow action here
