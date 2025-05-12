@@ -1,32 +1,28 @@
-function imgFilter(btn) {
+function newImgFilter(btn) {
     filter = btn.getAttribute('data-filter');
     let thisBlock = btn.closest('.col');
-    let filterBtns = thisBlock.querySelectorAll('.filterBtn');
-    filterTexts = thisBlock.querySelectorAll('.filterText');
+    // let filterBtns = thisBlock.querySelectorAll('.filterBtn');
+    // filterTexts = thisBlock.querySelectorAll('.filterText');
     thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
     if (thisGallery) {
         galleryItems = thisGallery.querySelectorAll('.slide');
     }
-    var tabs = [],
-        tabPanels = [];
-    filterBtns.forEach(filterBtn => {
-        filterBtn.classList.remove('activeBtn');
-        filterBtn.setAttribute('tabindex','-1');
-        filterBtn.setAttribute('aria-selected','false');
-        tabs.push(filterBtn);
-    });
-    btn.classList.add('activeBtn');
-    btn.removeAttribute('tabindex');
-    btn.setAttribute('aria-selected','true');
-    filterTexts.forEach(filterText => {
-        tabPanels.push(filterText);
-        let target = filterText.getAttribute('data-target');
-        if (filter == target) {
-            filterText.classList.remove('hide');
-        } else {
-            filterText.classList.add('hide');
-        }
-    });
+    // filterBtns.forEach(filterBtn => {
+    //     filterBtn.classList.remove('activeBtn');
+    //     filterBtn.setAttribute('tabindex','-1');
+    //     filterBtn.setAttribute('aria-selected','false');
+    // });
+    // btn.classList.add('activeBtn');
+    // btn.removeAttribute('tabindex');
+    // btn.setAttribute('aria-selected','true');
+    // filterTexts.forEach(filterText => {
+    //     let target = filterText.getAttribute('data-target');
+    //     if (filter == target) {
+    //         filterText.classList.remove('hide');
+    //     } else {
+    //         filterText.classList.add('hide');
+    //     }
+    // });
     if (galleryItems) {
         galleryItems.forEach(item => {
             if (item.classList.contains(filter)) {
@@ -130,35 +126,35 @@ class TabsAutomatic {
         switch (event.key) {
         case 'ArrowLeft':
             this.setSelectedToPreviousTab(tgt);
-            imgFilter(tgt);
+            newImgFilter(tgt);
             flag = true;
             break;
 
         case 'ArrowRight':
             this.setSelectedToNextTab(tgt);
-            imgFilter(tgt);
+            newImgFilter(tgt);
             flag = true;
             break;
 
         case 'Home':
             this.setSelectedTab(this.firstTab);
-            imgFilter(this.firstTab);
+            newImgFilter(this.firstTab);
             flag = true;
             break;
 
         case 'End':
             this.setSelectedTab(this.lastTab);
-            imgFilter(this.lastTab);
+            newImgFilter(this.lastTab);
             flag = true;
             break;
 
         case 'Enter':
-            imgFilter(event.currentTarget);
+            newImgFilter(event.currentTarget);
             flag = true;
             break;
 
         case ' ':
-            imgFilter(event.currentTarget);
+            newImgFilter(event.currentTarget);
             flag = true;
             break;
 
@@ -173,7 +169,7 @@ class TabsAutomatic {
     }
 
     onClick(event) {
-        imgFilter(event.currentTarget);
+        newImgFilter(event.currentTarget);
     }
 }
 
