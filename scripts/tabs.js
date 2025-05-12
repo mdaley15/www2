@@ -79,6 +79,7 @@ class TabsAutomatic {
                 } else {}
             }
         }
+        console.log(currentTab);
         imgFilter(currentTab);
     }
 
