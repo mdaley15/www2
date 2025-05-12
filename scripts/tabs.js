@@ -119,9 +119,12 @@ class TabsAutomatic {
 
 // Initialize tablist
 document.addEventListener('DOMContentLoaded', function() {
-    var tablists = document.querySelectorAll('.filterBtn');
-    console.log(tablists);
+    var tablists = document.querySelectorAll('.imgFilter');
     for (var i = 0; i < tablists.length; i++) {
-        new TabsAutomatic(tablists[i]);
+        var tablist = tablists[i].querySelectorAll('.filterBtn');
+        console.log(tablist);
+        for (var i = 0; i < tablist.length; i++) {
+            new TabsAutomatic(tablist[i]);
+        }
     }
 });
