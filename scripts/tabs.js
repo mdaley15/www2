@@ -37,16 +37,6 @@ function imgFilter(btn) {
             }
         });
     }
-    // if(event) {
-    //     console.log(btn,event);
-    //     if (event.key === 'ArrowLeft') {
-    //         console.log('Left arrow pressed');
-    //         // Add your left arrow action here
-    //     } else if (event.key === 'ArrowRight') {
-    //         console.log('Right arrow pressed');
-            
-    //     }
-    // }
 }
 
 'use strict';
@@ -181,7 +171,6 @@ class TabsAutomatic {
     }
 
     onClick(event) {
-        // this.setSelectedTab(event.currentTarget);
         imgFilter(event.currentTarget);
     }
 }
@@ -196,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {
     startingBtns.forEach(btn => {
         console.log(btn);
         btn.addEventListener("click", function() {
-            imgFilter(btn);
+            imgFilter(this);
         });
         btn.click();
     });
