@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
     for (var i = 0; i < tablists.length; i++) {
         new TabsAutomatic(tablists[i]);
     }
-    startingBtns = document.querySelectorAll('.startingBtn');
+    let startingBtns = document.querySelectorAll('.startingBtn');
     startingBtns.forEach(btn => {
         console.log(btn);
         btn.addEventListener("click", function() {
