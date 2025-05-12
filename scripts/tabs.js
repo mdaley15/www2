@@ -68,14 +68,15 @@ class TabsAutomatic {
                 this.firstTab = tab;
             }
             this.lastTab = tab;
+            this.firstTab.click();
         }
 
         this.setSelectedTab(this.firstTab, false);
 
-        let startingBtns = document.querySelectorAll('.startingBtn');
-        startingBtns.forEach(btn => {
-            btn.click();
-        });
+        // let startingBtns = document.querySelectorAll('.startingBtn');
+        // startingBtns.forEach(btn => {
+        //     btn.click();
+        // });
     }
 
     setSelectedTab(currentTab, setFocus) {
