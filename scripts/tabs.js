@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     let startingBtns = document.querySelectorAll('.startingBtn');
     startingBtns.forEach(btn => {
-        console.log(btn);
+        console.log(btn,this);
         btn.addEventListener("click", function() {
             imgFilter(this);
         });
