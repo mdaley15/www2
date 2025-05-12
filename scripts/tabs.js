@@ -1,4 +1,4 @@
-function newImgFilter(btn) {
+function imgFilter(btn) {
     filter = btn.getAttribute('data-filter');
     let thisBlock = btn.closest('.col');
     thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
@@ -74,7 +74,7 @@ class TabsAutomatic {
             }
         }
         console.log(currentTab);
-        newImgFilter(currentTab);
+        imgFilter(currentTab);
     }
 
     setSelectedToPreviousTab(currentTab) {
@@ -148,7 +148,7 @@ class TabsAutomatic {
 
     onClick(event) {
         this.setSelectedTab(event.currentTarget);
-        newImgFilter(event.currentTarget);
+        imgFilter(event.currentTarget);
     }
 }
 
