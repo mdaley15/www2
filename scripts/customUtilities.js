@@ -337,8 +337,10 @@ function imgFilter(btn,event) {
     }
     filterBtns.forEach(filterBtn => {
         filterBtn.classList.remove('activeBtn');
+        filterBtn.setAttribute('tabindex','-1');
     });
     btn.classList.add('activeBtn');
+    btn.setAttribute('tabindex','0');
     filterTexts.forEach(filterText => {
         let target = filterText.getAttribute('data-target');
         if (filter == target) {
@@ -364,7 +366,7 @@ function imgFilter(btn,event) {
             // Add your left arrow action here
         } else if (event.key === 'ArrowRight') {
             console.log('Right arrow pressed');
-            // Add your right arrow action here
+            
         }
     }
 }
