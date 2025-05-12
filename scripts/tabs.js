@@ -123,6 +123,7 @@ class TabsAutomatic {
     onKeydown(event) {
         var tgt = event.currentTarget,
         flag = false;
+        console.log(tgt);
 
         switch (event.key) {
         case 'ArrowLeft':
