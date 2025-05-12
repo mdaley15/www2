@@ -185,8 +185,8 @@ document.addEventListener('DOMContentLoaded', function() {
     startingBtns.forEach(btn => {
         console.log(btn,this);
         btn.addEventListener("click", function() {
-            imgFilter(this);
-            console.log('filter btn clicked');
+            imgFilter(btn);
+            console.log('filter '+btn+' clicked');
         });
         btn.click();
     });
