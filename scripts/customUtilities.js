@@ -360,13 +360,13 @@ function imgFilter(btn) {
 }
 function tab(event) {
     console.log(event);
-    // if (event.key === 'ArrowLeft') {
-    //     console.log('Left arrow pressed');
-    //     // Add your left arrow action here
-    // } else if (event.key === 'ArrowRight') {
-    //     console.log('Right arrow pressed');
-    //     // Add your right arrow action here
-    // }
+    if (event.key === 'ArrowLeft') {
+        console.log('Left arrow pressed');
+        // Add your left arrow action here
+    } else if (event.key === 'ArrowRight') {
+        console.log('Right arrow pressed');
+        // Add your right arrow action here
+    }
 }
 function lightboxFilter(itemLink) {
     var pathName = window.location.pathname;
