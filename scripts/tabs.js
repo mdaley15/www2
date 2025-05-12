@@ -4,6 +4,7 @@ class TabsAutomatic {
     constructor(groupNode) {
         this.tablistNode = groupNode;
 
+        console.log(this.tablistNode);
         this.tabs = [];
 
         this.firstTab = null;
@@ -123,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var tablists = document.querySelectorAll('.imgFilter');
     for (var i = 0; i < tablists.length; i++) {
         var tablist = tablists[i].querySelectorAll('.filterBtn');
-        console.log(tablist);
+        // console.log(tablist);
         for (var i = 0; i < tablist.length; i++) {
             new TabsAutomatic(tablist[i]);
         }
