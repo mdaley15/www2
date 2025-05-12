@@ -15,7 +15,7 @@ $( document ).ready(function() {
     }
     for(var i = 0;i<PDFObjects.length;i++)
     {
-    //    console.log(PDFObjects[i]+'<<---------------------------------------------- Foriegn PDF');
+       console.log(PDFObjects[i]+'<<---------------------------------------------- Foriegn PDF');
     }
     
 
