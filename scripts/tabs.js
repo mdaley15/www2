@@ -9,7 +9,6 @@ function imgFilter(btn) {
         galleryItems.forEach(item => {
             if (item.classList.contains(filter)) {
                 item.classList.remove('hide');
-                console.log(item);
             } else {
                 item.classList.add('hide');
                 item.querySelector('a').classList.remove('js-gallery-lightbox-opener');
@@ -79,7 +78,6 @@ class TabsAutomatic {
                 } else {}
             }
         }
-        console.log(currentTab);
         imgFilter(currentTab);
     }
 
