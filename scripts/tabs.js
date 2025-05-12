@@ -39,7 +39,7 @@ class TabsAutomatic {
             tab.setAttribute('aria-selected', 'false');
             if (tabpanel) {
                 this.tabpanels.push(tabpanel);
-            }
+            } else {}
 
             tab.addEventListener('keydown', this.onKeydown.bind(this));
             tab.addEventListener('click', this.onClick.bind(this));
@@ -65,7 +65,7 @@ class TabsAutomatic {
                 tab.removeAttribute('tabindex');
                 if (this.tabpanels[i]) {
                     this.tabpanels[i].classList.remove('hide');
-                }
+                } else {}
                 if (setFocus) {
                     tab.focus();
                     console.log(tab);
@@ -76,7 +76,7 @@ class TabsAutomatic {
                 tab.tabIndex = -1;
                 if (this.tabpanels[i]) {
                     this.tabpanels[i].classList.add('hide');
-                }
+                } else {}
             }
         }
         imgFilter(currentTab);
