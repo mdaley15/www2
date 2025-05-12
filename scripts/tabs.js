@@ -4,14 +4,12 @@ class TabsAutomatic {
     constructor(groupNode) {
         this.tablistNode = groupNode;
 
-        console.log(this.tablistNode);
         this.tabs = [];
 
         this.firstTab = null;
         this.lastTab = null;
 
         this.tabs = Array.from(this.tablistNode.querySelectorAll('[role=tab]'));
-        console.log(this.tabs);
         this.tabpanels = [];
 
         for (var i = 0; i < this.tabs.length; i += 1) {
@@ -121,12 +119,8 @@ class TabsAutomatic {
 
 // Initialize tablist
 document.addEventListener('DOMContentLoaded', function() {
-    var tablists = document.querySelectorAll('.imgFilter');
+    var tablists = document.querySelectorAll('[role=tablist].imgFilter');
     for (var i = 0; i < tablists.length; i++) {
-        var tablist = tablists[i].querySelectorAll('.filterBtn');
-        // console.log(tablist);
-        for (var i = 0; i < tablist.length; i++) {
-            new TabsAutomatic(tablist[i]);
-        }
+        new TabsAutomatic(tablists[i]);
     }
 });
