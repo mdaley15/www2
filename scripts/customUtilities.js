@@ -362,16 +362,6 @@ function imgFilter(btn) {
             }
         });
     }
-    if(event) {
-        console.log(btn,event);
-        if (event.key === 'ArrowLeft') {
-            console.log('Left arrow pressed');
-            // Add your left arrow action here
-        } else if (event.key === 'ArrowRight') {
-            console.log('Right arrow pressed');
-            
-        }
-    }
 }
 function lightboxFilter(itemLink) {
     var pathName = window.location.pathname;
