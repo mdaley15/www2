@@ -138,6 +138,7 @@ class TabsAutomatic {
         switch (event.key) {
         case 'ArrowLeft':
             this.setSelectedToPreviousTab(tgt);
+            imgFilter(event.currentTarget);
             flag = true;
             break;
 
@@ -149,11 +150,13 @@ class TabsAutomatic {
 
         case 'Home':
             this.setSelectedTab(this.firstTab);
+            imgFilter(event.currentTarget);
             flag = true;
             break;
 
         case 'End':
             this.setSelectedTab(this.lastTab);
+            imgFilter(event.currentTarget);
             flag = true;
             break;
 
