@@ -93,9 +93,9 @@ class TabsAutomatic {
                 tab.tabIndex = -1;
                 this.tabpanels[i].classList.add('hide');
             }
-            console.log(currentTab);
-            currentTab.click();
         }
+        console.log(currentTab);
+        currentTab.click();
     }
 
     setSelectedToPreviousTab(currentTab) {
