@@ -136,25 +136,21 @@ class TabsAutomatic {
 
         case 'Home':
             this.setSelectedTab(this.firstTab);
-            newImgFilter(this.firstTab);
             flag = true;
             break;
 
         case 'End':
             this.setSelectedTab(this.lastTab);
-            newImgFilter(this.lastTab);
             flag = true;
             break;
 
         case 'Enter':
             this.setSelectedTab(event.currentTarget);
-            newImgFilter(event.currentTarget);
             flag = true;
             break;
 
         case ' ':
             this.setSelectedTab(event.currentTarget);
-            newImgFilter(event.currentTarget);
             flag = true;
             break;
 
@@ -163,8 +159,8 @@ class TabsAutomatic {
         }
 
         if (flag) {
-        event.stopPropagation();
-        event.preventDefault();
+            event.stopPropagation();
+            event.preventDefault();
         }
     }
 
