@@ -339,18 +339,18 @@ function imgFilter(btn,event) {
     filterBtns.forEach(filterBtn => {
         filterBtn.classList.remove('activeBtn');
         filterBtn.setAttribute('tabindex','-1');
+        filterBtn.setAttribute('aria-selected','false');
         tabs.push(filterBtn);
     });
     btn.classList.add('activeBtn');
     btn.setAttribute('tabindex','0');
+    btn.setAttribute('aria-selected','true');
     filterTexts.forEach(filterText => {
         let target = filterText.getAttribute('data-target');
         if (filter == target) {
             filterText.classList.remove('hide');
-            filterText.setAttribute('aria-selected','true');
         } else {
             filterText.classList.add('hide');
-            filterText.setAttribute('aria-selected','false');
         }
     });
     if (galleryItems) {
