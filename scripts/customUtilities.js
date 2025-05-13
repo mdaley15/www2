@@ -23,12 +23,12 @@ $( document ).ready(function() {
     // console.log(window.location);
     var pathName = window.location.pathname,
         href = window.location.href;
-    if (href == "https://schools.inter-state.com/" || "https://schools.inter-state.com" || "schools.inter-state.com" || "schools.inter-state.com/") {
-        // window.location.replace("https://inter-state.com/");
-        // console.log('Redirect this href');
-    } else {
-        // console.log(href);
-    }
+    // if (href == "https://schools.inter-state.com/" || "https://schools.inter-state.com" || "schools.inter-state.com" || "schools.inter-state.com/") {
+    //     // window.location.replace("https://inter-state.com/");
+    //     // console.log('Redirect this href');
+    // } else {
+    //     // console.log(href);
+    // }
     let mobileLinks = document.querySelectorAll('.Mobile-overlay-menu-main a');
     mobileLinks.forEach(link => {
         let href = link.getAttribute('href');
