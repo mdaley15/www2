@@ -256,6 +256,9 @@
         padding: 0!important;
         height: fit-content!important;
         overflow: visible!important;
+        border-radius: 5px;
+        background-color: white;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
         
         img {
             display: block!important;
@@ -263,8 +266,13 @@
             width: 100%!important;
             height: auto!important;
             border-radius: 5px;
-            background-color: white;
-            box-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
+            transition: all .3s ease-in-out;
+        }
+        &:hover,
+        &:focus {
+            img {
+                transform: scale(.95);
+            }
         }
     }
     .image-slide-title {
