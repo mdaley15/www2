@@ -7,7 +7,6 @@
     > li {
         list-style-type: none!important;
         border-radius: 0 0 5px 5px;
-        // overflow: hidden;
         margin-bottom: 15px;
         
         .collapsible-header {
@@ -64,7 +63,6 @@
                 outline: none;
             }
             &:focus-visible {
-                outline: 2px solid inherit;
                 border-radius: 0 0 5px 5px;
             }
             .active {
@@ -219,26 +217,32 @@
         }
         &:nth-child(3n + 1) {
             box-shadow: 0 5px 0 @orange;
-            outline-color: @orange;
 
             .collapsible-body {
                 border-top: 1px solid @orange;
             }
+            .collapsible-header:focus-visible {
+                outline: 2px solid @orange;
+            }
         }
         &:nth-child(3n + 2) {
             box-shadow: 0 5px 0 @ltBlue;
-            outline-color: @ltBlue;
 
             .collapsible-body {
                 border-top: 1px solid @ltBlue;
             }
+            .collapsible-header:focus-visible {
+                outline: 2px solid @ltBlue;
+            }
         }
         &:nth-child(3n + 3) {
             box-shadow: 0 5px 0 @green;
-            outline-color: @green;
 
             .collapsible-body {
                 border-top: 1px solid @green;
+            }
+            .collapsible-header:focus-visible {
+                outline: 2px solid @green;
             }
         }
         &:first-child {
