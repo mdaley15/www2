@@ -138,7 +138,6 @@ $( document ).ready(function() {
 
     $('a[href*="#"]:not([href="#"])').click(function() {
         $('body').removeClass('is-mobile-overlay-active');
-        console.log(this+" clicked!");
         var offset = -100; // <-- change the value here
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
             var target = $(this.hash);
@@ -569,7 +568,6 @@ function anchorScroll() {
             }
         }
         if (target) {
-            console.log(target);
             setTimeout(function() {
                 window.scrollTo(0,0);
                 $('html, body').animate({
