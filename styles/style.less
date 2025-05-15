@@ -1510,9 +1510,6 @@ main .Index-page-content > div,
     width: 20%;
 }
 table {
-    border-radius: 5px;
-    overflow: hidden;
-    border: 1px solid @blue;
 
     th, td {
         line-height: 1.2;
@@ -1523,6 +1520,12 @@ table {
     th {
         background-color: @bgOverlay;
         color: @blue;
+        &:first-child {
+            border-radius: 5px 0 0 0;
+        }
+        &:last-child {
+            border-radius: 0 5px 0 0;
+        }
     }
     td {
         padding: 5px;
