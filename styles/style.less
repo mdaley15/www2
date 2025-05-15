@@ -1509,20 +1509,28 @@ main .Index-page-content > div,
 .fiveColumn td {
     width: 20%;
 }
-th {
-    background-color: @blue;
-    color: #fff;
-}
-th, td {
-    line-height: 1.2;
-}
-@media only screen and (max-width: 640px) {
-    table {
+table {
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid @blue;
+
+    th, td {
+        line-height: 1.2;
+        border-radius: 0;
+        border: 1px solid @blue;
+        vertical-align: baseline;
+    }
+    th {
+        background-color: @bgOverlay;
+        color: @blue;
+    }
+    td {
+        padding: 5px;
+    }
+    @media only screen and (max-width: 640px) {
         font-size: .5em!important;
     }
-}
-@media only screen and (min-width: 641px) and (max-width: 900px) {
-    table {
+    @media only screen and (min-width: 641px) and (max-width: 900px) {
         font-size: .7em!important;
     }
 }
