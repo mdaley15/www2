@@ -6,8 +6,8 @@
     <meta name="mobile-web-app-capable" content="yes">
     
     <!-- <script src="https://web.cmp.usercentrics.eu/modules/autoblocker.js"></script>
-    <script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-settings-id="EmxyFrjySI-GCK" async></script>
-    <script src="https://kit.fontawesome.com/50b8ef033d.js" crossorigin="anonymous"></script> -->
+    <script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-settings-id="EmxyFrjySI-GCK" async></script> -->
+    <script src="https://kit.fontawesome.com/50b8ef033d.js" crossorigin="anonymous"></script>
 
     {squarespace-headers}
     <squarespace:script src = "jquery-3.2.1.min.js" combo = "false">
