@@ -1,3 +1,93 @@
+.Main-content {
+    > .sqs-layout > .row {
+        margin: 0!important;
+    }
+    @media only screen and (max-width: 640px) {
+        padding-bottom: 30px;
+        padding-top: 0;
+        .sqs-layout .row .sqs-block {
+            // padding-top: 0!important;
+            // padding-bottom: 0!important;
+        }
+    }
+    .sqs-html-content {
+        h2 {
+            position: relative;
+            color: @blue;
+            font-family: oswald;
+            text-transform: uppercase;
+            font-weight: 600;
+
+            &::before,
+            &::after {
+                // content: "";
+                position: relative;
+                display: inline-block;
+                background-image: url('../assets/star.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                bottom: 1px;
+                height: 23px;
+                width: 23px;
+            }
+            &::before {
+                margin-right: 7px;
+            }
+            &::after {
+                margin-left: 7px;
+            }
+        }
+        h2,h3 {
+            margin-bottom: 20px;
+            &:last-child {
+                margin-bottom: -10px
+            }
+        }
+    }
+    .watermark {
+        font-size: 400px;
+        color: @blue;
+        position: absolute;
+        top: 0;
+        // margin-top: -30px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        opacity: .05;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+        &.fixed {
+            position: fixed;
+            top: 85px;
+        }
+    }
+    @media only screen and (max-width: 500px) {
+        .watermark {
+            font-size: 250px;
+        }
+    }
+    @media only screen and (min-width: 1000px) {
+        .sqs-html-content {
+            h2 {
+                // font-size: 40px;
+
+                &::before,
+                &::after {
+                    width: 30px;
+                    height: 30px;
+                    bottom: 2px;
+                }
+                &::before {
+                    margin-right: 8px;
+                }
+                &::after {
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+}
 #sitemap {
     .Main-content {
         h2 {
@@ -42,5 +132,14 @@
     }
     figure.sqs-block-image-figure {
         margin: 0;
+    }
+}
+
+.Main-content {
+    h2,h3 {
+        margin-bottom: 20px;
+        &:last-child {
+            margin-bottom: -10px
+        }
     }
 }
