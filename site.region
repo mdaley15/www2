@@ -9,6 +9,9 @@
     <!--<script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-settings-id="EmxyFrjySI-GCK" async></script>-->
 
     {squarespace-headers}
+    <link href="../assets/fontawesome.css" rel="stylesheet" />
+    <link href="../assets/brands.css" rel="stylesheet" />
+    <link href="../assets/solid.css" rel="stylesheet" />
     <squarespace:script src = "jquery-3.2.1.min.js" combo = "false">
     <squarespace:script src = "materialize.js" combo = "false">
     <script src="https://kit.fontawesome.com/50b8ef033d.js" crossorigin="anonymous"></script>
