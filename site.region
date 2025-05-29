@@ -14,7 +14,7 @@
     <link href="../assets/solid.css" rel="stylesheet" />
     <squarespace:script src = "jquery-3.2.1.min.js" combo = "false">
     <squarespace:script src = "materialize.js" combo = "false">
-    <script src="https://kit.fontawesome.com/50b8ef033d.js" crossorigin="anonymous"></script>
+    <!--<script src="https://kit.fontawesome.com/50b8ef033d.js" crossorigin="anonymous"></script>-->
     <squarespace:script src = "pdfFinder.js" combo = "false">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src = "https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
