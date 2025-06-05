@@ -54,6 +54,7 @@ class TabsAutomatic {
     }
 
     setSelectedTab(currentTab, setFocus) {
+        console.log(typeof setFocus);
         if (typeof setFocus !== 'boolean') {
             setFocus = true;
         }
