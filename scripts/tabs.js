@@ -59,6 +59,7 @@ class TabsAutomatic {
         } else {}
         for (var i = 0; i < this.tabs.length; i += 1) {
             var tab = this.tabs[i];
+            console.log(currentTab);
             if (currentTab === tab) {
                 tab.setAttribute('aria-selected', 'true');
                 tab.classList.add('activeBtn');
