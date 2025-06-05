@@ -49,6 +49,7 @@ class TabsAutomatic {
             }
             this.lastTab = tab;
         }
+        console.log(this.firstTab);
         // this.setSelectedTab(this.firstTab, false);
     }
 
