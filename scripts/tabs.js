@@ -67,7 +67,7 @@ class TabsAutomatic {
                     this.tabpanels[i].classList.remove('hide');
                 } else {}
                 if (setFocus) {
-                    tab.focus();
+                    // tab.focus();
                 }
             } else {
                 tab.setAttribute('aria-selected', 'false');
