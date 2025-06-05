@@ -322,7 +322,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     let startingBtns = document.querySelectorAll('.startingBtn');
     startingBtns.forEach(btn => {
-        btn.click();
+        // btn.click();
     });
     var toTop = document.getElementById('toTop');
     toTop.click();
