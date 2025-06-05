@@ -50,7 +50,7 @@ class TabsAutomatic {
             this.lastTab = tab;
         }
         console.log(this.firstTab);
-        this.setSelectedTab(this.firstTab, false);
+        // this.setSelectedTab(this.firstTab, false);
     }
 
     setSelectedTab(currentTab, setFocus) {
@@ -67,9 +67,9 @@ class TabsAutomatic {
                     this.tabpanels[i].classList.remove('hide');
                 } else {}
                 console.log(setFocus);
-                // if (setFocus) {
-                //     tab.focus();
-                // }
+                if (setFocus) {
+                    tab.focus();
+                }
             } else {
                 tab.setAttribute('aria-selected', 'false');
                 tab.classList.remove('activeBtn');
