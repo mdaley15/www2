@@ -159,8 +159,12 @@ class TabsAutomatic {
 
 // Initialize tablist
 document.addEventListener('DOMContentLoaded', function() {
+    var pathName = window.location.pathname;
     var tablists = document.querySelectorAll('[role=tablist].imgFilter');
     for (var i = 0; i < tablists.length; i++) {
         new TabsAutomatic(tablists[i]);
+    }
+    if (pathName.includes("/cover-designs-themes")) {
+        document.getElementById('toTop').click();
     }
 });
