@@ -131,15 +131,15 @@ class TabsAutomatic {
             flag = true;
             break;
 
-        case 'Enter':
-            this.setSelectedTab(event.currentTarget);
-            flag = true;
-            break;
+        // case 'Enter':
+        //     this.setSelectedTab(event.currentTarget);
+        //     flag = true;
+        //     break;
 
-        case ' ':
-            this.setSelectedTab(event.currentTarget);
-            flag = true;
-            break;
+        // case ' ':
+        //     this.setSelectedTab(event.currentTarget);
+        //     flag = true;
+        //     break;
 
         default:
             break;
