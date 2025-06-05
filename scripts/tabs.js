@@ -165,6 +165,8 @@ document.addEventListener('DOMContentLoaded', function() {
         new TabsAutomatic(tablists[i]);
     }
     if (pathName.includes("/cover-designs-themes")) {
-        document.getElementById('toTop').click();
+        var toTop = document.getElementById('toTop');
+        console.log(toTop);
+        toTop.click();
     }
 });
