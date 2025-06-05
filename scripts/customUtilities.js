@@ -325,7 +325,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // btn.click();
     });
     var toTop = document.getElementById('toTop');
-    toTop.click();
+    // toTop.click();
     
 });
 // function imgFilter(btn) {
