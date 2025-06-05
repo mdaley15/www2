@@ -54,10 +54,9 @@ class TabsAutomatic {
     }
 
     setSelectedTab(currentTab, setFocus) {
-        console.log(typeof setFocus);
         if (typeof setFocus !== 'boolean') {
             setFocus = true;
-        }
+        } else {}
         for (var i = 0; i < this.tabs.length; i += 1) {
             var tab = this.tabs[i];
             if (currentTab === tab) {
@@ -67,6 +66,7 @@ class TabsAutomatic {
                 if (this.tabpanels[i]) {
                     this.tabpanels[i].classList.remove('hide');
                 } else {}
+                console.log(setFocus);
                 if (setFocus) {
                     tab.focus();
                 }
