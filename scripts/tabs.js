@@ -49,7 +49,6 @@ class TabsAutomatic {
             }
             this.lastTab = tab;
         }
-        console.log(this.firstTab);
         // this.setSelectedTab(this.firstTab, false);
     }
 
@@ -59,7 +58,6 @@ class TabsAutomatic {
         } else {}
         for (var i = 0; i < this.tabs.length; i += 1) {
             var tab = this.tabs[i];
-            console.log(currentTab);
             if (currentTab === tab) {
                 tab.setAttribute('aria-selected', 'true');
                 tab.classList.add('activeBtn');
@@ -67,7 +65,6 @@ class TabsAutomatic {
                 if (this.tabpanels[i]) {
                     this.tabpanels[i].classList.remove('hide');
                 } else {}
-                console.log(setFocus);
                 if (setFocus) {
                     tab.focus();
                 }
@@ -167,7 +164,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     if (pathName.includes("/cover-designs-themes")) {
         var toTop = document.getElementById('toTop');
-        console.log(toTop);
         toTop.click();
     }
 });
