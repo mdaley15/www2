@@ -49,9 +49,7 @@ class TabsAutomatic {
             }
             this.lastTab = tab;
         }
-        console.log(this.firstTab);
         this.firstTab.tabIndex = 0;
-        // this.setSelectedTab(this.firstTab, false);
     }
 
     setSelectedTab(currentTab, setFocus) {
