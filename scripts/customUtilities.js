@@ -329,7 +329,7 @@ document.addEventListener('DOMContentLoaded', function() {
     toTop.focus();
     toTop.click();
     document.body.focus();
-    
+    console.log(this);
 });
 // function imgFilter(btn) {
 //     filter = btn.getAttribute('data-filter');
