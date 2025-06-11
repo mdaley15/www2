@@ -163,14 +163,4 @@ document.addEventListener('DOMContentLoaded', function() {
     for (var i = 0; i < tablists.length; i++) {
         new TabsAutomatic(tablists[i]);
     }
-    let activeBtns = document.querySelectorAll('.activeBtn');
-    if (activeBtns) {
-        console.log(activeBtns);
-        setTimeout(function() {
-            activeBtns.forEach(btn => {
-                btn.blur();
-                console.log('btn blurred');
-            });
-        }, 2000);
-    }
 });
