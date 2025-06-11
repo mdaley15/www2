@@ -334,7 +334,7 @@ document.addEventListener('DOMContentLoaded', function() {
             activeBtns.forEach(btn => {
                 btn.blur();
             });
-        }, 1000);
+        }, 2000);
     }
     
 });
