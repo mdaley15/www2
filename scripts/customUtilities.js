@@ -323,6 +323,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let startingBtns = document.querySelectorAll('.startingBtn');
     startingBtns.forEach(btn => {
         btn.click();
+        console.log("btn clicked");
     });
     var toTop = document.getElementById('toTop');
     toTop.focus();

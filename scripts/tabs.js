@@ -67,6 +67,7 @@ class TabsAutomatic {
                 } else {}
                 if (setFocus) {
                     tab.focus();
+                    console.log('tab focused');
                 }
             } else {
                 tab.setAttribute('aria-selected', 'false');
