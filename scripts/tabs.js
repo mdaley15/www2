@@ -168,7 +168,6 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(function() {
             activeBtns.forEach(btn => {
                 btn.blur();
-                btn.focusout();
             });
         }, 2000);
     }
