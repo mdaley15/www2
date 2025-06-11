@@ -153,6 +153,7 @@ class TabsAutomatic {
     onClick(event) {
         this.setSelectedTab(event.currentTarget);
         imgFilter(event.currentTarget);
+        console.log(event.currentTarget);
     }
 }
 
