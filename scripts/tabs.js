@@ -76,7 +76,6 @@ class TabsAutomatic {
                     this.tabpanels[i].classList.add('hide');
                 } else {}
             }
-            console.log(tab);
         }
         imgFilter(currentTab);
     }

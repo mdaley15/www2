@@ -325,6 +325,7 @@ document.addEventListener('DOMContentLoaded', function() {
         btn.click();
     });
     var toTop = document.getElementById('toTop');
+    toTop.blur();
     toTop.click();
     
 });
