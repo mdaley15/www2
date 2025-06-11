@@ -338,8 +338,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 btn.blur();
                 console.log('btn blurred');
             });
-            this.body.focus();
-        }, 2000);
+        }, 1000);
     }
 });
 // function imgFilter(btn) {
