@@ -330,9 +330,9 @@ document.addEventListener('DOMContentLoaded', function() {
     var toTop = document.getElementById('toTop');
     toTop.focus();
     toTop.click();
-    console.log('toTop clicked');
-    this.body.focus();
-    console.log('body focused');
+    // console.log('toTop clicked');
+    // this.body.focus();
+    // console.log('body focused');
 });
 // function imgFilter(btn) {
 //     filter = btn.getAttribute('data-filter');
