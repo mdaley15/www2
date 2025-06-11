@@ -323,16 +323,10 @@ document.addEventListener('DOMContentLoaded', function() {
     let startingBtns = document.querySelectorAll('.startingBtn');
     startingBtns.forEach(btn => {
         btn.click();
-        console.log("btn clicked");
-        // btn.blur();
-        // console.log('btn blurred');
     });
     var toTop = document.getElementById('toTop');
     toTop.focus();
     toTop.click();
-    // console.log('toTop clicked');
-    // this.body.focus();
-    // console.log('body focused');
 });
 // function imgFilter(btn) {
 //     filter = btn.getAttribute('data-filter');
