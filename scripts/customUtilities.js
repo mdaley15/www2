@@ -324,8 +324,8 @@ document.addEventListener('DOMContentLoaded', function() {
     startingBtns.forEach(btn => {
         btn.click();
         console.log("btn clicked");
-        btn.blur();
-        console.log('btn blurred');
+        // btn.blur();
+        // console.log('btn blurred');
     });
     var toTop = document.getElementById('toTop');
     toTop.focus();
@@ -333,17 +333,6 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('toTop clicked');
     this.body.focus();
     console.log('body focused');
-    // console.log(this);
-    // let activeBtns = document.querySelectorAll('.activeBtn');
-    // if (activeBtns) {
-    //     console.log(activeBtns);
-    //     setTimeout(function() {
-    //         activeBtns.forEach(btn => {
-    //             btn.blur();
-    //             console.log('btn blurred');
-    //         });
-    //     }, 1500);
-    // }
 });
 // function imgFilter(btn) {
 //     filter = btn.getAttribute('data-filter');
