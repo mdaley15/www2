@@ -329,8 +329,18 @@ document.addEventListener('DOMContentLoaded', function() {
     toTop.focus();
     toTop.click();
     console.log('toTop clicked');
-    this.body.focus();
     console.log(this);
+    let activeBtns = document.querySelectorAll('.activeBtn');
+    if (activeBtns) {
+        console.log(activeBtns);
+        setTimeout(function() {
+            activeBtns.forEach(btn => {
+                btn.blur();
+                console.log('btn blurred');
+            });
+            this.body.focus();
+        }, 2000);
+    }
 });
 // function imgFilter(btn) {
 //     filter = btn.getAttribute('data-filter');
