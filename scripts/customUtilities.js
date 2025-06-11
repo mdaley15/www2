@@ -331,6 +331,8 @@ document.addEventListener('DOMContentLoaded', function() {
     toTop.focus();
     toTop.click();
     console.log('toTop clicked');
+    this.body.focus();
+    console.log('body focused');
     // console.log(this);
     // let activeBtns = document.querySelectorAll('.activeBtn');
     // if (activeBtns) {
