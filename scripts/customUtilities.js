@@ -324,8 +324,8 @@ document.addEventListener('DOMContentLoaded', function() {
     startingBtns.forEach(btn => {
         btn.click();
         console.log("btn clicked");
-        // btn.blur();
-        // console.log('btn blurred');
+        btn.blur();
+        console.log('btn blurred');
     });
     var toTop = document.getElementById('toTop');
     toTop.focus();
