@@ -169,6 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(function() {
             activeBtns.forEach(btn => {
                 btn.blur();
+                console.log('btn blurred');
             });
         }, 2000);
     }
