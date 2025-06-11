@@ -326,8 +326,8 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log("btn clicked");
     });
     var toTop = document.getElementById('toTop');
-    // toTop.focus();
-    // toTop.click();
+    toTop.focus();
+    toTop.click();
     console.log('toTop clicked');
     this.body.focus();
     console.log(this);
