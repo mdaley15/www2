@@ -330,6 +330,11 @@ document.addEventListener('DOMContentLoaded', function() {
     let activeBtns = document.querySelectorAll('.activeBtn');
     if (activeBtns) {
         console.log(activeBtns);
+        setTimeout(function() {
+            activeBtns.forEach(btn => {
+                btn.blur();
+            });
+        }, 1000);
     }
     
 });
