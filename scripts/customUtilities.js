@@ -327,15 +327,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var toTop = document.getElementById('toTop');
     toTop.focus();
     toTop.click();
-    let activeBtns = document.querySelectorAll('.activeBtn');
-    if (activeBtns) {
-        console.log(activeBtns);
-        setTimeout(function() {
-            activeBtns.forEach(btn => {
-                btn.blur();
-            });
-        }, 2000);
-    }
     
 });
 // function imgFilter(btn) {
