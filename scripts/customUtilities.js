@@ -464,31 +464,43 @@ function lightboxFilter(itemLink) {
             next.remove();
         }
     }
-    // Step 1: Get the clicked image src
-    const clickedImg = itemLink.querySelector('img');
-    console.log(clickedImg);
-    const clickedSrc = clickedImg ? clickedImg.getAttribute('src') : null;
+    //Test Code
+    // === ACTIVATE CORRECT LIGHTBOX SLIDE BASED ON CLICKED IMAGE ===
 
+// Step 1: Get clicked image filename (without extension)
+const clickedImg = itemLink.querySelector('img');
+let clickedFilename = null;
+
+if (clickedImg) {
+    const clickedSrc = clickedImg.getAttribute('src') || clickedImg.getAttribute('data-src');
     if (clickedSrc) {
-        // Step 2: Clear existing active slide classes
-        lightboxItems.forEach(item => {
-            item.classList.remove('sqs-active-slide');
-        });
+        clickedFilename = clickedSrc.split('/').pop().split('.')[0];  // Filename only, no extension
+    }
+}
 
-        // Step 3: Find and activate the matching lightbox item
-        for (let i = 0; i < lightboxItems.length; i++) {
-            const lightboxImg = lightboxItems[i].querySelector('.thumb-image');
+if (clickedFilename) {
+    // Step 2: Remove active state from all lightbox items
+    lightboxItems.forEach(item => {
+        item.classList.remove('sqs-active-slide');
+    });
 
-            if (lightboxImg) {
-                const lbSrc = lightboxImg.getAttribute('src') || lightboxImg.getAttribute('data-src');
+    // Step 3: Loop through lightbox items and activate the matching one
+    for (let i = 0; i < lightboxItems.length; i++) {
+        const lightboxImg = lightboxItems[i].querySelector('.thumb-image');
 
-                if (lbSrc && lbSrc.includes(clickedSrc.split('/').pop())) { // Match by filename
+        if (lightboxImg) {
+            const lbSrc = lightboxImg.getAttribute('src') || lightboxImg.getAttribute('data-src');
+            if (lbSrc) {
+                const lbFilename = lbSrc.split('/').pop().split('.')[0];  // Filename only, no extension
+                if (lbFilename === clickedFilename) {
                     lightboxItems[i].classList.add('sqs-active-slide');
-                    break;
+                    break;  // Found the correct one
                 }
             }
         }
     }
+}
+
 }
 document.addEventListener('click', function(event) {
     const lightbox = document.querySelector('.yui3-lightbox2');
