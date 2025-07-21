@@ -466,6 +466,7 @@ function lightboxFilter(itemLink) {
     }
     // Step 1: Get the clicked image src
     const clickedImg = itemLink.querySelector('img');
+    console.log(clickedImg);
     const clickedSrc = clickedImg ? clickedImg.getAttribute('src') : null;
 
     if (clickedSrc) {
