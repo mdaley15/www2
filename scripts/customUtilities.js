@@ -331,136 +331,141 @@ document.addEventListener('DOMContentLoaded', function() {
     toTop.click();
 });
 function imgFilter(btn) {
-    const filter = btn.getAttribute('data-filter');
-
-    // Handle button states
-    const thisBlock = btn.closest('.col'); // Adjust selector if needed
-    const filterBtns = thisBlock.querySelectorAll('.filterBtn');
-
+    filter = btn.getAttribute('data-filter');
+    let thisBlock = btn.closest('.col');
+    let filterBtns = thisBlock.querySelectorAll('.filterBtn');
+    filterTexts = thisBlock.querySelectorAll('.filterText');
+    thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
+    if (thisGallery) {
+        galleryItems = thisGallery.querySelectorAll('.slide');
+    }
     filterBtns.forEach(filterBtn => {
         filterBtn.classList.remove('activeBtn');
-        filterBtn.setAttribute('tabindex', '-1');
-        filterBtn.setAttribute('aria-selected', 'false');
+        filterBtn.setAttribute('tabindex','-1');
+        filterBtn.setAttribute('aria-selected','false');
     });
-
     btn.classList.add('activeBtn');
     btn.removeAttribute('tabindex');
-    btn.setAttribute('aria-selected', 'true');
-
-    // Get gallery and slides
-    const thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
-    const galleryItems = thisGallery.querySelectorAll('.slide');
-
-    galleryItems.forEach(item => {
-        const itemClass = item.getAttribute('data-class');
-
-        if (itemClass === filter || filter === 'all') {
-            item.classList.remove('hide');
+    btn.setAttribute('aria-selected','true');
+    filterTexts.forEach(filterText => {
+        let target = filterText.getAttribute('data-target');
+        if (filter == target) {
+            filterText.classList.remove('hide');
         } else {
-            item.classList.add('hide');
+            filterText.classList.add('hide');
         }
     });
+    if (galleryItems) {
+        galleryItems.forEach(item => {
+            if (item.classList.contains(filter)) {
+                item.classList.remove('hide');
+            } else {
+                item.classList.add('hide');
+                item.querySelector('a').classList.remove('js-gallery-lightbox-opener');
+            }
+        });
+    }
 }
-// function lightboxFilter(itemLink) {
-//     var pathName = window.location.pathname;
-//     console.log(pathName);
-//     const filterClasses = [];
-//     let thisBlock = itemLink.closest('.collapsible-body');
-//     let thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
-//     galleryItems = thisGallery.querySelectorAll('.slide');
-//     galleryItems.forEach(item => {
-//         let itemClass = item.getAttribute('data-class');
-//         filterClasses.push(itemClass);
-//     });
-//     lightbox = document.querySelector('.yui3-lightbox2');
-//     lightboxItems = lightbox.querySelectorAll('.sqs-lightbox-slide');
-//     // filterClasses.forEach((str, index) => {
-//     //     if (lightboxItems[index]) {
-//     //         lightboxItems[index].classList.add(str);
-//     //     }
-//     // });
-//     lightboxItems.forEach(item => {
-//         let classList = item.classList;
-//         let lastClass = classList[classList.length - 1];
-//         // console.log(lastClass);
-//         let img = item.querySelector('.thumb-image');
-//         let imgDataSrc = img.getAttribute('data-src');
-//         let fileType = imgDataSrc.split('.').pop();
-//         var coverPath;
+function lightboxFilter(itemLink) {
+    var pathName = window.location.pathname;
+    console.log(pathName);
+    const filterClasses = [];
+    let thisBlock = itemLink.closest('.collapsible-body');
+    let thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
+    galleryItems = thisGallery.querySelectorAll('.slide');
+    galleryItems.forEach(item => {
+        let itemClass = item.getAttribute('data-class');
+        filterClasses.push(itemClass);
+    });
+    lightbox = document.querySelector('.yui3-lightbox2');
+    lightboxItems = lightbox.querySelectorAll('.sqs-lightbox-slide');
+    // filterClasses.forEach((str, index) => {
+    //     if (lightboxItems[index]) {
+    //         lightboxItems[index].classList.add(str);
+    //     }
+    // });
+    lightboxItems.forEach(item => {
+        let classList = item.classList;
+        let lastClass = classList[classList.length - 1];
+        // console.log(lastClass);
+        let img = item.querySelector('.thumb-image');
+        let imgDataSrc = img.getAttribute('data-src');
+        let fileType = imgDataSrc.split('.').pop();
+        var coverPath;
         
-//         if ((pathName.includes("/cover-designs-themes")) || (pathName.includes("/sports-and-clubs-photography") && thisBlock.classList.contains('switchImgs'))) {
-//             let lastSlashIndex = imgDataSrc.lastIndexOf('/');
-//             let filename = imgDataSrc.substring(lastSlashIndex + 1);
-//             filename = filename.split(".", 1)[0];
-//             let newImgPth = '../assets/'+filename+'.webp';
-//             if (window.innerWidth > 640) {
-//                 img.setAttribute('data-src', '');
-//                 img.setAttribute('src', '');
-//                 img.setAttribute('data-image', '');
-//                 img.setAttribute('data-src', newImgPth);
-//                 img.setAttribute('src', newImgPth);
-//             }
-//             coverPath = newImgPth;
-//         };
-//         if (window.innerWidth > 640) {
-//         }
-//         if (pathName.includes("/cover-designs-themes")) {
-//             img.setAttribute('alt', 'Yearbook cover assets');
-//             img.classList.add('ybAssets');
-//         }
-//         if (pathName.includes("/sports-and-clubs-photography") && thisBlock.classList.contains('switchImgs')) {
-//             img.setAttribute('alt', 'Sports + Clubs image assets');
-//             img.classList.add('scAssets');
-//         }
-//         let imgRatio = img.getAttribute('data-image-dimensions');
-//         let width = Number(imgRatio.split('x', 1)[0]);
-//         let height = Number(imgRatio.split('x')[1]);
-//         if (width < height) {
-//             img.classList.add('portrait');
-//         } else if (width == height) {
-//             img.classList.add('square');
-//         } else {
-//             img.classList.add('landscape');
-//         }
-//         let padder = item.querySelector('.sqs-lightbox-padder');
-//         let infoBtn = document.createElement('a');
-//         const text = document.createTextNode('Get More Info');
-//         infoBtn.appendChild(text);
-//         infoBtn.classList.add('allBtns');
-//         var link;
-//         if ((pathName.includes("/cover-designs-themes")) || (pathName.includes("/sports-and-clubs-photography") && thisBlock.classList.contains('switchImgs'))) {
-//             link = '/contact-us?' + coverPath+'?'+lastClass+'/webp';
-//         } else {
-//             link = '/contact-us?' + imgDataSrc+'?'+lastClass;
-//         }
-//         infoBtn.setAttribute('href', link);
-//         padder.appendChild(infoBtn);
-//     });
+        if ((pathName.includes("/cover-designs-themes")) || (pathName.includes("/sports-and-clubs-photography") && thisBlock.classList.contains('switchImgs'))) {
+            let lastSlashIndex = imgDataSrc.lastIndexOf('/');
+            let filename = imgDataSrc.substring(lastSlashIndex + 1);
+            filename = filename.split(".", 1)[0];
+            let newImgPth = '../assets/'+filename+'.webp';
+            if (window.innerWidth > 640) {
+                img.setAttribute('data-src', '');
+                img.setAttribute('src', '');
+                img.setAttribute('data-image', '');
+                img.setAttribute('data-src', newImgPth);
+                img.setAttribute('src', newImgPth);
+            }
+            coverPath = newImgPth;
+        };
+        if (window.innerWidth > 640) {
+        }
+        if (pathName.includes("/cover-designs-themes")) {
+            img.setAttribute('alt', 'Yearbook cover assets');
+            img.classList.add('ybAssets');
+        }
+        if (pathName.includes("/sports-and-clubs-photography") && thisBlock.classList.contains('switchImgs')) {
+            img.setAttribute('alt', 'Sports + Clubs image assets');
+            img.classList.add('scAssets');
+        }
+        let imgRatio = img.getAttribute('data-image-dimensions');
+        let width = Number(imgRatio.split('x', 1)[0]);
+        let height = Number(imgRatio.split('x')[1]);
+        if (width < height) {
+            img.classList.add('portrait');
+        } else if (width == height) {
+            img.classList.add('square');
+        } else {
+            img.classList.add('landscape');
+        }
+        let padder = item.querySelector('.sqs-lightbox-padder');
+        let infoBtn = document.createElement('a');
+        const text = document.createTextNode('Get More Info');
+        infoBtn.appendChild(text);
+        infoBtn.classList.add('allBtns');
+        var link;
+        if ((pathName.includes("/cover-designs-themes")) || (pathName.includes("/sports-and-clubs-photography") && thisBlock.classList.contains('switchImgs'))) {
+            link = '/contact-us?' + coverPath+'?'+lastClass+'/webp';
+        } else {
+            link = '/contact-us?' + imgDataSrc+'?'+lastClass;
+        }
+        infoBtn.setAttribute('href', link);
+        padder.appendChild(infoBtn);
+    });
 
-//     let activeFilter = thisBlock.querySelector('.activeBtn');
-//     if (activeFilter) {
-//         activeFilter = activeFilter.getAttribute('data-filter');
-//         let activeItems = [];
-//         lightboxItems.forEach(item => {
-//             if (item.classList.contains(activeFilter)) {
-//                 activeItems.push(item);
-//                 item.classList.remove('hide');
-//             } else {
-//                 item.classList.add('hide');
-//                 setTimeout(function() {
-//                     item.remove();
-//                 }, 2000);
-//             }
-//         });
-//         // console.log(activeItems);
-//         if (activeItems.length === 1) {
-//             let prev = document.querySelector('.sqs-lightbox-previous');
-//             let next = document.querySelector('.sqs-lightbox-next');
-//             prev.remove();
-//             next.remove();
-//         }
-//     }
-// }
+    let activeFilter = thisBlock.querySelector('.activeBtn');
+    if (activeFilter) {
+        activeFilter = activeFilter.getAttribute('data-filter');
+        let activeItems = [];
+        lightboxItems.forEach(item => {
+            if (item.classList.contains(activeFilter)) {
+                activeItems.push(item);
+                item.classList.remove('hide');
+            } else {
+                item.classList.add('hide');
+                setTimeout(function() {
+                    item.remove();
+                }, 2000);
+            }
+        });
+        // console.log(activeItems);
+        if (activeItems.length === 1) {
+            let prev = document.querySelector('.sqs-lightbox-previous');
+            let next = document.querySelector('.sqs-lightbox-next');
+            prev.remove();
+            next.remove();
+        }
+    }
+}
 document.addEventListener('click', function(event) {
     const lightbox = document.querySelector('.yui3-lightbox2');
     if (lightbox) {
