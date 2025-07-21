@@ -386,11 +386,11 @@ function lightboxFilter(itemLink) {
     });
     lightbox = document.querySelector('.yui3-lightbox2');
     lightboxItems = lightbox.querySelectorAll('.sqs-lightbox-slide');
-    // filterClasses.forEach((str, index) => {
-    //     if (lightboxItems[index]) {
-    //         lightboxItems[index].classList.add(str);
-    //     }
-    // });
+    filterClasses.forEach((str, index) => {
+        if (lightboxItems[index]) {
+            lightboxItems[index].classList.add(str);
+        }
+    });
     lightboxItems.forEach(item => {
         let classList = item.classList;
         let lastClass = classList[classList.length - 1];
