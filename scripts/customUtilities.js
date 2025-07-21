@@ -267,6 +267,7 @@ document.addEventListener('DOMContentLoaded', function() {
     galleries.forEach(gallery => {
         galleryItems = gallery.querySelectorAll('.slide');
         galleryItems.forEach((item, index) => {
+            console.log(item);
             let itemLink = item.querySelector('a');
             let category = itemLink.getAttribute('data-title');
             if (category) {
@@ -383,7 +384,6 @@ function lightboxFilter(itemLink) {
         }
     });
     lightboxItems.forEach(item => {
-        console.log(item);
         let classList = item.classList;
         let lastClass = classList[classList.length - 1];
         // console.log(lastClass);
