@@ -464,43 +464,6 @@ function lightboxFilter(itemLink) {
             next.remove();
         }
     }
-    //Test Code
-    // === ACTIVATE CORRECT LIGHTBOX SLIDE BASED ON CLICKED IMAGE ===
-
-// Step 1: Get clicked image filename (without extension)
-const clickedImg = itemLink.querySelector('img');
-let clickedFilename = null;
-
-if (clickedImg) {
-    const clickedSrc = clickedImg.getAttribute('src') || clickedImg.getAttribute('data-src');
-    if (clickedSrc) {
-        clickedFilename = clickedSrc.split('/').pop().split('.')[0];  // Filename only, no extension
-    }
-}
-
-if (clickedFilename) {
-    // Step 2: Remove active state from all lightbox items
-    lightboxItems.forEach(item => {
-        item.classList.remove('sqs-active-slide');
-    });
-
-    // Step 3: Loop through lightbox items and activate the matching one
-    for (let i = 0; i < lightboxItems.length; i++) {
-        const lightboxImg = lightboxItems[i].querySelector('.thumb-image');
-
-        if (lightboxImg) {
-            const lbSrc = lightboxImg.getAttribute('src') || lightboxImg.getAttribute('data-src');
-            if (lbSrc) {
-                const lbFilename = lbSrc.split('/').pop().split('.')[0];  // Filename only, no extension
-                if (lbFilename === clickedFilename) {
-                    lightboxItems[i].classList.add('sqs-active-slide');
-                    break;  // Found the correct one
-                }
-            }
-        }
-    }
-}
-
 }
 document.addEventListener('click', function(event) {
     const lightbox = document.querySelector('.yui3-lightbox2');
