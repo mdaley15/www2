@@ -267,7 +267,6 @@ document.addEventListener('DOMContentLoaded', function() {
     galleries.forEach(gallery => {
         galleryItems = gallery.querySelectorAll('.slide');
         galleryItems.forEach((item, index) => {
-            console.log(item);
             let itemLink = item.querySelector('a');
             let category = itemLink.getAttribute('data-title');
             if (category) {
@@ -283,6 +282,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (itemLink.getAttribute('role') === 'button') {
                     lightboxFilter(this);
                 }
+                console.log(item);
             });
             itemLink.addEventListener('keydown', function(e) {
                 if (e.which == 13 || e.which == 32) {
