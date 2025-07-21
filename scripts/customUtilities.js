@@ -464,6 +464,30 @@ function lightboxFilter(itemLink) {
             next.remove();
         }
     }
+    // Step 1: Get the clicked image src
+    const clickedImg = itemLink.querySelector('img');
+    const clickedSrc = clickedImg ? clickedImg.getAttribute('src') : null;
+
+    if (clickedSrc) {
+        // Step 2: Clear existing active slide classes
+        lightboxItems.forEach(item => {
+            item.classList.remove('sqs-active-slide');
+        });
+
+        // Step 3: Find and activate the matching lightbox item
+        for (let i = 0; i < lightboxItems.length; i++) {
+            const lightboxImg = lightboxItems[i].querySelector('.thumb-image');
+
+            if (lightboxImg) {
+                const lbSrc = lightboxImg.getAttribute('src') || lightboxImg.getAttribute('data-src');
+
+                if (lbSrc && lbSrc.includes(clickedSrc.split('/').pop())) { // Match by filename
+                    lightboxItems[i].classList.add('sqs-active-slide');
+                    break;
+                }
+            }
+        }
+    }
 }
 document.addEventListener('click', function(event) {
     const lightbox = document.querySelector('.yui3-lightbox2');
