@@ -367,6 +367,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function lightboxFilter(itemLink) {
     var pathName = window.location.pathname;
     console.log(pathName);
+    console.log(itemLink);
     const filterClasses = [];
     let thisBlock = itemLink.closest('.collapsible-body');
     let thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
