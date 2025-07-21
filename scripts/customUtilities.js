@@ -280,14 +280,18 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             itemLink.addEventListener('click', function(e) {
                 if (itemLink.getAttribute('role') === 'button') {
-                    lightboxFilter(this);
+                    setTimeout(() => {
+                        lightboxFilter(this);
+                    }, 200); // Wait for Squarespace to build the lightbox
                 }
                 console.log(item);
             });
             itemLink.addEventListener('keydown', function(e) {
                 if (e.which == 13 || e.which == 32) {
                     if (itemLink.getAttribute('role') === 'button') {
-                        lightboxFilter(this);
+                        setTimeout(() => {
+                            lightboxFilter(this);
+                        }, 200); // Wait for Squarespace to build the lightbox
                     }
                 };
             });
@@ -357,33 +361,40 @@ function imgFilter(btn) {
     });
     if (galleryItems) {
         galleryItems.forEach(item => {
-            if (item.classList.contains(filter)) {
+            const itemClass = item.getAttribute('data-class');
+            if (itemClass === filter || filter === 'all') {
                 item.classList.remove('hide');
             } else {
                 item.classList.add('hide');
-                item.querySelector('a').classList.remove('js-gallery-lightbox-opener');
+                item.style.pointerEvents = 'none';
             }
+            // if (item.classList.contains(filter)) {
+            //     item.classList.remove('hide');
+            // } else {
+            //     item.classList.add('hide');
+            //     item.querySelector('a').classList.remove('js-gallery-lightbox-opener');
+            // }
         });
     }
 }
 function lightboxFilter(itemLink) {
     var pathName = window.location.pathname;
-    console.log(pathName);
-    const filterClasses = [];
-    let thisBlock = itemLink.closest('.collapsible-body');
-    let thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
-    galleryItems = thisGallery.querySelectorAll('.slide');
-    galleryItems.forEach(item => {
-        let itemClass = item.getAttribute('data-class');
-        filterClasses.push(itemClass);
-    });
+    // console.log(pathName);
+    // const filterClasses = [];
+    // let thisBlock = itemLink.closest('.collapsible-body');
+    // let thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
+    // galleryItems = thisGallery.querySelectorAll('.slide');
+    // galleryItems.forEach(item => {
+    //     let itemClass = item.getAttribute('data-class');
+    //     filterClasses.push(itemClass);
+    // });
     lightbox = document.querySelector('.yui3-lightbox2');
     lightboxItems = lightbox.querySelectorAll('.sqs-lightbox-slide');
-    filterClasses.forEach((str, index) => {
-        if (lightboxItems[index]) {
-            lightboxItems[index].classList.add(str);
-        }
-    });
+    // filterClasses.forEach((str, index) => {
+    //     if (lightboxItems[index]) {
+    //         lightboxItems[index].classList.add(str);
+    //     }
+    // });
     lightboxItems.forEach(item => {
         let classList = item.classList;
         let lastClass = classList[classList.length - 1];
@@ -407,8 +418,6 @@ function lightboxFilter(itemLink) {
             }
             coverPath = newImgPth;
         };
-        if (window.innerWidth > 640) {
-        }
         if (pathName.includes("/cover-designs-themes")) {
             img.setAttribute('alt', 'Yearbook cover assets');
             img.classList.add('ybAssets');
