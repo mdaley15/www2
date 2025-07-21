@@ -282,7 +282,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (itemLink.getAttribute('role') === 'button') {
                     lightboxFilter(this);
                 }
-                console.log(itemLink);
             });
             itemLink.addEventListener('keydown', function(e) {
                 if (e.which == 13 || e.which == 32) {
@@ -368,7 +367,6 @@ document.addEventListener('DOMContentLoaded', function() {
 function lightboxFilter(itemLink) {
     var pathName = window.location.pathname;
     console.log(pathName);
-    console.log(itemLink);
     const filterClasses = [];
     let thisBlock = itemLink.closest('.collapsible-body');
     let thisGallery = thisBlock.querySelector('.sqs-gallery-design-grid');
@@ -385,6 +383,7 @@ function lightboxFilter(itemLink) {
         }
     });
     lightboxItems.forEach(item => {
+        console.log(item);
         let classList = item.classList;
         let lastClass = classList[classList.length - 1];
         // console.log(lastClass);
