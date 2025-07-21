@@ -280,18 +280,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             itemLink.addEventListener('click', function(e) {
                 if (itemLink.getAttribute('role') === 'button') {
-                    setTimeout(() => {
-                        lightboxFilter(this);
-                    }, 200); // Wait for Squarespace to build the lightbox
+                    lightboxFilter(this);
                 }
                 console.log(item);
             });
             itemLink.addEventListener('keydown', function(e) {
                 if (e.which == 13 || e.which == 32) {
                     if (itemLink.getAttribute('role') === 'button') {
-                        setTimeout(() => {
-                            lightboxFilter(this);
-                        }, 200); // Wait for Squarespace to build the lightbox
+                        lightboxFilter(this);
                     }
                 };
             });
