@@ -282,7 +282,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (itemLink.getAttribute('role') === 'button') {
                     lightboxFilter(this);
                 }
-                console.log(item);
             });
             itemLink.addEventListener('keydown', function(e) {
                 if (e.which == 13 || e.which == 32) {
