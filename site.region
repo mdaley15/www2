@@ -14,7 +14,7 @@
     <!--<script src="https://kit.fontawesome.com/50b8ef033d.js" crossorigin="anonymous"></script>-->
     <squarespace:script src = "pdfFinder.js" combo = "false">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <squarespace:script src = "https://unpkg.com/aos@2.3.1/dist/aos.js" combo = "false">
+    <script src = "https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <squarespace:script src = "customUtilities.js" combo = "false">
     <squarespace:script src="tabs.js" combo="false"/>
 
