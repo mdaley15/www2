@@ -295,7 +295,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let bannerStyleGuideGallery = document.querySelector('#banner-style-guide .sqs-gallery-design-grid');
     if (bannerStyleGuideGallery) {
-        console.log(bannerStyleGuideGallery);
+        let slides = bannerStyleGuideGallery.querySelectorAll('.slide');
+        slides.forEach(slide => {
+            let slideTitle = slide.querySelector('.image-slide-title');
+            console.log(slideTitle);
+        });
     }
 
     let watermark = document.querySelector('.watermark');
