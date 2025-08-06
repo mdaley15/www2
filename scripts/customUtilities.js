@@ -299,6 +299,7 @@ document.addEventListener('DOMContentLoaded', function() {
         slides.forEach(slide => {
             let slideTitle = slide.querySelector('.image-slide-title');
             slideTitle = slideTitle.textContent;
+            slideTitle = slideTitle.split("/");
             console.log(slideTitle);
         });
     }
