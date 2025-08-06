@@ -301,7 +301,7 @@ document.addEventListener('DOMContentLoaded', function() {
             let newSlideTitle = slideTitle.textContent;
             newSlideTitle = newSlideTitle.split("/");
             console.log(newSlideTitle);
-            slideTitle.textContent = newSlideTitle[0];
+            slideTitle.innerHTML = newSlideTitle[0];
             let newSpan = document.createElement('span');
             newSpan.textContent = newSlideTitle[1];
             console.log(newSpan);
