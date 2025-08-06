@@ -293,6 +293,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    let bannerStyleGuideGallery = document.querySelector('#banner-style-guide .sqs-gallery-design-grid');
+    if (bannerStyleGuideGallery) {
+        console.log(bannerStyleGuideGallery);
+    }
+
     let watermark = document.querySelector('.watermark');
     let pageIcon = document.querySelector('.introTitle i');
     let intro = document.querySelector('.Intro');
