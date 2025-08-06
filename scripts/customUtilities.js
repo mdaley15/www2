@@ -301,11 +301,9 @@ document.addEventListener('DOMContentLoaded', function() {
             let slideTitle = slide.querySelector('.image-slide-title');
             let newSlideTitle = slideTitle.textContent;
             newSlideTitle = newSlideTitle.split("/");
-            console.log(newSlideTitle);
             slideTitle.innerHTML = newSlideTitle[0];
             let newSpan = document.createElement('span');
             newSpan.textContent = newSlideTitle[1];
-            console.log(newSpan);
             slideTitle.appendChild(newSpan);
         });
     }
