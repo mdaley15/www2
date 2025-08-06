@@ -298,10 +298,10 @@ document.addEventListener('DOMContentLoaded', function() {
         let slides = bannerStyleGuideGallery.querySelectorAll('.slide');
         slides.forEach(slide => {
             let slideTitle = slide.querySelector('.image-slide-title');
-            let slideTitleText = slideTitle.textContent;
-            let newSlideTitle = slideTitleText.split("/");
+            let newSlideTitle = slideTitle.textContent;
+            newSlideTitle = newSlideTitle.split("/");
             console.log(newSlideTitle);
-            slideTitleText = newSlideTitle[0];
+            slideTitle.textContent = newSlideTitle[0];
             let newSpan = document.createElement('span');
             newSpan.textContent = newSlideTitle[1];
             console.log(newSpan);
