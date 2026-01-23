@@ -47,7 +47,7 @@
         </div>
         <div class="footerRow rowTwo">
             <div class="footerCol bigCol">
-                <small>© 2025 Inter-State Studio & Publishing Co.</small>
+                <small>© <script>document.write(new Date().getFullYear())</script> Inter-State Studio & Publishing Co.</small>
             </div>
         </div>
 
