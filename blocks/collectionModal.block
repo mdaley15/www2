@@ -160,8 +160,8 @@
         var shown = getCookie(cookieName);
 
         if (!shown) {
+            showModal();
             setTimeout(function () {
-                showModal();
             }, 50);
 
             setSessionCookie(cookieName, '1');
