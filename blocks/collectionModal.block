@@ -159,7 +159,8 @@
         function setSessionCookie(name, value) {
             document.cookie = name + '=' + encodeURIComponent(value) + '; path=/';
         }
-
+        
+        var pathName = window.location.pathname
         if (pathName.includes("/contact-us") || pathName.includes("/request-yearbook-info") || pathName.includes("/request-sample-yearbook")) {
             var shown = getCookie(cookieName);
 
