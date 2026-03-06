@@ -5,10 +5,10 @@
             <h3 class="modal-title" id="collectionModalLabel">Notice at Collection</h3>
             <button type="button" class="customClose" aria-label="Close">&times;</button>
         </div>
-    </div>
-    <div class="modal-body">
-        <p>modal body</p>
-        <p><a href="https://inter-state.com/privacy" target="_blank">Privacy Policy</a></p>
+        <div class="modal-body">
+            <p>modal body</p>
+            <p><a href="https://inter-state.com/privacy" target="_blank">Privacy Policy</a></p>
+        </div>
     </div>
 </div>
 
@@ -21,7 +21,8 @@
     width: 100%;
     overflow-y: hidden;
     overflow-x: visible;
-    z-index: 99999;
+    z-index: 99999!important;
+    background: transparent!important;
     
     .modal-content {
         border-radius: 10px;
