@@ -124,6 +124,7 @@
 <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function () {
         var modalElement = document.getElementById('collectionModal');
+        var modalContent = modalElement.querySelector('.modal-content');
         var closeButton = document.querySelector('.customClose');
         var cookieName = 'privacy_modal';
 
@@ -162,10 +163,19 @@
             hideModal();
         });
 
-        modalElement.addEventListener('click', function (event) {
-            if (event.target === modalElement) {
+        document.addEventListener('click', function (event) {
+            var target = event.target;
+
+            if (modalElement.contains(target)) {
+                return; // Do nothing if the click is inside the modal
+            }
+            if (target.closest('.privacy-trigger, .no-modal-close')) {
+                return; // Do nothing if the click is on these elements
+            }
+            if (modalElement.classList.contains('open')) {
                 hideModal();
             }
+            target.focus();
         });
 
         document.addEventListener('keydown', function (event) {
