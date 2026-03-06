@@ -135,8 +135,8 @@
         function showModal() {
             modalElement.classList.add('open');
             modalElement.setAttribute('aria-hidden', 'false');
-            modalContent.classList.add('open');
             setTimeout(function () {
+                modalContent.classList.add('open');
             }, 100);
         }
 
