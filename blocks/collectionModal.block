@@ -48,21 +48,22 @@
                 font-weight: 700;
                 font-size: 30px;
                 margin: 0;
-                color: #185b92;
+                color: #344d87;
                 line-height: 1;
                 padding-top: 3px;
             }
             button.customClose {
                 background: transparent;
                 border: 0;
-                color: @blue;
+                color: #344d87;
                 padding: 0;
                 font-size: 30px;
                 line-height: 30px;
+                transition: all .3s ease-in-out;
 
                 &:hover,
                 &:focus {
-                    color: @drkOrange;
+                    color: #dd6a14;
                 }
             }
         }
