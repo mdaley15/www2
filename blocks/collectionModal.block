@@ -27,6 +27,7 @@
     box-shadow: none;
     
     .modal-content {
+        position: relative;
         border-radius: 5px;
         border: 0;
         width: 100%;
