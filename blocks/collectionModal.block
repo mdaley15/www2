@@ -15,6 +15,7 @@
 <style>
 /* Notice At Collection */
 #collectionModal {
+    display: none;
     padding: 20px!important;
     bottom: 0 !important;
     top: unset !important;
@@ -60,6 +61,8 @@
         }
     }
     &.open {
+        display: block;
+        
         .modal-dialog {
             bottom: 0 !important
         }
@@ -91,13 +94,19 @@
 
 <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function () {
-        // Initialize the modal
         var modalElement = document.getElementById('collectionModal');
-        var modalInstance = M.Modal.init(modalElement, {
-            dismissible: true, // Allow closing by clicking outside the modal
-        });
-
+        var closeButton = document.querySelector('.customClose');
         var cookieName = 'privacy_modal';
+
+        function showModal() {
+            modalElement.classList.add('open');
+            modalElement.setAttribute('aria-hidden', 'false');
+        }
+
+        function hideModal() {
+            modalElement.classList.remove('open');
+            modalElement.setAttribute('aria-hidden', 'true');
+        }
 
         function getCookie(name) {
             var match = document.cookie.match(new RegExp('(^|; )' + name + '=([^;]*)'));
@@ -108,20 +117,30 @@
             document.cookie = name + '=' + encodeURIComponent(value) + '; path=/';
         }
 
-        // Check if the modal has already been shown
         var shown = getCookie(cookieName);
 
         if (!shown) {
             setTimeout(function () {
-                modalInstance.open(); // Open the modal using Materialize
+                showModal();
             }, 50);
 
             setSessionCookie(cookieName, '1');
         }
 
-        // Close modal when the close button is clicked
-        document.querySelector('.customClose').addEventListener('click', function () {
-            modalInstance.close();
+        closeButton.addEventListener('click', function () {
+            hideModal();
+        });
+
+        window.addEventListener('click', function (event) {
+            if (event.target === modalElement) {
+                hideModal();
+            }
+        });
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape' && modalElement.style.display === 'block') {
+                hideModal();
+            }
         });
     });
 </script>
