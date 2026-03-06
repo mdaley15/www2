@@ -145,7 +145,7 @@
             setTimeout(function () {
                 modalElement.classList.remove('open');
                 modalElement.setAttribute('aria-hidden', 'true');
-            }, 100);
+            }, 300);
         }
 
         window.showModal = showModal;
