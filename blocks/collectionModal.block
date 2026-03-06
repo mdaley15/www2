@@ -171,6 +171,7 @@
             }
             if (target.closest('.privacy-trigger')) {
                 showModal();
+                return;
             }
             if (modalElement.classList.contains('open')) {
                 hideModal();
