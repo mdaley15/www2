@@ -13,7 +13,76 @@
 </div>
 
 <style>
+/* Notice At Collection */
+#collectionModal {
+    padding: 20px!important;
+    bottom: 0 !important;
+    top: unset !important;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: visible;
+    z-index: 99999;
+    
+    .modal-content {
+        border-radius: 10px;
+        border: 0;
+        width: 100%;
+        height: fit-content;
+    }
+    .modal-header {
+        padding: 15px 25px;
+        display: flex;
+        justify-content: space-between;
 
+        .modal-title {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: normal;
+            /*font-family: Bebas Neue;
+            font-weight: 700;
+            font-size: 30px;
+            color: #185b92;*/
+            line-height: 1;
+            padding-top: 3px;
+        }
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+    .modal-body {
+        padding: 15px 25px;
+
+        p:last-child {
+            margin-bottom: 0!important;
+        }
+    }
+    &.open {
+        .modal-dialog {
+            bottom: 0 !important
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        padding: 15px!important;
+
+        .modal-header {
+            padding: 10px 15px!important;
+        }
+        .modal-title {
+            font-size: 20px!important;
+        }
+        .modal-body {
+            padding: 10px 15px 12px!important;
+
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+}
+.modal-backdrop.transparentBackdrop {
+    opacity: 0!important;
+    pointer-events: none!important;
+}
 </style>
 
 <script type="text/javascript">
