@@ -126,6 +126,7 @@
 </style>
 
 <script type="text/javascript">
+
     document.addEventListener('DOMContentLoaded', function () {
         var modalElement = document.getElementById('collectionModal');
         var modalContent = modalElement.querySelector('.modal-content');
@@ -159,15 +160,15 @@
             document.cookie = name + '=' + encodeURIComponent(value) + '; path=/';
         }
 
-        var shown = getCookie(cookieName);
+        if (pathName.includes("/contact-us") || pathName.includes("/request-yearbook-info") || pathName.includes("/request-sample-yearbook")) {
+            var shown = getCookie(cookieName);
 
-        if (!shown) {
-            showModal();
-            setTimeout(function () {
-            }, 50);
+            if (!shown) {
+                showModal();
 
-            setSessionCookie(cookieName, '1');
-        }
+                setSessionCookie(cookieName, '1');
+            }
+        };
 
         closeButton.addEventListener('click', function () {
             closeButton.blur();
