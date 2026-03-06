@@ -110,6 +110,9 @@
             modalElement.setAttribute('aria-hidden', 'true');
         }
 
+        // Expose showModal globally
+        window.showModal = showModal;
+
         function getCookie(name) {
             var match = document.cookie.match(new RegExp('(^|; )' + name + '=([^;]*)'));
             return match ? decodeURIComponent(match[2]) : null;
