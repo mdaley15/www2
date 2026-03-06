@@ -10,7 +10,7 @@
     <link href="../assets/brands.css" rel="stylesheet" />
     <link href="../assets/solid.css" rel="stylesheet" />
     <squarespace:script src = "jquery-3.2.1.min.js" combo = "false">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <squarespace:script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" combo = "false">
     <!--<script src="https://kit.fontawesome.com/50b8ef033d.js" crossorigin="anonymous"></script>-->
     <squarespace:script src = "pdfFinder.js" combo = "false">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
