@@ -169,8 +169,8 @@
         document.addEventListener('click', function (event) {
             var target = event.target;
 
-            if (modalElement.contains(target)) {
-                return; // Do nothing if the click is inside the modal
+            if (modalContent.contains(target)) {
+                return;
             }
             if (target.closest('.privacy-trigger')) {
                 showModal();
