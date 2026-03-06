@@ -27,7 +27,7 @@
     box-shadow: none;
     
     .modal-content {
-        border-radius: 10px;
+        border-radius: 5px;
         border: 0;
         width: 100%;
         height: fit-content;
@@ -50,6 +50,13 @@
                 color: #185b92;*/
                 line-height: 1;
                 padding-top: 3px;
+            }
+            button.customClose {
+                background: transparent;
+                border: 0;
+                color: #344d87;
+                height: 12px;
+                width: 12px;
             }
             &::before,
             &::after {
