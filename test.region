@@ -10,13 +10,13 @@
     <link href="../assets/brands.css" rel="stylesheet" />
     <link href="../assets/solid.css" rel="stylesheet" />
     <squarespace:script src = "jquery-3.2.1.min.js" combo = "false">
-    <squarespace:script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" combo = "false">
     <!--<script src="https://kit.fontawesome.com/50b8ef033d.js" crossorigin="anonymous"></script>-->
     <squarespace:script src = "pdfFinder.js" combo = "false">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src = "https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <squarespace:script src = "customUtilities.js" combo = "false">
     <squarespace:script src="tabs.js" combo="false"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
   </head>
   <body id="{collection.urlId}" class="{squarespace.page-classes} sqs-has-custom-cart{.if website.logoImageUrl} has-logo-image{.or} has-site-title{.end}{.if website.siteTagLine} has-tagline{.end}{.if website.socialAccounts.0} has-social{.end}{.if showCart} has-cart{.end}{.if item}{.or}{.equal? collection.typeName "index"}{.section collection}{.repeated section collections}{.background-source-video?} has-parallax-images{.or}{.section mainImage} has-parallax-images{.end}{.end}{.end}{.end}{.or}{.section collection}{.background-source-video?} has-parallax-images{.or}{.section mainImage} has-parallax-images{.end}{.end}{.end}{.end}{.end} enable-load-effects<squarespace:navigation navigationId="mainNavigation">{.if items.0} has-primary-nav{.end}</squarespace:navigation><squarespace:navigation navigationId="secondaryNavigation">{.if items.0} has-secondary-nav{.end}</squarespace:navigation><squarespace:navigation navigationId="footerMainNavigation">{.if items.0} has-footer-nav{.end}</squarespace:navigation>{.equal? collection.typeName "index"}{.section collection}{.section collections.0}{.equal? typeName "gallery"} has-index-gallery-first{.end}{.end}{.end}{.end}" data-controller="HashManager, SiteLoader, MobileClassname">
