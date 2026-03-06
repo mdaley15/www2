@@ -32,6 +32,7 @@
                 <ul class="quicklinks">
                     <li><a href="https://interstatesupport.zendesk.com/hc/en-us" target="_blank">Parent Help</a></li>
                     <li><a href="https://inter-state.com/privacy" target="_blank">Privacy Policy</a></li>
+                    <li><span onclick="$('#collectionModal').modal('open'); $('.modal-backdrop').css({ 'pointer-events': 'none', opacity: '0' });">Notice at Collection</span></li>
                     <!-- <li><a href="/privacy-policy#cookies" target="">Cookies Policy</a></li>
                     <li><a href="/terms-of-use" target="">Terms of Use</a></li>
                     <li><a href="/accessibility">Web Accessibility</a></li> -->
