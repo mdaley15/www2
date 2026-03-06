@@ -30,6 +30,8 @@
         border: 0;
         width: 100%;
         height: fit-content;
+        background-color: white;
+        padding: 0;
         
         .modal-header {
             padding: 15px 25px;
@@ -62,7 +64,7 @@
     }
     &.open {
         display: block;
-        
+
         .modal-dialog {
             bottom: 0 !important
         }

@@ -170,6 +170,8 @@
         </div>
       </div>
 
+        {@|apply collectionModal.block}
+
       {@|apply footerTest.block}
       <!-- {@|apply chat.block} -->
 
@@ -195,8 +197,6 @@
     <script>
         AOS.init();
     </script>
-
-    {@|apply collectionModal.block}
 
   </body>
 </html>
