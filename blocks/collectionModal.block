@@ -131,7 +131,7 @@
         var cookieName = 'privacy_modal_schools';
 
         function showModal() {
-            modalElement.classList.remove('open');
+            modalElement.classList.add('open');
             modalElement.setAttribute('aria-hidden', 'false');
             setTimeout(function () {
                 modalContent.classList.add('open');
