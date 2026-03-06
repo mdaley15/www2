@@ -128,7 +128,7 @@
         var modalElement = document.getElementById('collectionModal');
         var modalContent = modalElement.querySelector('.modal-content');
         var closeButton = document.querySelector('.customClose');
-        var cookieName = 'privacy_modal';
+        var cookieName = 'privacy_modal_schools';
 
         function showModal() {
             modalElement.classList.add('open');
