@@ -134,7 +134,7 @@
 
         function showModal() {
             modalElement.classList.add('open');
-            modalElement.setAttribute('aria-hidden', 'false');
+            modalElement.focus();
             setTimeout(function () {
                 modalContent.classList.add('open');
             }, 100);
@@ -144,7 +144,7 @@
             modalContent.classList.remove('open');
             setTimeout(function () {
                 modalElement.classList.remove('open');
-                modalElement.setAttribute('aria-hidden', 'true');
+                modalElement.blur();
             }, 300);
         }
 
