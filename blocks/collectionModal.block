@@ -88,13 +88,12 @@
                 }
             }
         }
+        &.open {
+            bottom: 0 !important
+        }
     }
     &.open {
         display: block;
-
-        .modal-content {
-            bottom: 0 !important
-        }
     }
     @media only screen and (max-width: 600px) {
         padding: 15px!important;
@@ -132,13 +131,19 @@
         var cookieName = 'privacy_modal_schools';
 
         function showModal() {
-            modalElement.classList.add('open');
+            modalElement.classList.remove('open');
             modalElement.setAttribute('aria-hidden', 'false');
+            setTimeout(function () {
+                modalContent.classList.add('open');
+            }, 50);
         }
 
         function hideModal() {
-            modalElement.classList.remove('open');
-            modalElement.setAttribute('aria-hidden', 'true');
+            modalContent.classList.remove('open');
+            setTimeout(function () {
+                modalElement.classList.remove('open');
+                modalElement.setAttribute('aria-hidden', 'true');
+            }, 50);
         }
 
         window.showModal = showModal;
