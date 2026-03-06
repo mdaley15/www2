@@ -36,7 +36,8 @@
         padding: 0;
         box-shadow: 10px 10px 0 #344d87, 0 0 10px rgba(0, 0, 0, .5) !important;
         bottom: -50px;
-        transition: bottom .3s ease-in-out;
+        opacity: 0;
+        transition: all .3s ease-in-out;
         
         .modal-header {
             padding: 15px 25px;
@@ -89,7 +90,8 @@
             }
         }
         &.open {
-            bottom: 0 !important
+            bottom: 0 !important;
+            opacity: 1!important;
         }
     }
     &.open {
@@ -133,8 +135,8 @@
         function showModal() {
             modalElement.classList.add('open');
             modalElement.setAttribute('aria-hidden', 'false');
+            modalContent.classList.add('open');
             setTimeout(function () {
-                modalContent.classList.add('open');
             }, 100);
         }
 
