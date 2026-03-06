@@ -24,6 +24,7 @@
     overflow-x: visible;
     z-index: 99999!important;
     background: transparent!important;
+    box-shadow: none;
     
     .modal-content {
         border-radius: 10px;
@@ -32,6 +33,7 @@
         height: fit-content;
         background-color: white;
         padding: 0;
+        box-shadow: 10px 10px 0 #344d87, 0 0 10px rgba(0, 0, 0, .5) !important;
         
         .modal-header {
             padding: 15px 25px;
