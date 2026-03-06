@@ -57,7 +57,7 @@
             button.customClose {
                 background: transparent;
                 border: 0;
-                color: #344d87;
+                color: #dd6a14;
                 padding: 0;
                 font-size: 30px;
                 line-height: 1;
@@ -65,7 +65,7 @@
 
                 &:hover,
                 &:focus {
-                    color: #dd6a14;
+                    color: #344d87;
                 }
             }
         }
@@ -159,7 +159,7 @@
         function setSessionCookie(name, value) {
             document.cookie = name + '=' + encodeURIComponent(value) + '; path=/';
         }
-        
+
         var pathName = window.location.pathname
         if (pathName.includes("/contact-us") || pathName.includes("/request-yearbook-info") || pathName.includes("/request-sample-yearbook")) {
             var shown = getCookie(cookieName);
