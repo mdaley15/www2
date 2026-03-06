@@ -6,7 +6,7 @@
             <button type="button" class="customClose" aria-label="Close">&times;</button>
         </div>
         <div class="modal-body">
-            <p>modal body</p>
+            <p>We collect personal information you provide here for the purpose of creating your account, processing orders, and delivering personalized products. We do not sell or share your personal information as defined under the California Privacy Rights Act (CPRA). Information is retained only as long as necessary to fulfill these purposes or as required by law.</p>
             <p><a href="https://inter-state.com/privacy" target="_blank">Privacy Policy</a></p>
         </div>
     </div>
@@ -47,20 +47,23 @@
                 font-family: Bebas Neue;
                 font-weight: 700;
                 font-size: 30px;
-                color: #185b92;*/
+                margin: 0;
+                color: #185b92;
                 line-height: 1;
                 padding-top: 3px;
             }
             button.customClose {
                 background: transparent;
                 border: 0;
-                color: #344d87;
-                height: 12px;
-                width: 12px;
-            }
-            &::before,
-            &::after {
-                display: none;
+                color: @blue;
+                padding: 0;
+                font-size: 30px;
+                line-height: 30px;
+
+                &:hover,
+                &:focus {
+                    color: @drkOrange;
+                }
             }
         }
         .modal-body {
