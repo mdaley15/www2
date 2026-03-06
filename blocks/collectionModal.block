@@ -89,6 +89,9 @@
         .modal-title {
             font-size: 20px!important;
         }
+        button.customClose {
+            font-size: 20px!important;
+        }
         .modal-body {
             padding: 10px 15px 12px!important;
 
