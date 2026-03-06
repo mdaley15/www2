@@ -1,0 +1,72 @@
+<!-- Session modal -->
+<div id="collectionModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="collectionModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="collectionModalLabel">@Home.menuCollection</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <p>@Html.Raw(Home.collectionPopBody)</p>
+                <p><a href="/privacy">@Home.menuPrivacy</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    (function () {
+        // session cookie shared across tabs/windows.
+        var cookieName = 'privacy_modal';
+
+        function getCookie(name) {
+            var match = document.cookie.match(new RegExp('(^|; )' + name + '=([^;]*)'));
+            return match ? decodeURIComponent(match[2]) : null;
+        }
+        function setSessionCookie(name, value) {
+            // No expires => session cookie (cleared when browser closes); path=/ shares across site and tabs.
+            document.cookie = name + '=' + encodeURIComponent(value) + '; path=/';
+        }
+
+        var shown = getCookie(cookieName);
+
+        if (!shown) {
+            setTimeout(function () {
+                $('#collectionModal').modal('show');
+                $('.modal-backdrop').css({ 'pointer-events': 'none', opacity: '0' });
+            }, 50);
+
+            // Mark as shown for the session
+            setSessionCookie(cookieName, '1');
+        }
+
+        $(document).on('click', function (e) {
+            var $t = $(e.target);
+
+            // if click is inside the modal, do nothing
+            if ($t.closest('#collectionModal').length) {
+                return;
+            }
+
+            // if click is on a trigger or element that should not close the modal, do nothing
+            if ($t.closest('.privacy-trigger, .no-modal-close').length) {
+                return;
+            }
+
+            // only hide when the modal is visible
+            var collectionModal = $('#collectionModal');
+            if (collectionModal.hasClass('in') || collectionModal.is(':visible')) {
+                collectionModal.modal('hide');
+            }
+            $($t).focus();
+        });
+        $(document).on('click', '#collectionModal', function (e) {
+            if (e.target === this) {
+                $(this).modal('hide');
+            }
+        });
+        $(document).on('click', '.modal-backdrop', function (e) {
+            $('#collectionModal').modal('hide');
+        });
+    })();
+</script>

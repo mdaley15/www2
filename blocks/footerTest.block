@@ -1,0 +1,55 @@
+<footer class="Footer" id="footer" role="contentinfo" data-controller="FooterBreakpoints">
+    <div class="insideFooter footerTop">
+        <div>
+            <div>
+                <h3>Partner with us for premium school photography and yearbook services!</h3>
+                <!-- <p>Bacon ipsum dolor amet turducken chislic beef, tongue chuck porchetta.</p> -->
+            </div>
+            <a class="allBtns lift" href="/contact-us">Request Info</a>
+        </div>
+    </div>
+    <div class="insideFooter footerBottom">
+
+        <div class="footerRow rowOne">
+            <div class="footerCol smallCol colOne">
+                {.section website}
+                    {.section logoImageUrl}
+                        <img src="../assets/logoWhite.svg" alt="{siteTitle}" class="footerLogo" />
+                    {.or}
+                        {siteTitle}
+                    {.end}
+                {.end}
+            </div>
+            <div class="footerCol smallCol colTwo">
+                <ul class="quicklinks">
+                    <li><a href="https://inter-state.com/Account/Reminders">Exclusive Offers</a></li>
+                    <li><a href="https://www.paycomonline.net/v4/ats/web.php/jobs?clientkey=2DC5322E5E7F4922767F4DDD8A420236" target="_blank">Careers</a></li>
+                    <li><a href="https://www.inter-statefranchise.com/" target="_blank">Franchise Opportunities</a></li>
+                    <li><a href="/service-areas" target="">Service Areas</a></li>
+                </ul>
+            </div>
+            <div class="footerCol smallCol colThree">
+                <ul class="quicklinks">
+                    <li><a href="https://interstatesupport.zendesk.com/hc/en-us" target="_blank">Parent Help</a></li>
+                    <li><a href="https://inter-state.com/privacy" target="_blank">Privacy Policy</a></li>
+                    <!-- <li><a href="/privacy-policy#cookies" target="">Cookies Policy</a></li>
+                    <li><a href="/terms-of-use" target="">Terms of Use</a></li>
+                    <li><a href="/accessibility">Web Accessibility</a></li> -->
+                    <li><a href="https://inter-state.com/Account/Reminders">Consent Preferences</a></li>
+                    <li><a href="/sitemap" target="">Site Map</a></li>
+                </ul>
+            </div>
+            <div class="footerCol smallCol colFour">
+                <a href="https://www.linkedin.com/company/inter-state-studio-&amp;-publishing-co-" target="_blank" class="LinkedIn" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footerRow rowTwo">
+            <div class="footerCol bigCol">
+                <small>© <script>document.write(new Date().getFullYear())</script> Inter-State Studio & Publishing Co.</small>
+            </div>
+        </div>
+
+    </div>
+</footer>
