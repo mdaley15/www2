@@ -169,8 +169,8 @@
             if (modalElement.contains(target)) {
                 return; // Do nothing if the click is inside the modal
             }
-            if (target.closest('.privacy-trigger, .no-modal-close')) {
-                return; // Do nothing if the click is on these elements
+            if (target.closest('.privacy-trigger')) {
+                showModal();
             }
             if (modalElement.classList.contains('open')) {
                 hideModal();
