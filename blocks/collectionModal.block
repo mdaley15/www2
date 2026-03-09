@@ -162,6 +162,7 @@
 
         var pathName = window.location.pathname
         if (pathName.includes("/contact-us") || pathName.includes("/request-yearbook-info") || pathName.includes("/request-sample-yearbook")) {
+            console.log(pathName);
             var shown = getCookie(cookieName);
 
             if (!shown) {
