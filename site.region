@@ -196,7 +196,5 @@
         AOS.init();
     </script>
 
-    {@|apply collectionModal.block}
-
   </body>
 </html>
