@@ -183,7 +183,6 @@
                 return;
             }
             if (target === '.privacy-trigger') {
-                showModal();
                 return;
             }
             if (modalElement.classList.contains('open')) {
