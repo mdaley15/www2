@@ -188,8 +188,8 @@
             }
             if (modalElement.classList.contains('open')) {
                 hideModal();
+                target.focus();
             }
-            target.focus();
         });
 
         document.addEventListener('keydown', function (event) {
