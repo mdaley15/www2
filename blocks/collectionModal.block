@@ -1,5 +1,5 @@
 <!-- Session modal -->
-<div id="collectionModal" class="modal" role="dialog" aria-labelledby="collectionModalLabel">
+<div id="collectionModal" class="modal" role="dialog" aria-labelledby="collectionModalLabel" tabindex="0">
     <div class="modal-content">
         <div class="modal-header">
             <h3 class="modal-title" id="collectionModalLabel">Notice at Collection</h3>
@@ -181,6 +181,9 @@
             console.log(target);
 
             if (modalContent.contains(target)) {
+                return;
+            }
+            if (target.closest('.privacy-trigger') && modalElement.classList.contains('open')) {
                 return;
             }
             if (modalElement.classList.contains('open')) {
