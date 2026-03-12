@@ -130,12 +130,13 @@
     document.addEventListener('DOMContentLoaded', function () {
         var modalElement = document.getElementById('collectionModal');
         var modalContent = modalElement.querySelector('.modal-content');
+        var modalTitle = modalElement.querySelector('.modal-title');
         var closeButton = document.querySelector('.customClose');
         var cookieName = 'privacy_modal_schools';
 
         function showModal() {
             modalElement.classList.add('open');
-            modalElement.focus();
+            modalTitle.focus();
             setTimeout(function () {
                 modalContent.classList.add('open');
             }, 100);
