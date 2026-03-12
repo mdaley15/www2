@@ -1,8 +1,8 @@
 <!-- Session modal -->
-<div id="collectionModal" class="modal" role="dialog" aria-labelledby="collectionModalLabel" tabindex="0">
+<div id="collectionModal" class="modal" role="dialog" aria-labelledby="collectionModalLabel">
     <div class="modal-content">
         <div class="modal-header">
-            <h3 class="modal-title" id="collectionModalLabel">Notice at Collection</h3>
+            <h3 class="modal-title" id="collectionModalLabel" tabindex="0">Notice at Collection</h3>
             <button type="button" class="customClose" aria-label="Close">&times;</button>
         </div>
         <div class="modal-body">
