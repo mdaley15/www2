@@ -182,7 +182,7 @@
             if (modalContent.contains(target)) {
                 return;
             }
-            if (target.closest('.privacy-trigger')) {
+            if (target === '.privacy-trigger') {
                 showModal();
                 return;
             }
