@@ -135,6 +135,7 @@
         var modalTitle = modalElement.querySelector('.modal-title');
         var closeButton = document.querySelector('.customClose');
         var cookieName = 'privacy_modal_schools';
+        var sessionKey = 'uniqueSessionId';
 
         function showModal() {
             modalElement.classList.add('open');
