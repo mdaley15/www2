@@ -135,8 +135,6 @@
         var modalTitle = modalElement.querySelector('.modal-title');
         var closeButton = document.querySelector('.customClose');
         var cookieName = 'privacy_modal_schools';
-        var sessionKey = 'uniqueSessionId';
-        var tabKey = 'tabSessionFlag';
 
         function showModal() {
             modalElement.classList.add('open');
@@ -169,37 +167,26 @@
             document.cookie = name + '=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC;';
         }
 
-        function getOrCreateBrowserSessionId() {
-            var sessionId = localStorage.getItem(sessionKey);
-            if (!sessionId) {
-                sessionId = new Date().getTime().toString(); // Use timestamp as a unique ID
-                localStorage.setItem(sessionKey, sessionId);
+        // Detect if the page load is part of a restored session
+        function isRestoredSession() {
+            if (performance.navigation) {
+                // Deprecated API
+                return performance.navigation.type === performance.navigation.TYPE_BACK_FORWARD;
+            } else if (performance.getEntriesByType) {
+                // Modern API
+                var navEntries = performance.getEntriesByType('navigation');
+                if (navEntries.length > 0) {
+                    return navEntries[0].type === 'back_forward';
+                }
             }
-            return sessionId;
+            return false; // Default to false if the API is unavailable
         }
 
-        function isFirstTabInSession() {
-            return !sessionStorage.getItem(tabKey);
+        // Reset the cookie if this is a restored session
+        if (isRestoredSession()) {
+            console.log('Restored session detected. Resetting the cookie.');
+            deleteCookie(cookieName);
         }
-
-        function markTabAsActive() {
-            sessionStorage.setItem(tabKey, 'true');
-        }
-
-        var currentSession = getOrCreateBrowserSessionId();
-        console.log('Current Browser Session ID:', currentSession);
-
-        if (isFirstTabInSession()) {
-            var storedSessionId = getCookie('sessionId');
-            if (storedSessionId !== currentSession) {
-                // If the session ID has changed, reset the cookie
-                console.log('Session ID has changed. Resetting the cookie.');
-                deleteCookie(cookieName);
-                setSessionCookie('sessionId', currentSession);
-            }
-        }
-
-        markTabAsActive();
 
         var pathName = window.location.pathname
         if (pathName.includes("/contact-us") || pathName.includes("/request-yearbook-info") || pathName.includes("/request-sample-yearbook")) {
