@@ -167,6 +167,7 @@
         var pathName = window.location.pathname
         if (pathName.includes("/contact-us") || pathName.includes("/request-yearbook-info") || pathName.includes("/request-sample-yearbook")) {
             var shown = getCookie(cookieName);
+            console.log('Cookie value:', shown);
 
             if (!shown) {
                 showModal();
