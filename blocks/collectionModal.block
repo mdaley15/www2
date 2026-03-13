@@ -164,32 +164,29 @@
             document.cookie = name + '=' + encodeURIComponent(value) + '; path=/';
         }
 
-        // Generate a new session ID
-        function generateSessionId() {
-            return new Date().getTime().toString(); // Use timestamp as a unique ID
-        }
-
-        // Check if a new session has started
-        var currentSession = localStorage.getItem(sessionKey);
-        var newSession = generateSessionId();
-        console.log(currentSession, newSession);
-
-        if (!currentSession || currentSession !== newSession) {
-            // If no session exists or the session ID has changed, treat it as a new session
-            localStorage.setItem(sessionKey, newSession);
-
-            // Check if the current path matches the specified paths
-            var pathName = window.location.pathname;
-            if (pathName.includes("/contact-us") || pathName.includes("/request-yearbook-info") || pathName.includes("/request-sample-yearbook")) {
-                var shown = getCookie(cookieName);
-                console.log('Cookie value:', shown);
-
-                if (!shown) {
-                    showModal();
-                    setSessionCookie(cookieName, '1');
-                }
+        function getOrCreateSessionId() {
+            var sessionId = sessionStorage.getItem(sessionKey);
+            if (!sessionId) {
+                sessionId = new Date().getTime().toString(); // Use timestamp as a unique ID
+                sessionStorage.setItem(sessionKey, sessionId);
             }
+            return sessionId;
         }
+
+        var currentSession = getOrCreateSessionId();
+        console.log('Current Session ID:', currentSession);
+
+        var pathName = window.location.pathname
+        if (pathName.includes("/contact-us") || pathName.includes("/request-yearbook-info") || pathName.includes("/request-sample-yearbook")) {
+            var shown = getCookie(cookieName);
+            console.log('Cookie value:', shown);
+
+            if (!shown) {
+                showModal();
+
+                setSessionCookie(cookieName, '1');
+            }
+        };
 
         closeButton.addEventListener('click', function () {
             closeButton.blur();
