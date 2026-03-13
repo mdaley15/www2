@@ -136,6 +136,7 @@
         var closeButton = document.querySelector('.customClose');
         var cookieName = 'privacy_modal_schools';
         var sessionKey = 'uniqueSessionId';
+        var tabKey = 'tabSessionFlag';
 
         function showModal() {
             modalElement.classList.add('open');
@@ -168,25 +169,37 @@
             document.cookie = name + '=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC;';
         }
 
-        function getOrCreateSessionId() {
-            var sessionId = sessionStorage.getItem(sessionKey);
+        function getOrCreateBrowserSessionId() {
+            var sessionId = localStorage.getItem(sessionKey);
             if (!sessionId) {
                 sessionId = new Date().getTime().toString(); // Use timestamp as a unique ID
-                sessionStorage.setItem(sessionKey, sessionId);
+                localStorage.setItem(sessionKey, sessionId);
             }
             return sessionId;
         }
 
-        var currentSession = getOrCreateSessionId();
-        console.log('Current Session ID:', currentSession);
-
-        var storedSessionId = getCookie('sessionId');
-        if (storedSessionId !== currentSession) {
-            // If the session ID has changed, reset the cookie
-            console.log('Session ID has changed. Resetting the cookie.');
-            deleteCookie(cookieName);
-            setSessionCookie('sessionId', currentSession);
+        function isFirstTabInSession() {
+            return !sessionStorage.getItem(tabKey);
         }
+
+        function markTabAsActive() {
+            sessionStorage.setItem(tabKey, 'true');
+        }
+
+        var currentSession = getOrCreateBrowserSessionId();
+        console.log('Current Browser Session ID:', currentSession);
+
+        if (isFirstTabInSession()) {
+            var storedSessionId = getCookie('sessionId');
+            if (storedSessionId !== currentSession) {
+                // If the session ID has changed, reset the cookie
+                console.log('Session ID has changed. Resetting the cookie.');
+                deleteCookie(cookieName);
+                setSessionCookie('sessionId', currentSession);
+            }
+        }
+
+        markTabAsActive();
 
         var pathName = window.location.pathname
         if (pathName.includes("/contact-us") || pathName.includes("/request-yearbook-info") || pathName.includes("/request-sample-yearbook")) {
