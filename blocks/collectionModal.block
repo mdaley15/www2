@@ -171,9 +171,11 @@
         function isRestoredSession() {
             if (performance.navigation) {
                 // Deprecated API
+                console.log('Performance navigation type:', performance.navigation.type);
                 return performance.navigation.type === performance.navigation.TYPE_BACK_FORWARD;
             } else if (performance.getEntriesByType) {
                 // Modern API
+                console.log('Performance entries:', performance.getEntriesByType('navigation'));
                 var navEntries = performance.getEntriesByType('navigation');
                 if (navEntries.length > 0) {
                     return navEntries[0].type === 'back_forward';
