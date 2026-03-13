@@ -128,13 +128,13 @@
 </style>
 
 <script type="text/javascript">
-
     document.addEventListener('DOMContentLoaded', function () {
         var modalElement = document.getElementById('collectionModal');
         var modalContent = modalElement.querySelector('.modal-content');
         var modalTitle = modalElement.querySelector('.modal-title');
         var closeButton = document.querySelector('.customClose');
         var cookieName = 'privacy_modal_schools';
+        var sessionKey = 'uniqueSessionId'; // Key for session tracking
 
         function showModal() {
             modalElement.classList.add('open');
@@ -163,17 +163,27 @@
             document.cookie = name + '=' + encodeURIComponent(value) + '; path=/';
         }
 
-        var pathName = window.location.pathname
-        if (pathName.includes("/contact-us") || pathName.includes("/request-yearbook-info") || pathName.includes("/request-sample-yearbook")) {
+        // Generate a new session ID
+        function generateSessionId() {
+            return new Date().getTime().toString(); // Use timestamp as a unique ID
+        }
+
+        // Check if a new session has started
+        var currentSession = localStorage.getItem(sessionKey);
+        var newSession = generateSessionId();
+
+        if (!currentSession) {
+            // If no session exists, set a new session ID and show the modal
+            localStorage.setItem(sessionKey, newSession);
+
             var shown = getCookie(cookieName);
             console.log('Cookie value:', shown);
 
             if (!shown) {
                 showModal();
-
                 setSessionCookie(cookieName, '1');
             }
-        };
+        }
 
         closeButton.addEventListener('click', function () {
             closeButton.blur();
