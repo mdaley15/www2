@@ -160,7 +160,8 @@
         }
 
         function setSessionCookie(name, value) {
-            document.cookie = name + '=' + encodeURIComponent(value) + '; path=/';
+            // document.cookie = name + '=' + encodeURIComponent(value) + '; path=/';
+            document.cookie = name + '=' + encodeURIComponent(value) + '; path=/; Max-Age=0';
         }
 
         var pathName = window.location.pathname
@@ -186,7 +187,6 @@
                 return;
             }
             if (target.closest('.privacy-trigger') && modalElement.classList.contains('open')) {
-                console.log(target);
                 return;
             }
             if (modalElement.classList.contains('open')) {
