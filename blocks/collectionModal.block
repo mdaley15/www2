@@ -135,6 +135,7 @@
         var modalTitle = modalElement.querySelector('.modal-title');
         var closeButton = document.querySelector('.customClose');
         var cookieName = 'privacy_modal_schools';
+        var sessionKey = 'browserSessionId';
 
         function showModal() {
             modalElement.classList.add('open');
@@ -167,6 +168,15 @@
             document.cookie = name + '=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC;';
         }
 
+        function getOrCreateBrowserSessionId() {
+            var sessionId = localStorage.getItem(sessionKey);
+            if (!sessionId) {
+                sessionId = new Date().getTime().toString(); // Use timestamp as a unique ID
+                localStorage.setItem(sessionKey, sessionId);
+            }
+            return sessionId;
+        }
+
         // Detect if the page load is part of a restored session
         function isRestoredSession() {
             if (performance.navigation) {
@@ -182,6 +192,17 @@
                 }
             }
             return false; // Default to false if the API is unavailable
+        }
+
+        // Check if this is a new browser session
+        var currentSessionId = getOrCreateBrowserSessionId();
+        var storedSessionId = getCookie('sessionId');
+
+        if (!storedSessionId || storedSessionId !== currentSessionId) {
+            // If the session ID has changed or doesn't exist, reset the cookie
+            console.log('New browser session detected. Resetting the cookie.');
+            deleteCookie(cookieName);
+            setSessionCookie('sessionId', currentSessionId);
         }
 
         // Reset the cookie if this is a restored session
