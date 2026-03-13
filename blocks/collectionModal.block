@@ -172,7 +172,7 @@
         // Check if a new session has started
         var currentSession = localStorage.getItem(sessionKey);
         var newSession = generateSessionId();
-        console.log(newSession);
+        console.log(sessionKey, newSession);
 
         if (!currentSession || currentSession !== newSession) {
             // If no session exists or the session ID has changed, treat it as a new session
