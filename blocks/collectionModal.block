@@ -164,6 +164,10 @@
             document.cookie = name + '=' + encodeURIComponent(value) + '; path=/';
         }
 
+        function deleteCookie(name) {
+            document.cookie = name + '=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC;';
+        }
+
         function getOrCreateSessionId() {
             var sessionId = sessionStorage.getItem(sessionKey);
             if (!sessionId) {
@@ -175,6 +179,14 @@
 
         var currentSession = getOrCreateSessionId();
         console.log('Current Session ID:', currentSession);
+
+        var storedSessionId = getCookie('sessionId');
+        if (storedSessionId !== currentSession) {
+            // If the session ID has changed, reset the cookie
+            console.log('Session ID has changed. Resetting the cookie.');
+            deleteCookie(cookieName);
+            setSessionCookie('sessionId', currentSession);
+        }
 
         var pathName = window.location.pathname
         if (pathName.includes("/contact-us") || pathName.includes("/request-yearbook-info") || pathName.includes("/request-sample-yearbook")) {
