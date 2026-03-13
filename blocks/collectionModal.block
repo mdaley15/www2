@@ -160,8 +160,7 @@
         }
 
         function setSessionCookie(name, value) {
-            // document.cookie = name + '=' + encodeURIComponent(value) + '; path=/';
-            document.cookie = name + '=' + encodeURIComponent(value) + '; path=/; Max-Age=0';
+            document.cookie = name + '=' + encodeURIComponent(value) + '; path=/';
         }
 
         var pathName = window.location.pathname
