@@ -156,7 +156,11 @@
 
         function getCookie(name) {
             var match = document.cookie.match(new RegExp('(^|; )' + name + '=([^;]*)'));
-            return match ? decodeURIComponent(match[2]) : null;
+            if (match) {
+                var cookieValue = decodeURIComponent(match[2]);
+                return cookieValue.split('|')[0]; // Return only the first part of the cookie value
+            }
+            return null;
         }
 
         function setSessionCookie(name, value) {
