@@ -135,6 +135,7 @@
         var modalTitle = modalElement.querySelector('.modal-title');
         var closeButton = document.querySelector('.customClose');
         var cookieName = 'privacy_modal_schools';
+        var expires;
 
         function showModal() {
             modalElement.classList.add('open');
@@ -163,7 +164,7 @@
             var date = new Date();
             date.setTime(date.getTime() + (1 * 60 * 60 * 1000)); // 1 hour in milliseconds
             // date.setTime(date.getTime() + (24 * 60 * 60 * 1000)); // 24 hours in milliseconds
-            var expires = "expires=" + date.toUTCString();
+            expires = "expires=" + date.toUTCString();
             document.cookie = name + '=' + encodeURIComponent(value) + '; ' + expires + '; path=/';
             // document.cookie = name + '=' + encodeURIComponent(value) + '; path=/';
         }
