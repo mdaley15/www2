@@ -183,19 +183,16 @@
 
         if (pathName.includes("/contact-us") || pathName.includes("/request-yearbook-info") || pathName.includes("/request-sample-yearbook")) {
             var shown = getCookie(cookieName);
-            var expirationTimestamp;
+            var expirationTimestamp = shown ? getCookieExpiration(cookieName) : setSessionCookie(cookieName, '1');
 
             if (!shown) {
                 showModal();
-                expirationTimestamp = setSessionCookie(cookieName, '1');
-            } else {
-                expirationTimestamp = getCookieExpiration(cookieName);
             }
 
             if (expirationTimestamp) {
                 var timeLeft = expirationTimestamp - Date.now();
-                console.log('Cookie value: ' + cookieName + ' =', shown);
-                console.log('Cookie expires in: ' + Math.max(0, timeLeft / 1000) + ' seconds');
+                console.log(`Cookie value: ${cookieName} = ${shown}`);
+                console.log(`Cookie expires in: ${Math.max(0, timeLeft / 1000)} seconds`);
             } else {
                 console.log('Cookie expiration not found.');
             }
