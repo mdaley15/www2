@@ -191,8 +191,8 @@
 
             if (expirationTimestamp) {
                 var timeLeft = expirationTimestamp - Date.now();
-                console.log(`Cookie value: ${cookieName} = ${shown}`);
-                console.log(`Cookie expires in: ${Math.max(0, timeLeft / 1000)} seconds`);
+                console.log('Cookie value: ' + cookieName + ' =', shown);
+                console.log('Cookie expires in: ' + Math.max(0, timeLeft / 1000) + ' seconds');
             } else {
                 console.log('Cookie expiration not found.');
             }
