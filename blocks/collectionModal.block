@@ -135,7 +135,6 @@
         var modalTitle = modalElement.querySelector('.modal-title');
         var closeButton = document.querySelector('.customClose');
         var cookieName = 'privacy_modal_schools';
-        var expires;
 
         function showModal() {
             modalElement.classList.add('open');
@@ -164,7 +163,7 @@
             var date = new Date();
             date.setTime(date.getTime() + (1 * 60 * 60 * 1000)); // 1 hour in milliseconds
             // date.setTime(date.getTime() + (24 * 60 * 60 * 1000)); // 24 hours in milliseconds
-            expires = "expires=" + date.toUTCString();
+            var expires = "expires=" + date.toUTCString();
             document.cookie = name + '=' + encodeURIComponent(value) + '; ' + expires + '; path=/';
             // document.cookie = name + '=' + encodeURIComponent(value) + '; path=/';
         }
@@ -172,12 +171,12 @@
         var pathName = window.location.pathname
         if (pathName.includes("/contact-us") || pathName.includes("/request-yearbook-info") || pathName.includes("/request-sample-yearbook")) {
             var shown = getCookie(cookieName);
-            console.log('Cookie value: '+ cookieName + ' =', shown, expires);
 
             if (!shown) {
                 showModal();
 
-                setSessionCookie(cookieName, '1');
+                var cookieExpires = setSessionCookie(cookieName, '1');
+                console.log('Cookie value: ' + cookieName + ' =', shown, cookieExpires);
             }
         };
 
