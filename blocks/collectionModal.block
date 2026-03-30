@@ -161,7 +161,7 @@
 
         function setSessionCookie(name, value) {
             var date = new Date();
-            date.setTime(date.getTime() + (1 * 60 * 60 * 1000)); // 1 hour in milliseconds, 24 hours in milliseconds = 24 * 60 * 60 * 1000
+            date.setTime(date.getTime() + (5 * 60 * 1000)); // 5 minutes in milliseconds, 24 hours in milliseconds = 24 * 60 * 60 * 1000
             var expires = "expires=" + date.toUTCString();
             var expirationTimestamp = date.getTime();
             document.cookie = name + '=' + encodeURIComponent(value + '|' + expirationTimestamp) + '; ' + expires + '; path=/';
@@ -193,7 +193,7 @@
             }
 
             if (expirationTimestamp) {
-                var timeLeft = expirationTimestamp - Date.now(); // Calculate remaining time in milliseconds
+                var timeLeft = expirationTimestamp - Date.now();
                 console.log('Cookie value: ' + cookieName + ' =', shown);
                 console.log('Cookie expires in: ' + Math.max(0, timeLeft / 1000) + ' seconds');
             } else {
