@@ -171,13 +171,15 @@
         var pathName = window.location.pathname
         if (pathName.includes("/contact-us") || pathName.includes("/request-yearbook-info") || pathName.includes("/request-sample-yearbook")) {
             var shown = getCookie(cookieName);
+            var cookieExpires;
 
             if (!shown) {
                 showModal();
 
-                var cookieExpires = setSessionCookie(cookieName, '1');
-                console.log('Cookie value: ' + cookieName + ' =', shown, cookieExpires);
+                cookieExpires = setSessionCookie(cookieName, '1');
             }
+            
+            console.log('Cookie value: ' + cookieName + ' =', shown, cookieExpires);
         };
 
         closeButton.addEventListener('click', function () {
