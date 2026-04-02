@@ -184,7 +184,7 @@
                 setSessionCookie(cookieName, '1');
                 console.log("Cookie "+ cookieName +" not found. Showing modal.");
             } else {
-                console.log("Cookie "+ cookieName +" found: " + shown + ");
+                console.log("Cookie "+ cookieName +" found: " + shown);
             }
         };
 
