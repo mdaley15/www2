@@ -130,13 +130,15 @@
 <script type="text/javascript">
 
     document.addEventListener('DOMContentLoaded', function () {
-        var modalElement = document.getElementById('collectionModal');
-        var modalContent = modalElement.querySelector('.modal-content');
-        var modalTitle = modalElement.querySelector('.modal-title');
-        var closeButton = document.querySelector('.customClose');
-        var cookieName = 'privacy_modal_schools';
+        const modalElement = document.getElementById('collectionModal');
+        const modalContent = modalElement.querySelector('.modal-content');
+        const modalTitle = modalElement.querySelector('.modal-title');
+        const closeButton = document.querySelector('.customClose');
+        const cookieName = 'privacy_modal_schools';
+        let lastFocusedElement;
 
         function showModal() {
+            lastFocusedElement = document.activeElement;
             modalElement.classList.add('open');
             modalTitle.focus();
             setTimeout(function () {
@@ -149,53 +151,40 @@
             setTimeout(function () {
                 modalElement.classList.remove('open');
                 modalElement.blur();
+                if (lastFocusedElement) {
+                    lastFocusedElement.focus();
+                }
             }, 300);
         }
 
         window.showModal = showModal;
 
         function getCookie(name) {
-            var match = document.cookie.match(new RegExp('(^|; )' + name + '=([^;]*)'));
-            return match ? decodeURIComponent(match[2]) : null;
-        }
-
-        function setSessionCookie(name, value) {
-            var date = new Date();
-            date.setTime(date.getTime() + (5 * 60 * 1000)); // 5 minutes in milliseconds, 24 hours in milliseconds = 24 * 60 * 60 * 1000
-            var expires = "expires=" + date.toUTCString();
-            var expirationTimestamp = date.getTime();
-            document.cookie = name + '=' + encodeURIComponent(value + '|' + expirationTimestamp) + '; ' + expires + '; path=/';
-            return expirationTimestamp;
-        }
-
-        function getCookieExpiration(name) {
-            var cookie = getCookie(name);
-            if (cookie) {
-                var parts = cookie.split('|');
-                if (parts.length === 2) {
-                    return parseInt(parts[1], 10);
-                }
+            const match = document.cookie.match(new RegExp('(^|; )' + name + '=([^;]*)'));
+            const value = match ? decodeURIComponent(match[2]) : null;
+            if (value && value.includes('|')) {
+                return value.split('|')[0];
             }
-            return null;
+            return value;
         }
 
-        var pathName = window.location.pathname;
+        function setSessionCookie(name, value, hours = 24) {
+            var date = new Date();
+            date.setTime(date.getTime() + (hours * 60 * 60 * 1000)); // Default to 24 hours
+            var expires = "expires=" + date.toUTCString();
+            document.cookie = name + '=' + encodeURIComponent(value) + '; ' + expires + '; path=/';
+        }
 
+        var pathName = window.location.pathname
         if (pathName.includes("/contact-us") || pathName.includes("/request-yearbook-info") || pathName.includes("/request-sample-yearbook")) {
             var shown = getCookie(cookieName);
-            var expirationTimestamp = shown ? getCookieExpiration(cookieName) : setSessionCookie(cookieName, '1');
 
             if (!shown) {
                 showModal();
-            }
-
-            if (expirationTimestamp) {
-                var timeLeft = expirationTimestamp - Date.now();
-                var cookieValue = shown ? shown.split('|')[0] : null;
-                console.log('Cookie value: ' + cookieName + ' =', cookieValue);
-                console.log('Cookie expires in: ' + Math.max(0, timeLeft / 1000) + ' seconds');
+                setSessionCookie(cookieName, '1');
+                console.log(`Cookie "${cookieName}" not found. Showing modal.`);
             } else {
-                console.log('Cookie expiration not found.');
+                console.log(`Cookie "${cookieName}" found: ${shown}`);
             }
         };
 
