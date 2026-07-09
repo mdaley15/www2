@@ -206,7 +206,7 @@ $( document ).ready(function() {
     document.addEventListener('contextmenu', function(event) {
         if (event.target.tagName === 'IMG') {
             // ADD WHEN SITE GOES LIVE
-            event.preventDefault();
+            // event.preventDefault();
         }
     });
     var titles = document.querySelectorAll('.image-caption strong, h2, h3, h4');
