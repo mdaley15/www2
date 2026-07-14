@@ -176,7 +176,7 @@
         }
 
         var pathName = window.location.pathname
-        if (pathName.includes("/contact-us") || pathName.includes("/request-yearbook-info") || pathName.includes("/request-sample-yearbook")) {
+        if (pathName.includes("/contact-us") || pathName.includes("/request-yearbook-info") || pathName.includes("/request-sample-yearbook") || pathName.includes("/spreading-smiles") || pathName.includes("/teacher-of-the-year")) {
             var shown = getCookie(cookieName);
 
             if (!shown) {
